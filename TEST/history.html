@@ -14,7 +14,7 @@ function showimg() {
    ['images/rolling400_150_03.png', 'https://www.facebook.com/pages/%E5%A5%BD%E5%BA%B7123/465404173588358']
  ];
   var ry=Math.floor(Math.random()*imgList.length);
-   document.write("<a href='" + imgList[ry][1] + "'><img src='"+imgList[ry][0]+"' alt='' border=0 width=400 height=150></a>");
+   document.write("<a href='" + imgList[ry][1] + "'><img src='"+imgList[ry][0]+"' alt='' border=0 ></a>");
   }
 </script> 
 <!-- random_img End -->
@@ -25,17 +25,11 @@ function showimg() {
 		<!--HEADER-->
 		<div class="header">
 			<!-- menu -->
-			<!--<ul>
-				<li><a href="hot.html"><img src="images/menu01_off.png" alt="HOT"></a></li>
-				<li><a href="category.html"><img src="images/menu02_off.png" alt="CATEGORY"></a></li>
-				<li><a href="history.html"><img src="images/menu03_off.png" alt="HISTORY"></a></li>
-				<li><a href="delivery.html"><img src="images/menu04_off.png" alt="DELIVERY STATUS"></a></li>
-			</ul>-->
 			<ul>
-				<li><a href="hot.html">HOT</a></li>
-				<li><a href="category.html">CATEGORY</a></li>
-				<li><a href="history.html">HISTORY</a></li>
-				<li><a href="delivery.html">DELIVERY STATUS</a></li>
+				<li class="on"><a href="hot.html"><img src="images/menu01_off.png" alt="HOT"><br>HOT</a></li>
+				<li><a href="category.html"><img src="images/menu02_off.png" alt="CATEGORY"><br>CATEGORY</a></li>
+				<li><a href="history.html"><img src="images/menu03_off.png" alt="HISTORY"><br>HISTORY</a></li>
+				<li><a href="delivery.html"><img src="images/menu04_off.png" alt="DELIVERY STATUS"><br>DELIVERY STATUS</a></li>
 			</ul>
 			<!-- //menu -->
 			<!-- random Banner Start -->
