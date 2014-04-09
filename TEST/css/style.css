@@ -3,7 +3,7 @@
 
 /*default*/
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none;}
-body,input,textarea,select,table,button{font-size:14px; font-family:Verdana,Sans-serif;}
+body,input,textarea,select,table,button{font-size:14px; font-family: Verdana,  Arial, sans-serif;}
 body{position:relative;background-color:#ffffff;/*background-color:#eaeaea;*/color:#363636;word-wrap:break-word;word-break:break-al;}
 img,fieldset{border:0;}
 li,ul,ol{list-style:none;}
@@ -37,6 +37,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	float:left;
 	text-align: center;
 }
+
+
+
 .header li img{
 	height:50px;
 	display: inline-block;
@@ -483,4 +486,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 .footer .footer_font02{
 	font-size:11px; 
 	color:#dfdfdf;
+}
+
+
+
+
+
+@media all and (max-width: 600px) {
+.header li a {
+font-size: 1em;
+font-weight: bold;
+}
 }
