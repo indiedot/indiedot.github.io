@@ -17,7 +17,7 @@ body{height:100%;}html{height:100%;}
 .header{
 	position: fixed;
 	width:100%;
-	height: 200px;
+	height: 250px;
 	overflow: hidden;
 	z-index: 1;
 	top:0;
@@ -50,7 +50,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	border-right: 1px dashed #dd515b;
 }
 .contents{
-	padding:220px 10px 20px 10px;
+	padding:270px 10px 20px 10px;
 	background: #e9e9e9;
 
 }
@@ -62,13 +62,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 .device {
 	position:relative; 
 	width:100%; 
-	height:125px; 
+	height:150px; 
 	margin:0 auto; 
-	background-color:#d2d2d2; 
+	background-color:#ffffff; 
 	/*background:url('/images/banner_bg.JPG') repeat-x; 
 	background-size:10px 150px;*/  
 }
-.swiper-container {height:125px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
+.swiper-container {height:150px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
 .contents .app_list{
 }
 .contents .app_list .item{
