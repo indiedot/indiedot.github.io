@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>...</title>
+	<style>
+	 body, ul, li{margin: 0; padding: 0;}
+	 .box{width:600px; height: 600px; overflow: hidden; position: relative; margin:0 auto;}
+	nav{position: absolute; bottom:0;width: 600px; text-align: center;} 
+	 nav li{padding: 5px; display: inline-block; cursor:pointer; color: black; background-color: #ebebeb; border-radius: 100%; width:20px; height:20px;  }
+	 nav li:hover{background-color:#e8e545;}
+	 nav li.on{background-color:#e8e545;}
+	 .photo li{display:none;}
+	 .photo li.on{display: block;}
+
+	</style>
+</head>
+<body>
+	<section id="box" class="box">
+		<nav>
+			<ul>
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<button>이전</button>
+			<button>다음</button>
+		</nav>
+		<ul class="photo">
+			<li class="on"><img src="01.jpg" alt=""></li>
+			<li><img src="02.jpg" alt=""></li>
+			<li><img src="03.jpg" alt=""></li>
+		</ul>
+
+	</section>
+	<script>
+		var box = document.getElementById("box");
+		var nav = box.getElementsByTagName("NAV")[0];
+		var nav_list = nav.getElementsByTagName("LI");
+		var prev = nav.getElementsByTagName("BUTTON")[0];
+		var next = nav.getElementsByTagName("BUTTON")[1];
+		var photo = box.getElementsByTagName("UL")[1];
+		var photo_list = photo.getElementsByTagName("LI");
+		var idx = 0;
+
+		console.log(nav_list);
+		console.log(photo_list);
+		console.log(next);
+
+		for(var i = 0; i < nav_list.length; i++){
+			nav_list[i].x = i;
+			nav_list[i].onmouseover = function(){
+				if(this.x == idx){
+
+				}else {
+					photo_list[idx].className = "";
+					nav_list[idx].className = "";
+					idx = this.x;
+					photo_list[this.x].className = "on";
+					nav_list[this.x].className = "on";
+
+
+				}
+
+			};
+			
+		}
+		
+		next.onclick = function(){
+			nav_list[idx].className = "";
+			photo_list[idx].className = "";
+			idx++;
+			if(idx == nav_list.length){
+				idx=0;
+			}
+			nav_list[idx].className = "on";
+			photo_list[idx].className = "on";
+			
+		};
+
+		prev.onclick = function(){
+			nav_list[idx].className = "";
+			photo_list[idx].className = "";
+			idx--;
+			if(idx < 0){
+				idx=nav_list.length-1;
+			}
+			nav_list[idx].className = "on";
+			photo_list[idx].className = "on";
+		};
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{font-family: 'dotum'; font-size: small; margin:0; padding: 0;}
+
+/*1 : 사이트 테마 (스타일) - 사이트 전체 컬러/폰트 */
+dl, dt, dd, ul, li, section, p, h1, h2, h3{padding: 0; margin:0;}
+
+
+
+
+
+/*2 : 컨텐츠 디자인 - 레이아웃(포지션,플롯,디스플레이)*/
+/*layout*/
+header{position: fixed; top:0; left:0;}
+header nav ul{display: none;}
+header nav .menu .on{display: block;}
+
+.main_img {float:left;}
+
+.contents{float:left;}
+
+.contents:after{content: ""; display: block; clear: both;}
+.contents .link{}
+.contents .link h2{display: none;}
+.contents .news{}
+.contents .banner{}
+.contents footer{}
+
+
+/*3 : 박스모델링 - 박스위드,헤잇,마진,패딩 */
+/*layout*/
+.wrap{width:1305px;}
+header{width:200px; height:100%; overflow: hidden;}
+header nav .menu{padding:20px 0 20px 0;}
+header nav .menu ul{ margin:20px 0 -20px 0;}
+header nav .menu li{padding:10px 0 10px 0;}
+
+.main_img {width:800px; height:1000px; margin:0 0 0 200px;}
+
+.contents{width:300px;/*width:100%를 줄경우 화면의 전체적인 사이즈를 갖는데, 컨텐츠의 100%를 갖게 하는 방법은?*/overflow-x:scroll;}
+.contents .link{width:300px;}
+.contents .link .item{height:150px;}
+/*4 : 스타일(테마)*/
+/*layout*/
+header{border-right:1px solid gray;}
+header nav .menu{border-bottom:1px dashed gray;}
+header nav .menu .on{background-color: #854587}
+
+.main_img{border-right:1px dashed gray;}
+.contents{}
+.contents .link .item{border-bottom: 1px solid gray;}
+.contents .link .bg1{background: url(http://www.hanyangcorp.co.kr/images/main_new.png) no-repeat 20px 25px;}
+/*안되던것
+1. 
+*/

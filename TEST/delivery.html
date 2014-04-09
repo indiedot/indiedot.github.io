@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale1.0,user-scalable=no">
+<title>Haokang123</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- random_img Start -->
+<script language="JavaScript"> 
+function showimg() {
+   var imgList = [
+   ['images/rolling400_150_01.png', 'https://www.facebook.com/pages/%E5%A5%BD%E5%BA%B7123/465404173588358'] ,
+   ['images/rolling400_150_02.png', 'https://www.facebook.com/pages/%E5%A5%BD%E5%BA%B7123/465404173588358'],
+   ['images/rolling400_150_03.png', 'https://www.facebook.com/pages/%E5%A5%BD%E5%BA%B7123/465404173588358']
+ ];
+  var ry=Math.floor(Math.random()*imgList.length);
+   document.write("<a href='" + imgList[ry][1] + "'><img src='"+imgList[ry][0]+"' alt='' border=0 width=400 height=150></a>");
+  }
+</script> 
+<!-- random_img End -->
+
+</head>
+<body>
+	<div class="wrap">
+		<!--HEADER-->
+		<div class="header">
+			<!-- menu -->
+			<!--<ul>
+				<li><a href="hot.html"><img src="images/menu01_off.png" alt="HOT"></a></li>
+				<li><a href="category.html"><img src="images/menu02_off.png" alt="CATEGORY"></a></li>
+				<li><a href="history.html"><img src="images/menu03_off.png" alt="HISTORY"></a></li>
+				<li><a href="delivery.html"><img src="images/menu04_off.png" alt="DELIVERY STATUS"></a></li>
+			</ul>-->
+			<ul>
+				<li><a href="hot.html">HOT</a></li>
+				<li><a href="category.html">CATEGORY</a></li>
+				<li><a href="history.html">HISTORY</a></li>
+				<li><a href="delivery.html">DELIVERY STATUS</a></li>
+			</ul>
+			<!-- //menu -->
+			<!-- random Banner Start -->
+			<div class="device">
+		  		<div class="swiper-container"><script language="JavaScript">showimg();</script></div>
+			</div>		
+			<!-- random Banner End -->
+		</div>  
+      	<!--//HEADER-->
+      	<!--CONTENTS-->
+      	<div class="contents">
+      		<h1>情況</h1>
+      		<div class="delivery">
+      			<table cellpadding="0" cellspacing="0" border="0">
+      				<tr>
+      					<th>상품명</th>
+      					<td>상품명</td>
+      				</tr>
+      				<tr>
+      					<th>구매일</th>
+      					<td>2014.04.04</td>
+      				</tr>
+      				<tr>
+      					<th>구매포인트</th>
+      					<td>200</td>
+      				</tr>
+      				<tr>
+      					<th>상태</th>
+      					<td>접수, 확인완료, 발송대기, 발송완료, PENDING, 취소</td>
+      				</tr>
+      			</table>
+			</div>
+			<h1>好康123Message</h1>
+			<div class="delivery_message">
+				<!--1. 접수 일 경우-->
+				<p>
+					<span class="id">[ID]</span>님 0000년 00월 00일 요청하신 상품에 대해 <span class="stat">개인정보 확인</span>이 필요합니다. 
+					<br>
+					문의사항은<span class="email"><a href="mailto:test@gmail.com"> xx@xxxx.xxxx</a></span>로 연락 주세요.
+				</p>
+				<!--2. 확인완료일 경우 -->
+				<p>
+					<span class="id">[ID]</span>님 0000년 00월 00일 요청하신 상품에 대해 확인되어 <span class="stat">발송대기</span> 중입니다. 
+					<br>
+					문의사항은 <span class="email"><a href="mailto:test@gmail.com"> xx@xxxx.xxxx</a></span>로 연락 주세요.
+				</p>
+				<!--3. 발송완료일 경우 -->
+				<p>	
+					 <span class="id">[ID]</span>님 0000년 00월 00일 요청하신 상품에 대해 <span class="stat">발송</span>하였습니다. 
+					<br>
+					 문의사항은 <span class="email"><a href="mailto:test@gmail.com"> xx@xxxx.xxxx</a></span>로 연락 주세요.
+				</p>
+				<!--4. Pending일 경우 -->
+				<p>	
+					<span class="id">[ID]</span>님 0000년 00월 00일 요청하신 상품에 대해 <span class="stat">지연중</span>입니다. 
+					<br>
+					반드시 <span class="email"><a href="mailto:test@gmail.com"> xx@xxxx.xxxx</a></span>로 연락 주세요.
+				</p>
+				<!--5. Cancel일 경우  -->
+				<p>	
+					<span class="id">[ID]</span>님 0000년 00월 00일 요청하신 상품에 대해 <span class="stat">취소</span>되었습니다.
+				</p>
+				<!--6. 교환내역이 없을 경우 -->
+				<p>	
+					<span class="id">[ID]</span>님 최근 교환하신 상품이 없습니다. 
+				</p>
+			</div>
+
+			<a href="#" class="back">back</a>
+
+      	</div>
+      	<!--//CONTENTS-->
+		<!-- FOOTER -->
+		<div class="footer">
+
+			<div class="copy">
+				<span class="footer_font01">2014 好康123 ALL RIGHTS RESERVED</span>
+			</div>
+		</div>
+		<!-- //FOOTER -->
+	</div>
+	
+	
+
+</body>
+</html>

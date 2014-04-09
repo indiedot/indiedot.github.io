@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>......</title>
+	<style>
+	html, body, ul, li, section, figure{margin: 0; padding: 0;}
+	li{list-style-type:none;}
+	.main_img{position: relative; overflow: hidden; width:100%; height: 388px;}
+	.main_img section.on{display: block;}
+	.main_img section{display: none;}
+	nav{position: absolute; bottom: 0; text-align: center;  width: 100%;}
+	nav li {background:blue; border-radius: 100%; width:10px; height:10px; margin: 5px; font-size: 0; display: inline-block;}
+	nav li:hover{background: red;}
+	nav li.on{background: red;}
+	</style>
+
+</head>
+<body>
+	<section id="slide" class="main_img">
+		<nav>
+			<ul>
+				<li class="on"><a href="">1</a></li>
+				<li><a href="">2</a></li>
+			</ul>
+		</nav>
+		<section class="on">
+			<figure>
+				<img src="http://www.ktestate.com/common/images/icon/bg_main_visual01.jpg" alt="Real Estate">
+				<figurecaption>
+				<p>no.1 선진종합부동산 1위 기업</p>
+				<h1>Real Estate</h1>
+				
+				<p>꿈은 현실로 미래를 오늘로</p>
+				<p>국내 최초 종합부동산 회사 KT estate가 부동산의 가치와 도시문화를 새롭게 창조하겠습니다. </p> 
+				</figurecaption>
+			</figure>
+		</section>
+		<section>
+			<figure>
+				<img src="http://www.ktestate.com/common/images/icon/bg_main_visual02.jpg" alt="Real Estate">
+				<figurecaption>
+				<p>no.1 선진종합부동산 1위 기업</p>
+				<h1>개발/투자</h1>
+				<p>혁신을 통한 새로운 공간가치 창출</p>
+				<p>정밀한 자산분석과 시장조사를 바탕으로 가장 최적화된 사업을 시행하며, 다양한 금융기법이 융합된 개발투자 구조를 설계합니다.  ~~~</p> 
+				</figurecaption>
+			</figure>
+		</section>
+	</section>
+	
+	<script>
+	var slide = document.getElementById("slide");
+	var nav = slide.getElementsByTagName("NAV")[0];
+	var nav_list = nav.getElementsByTagName("LI");
+	var item = slide.getElementsByTagName("SECTION");
+	var idx = 0;
+
+	for (var i = 0; i < nav_list.length; i++){
+		nav_list[i].x = i;
+		nav_list[i].onclick = function(){
+			if(this.x==idx){
+
+			}else{
+				nav_list[idx].className = "";
+				item[idx].className = "";
+				idx = this.x;
+				nav_list[this.x].className = "on";
+				item[this.x].className = "on";
+			}
+		};
+	}
+	</script>
+</body>
+</html>

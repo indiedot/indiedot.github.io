@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>스크립트 테스트</title>
+</head>
+<body>
+	<section id="slide">
+		<ul>
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+		</ul>
+		<nav>
+			<ul>
+				<li>버튼1</li>
+				<li>버튼2</li>
+				<li>버튼3</li>
+			</ul>
+		</nav>
+	</section>
+	<script>
+		var doc = document;
+		var slide = doc.getElementById("slide");
+		var item = slide.getElementsByTagName("UL")[0];
+		var item_list = item.getElementsByTagName("LI");
+		var nav = slide.getElementsByTagName("UL")[1];
+		var nav_list  = nav.getElementsByTagName("LI");
+		var idx = 0;
+
+		for(i=0; i < nav_list.length; i++){
+			nav_list = 0;
+			nav_list.onclick= function(){
+
+			}
+		}
+
+	</script>
+</body>
+</html>

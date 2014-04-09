@@ -1,0 +1,30 @@
+@charset "utf-8"
+
+@mixin font
+	color: #555555
+	font-size: 15px
+
+.font2 
+	color: #333
+
+.layout3
+	@extend .font2 
+
+.layout1
+	@include font
+	@extend .font2
+
+.layout2
+	@include font
+
+.layout4
+	a
+		color: #ababab
+	h1
+		@include font
+	.sm
+		color : #bebebe
+		display: block
+
+	.bc
+		@extend .font2

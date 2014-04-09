@@ -1,0 +1,114 @@
+body{font-family: 'dotum'; font-size: small; margin:0; padding: 0;}
+
+/*1 : 사이트 테마 (스타일) - 사이트 전체 컬러/폰트 */
+dl, dt, dd, ul, li, section, p, h1, h2, h3{padding: 0; margin:0;}
+/*2 : 컨텐츠 디자인 - 레이아웃(포지션,플롯,디스플레이)*/
+/*layout*/
+.wrap{position:relative; display: block;}
+.wrap .top{position: fixed; top:0; left:0; display:block; z-index: 1}
+.wrap .menu{position:absolute; top:0; left:0;}
+.wrap .contents{}
+/*.wrap .contents h2{display: none;}*/
+.wrap .contents .main_img{}
+.wrap .contents .col1{float:left;}
+.wrap .contents .col2{float:left;}
+.wrap .contents .col3{float:left;}
+.wrap .contents .col3 .partner{float:left;}
+.wrap .contents .col3 .group{float: left;}
+
+
+/*board*/
+.board {}
+.board h1{}
+.board dl{position: relative;}
+.board .title{}
+.board .date{}
+.board .img{position:absolute; top:0; left:0;}
+/*banner*/
+.banner{position: relative;}
+.banner h1{display:none;}
+.banner .item{display: none;}
+.banner .on{display: block;}
+.banner .img{position: absolute; top: 0; left: 0;}
+.banner .controller{position:absolute; top:10px; right:10px;}
+.banner .controller p{float:left;}
+.banner .controller:after{content: ""; display:block; clear:both;}
+
+
+
+
+
+
+/*3 : 박스모델링 - 박스위드,헤잇,마진,패딩 */
+/*layout*/
+.wrap{}
+.wrap .top{width:100%; height:50px; }
+.wrap .menu{width:150px;}
+.wrap .contents{margin:50px 0 0 150px;}
+.wrap .contents .main_img{height:400px;}
+.wrap .contents .col1{width:40%;}
+.wrap .contents .col1 .banner1{height:200px;}
+.wrap .contents .col1 .board{height:400px;}
+.wrap .contents .col2{width:20%;}
+.wrap .contents .col2 .banner2{height:200px;}
+.wrap .contents .col2 .inside{height:200px;}
+.wrap .contents .col2 .news{height:200px;}
+.wrap .contents .col3{width:40%;}
+.wrap .contents .col3 .banner3{height:400px;}
+.wrap .contents .col3 .partner{width:50%; height: 200px;}
+.wrap .contents .col3 .group{width:50%; height: 200px;}
+/*board*/
+.board dl{height:100%; margin:0 0 30px 0; border-bottom:1px dashed gray;}
+.board .title{margin:0 0 0 100px;}
+.board .date{margin:10px 0 0 100px;}
+.board .img{width:90px; height:50px;}
+/*banner*/
+.banner{border:1px dashed gray; min-height:350px;}
+.banner .controller{background:#434343;}
+
+
+
+
+
+
+/*4 : 스타일(테마)*/
+/*layout*/
+.wrap .top{background: #ebebeb;}
+.wrap .contents .main_img{background:#584484;}
+.wrap .contents .banner1{background: #ebebeb;}
+.wrap .contents .banner2{background: #999999;}
+.wrap .contents .banner3{background: #e5b5e5;}
+.wrap .contents .board{background: #999999;}
+.wrap .contents .inside{background: #878787;}
+.wrap .contents .news{background: #565656;}
+.wrap .contents .partner{background: #b0b0b0;}
+.wrap .contents .group{background: #999999;}
+
+
+/*board*/
+.board .title{font-weight:bold;}
+.board .date{font-size:1em; color:#a1a1a1;}
+.board .img{background: #ebebeb; }
+/*banner*/
+.banner {background: #ebebeb;}
+.banner h2{color:#556fb6; font-family:verdana;}
+.banner p{color:#959595;}
+
+
+
+
+
+/*안되던것
+1. postion:absolute;를 쓰면 height값을 잡지 못해서 
+height:100%;에 영향을 주지 못하는데, 
+이를 해결 하는 방법
+- float:left;를 쓰면 될것 같은데, 그렇게 되면 dt(title) dd(date)가 붙지가 않음 
+
+2. dl을 다 나누지 않고 정렬 하는 방법 
+
+하.. 왜케 어려워 ㅠㅠ
+
+3. position:fiexd;를 쓰면 가로값이 왜 100%가 안되나.. display:block;을 썻는데도...
+
+4. 컨텐츠를 분리하면서 레이아웃을 살리는 방법?
+*/

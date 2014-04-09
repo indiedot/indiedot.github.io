@@ -1,0 +1,10 @@
+@charset "utf-8"; 
+
+html, 
+body {
+	font-size: small; 
+	font-family: Arial, '맑은 고딕';
+}
+
+.nav .on{color:red;}
+.contents .on{color:red;}

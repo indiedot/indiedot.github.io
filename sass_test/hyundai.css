@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  position: relative;
+  font-size: 13px;
+}
+.wrap dl, .wrap dt, .wrap dd, .wrap ul, .wrap li, .wrap section, .wrap p, .wrap h1, .wrap h2, .wrap h3 {
+  padding: 0;
+  margin: 0;
+}
+.wrap .top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
+  background: #ebebeb;
+  width: 100%;
+  height: 50px;
+}
+.wrap .menu {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 150px;
+}
+.wrap .contents {
+  margin: 50px 0 0 150px;
+}
+.wrap .contents:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.wrap .contents .col1,
+.wrap .contents .col2,
+.wrap .contents .col3,
+.wrap .contents .col3 .partner,
+.wrap .contents .col3 .group {
+  float: left;
+}
+.wrap .contents .main_img {
+  height: 400px;
+  background: #584484;
+}
+.wrap .contents .col1 {
+  width: 40%;
+}
+.wrap .contents .col1 .banner1 {
+  height: 200px;
+}
+.wrap .contents .col1 .board {
+  height: 400px;
+}
+.wrap .contents .col2 {
+  width: 20%;
+}
+.wrap .contents .col2 .banner2 {
+  height: 200px;
+}
+.wrap .contents .col2 .inside {
+  height: 200px;
+}
+.wrap .contents .col2 .news {
+  height: 200px;
+  border: 1px solid #e126e1;
+}
+.wrap .contents .col3 {
+  width: 40%;
+}
+.wrap .contents .col3 .banner3 {
+  height: 400px;
+  border: 1px solid #e126e1;
+}
+.wrap .contents .col3 .partner {
+  width: 50%;
+  height: 400px;
+  border: 1px solid #e126e1;
+}
+.wrap .contents .col3 .group {
+  width: 50%;
+  height: 200px;
+}

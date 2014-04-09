@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>서울시농수산물공사</title> 
+
+<style type="text/css">
+li{list-style-type: none;}
+.slide_popup{position:absolute; left: 50%; background:gray;width: 300px; height: 300px; margin:0 0 0 -150px; }
+.slide_popup ul li{width:300px; height: 300px; position: absolute; top: 0; left: 0}
+.slide_popup .controller{position:absolute; background:#fff; bottom: 0; right: 0; width: 150px; }
+
+.menu{position:relative; height: 300px; border: 1px solid red;}
+.menu .box{width:250px;}
+.menu .left{position: absolute; left: 50px;}
+.menu .right{position: absolute; right:50px;}
+.menu ul{border: 1px solid red;}
+.menu li{border: 1px solid #ebebeb; width: 100px; height: 100px; float: left;}
+.menu li:after{display:block; clear:both; content: ""}
+.menu .controller{position: absolute; width: 100%; top:50%;}
+.menu .controller .prev{position: absolute; left: 0;}
+.menu .controller .next{position: absolute; right:0;}
+</style>
+</head>
+<body>
+<div class="slide_popup">
+	<ul>
+		<li><a href="#">올본</a></li>
+		<li><a href="#">고등어와갈치</a></li>
+		<li><a href="#">신입사원</a></li>
+	</ul>
+	<div class="controller">
+		<a href="#">prev</a>
+		<a href="#">stop</a>
+		<a href="#">next</a>
+	</div>
+</div>
+<div class="menu">
+	<ul class="box left">
+		<li><a href="">출하자신고</a></li>
+		<li><a href="">구매자신고</a></li>
+		<li><a href="">가격검색</a></li>
+		<li><a href="">실시간경매현황</a></li>
+	</ul>
+	<ul class="box right">
+		<li><a href="">경매결과</a></li>
+		<li><a href="">경매시간안내</a></li>
+		<li><a href="">시장인력채용</a></li>
+		<li><a href="">유통인찾기</a></li>
+	</ul>
+	<div class="controller">
+		<a href="#" class="prev">prev</a>
+		<a href="#" class="next">next</a>
+	</div>
+</div>
+</body>
+</html>

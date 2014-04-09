@@ -1,0 +1,19 @@
+.font2, .layout3, .layout1, .layout4 .bc {
+  color: #333333; }
+
+.layout1 {
+  color: #555555;
+  font-size: 15px; }
+
+.layout2 {
+  color: #555555;
+  font-size: 15px; }
+
+.layout4 a {
+  color: #ababab; }
+.layout4 h1 {
+  color: #555555;
+  font-size: 15px; }
+.layout4 .sm {
+  color: #bebebe;
+  display: block; }

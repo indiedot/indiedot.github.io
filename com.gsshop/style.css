@@ -1,0 +1,47 @@
+@charset "utf-8"; 
+
+
+html, 
+body {
+	font-size: small; 
+	font-family: Arial, '맑은 고딕';
+}
+h1 { font-size: 1em; }
+.hh { display: none; } /* hidden header */
+
+
+.gsshop {}
+.indexgs {}
+
+.ptn1 {
+	position: relative;
+	width: 560px; 
+	height: 380px;  
+	border:1px solid gray;
+	overflow: hidden;
+}
+
+.ptn1 nav{
+	position: absolute;
+	top: 0;
+	right:0;
+}
+
+.item{
+	display: none;
+} 
+.ptn1 .on{display: block;}
+.item:after{content:""; display: block; clear: both;}
+
+
+/* .item header{position: absolute; top:0; left: 50%; width: 150px; margin-left: -75px;}*/
+/*.item header { text-align: center; }*/
+/*.item .product1{float:left; width: 34%}
+.item .product2{float: left; width: 34%; margin-top:50px;}
+.item .product3{float:left; width: 33%}*/
+
+
+/*.item section { position: absolute; }
+.item .product1 { top: 0; left: 0; }
+.item .product2 { top: 0; left: 0; }
+.item .product3 { top: 0; right: 0;}*/

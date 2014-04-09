@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+	
+	<h1>test</h1>
+
+	<button id="prev">prev</button>
+	<button id="next">next</button>
+
+
+	<ul id="nav" class="nav">
+		<li>하나</li>
+		<li>둘</li>
+		<li>셋</li>
+		<li>넷</li>
+		<li>둘</li>
+		<li>셋</li>
+		<li>넷</li>
+	</ul>
+
+	<ul id="contents" class="contents">
+		<li>내용1</li>
+		<li>내용2</li>
+		<li>내용3</li>
+		<li>내용4</li>
+		<li>둘</li>
+		<li>셋</li>
+		<li>넷</li>
+	</ul>
+	
+<script>
+	
+	var doc = document; 
+	var nav = doc.getElementById("nav");
+	var nav_list = nav.getElementsByTagName("LI");
+	var contents = doc.getElementById("contents");
+	var contents_list = contents.getElementsByTagName("LI");
+	var len = contents_list.length; 
+	var nav_index = 0;
+
+	console.log(nav_list); 
+	console.log(contents_list); 
+
+	for(var i=0; i < nav_list.length; i++){
+		console.log(i);
+
+		if(nav_index == i) {
+			contents_list[i].className="on";
+			nav_list[i].className="on";
+		}
+
+		nav_list[i].title=i;
+		nav_list[i].onclick=function(){
+			//for(var i =0; i < contents_list.length; i++){
+			//	contents_list[i].className="";
+			//}
+			//contents_list[this.title].className="on";
+			if(nav_index == this.title){
+
+			}else{
+				nav_list[nav_index].className="";
+				nav_list[this.title].className="on";
+				contents_list[nav_index].className="";
+				contents_list[this.title].className="on";
+				nav_index=this.title;
+
+			}
+			
+		};
+	}
+
+	var prev = doc.getElementById('prev'); 
+	var next = doc.getElementById('next');
+
+	prev.onclick = function() {
+		nav_list[nav_index].className = ''; 
+		contents_list[nav_index].className = ''; 
+
+		nav_index--; 
+		// nav_index = nav_index -1; 
+
+		if(nav_index < 0) {
+			nav_index = len-1;
+		}
+
+		nav_list[nav_index].className = 'on'; 
+		contents_list[nav_index].className = 'on'; 
+	};
+
+	next.onclick = function() {
+		nav_list[nav_index].className = ''; 
+		contents_list[nav_index].className = ''; 
+
+		nav_index++;
+	
+		if(nav_index == len) {
+			nav_index = 0;
+		}
+
+		nav_list[nav_index].className = 'on'; 
+		contents_list[nav_index].className = 'on';
+	};
+	
+
+</script>
+</body>
+</html>

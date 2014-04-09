@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>..</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="gsshop">
+	<div class="indexgs">
+
+
+
+		<section class="ptn1" id="ptn1">
+			<h1 class="hh">look_me</h1>
+
+			<nav id="nav">
+				<ul>
+					<li>퀸카되는 아이템</li>
+					<li>매력철철 다양한 연출</li>
+				</ul>
+			</nav>
+			
+			<section class="item item1">
+				<header>
+					<h1>퀸카되는 아이템</h1>
+					<p>봄 패션 내가 접수</p>
+				</header>
+				<section class="product1">
+					<h1>여러여리 여신핏</h1>
+					<p>1</p>
+					<figure>
+						<img src="" alt="">
+						<figcaption>...</figcaption>
+					</figure>
+				</section>
+			</section>
+
+			<section class="item item2">
+				<header>
+					<h1>매력철철 다양한 연출</h1>
+					<p>스타일리쉬 코디 완성</p>
+				</header>
+				<section class="product1">
+					<h1>여러여리 여신핏</h1>
+					<p>1</p>
+					<figure>
+						<img src="" alt="">
+						<figcaption>...</figcaption>
+					</figure>
+				</section>
+			</section>
+			
+		</sectino>
+
+
+
+
+
+		
+	</div>
+</div>
+
+<script>
+	var doc = document; 
+	var ptn1 = doc.getElementById('ptn1'); 
+	// var ptn1_sections = ptn1.getElementsByTagName("SECTION");
+	// var ptn1_itemSections = [];
+	var ptn1_itemSections = document.querySelectorAll(".ptn1 .item");
+	var view_itemSection_flag = 0; 
+
+	// for(var i = 0; i < ptn1_sections.length; i++) {
+	// 	if(ptn1_sections[i].className.indexOf('item') > -1) {
+	// 		ptn1_itemSections.push(ptn1_sections[i]);
+	// 	}
+	// }
+
+	// // alert(ptn1_itemSections.length); 
+	// console.log(ptn1_itemSections); 
+
+	// alert(ptn1_sections.length); 
+
+	var nav = doc.getElementById("nav");
+	var nav_list = nav.getElementsByTagName("LI");
+
+	for ( var i = 0; i < nav_list.length; i++) {
+		nav_list[i].count = i; 
+		nav_list[i].onmouseover = function() {
+			// alert(this.innerHTML);
+			// alert(this.count);
+
+			if(this.count == view_itemSection_flag) {
+
+			} else {
+				ptn1_itemSections[view_itemSection_flag].className = ptn1_itemSections[view_itemSection_flag].className.replace(' on', '');
+				ptn1_itemSections[this.count].className = ptn1_itemSections[this.count].className + " on"; 
+				view_itemSection_flag = this.count;
+			}
+		};
+	}
+
+	ptn1_itemSections[0].className = ptn1_itemSections[0].className + " on"; 
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+li{list-style-type: none;}
+body{font-family: 'dotum'; font-size: 1em;}
+/*1*/
+h1{color:black; font-size:14px;}
+h2{color: gray; font-size:1.5em;}\
+h3{color:gray; font-size: 1em; font-weight: bold;}
+
+
+/*2*/
+.footer{position: relative;}
+.logo{position: absolute; bottom: 0; left: 0;}
+.inner_link{position:relative; float: left;}
+.inner_link h2{display: none;}
+.inner_link li{float:left;}
+.outer_link{position:relative; float: right}
+.outer_link h2, .outer_link h3{display: none;}
+.outer_link p{display: inline;}
+.market_info{position:absolute; bottom: 50px; left:200px; }
+.market_info h2{display: none;}
+.market_info h3{display: inline;}
+.market_info p{display: inline;}
+.site_info{position: absolute; right: 0; bottom: 50px;}
+.site_info h2{display: none;}
+.site_info .a{float: left;}
+.site_info .b{float:right;}
+
+.c{position: absolute; bottom: 0; left: 200px;}
+
+
+/*3*/
+.footer{height:300px; border: 1px solid red;}
+.logo{width:180px; }
+.inner_link{}
+.outer_link{}
+.market_info{}
+.site_info{}
+.site_info .a{width: 150px;}
+.site_info .b{width:150px;}

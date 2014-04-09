@@ -1,0 +1,93 @@
+@mixin fixedBar
+	position: fixed
+	top: 0
+	left: 0
+	display: block
+	z-index: 1
+
+@mixin menu ($t, $l)
+	position: absolute
+	top: $t
+	left: $l
+
+@mixin clearAbsolute
+	position: relative
+
+@mixin clearFloat
+	&:after
+		content: ""
+		display: block
+		clear: both
+@mixin borderColor
+	border : 1px solid $color1 
+
+$commonColor: #de23de
+$commonFontsize: 10px
+
+
+$color1: $commonColor + #030303
+$height1: $commonFontsize * 20
+$heightI2: $height1*2
+
+body
+	margin: 0
+	padding: 0
+
+.wrap
+	@include clearAbsolute
+	font-size: $commonFontsize +3
+
+	dl, dt, dd, ul, li, section, p, h1, h2, h3
+		padding: 0
+		margin: 0
+
+	.top
+		@include fixedBar
+		background: #ebebeb
+		width: 100%
+		height: 50px
+	.menu
+		@include menu(100px, 100px)
+		width: 150px
+	.contents
+		margin: 50px 0 0 150px
+		@include clearFloat
+
+	.contents
+		.col1, 
+		.col2, 
+		.col3, 
+		.col3 .partner,
+		.col3 .group
+			float: left
+		.main_img
+			height: 400px
+			background: #584484
+		.col1
+			width: 40%
+			.banner1
+				height: $height1
+			.board
+				height: $heightI2
+		.col2
+			width: 20%
+			.banner2
+				height: $height1
+			.inside
+				height: $height1
+			.news
+				height: $height1
+				@include borderColor
+		.col3
+			width: 40%
+			.banner3
+				height: $heightI2
+				@include borderColor
+			.partner
+				width: 50%
+				height: $heightI2
+				@include borderColor
+			.group
+				width: 50%
+				height: $height1
+

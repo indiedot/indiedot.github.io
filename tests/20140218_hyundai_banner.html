@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>배너</title>
+	<link rel="stylesheet" type="type/css" href="hyundai.css">
+</head>
+
+<body>
+	<section id="banner" class="banner">
+		<h1>배너</h1>
+		<section class="item on">
+			<h2>01 H LIBRARY</h2>
+			<p>01 현대 자동차가 만들어온 소중한 순간들을 느껴보세요</p>
+			<p class="img"><img src="http://pr.hyundai.com/images/common/main_img_roll_banner01.png" alt="h library"></p>
+		</section>
+		<section class="item">
+			<h2>02 H PLANT</h2>
+			<p>02 세계 곳곳의 현대자동차 글로벌 생산공장을 방문해 보세요</p>
+			<p class="img"><img src="http://pr.hyundai.com/images/common/main_img_roll_banner02.png" alt="h library"></p>
+		</section>
+		<section class="item">
+			<h2>03 H STORY</h2>
+			<p>03 삶의 소중한 순간들을 함께한 현대자동차의 역사적인 순간들을 담았습니다.</p>
+			<p class="img"><img src="http://pr.hyundai.com/images/common/main_img_roll_banner03.png" alt="h library"></p>
+		</section>
+		<div class="controller">
+			<p>앞으로</p>
+			<p>정지</p>
+			<p>뒤로</p>
+		</div>
+	</section>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<!--<script>
+		var banner = document.getElementById("banner");
+		var item = banner.getElementsByTagName("SECTION");
+		var controller = banner.getElementsByTagName("DIV")[0];
+		var next = controller.getElementsByTagName("P")[0];
+		var prev = controller.getElementsByTagName("P")[2];
+		var idx = 0;
+
+		next.onclick = function (){
+			item[idx].className ="item";
+			// $(item[idx]).fadeOut("slow", function() {});
+
+			idx++;
+			if(idx == item.length){
+				idx = 0;
+			}
+			 item[idx].className ="item on";
+			//$(item[idx]).fadeIn("slow", function() {});
+
+
+		};
+
+		prev.onclick = function(){
+			item[idx].className = "item";
+			idx--;
+			if (idx < 0){
+				idx = item.length -1;
+			}
+			item[idx].className = "item on";
+		};
+
+
+	</script>-->
+	<script>
+		var banner = document.getElementById("banner");
+		var item = banner.getElementsByTagName("SECTION");
+		var controller = banner.getElementsByTagName("DIV")[0];
+		var next = controller.getElementsByTagName("P")[0];
+		var prev = controller.getElementsByTagName("P")[2];
+		var idx = 0;
+
+		next.onclick = function(){
+			item[idx].className = "item";
+			idx++;
+			if(idx == item.length){
+				idx = item.length -1; 
+			}
+			item[idx].className = "item on";
+		};
+
+		prev.onclick = function(){
+			item[idx].className = "item";
+			idx--;
+			if(idx < 0){
+				idx = 0;
+			}
+			item[idx].className = "item on";
+		};
+
+	</script>
+</body>
+</html>

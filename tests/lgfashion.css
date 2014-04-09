@@ -1,0 +1,37 @@
+body{font-family: 'dotum'; font-size: small;}
+
+/*1*/
+h1{color:black;}
+h2{color:gray; }
+h3{color:gray;}
+a:link, a:visited{color:hotpink;}
+a:hover{color:blue;}
+
+/*2*/
+h1{display:none;}
+h2{display: none;}
+nav li{float:left;}
+nav:after{content: ""; display: block; clear: both;}
+
+.board_preview {position: relative;}
+.board_preview .item{display: none;}
+.board_preview .on{display: block;}
+.board_preview .btn_more{position: absolute; top:0; right: 0 }
+
+
+/*
+.board_preview .news{position: absolute; top: 0; left: 0;}
+.board_preview .job{position: absolute; top: 0; left: 0;}
+.board_preview .notice{position: absolute; top:0; left: 0;}
+.board_preview .btn_more{position: absolute; top: 0; right: 0;}
+*/
+/*3*/
+.board_preview {border:1px dashed red;}
+.board_preview .item h2{border:1px solid green; }
+.board_preview .item ul{border:1px dashed gray; }
+.board_preview .btn_more{margin:0;}
+
+/*4*/
+.board_preview .item h2{font-size:1.2em;}
+.board_preview .item ul { background-color:#ebebeb; }
+.board_preview .btn_more{background: gray; }
