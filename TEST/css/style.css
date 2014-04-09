@@ -3,7 +3,7 @@
 
 /*default*/
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none;}
-body,input,textarea,select,table,button{font-size:14px; font-family:"돋움",Dotum,"굴림",Gulim,Helvetica,Sans-serif;}
+body,input,textarea,select,table,button{font-size:14px; font-family:Verdana,Sans-serif;}
 body{position:relative;background-color:#ffffff;/*background-color:#eaeaea;*/color:#363636;word-wrap:break-word;word-break:break-al;}
 img,fieldset{border:0;}
 li,ul,ol{list-style:none;}
@@ -24,26 +24,30 @@ body{height:100%;}html{height:100%;}
 
 }
 .header ul{
-	/*background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');*/
-	background: url("../images/bg_menu.png") repeat;
-	background-size: 50%;
+	background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
+	/*background:#4c393e ;url("../images/bg_menu.png") repeat
+	background-size: 50%;*/
 	height:100px;
 }
 .header ul:after{content: ""; display: block; clear: both;}
 
 .header li{
 	width:25%;
+	height: 100px;
 	float:left;
 	text-align: center;
+	border-right: 1px dashed #dd515b;
 }
 .header li img{
 	height:50px;
 	display: inline-block;
-	padding: 25px 0 0 0;
+	padding: 10px 0 0 0;
 }
 .header li a{
 	display: inline-block;
+	color:#ffffff;
+	font-size: 20px;<
 }
 .contents{
 	padding:220px 10px 20px 10px;
@@ -65,7 +69,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	background-size:10px 150px;*/  
 }
 .swiper-container {height:125px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
-.swiper-container img{width: 100%;}
 .contents .app_list{
 }
 .contents .app_list .item{
