@@ -47,7 +47,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	height: 100px;
 	color:#ffffff;
 	font-size: 20px;
-	border-right: 1px dashed #dd515b;
+	border-right: 1px solid #7d0000;
 }
 .contents{
 	padding:270px 10px 20px 10px;
@@ -69,6 +69,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	background-size:10px 150px;*/  
 }
 .swiper-container {height:150px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
+
+.swiper-container img{width:100%; }
+
 .contents .app_list{
 }
 .contents .app_list .item{
