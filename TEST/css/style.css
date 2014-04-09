@@ -17,8 +17,6 @@ body{height:100%;}html{height:100%;}
 .header{
 	position: fixed;
 	width:100%;
-	height: 250px;
-	overflow: hidden;
 	z-index: 1;
 	top:0;
 
@@ -37,9 +35,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	float:left;
 	text-align: center;
 }
-
-
-
 .header li img{
 	height:50px;
 	display: inline-block;
@@ -50,8 +45,32 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	height: 100px;
 	color:#ffffff;
 	font-size: 20px;
+	padding:0 20px;
 	border-right: 1px solid #7d0000;
 }
+
+/*random Banner Start*/
+.header .device {
+	position:relative; 
+	width:100%; 
+	margin:0 auto; 
+	background-color:#ffffff; 
+	/*background:url('/images/banner_bg.JPG') repeat-x; 
+	background-size:10px 150px;*/  
+}
+.header .swiper-container {
+	width:100%; 
+	text-align:center; 
+	display:inline-block;
+}
+
+.header .swiper-container img{
+	width:100%; 
+}
+
+
+
+
 .contents{
 	padding:270px 10px 20px 10px;
 	background: #e9e9e9;
@@ -61,19 +80,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	font-size: 16px;
 	margin: 0 0 10px 0;
 }
-/*random Banner Start*/
-.device {
-	position:relative; 
-	width:100%; 
-	height:150px; 
-	margin:0 auto; 
-	background-color:#ffffff; 
-	/*background:url('/images/banner_bg.JPG') repeat-x; 
-	background-size:10px 150px;*/  
-}
-.swiper-container {height:150px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
 
-.swiper-container img{width:100%; }
 
 .contents .app_list{
 }
