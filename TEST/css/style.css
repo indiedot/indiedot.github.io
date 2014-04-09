@@ -22,8 +22,7 @@ body{height:100%;}html{height:100%;}
 
 }
 .header ul{
-	background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
+	
 	/*background:#4c393e ;url("../images/bg_menu.png") repeat
 	background-size: 50%;*/
 	height:100px;
@@ -31,6 +30,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 .header ul:after{content: ""; display: block; clear: both;}
 
 .header li{
+	background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
 	width:25%;
 	float:left;
 	text-align: center;
@@ -47,6 +48,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	font-size: 20px;
 	padding:0 20px;
 	border-right: 1px solid #7d0000;
+}
+.header li.on {
+	background: -webkit-gradient(linear, left top, left bottom, from(#99000c), to(#e60012));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#99000c', endColorstr='#e60012');
+}
+.header li.on a{
+	color: #ffffff;
 }
 
 /*random Banner Start*/
