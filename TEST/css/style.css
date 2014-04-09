@@ -523,12 +523,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 }
 
 @media all and (max-width: 600px) {
+	.header ul{
+	height: 80px;
+	}
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
 	}
 	.header li img{
-	height:25px;
+	height:30px;
 	display: inline-block;
 	padding: 20px 0 0 0;
 	}
