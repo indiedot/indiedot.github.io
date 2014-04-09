@@ -20,11 +20,12 @@ body{height:100%;}html{height:100%;}
 	width:100%;
 	height: 200px;
 	overflow: hidden;
+	z-index: 1;
 }
 .header ul{
 	background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
-
+	height:100px;
 }
 .header ul:after{content: ""; display: block; clear: both;}
 
@@ -34,7 +35,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	text-align: center;
 }
 .header li img{
-	width: 25%;
+	height:100px;
 	display: inline-block;
 }
 
@@ -42,7 +43,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	padding-top:200px;
 }
 /*random Banner Start*/
-.device {position:relative; width:100%; height:125px; margin:0 auto; background-color:#a43019; /*background:url('/images/banner_bg.JPG') repeat-x; background-size:10px 150px;*/  }
+.device {
+	position:relative; 
+	width:100%; 
+	height:125px; 
+	margin:0 auto; 
+	background-color:#d2d2d2; 
+	/*background:url('/images/banner_bg.JPG') repeat-x; 
+	background-size:10px 150px;*/  
+}
 .swiper-container {height:125px; width:100%; text-align:center; display:inline-block; overflow:hidden; }
 /*Text Banner Start*/
 #app_list {border-top:2px solid #e85d48; margin-top:1px;}
