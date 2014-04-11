@@ -293,6 +293,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	text-align: right;
 	color: #707070;
 }
+.contents .product .type01 td.nopoint{
+	text-align: center;
+	color:red;
+}
 .contents .product .type02 th{
 	width:20%;
 	border-bottom: 1px solid #bdbdbd;
