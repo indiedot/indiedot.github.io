@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>java script study</title>
+</head>
+<body>
+	<h1>자바스크립트 공부</h1>
+	<p><a href="http://math88.com.ne.kr/computer/js/JSmanual/">http://math88.com.ne.kr/computer/js/JSmanual/참조</a></p>
+	<ul>
+		<li>출력할 내용이 문자열이면 반드시 따옴표("")로 묶어 주어야 합니다.</li>
+		<li>따옴표 안에 또 따옴표를 넣어야 될 경우에는 반드시 홑따옴표(' ')를 사용해야 됩니다. 그렇지 않으면 브라우저는 에러를 발생시키게 됩니다.</li>
+		<li>[경고창] alert()메소드를 사용할때는 HTML 태그는 사용할 수 없습니다. (\n는 줄바꿈)</li>
+		<li>[확인상자] confirm</li>
+		<li>prompt("메세지","디폴트값")</li>
+		<li>변수는 따옴표를 사용하지 않는다.</li>
+		<li>자바스크립트에서 변수를 명시적으로 선언을 할 겨우에는 var 라는 예약어를 사용하여 선언 해 줄 수 있습니다</li>
+	</ul>
+
+	<input type="button" onclick="alert('버튼을 클릭하였습니다.')" value="button">
+	<input type="button" onclick="document.bgColor = 'gold'"; value="배경색바꾸는 버튼">
+
+	<script>
+	document.bgColor="black"
+	document.write("<div><p style='color:red'>자바스크립트 공부중입니다.</p><br>출력할 내용이 문자열이면 반드시 따옴표로 묶어 주어야 합니다.</div>")
+	document.write("따옴표안에 \"또 따옴표를 쓰게될경우\" 에는 이 방법을 씁니다.");
+	alert("alert()메소드를 사용할때는 \nHTML 태그는 사용할 수 없습니다.");
+	//확인상자 confirm()
+	yesorno = confirm("당신은 남자분 이시군요. 그렇죠?")
+	if(yesorno == true)
+   		document.write("당신은 남성입니다<br>")
+	else
+  		document.write("당신은 여성입니다<br>")
+
+  	name = prompt("손님의 이름을 적어주세요","나그네")
+  	document.write("<font color=blue>" + name + "</font>님 감사합니다<br>")
+  	document.write( name + "님 감사합니다<br>")
+
+  	var myname = "안혜미", myage = "30", myaddress = "경기도성남"
+  	document.write("나의 이름은" + myname + "입니다.<br> 그리고 나의 나이는" + myage + "살입니다. <br> 마지막으로 내가 사는 곳은" + myaddress + "입니다.")
+
+  	//산술연산자
+  	var num1 =  10,  num2 = 5;
+  	document.write("num1 + num2 = " + (num1 + num2) + "<br>");
+  	document.write(num1 + "+" + num2 +"="+ (num1 + num2) + "<br>");
+
+  	//조건연산자 (if ~ else 랑 비슷하다.)
+  	var num3 = 1;
+  	var num4 = 2;
+  	num3 > num4 ?//조건식
+  	document.write("num3 이  num4보다 큽니다.<br>") : document.write("num4이 num3보다 큽니다.<br>")
+
+  	//논리연산자
+  	a = 3;
+	document.write("a 는 2보다 작은 수인가? : " + (a < 2) + "<br>");
+	document.write("a 는 2보다 큰 수인가? : " + (a > 2) + "<br>");
+	document.write("a 는 2보다 크고, 5보다 작은 수인가? : " + (a < 2 < 5) + "<br>");
+	document.write("a 는 3의 배수이거나 5의 배수인가? : " + (a%3==0 || a%5==0 ) + "<br>");
+	document.write("a 는 3의 배수이면서 동시에 5의 배수인가? : " + (a%3==0 && a%5==0 ) + "<br>");
+	document.write("a 는 4가 아닌가? : " + (a != 4) + "<br>");
+
+	b = 3;
+	document.write("b = 3 일때,<br>");
+	document.write("++b 는 ===> " , ++b , "<br>");
+	document.write("--b 는 ===> " , --b , "<br>");
+
+	
+	</script>
+
+	<input type="button" onclick=" yourage = prompt('나이를 입력해 주세요.','')" value="나이입력버튼">
+	<script>
+	//if문
+	if(yourage > 20){
+		document.write("당신은 성인입니다.")
+	}else{
+		alert("성인이 아니어서 접근하실수없습니다.");
+	}
+	</script>
+
+	
+	
+</body>
+</html>
