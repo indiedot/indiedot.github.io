@@ -624,7 +624,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	}
 	.header ul{
 	height: 55px;
-	background-size: 200%
+	background-size: 100%
 	}
 	.header li a {
 	font-size: 1.5em;
