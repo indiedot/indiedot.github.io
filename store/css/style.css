@@ -26,21 +26,12 @@ body{height:100%;}html{height:100%;}
 }
 .header ul:after{content: ""; display: block; clear: both;}
 
-/*4개일때*/
+
 .header li{
 	/*background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
 	border-top: 5px solid #7e0000;*/
-	width:25%;
-	float:left;
-	text-align: center;
-	}
-/*3개일때*/
-.header li{
-	/*background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
-	border-top: 5px solid #7e0000;*/
-	width:33.3%;/*값 변경*/
+	width:33.3%;/*값 변경 메뉴가 3개일때 (4개일 경우 25%로 변경)*/
 	float:left;
 	text-align: center;
 	}
@@ -52,15 +43,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 }
 .header li a{
 	display: block;
-	height: 100px;
+	height: 96px;
 	color:#ffffff;
 	font-size: 20px;
-	/*border-right: 1px dotted #ddb4aa;*/
 }
 .header li.on {
 	background: -webkit-gradient(linear, left top, left bottom, from(#1b1b1b), to(#434343));
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endColorstr='#434343');
-	
+
 }
 .header li.on a{
 	color: #ffffff;
@@ -565,20 +555,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 
 @media all and (max-width: 800px) {
 	.header ul{
-		height:50px;
+		height:80px;
+		background-size: 70%;
 	}
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
-	height:50px;
+	height:71px;
 	}
 	.header li img{
-	height:15px;
+	height:35px;
 	display: inline-block;
 	padding: 10px 0 0 0;
 	}
 	.contents{
-	padding:250px 10px 20px 10px;
+	padding:240px 10px 20px 10px;
 	background: #e9e9e9;
 
 }
@@ -586,20 +577,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 
 @media all and (max-width: 600px) {
 	.header ul{
-	height: 50px;
+	height: 65px;
+	background-size: 100%;
 	}
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
-	height:50px;
+	height:58px;
 	}
 	.header li img{
-	height:15px;
+	height:25px;
 	display: inline-block;
 	padding: 8px 0 0 0;
 	}
 	.contents{
-	padding:240px 10px 20px 10px;
+	padding:230px 10px 20px 10px;
 	background: #e9e9e9;
 
 }
@@ -629,41 +621,48 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	.header li a {
 	font-size: 1.0em;
 	font-weight: bold;
-	height:50px;
+	height:49px;
 	}
 	.header li img{
 	display: inline-block;
-	height:15px;
+	height:18px;
 	padding: 6px 0 0 0;
 	}
 	.contents{
-	padding:230px 10px 20px 10px;
+	padding:220px 10px 20px 10px;
+	background: #e9e9e9;
+}
+
+
+@media all and (max-width: 390px) {
+	.contents{
+	padding:215px 10px 20px 10px;
 	background: #e9e9e9;
 }
 
 @media all and (max-width: 370px) {
 	.contents{
-	padding:225px 10px 20px 10px;
+	padding:203px 10px 20px 10px;
 	background: #e9e9e9;
 }
 
 @media all and (max-width: 350px) {
 	.contents{
-	padding:220px 10px 20px 10px;
+	padding:195px 10px 20px 10px;
 	background: #e9e9e9;
 }
 @media all and (max-width: 340px) {
 	.contents{
-	padding:213px 10px 20px 10px;
+	padding:193px 10px 20px 10px;
 	background: #e9e9e9;
 }
 @media all and (max-width: 330px) {
 	.contents{
-	padding:208px 10px 20px 10px;
+	padding:188px 10px 20px 10px;
 	background: #e9e9e9;
 }
 @media all and (max-width: 320px) {
 	.contents{
-	padding:200px 10px 20px 10px;
+	padding:183px 10px 20px 10px;
 	background: #e9e9e9;
 }
