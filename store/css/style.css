@@ -624,12 +624,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	}
 	.header ul{
 	height: 55px;
-	background-size: 150%
+	background-size: 200%
 	}
 	.header li a {
-	font-size: 1em;
+	font-size: 1.5em;
 	font-weight: bold;
 	height:50px;
+	margin-top:-15px;
 	}
 	.header li img{
 	height:15px;
