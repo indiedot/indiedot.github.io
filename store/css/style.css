@@ -627,15 +627,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	background-size: 100%
 	}
 	.header li a {
-	font-size: 1.5em;
+	font-size: 1.0em;
 	font-weight: bold;
 	height:50px;
-	margin-top:-15px;
 	}
 	.header li img{
 	height:15px;
 	padding: 6px 0 0 0;
-	display: none;
 	}
 	.contents{
 	padding:230px 10px 20px 10px;
