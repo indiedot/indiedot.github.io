@@ -24,6 +24,10 @@ body{height:100%;}html{height:100%;}
 	
 	/*background:#4c393e ;url("../images/bg_menu.png") repeat
 	background-size: 50%;*/
+	
+	background: url("../images/bg_header.png") repeat-x bottom;
+	background-size: 150%;
+	
 	height:50px;
 }
 .header ul:after{content: ""; display: block; clear: both;}
@@ -33,7 +37,6 @@ body{height:100%;}html{height:100%;}
 	/*background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
 	border-top: 5px solid #7e0000;*/
-	background: url("../images/bg_header.png") repeat-x left bottom ;
 	width:25%;
 	float:left;
 	text-align: center;
@@ -43,7 +46,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endC
 	/*background: -webkit-gradient(linear, left top, left bottom, from(#e60012), to(#99000c));
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e60012', endColorstr='#99000c');
 	border-top: 5px solid #7e0000;*/
-	background: url("../images/bg_header.png") repeat-x left bottom ;
 	width:33.3%;/*값 변경*/
 	float:left;
 	text-align: center;
@@ -574,7 +576,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
-	height:75px;
+	height:50px;
 	}
 	.header li img{
 	height:15px;
@@ -595,7 +597,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
-	height:65px;
+	height:50px;
 	}
 	.header li img{
 	height:15px;
@@ -632,7 +634,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	.header li a {
 	font-size: 1em;
 	font-weight: bold;
-	height:60px;
+	height:50px;
 	}
 	.header li img{
 	height:15px;
