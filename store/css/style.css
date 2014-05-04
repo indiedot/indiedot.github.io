@@ -632,6 +632,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	height:50px;
 	}
 	.header li img{
+	display: inline-block;
 	height:15px;
 	padding: 6px 0 0 0;
 	}
