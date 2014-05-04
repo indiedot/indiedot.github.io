@@ -21,14 +21,8 @@ body{height:100%;}html{height:100%;}
 	top:0;
 }
 .header ul{
-	
-	/*background:#4c393e ;url("../images/bg_menu.png") repeat
-	background-size: 50%;*/
-	
 	background: url("../images/bg_header.png") repeat-x bottom;
-	background-size: 150%;
-	
-	height:50px;
+	height:107px;
 }
 .header ul:after{content: ""; display: block; clear: both;}
 
@@ -629,7 +623,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 		width:100%;
 	}
 	.header ul{
-	height: 50px;
+	height: 55px;
 	}
 	.header li a {
 	font-size: 1em;
@@ -638,8 +632,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 	}
 	.header li img{
 	height:15px;
-	display: inline-block;
+	/*display: inline-block;*/
 	padding: 6px 0 0 0;
+	display: none;
 	}
 	.contents{
 	padding:230px 10px 20px 10px;
