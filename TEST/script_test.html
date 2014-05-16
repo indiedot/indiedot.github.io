@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		li{list-style: none;}
+		nav{position: absolute;top: 0; right: 0;}
+		nav li{float:left; margin: 0 20px 0 0;}
+		section li{width:200px; height:200px; border: 1px dashed gray; position: absolute; top: 0; left: 0; display: none;}
+		section li.on{display: block;}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>버튼01</li>
+			<li>버튼02</li>
+			<li>버튼03</li>
+			<li>버튼04</li>
+		</ul>
+	</nav>
+	<section>
+		<ul>
+			<li class="on">내용01</li>
+			<li>내용02</li>
+			<li>내용03</li>
+			<li>내용04</li>
+		</ul>
+	</section>
+	<script>
+		var doc = document;
+		var nav = doc.getElementsByTagName("NAV")[0];
+		var nav_list = nav.getElementsByTagName("LI");
+		var con = doc.getElementsByTagName("SECTION")[0];
+		var con_list = con.getElementsByTagName("LI");
+		var idx = 0;
+
+		for(var i=0; i < nav_list.length; i++){
+			nav_list[i].x=i;
+			nav_list[i].onclick = function(){
+				if(this.x == idx){
+
+				}else{
+					con_list[idx].className = "";
+					idx = this.x;
+					con_list[idx].className = "on";
+				}
+			}
+		}
+	</script>
+</body>
+</html>

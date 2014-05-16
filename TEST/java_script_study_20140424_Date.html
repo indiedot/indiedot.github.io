@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Date() 객체</h1>
+	<p></p>
+	<script>
+		now = new Date();
+		year = (now.getYear() + 1900);
+		week = now.getDate();
+
+		week = new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일");
+		weekend = week[now.getDay()];
+
+		document.write("오늘은 " + year + "년입니다.<br>");
+		document.write("오늘은 " + weekend + "입니다.<br>");
+
+
+		hour = now.getHours();
+		min = now.getMinutes();
+
+		var ampm;
+		if(now.getHours() <= 12){
+			ampm = "오전";
+		}else{
+			ampm = "오후";
+			hour = (now.getHours()-12);
+		}
+
+		document.write("지금 시간은 " + ampm + hour +"시"+ min + "분입니다.<br>")
+
+		dDay = new Date(2015,1,1);
+
+		now2 = now.getTime();
+		dDay2 = dDay.getTime();
+
+		count = dDay2 - now2;
+		count = Math.floor(count/(24*3600*1000));
+
+		document.write("2015년까지 남은 일은" + count +"일 입니다.")
+		document.write("2015년까지 남은 일은" + dDay +"일 입니다.")
+
+	</script>
+</body>
+</html>
