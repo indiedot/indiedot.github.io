@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery-1.11.3.min.js"></script>
+	<style>
+		body{text-align: center;}
+		.slide{
+			position: relative;
+			width: 500px;
+			height: 300px;
+			border: 1px solid gray;
+			overflow: hidden;
+		}
+		ul, li{
+			margin: 0; padding: 0;
+		}
+
+		.img{
+			width: 1600px;
+
+		}
+		.img li{
+			width: 500px;
+			height: 300px;
+			font-size: 30px;
+			list-style: none;
+			position: absolute;
+
+		}
+		.img .img01{background: red; top:0; left: 500;}
+		.img .img02{background: blue; top:0; left: 500px;}
+		.img .img03{background: green; top:0; left: 500px;}
+
+
+		.prev {
+			position: absolute;
+			top:50%;
+			left: 10px;
+		}
+		.next {
+			position: absolute;
+			top:50%;
+			right: 10px;
+		}
+		.btn_page{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+		}
+		.btn_page .on{
+			color: white;
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="slide">
+		<ul class="img">
+			<li class="img01">가</li>
+			<li class="img02">나</li>
+			<li class="img03">다</li>
+		</ul>
+		<div class="button">
+			<button class="prev">이전</button>
+			<button class="next">다음</button>
+		</div>
+		<div class="btn_page">
+			<button class="on">1</button>
+			<button>2</button>
+			<button>3</button>
+		</div>
+	</div>
+	<script>
+
+		$(function(){
+			$('ul:eq(0)').css('left','0');
+		});
+		
+
+		var idx = 0;
+
+		// $('.prev').on('click',function(){
+		// 	$('li').removeClass('on');
+		// 	$('.btn_page button').removeClass('on');
+		// 	idx--;
+		// 	if(idx < 0){
+		// 		idx = $('li').length-1;
+		// 	}
+		// 	$('li:eq('+ idx +')').addClass('on');
+		// 	$('.btn_page button:eq('+ idx +')').addClass('on');
+
+
+		// 	console.log(idx);
+			
+		// });
+		$('.next').on('click',function(){
+			//$('.btn_page button').removeClass('on');
+			
+			
+			$('li:eq('+ idx +')').animate({
+			left:-500
+			},1000,function(){
+				console.log('-500이 된 li는 다시 +500이 되야한다. ')
+				
+				$(this).removeAttr("style");
+
+			});
+
+
+
+
+			
+			$('li:eq('+ idx +')').next().animate({
+			left:0
+			},1000);
+
+			
+
+
+			if(idx === $('li').length-1){
+				$('li:eq('+ idx +')').animate({
+				left:-500
+				},1000,function(){
+				console.log('-500이 된 li는 다시 +500이 되야한다. ')
+				
+				$(this).removeAttr("style");
+
+			});
+				
+				$('li:eq(0)').animate({
+				left:0
+				},1000);
+			}
+
+			idx++;
+
+
+			
+
+
+
+			if(idx === $('li').length){
+				idx = 0;
+
+			}
+
+			// 경우
+			// idx 초기 값 0
+			// idx = 0 일때 -500 : 첫번째 li   li:eq(0) / 0 : 두번째 li li:eq(1)
+			// idx = 1 일때 -500 : 두번째 li   li:eq(1) / 0 : 세번째 li li:eq(2)
+			// idx = 2 일때 -500 : 세번째 li   li:eq(2) / 0 : 첫번째 li li:eq(0)
+			
+			// idx = 3 일때 idx는 다시 0이 된다. 
+			// idx = 0 일때 -500 : 첫번째 li   li:eq(0) / 0 : 두번째 li li:eq(1)
+
+			
+			
+
+
+
+
+
+			// if(idx < $('li').length){
+
+
+			// 	$('li:eq('+ idx +')').prev().animate({
+			// 	left:-500
+			// 	},1000,function(){
+			// 	//$('li:eq('+ idx +')').css('left', '500');
+			// 	//$(this).css('left', '500');
+			// 	console.log('냐냐냐냐냐')
+
+			// 	});
+
+			// 	$('li:eq('+ idx +')').animate({
+			// 	left:0
+			// 	},1000);
+
+
+			// }else if(idx === 2){
+			// 	$('li:eq(2)').animate({
+			// 	left:-500
+			// 	},1000,function(){
+			// 	//$('li:eq('+ idx +')').css('left', '500');
+			// 	//$(this).css('left', '500');
+			// 	console.log('냐냐냐냐냐')
+
+			// 	});
+			// }
+			
+
+			
+
+
+
+			
+
+			console.log(idx);
+			//$('.btn_page button:eq('+ idx +')').addClass('on');
+			
+		});
+
+	</script>
+</body>
+</html>
