@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../jquery-1.11.3.min.js"></script>
+	<style>
+		ul,li,p, img{
+			margin: 0; padding: 0;
+		}
+		body{
+			background: #313131; 
+			color: #fff;
+			font-family: verdana, sans-serif;
+			font-size: small;
+
+		}
+
+		.theme{
+			position: relative;
+		}
+		.wrapper-outer{
+			width: 800px;
+			height: 
+			border: 1px solid black;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.wrapper{
+			/*이미지의 가로 사이즈 * 이미지의 갯수가 이 클래스의 가로 값이 되야한다. */
+			width:3200px;
+			position: relative;
+		}
+
+		.wrapper:after{
+			clear:both; display: block; content: "";
+		}
+		
+
+		.item{
+			position: relative;
+			width: 800px;
+			float: left;
+		}
+
+		.item .img img{
+			width: 100%;
+			height: auto;
+
+		}
+		.item .text{
+			font-size: 0.9em;
+			position: absolute;
+			right: 10%;
+			bottom:10%;
+		}
+
+
+		
+
+		/*pagebutton*/
+		.theme .controls {
+			
+		}
+
+		.theme .controls .pagination{
+			margin-top:10px;
+			text-align: center;
+		}
+
+		.theme .controls .pagination .page{
+			display: inline-block;
+		}
+
+		.theme .controls .pagination .page span{
+			display: block;
+			width: 10px;
+			height: 10px;
+			margin:0;
+			filter: Alpha(Opacity=50);
+			opacity: 0.5;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			background-color: transparent;
+			border: 1px solid #ffffff;
+			cursor: pointer;
+		}
+
+		.theme .controls .pagination .active span{
+			background: #fff;
+			filter: Alpha(Opacity=100);
+			opacity: 1;
+		}
+
+		.theme .controls .buttons{
+		}
+
+		.theme .controls .buttons .prev, .theme .controls .buttons .next{
+			background: url(http://www.isanfasteners.com/common/images/slider/arrows.png) no-repeat;
+			width: 30px;
+			height: 75px;
+			font-size: 0;
+			position: absolute;
+			top: 50%;
+			margin-top: -40px;
+		}
+		
+		.theme .controls .buttons .prev{
+			left: 0;
+			cursor: pointer;
+		}
+		
+		.theme .controls .buttons .next{
+			background-position: -90px 0;
+			right: 0;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<!--
+	참고 사이트 : http://1624bit.com/
+	작업 내용 : 슬라이드 
+	특징 : 1. 자동 슬라이드 
+	           2. 하단 버튼으로 제어 
+	           3. 좌우에 마우스 오버할때 좌 우 버튼이 제공 됨. 
+	           4. 컨텐츠에 마우스 오버할 경우 자동 슬라이드가 멈춤. 
+
+-->
+<div class="theme" >
+	<div class="wrapper-outer">
+		<div class="wrapper">
+			<div class="item">
+				<div class="text">
+					<p>JEJU ISLAND</p>
+				</div>
+				<div class="img">
+					<a href="#"><img src="img/01.jpg"></a>
+				</div>
+			</div>
+			
+			<div class="item">
+				<div class="text">
+					<p>JEJU ISLAND</p>
+				</div>
+				<div class="img">
+					<a href="#"><img src="img/02.jpg"></a>
+				</div>
+			</div>
+			
+			<div class="item">
+				<div class="text">
+					<p>JEJU ISLAND</p>
+				</div>
+				<div class="img">
+					<a href="#"><img src="img/03.jpg"></a>
+				</div>
+			</div>
+
+			<div class="item">
+				<div class="text">
+					<p>JEJU ISLAND</p>
+				</div>
+				<div class="img">
+					<a href="#"><img src="img/04.jpg"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="controls">
+		<div class="buttons">
+			<div class="prev">prev</div>
+			<div class="next">next</div>
+		</div>
+		<div class="pagination">
+			<div class="page active"><span class=""></span></div>
+			<div class="page"><span class=""></span></div>
+			<div class="page"><span class=""></span></div>
+			<div class="page"><span class=""></span></div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	/*
+	
+	1. 자동으로 다음 사진으로 이동 한다. 마지막 사진 일 경우에는 다시 처음 사진으로 돌아간다. 
+	- setInterval로 시간에 맞춰 left 값을 조절하여 움직인다. 
+	- idx값을 이용한다. 
+		- 1초(1000) 마다 움직인다. 
+		idx = 0 일때 idx++ 하여 idx를 1로 만든 후 800에 idx를 곱한 만큼 움직인다 . (-800)
+		1초후, idx = 1에서 2로 ++되고 800 * 2 하여 1600만큼 움직인다. 
+		idx = 4가 되었을땐 idx를 다시 0으로 만들고 처음으로 돌아오게 한다. 
+
+	2. 자동으로 사진으로 이동하지만, 마우스가 오버 되었을때는 자동 애니메이트는 사라지고 마우스를 떼면, 다시 자동 애니메이트를 실행한다. 
+
+	3. 이전 다음 버튼을 제어한다. 
+	- 버튼을 누르면 사진이 한장씩 이동한다.
+	- idx 값 이용. 
+	
+	4. 페이징 
+	- 사진이 넘어갈때(Next,Prev) 같이 이동된다. addClass 로 active를 추가한다. 
+	-  페이징 버튼을 마우스 오버할때 해당 이미지로 이동한다. 
+		- 오토플레이들을 제거한다. 
+		- 해당 페이지에 active를 준다. 기존의 active를 삭제하고 내가 선택한 page에 active를 준다. 
+		- 페이지에 맞는 이미지로 이동한다. index()를 사용한다. 
+	- 페이징 버튼을 마우스 아웃 할때는 다시 원위치로 돌아온다. 
+		- 다시 오토플레이 되게 한다. 동작할 때 다시 내가 active되있는 위치에서 시작하기 위해서 idx에 nowidx(index()로 알아낸 배열) 값을 넣는다. 
+
+
+
+	*/
+
+
+	var idx = 0;
+	var autoNext, autoPrev;
+	var next, prev;
+
+	var nowidx = 0; //page의 index값을 알기 위한 변수
+
+	var auto; // autoNext와 autoPrev를 구별하기 위한 변수
+
+
+	//자동으로 다음 사진으로 넘어가기. 
+	autoNext = setInterval(function(){
+			next();
+		}, 3000
+	);
+
+	//자동으로 이전 사진으로 돌아가기. 
+	// autoPrev = setInterval(function(){
+	// 		prev();
+	// 	}, 3000
+	// );
+
+	//이미지에 마우스 오버 했을때, autoNext 해제한다. 
+	$('.item')
+	.mouseenter(function(){
+		console.log('마우스 오버됨.');
+		clearInterval(autoNext);
+		clearInterval(autoPrev);
+	})
+	.mouseleave(function(){
+		console.log('마우스 아웃됨.');
+		//만약 autoNext가 실행 되고 있을 땐 계속 autoNext를 실행하고 
+		//autoPrev가 실행되고 있을땐 계쏙 autoPrev를 실행해야한다. 
+		//autoNext와 autoPrev어떻게 구분 할 수 있을까?
+		
+		if (auto == 'next'){
+			autoNext = setInterval(function(){
+					next();
+				}, 3000
+			);
+		}else if (auto == 'prev'){
+			autoPrev = setInterval(function(){
+					prev();
+				}, 3000
+			);
+		}
+
+		
+		
+	});
+
+	//다음 버튼 클릭할때 이미지 이동.
+	$('.next').on('click', function(){
+		//next만 실행할 경우, 자동 실행의 autoNext와 겹쳐 속도가 빨라진다. autoNext을 해제 해야함. 
+		clearInterval(autoNext);
+		clearInterval(autoPrev);
+		next();
+		//다시 autoNext를 실행한다 
+		autoNext = setInterval(function(){
+				next();
+			}, 3000
+		);
+	});
+
+	//이전 버튼 클릭할때 이미지 이동.
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//이전 버튼에 문제 생김.....autoNext가 해제되지 않고 계속 작동되고 있어서 이전 버튼이 되지 않았음. clearInterval(autoNext);로 해결함!! 
+	$('.prev').on('click', function(){
+		//prev만 실행할 경우, 자동 실행의 autoPrev와 겹쳐 속도가 빨라진다. autoPrev을 해제 해야함. 
+		clearInterval(autoPrev);
+		clearInterval(autoNext);
+		prev();
+		//다시 autoPrev를 실행한다 
+		autoPrev = setInterval(function(){
+				prev();
+			}, 3000
+		);
+	});
+
+
+	
+
+	//페이징 마우스 롤오버시 해당 이미지로 이동
+	$('.page').
+		mouseenter(function(){
+			clearInterval(autoPrev);
+			clearInterval(autoNext);
+			$('.page').removeClass('active'); //원래 active되어 있던 것을 해제한다. 
+			$(this).addClass('active');  //내가 마우스 오버한 곳에 active를 준다. 
+
+			nowidx = $( '.page' ).index( this ); //인덱스 값을 알아내는 방법
+
+			$('.wrapper').animate(
+				{	
+					left : -800 * nowidx	//이미지의 가로 값 * 내 현재 active =위치 위에서 찾은 인덱스 값
+				},
+				100 //속도
+			);
+
+			idx = nowidx;
+		}
+	).
+		mouseleave(function(){
+			autoNext = setInterval(function(){
+					next();
+				}, 3000
+			);
+		}
+	)
+
+
+
+	//function 지정 
+	//1. 다음 사진으로 넘어가기
+	next = function(){
+		console.log(idx);
+
+		$('.page').removeClass('active');
+		
+		idx++;
+
+		auto = 'next'; // 
+		console.log(auto);
+
+		if(idx === $('.item').length){
+			$('.wrapper').animate(
+				{	
+					left : 0	//이미지의 원래 위치
+				},
+				500 //속도
+			);
+			idx = 0;
+			
+		} else {
+			
+			$('.wrapper').animate(
+				{	
+					left : -800 * idx	//이미지의 가로 값 * idx값
+				},
+				1000 //속도
+			);
+		}
+		$('.page:eq('+ idx +')').addClass('active');
+
+	};  //궁금증 펑션 뒤에 ; 붙이는 것인가.. 안붙이는 것인가.....
+
+
+
+	//2. 이전 사진으로 돌아가기
+	//-  idx = 0 일경우 left : -800 / idx = 1일 경우 left: -1600 (-800 * (idx+1)) / idx = 2일 경우 left:-2400 (-800 *(idx+1))
+	//-  idx가 작아지다 -1이 되는 경우에는 다시 3으로 바꾸고 사진은 다시 처음으로 돌아온다. 
+	prev = function(){
+		$('.page').removeClass('active');
+		$('.page:eq('+ idx +')').addClass('active');
+		
+		console.log(idx);
+		//idx값은 0으로 시작해 작아진다. 
+		idx--;
+		
+		auto = 'prev'; // 
+		console.log(auto);
+
+		
+		//idx값이 0보다 작아질 경우(-1)엔 3으로 바꿔 주어야 한다. 
+		//그리고  idx값에 맞추어 왼쪽으로 이동한다.
+		if(idx < 0){
+			//console.log(idx);
+			
+			idx = $('.item').length-1; // idx를 item(이미지 갯수)와 맞춘다. 
+			$('.wrapper').animate(
+				{	
+					left : 0 //이미지의 원래 값	
+				},
+				500 //속도
+			);
+
+		} else { //idx 값이 0, 1, 2, 3 일 경우에
+			//console.log(idx);
+			$('.wrapper').animate(
+				{	
+					left : - 800 * (idx+1) //이미지의 가로 값 * (idx + 1) 값 
+				},
+				1000 //속도
+			);
+		}
+
+		
+	}
+
+
+</script>
+
+
+
+</body>
+</html>
