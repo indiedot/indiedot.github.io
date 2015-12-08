@@ -10,102 +10,149 @@
 		::-moz-selection { background:#000d86; color:#fff; }
 		
 		body{
-			font-family: 'Montserrat', 'Nanum Gothic',  sans-serif;
+			font-family: 'Nanum Gothic', 'Montserrat', 'Dotum', sans-serif;
 			font-size: small;
 			margin: 0;
 			padding: 0;
+		}
+		@media (min-width: 1px){
+			body{font-family: 'Montserrat', 'Nanum Gothic', 'Dotum', sans-serif;}	
 		}
 		/*dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, hr, p {
 			list-style: none;
 			margin: 0;
 			padding: 0;
 		}*/
-
 		.portfolio{
-			position: relative;
-			padding: 50px 50px 0 50px;
+			padding: 20px;
 		}
-		.mainimg{
+		.portfolio .mainimg{
+		}
+		.portfolio .mainimg img{
 			width: 100%;
-			height: 600px;
-			background: #bbb;
 		}
-
-		.info{
-			border: 1px solid red;
-			padding: 50px;
+		.portfolio .info{
+			background: #eaeaef;
+			padding: 20px;
+			margin: 20px 0; 
 		}
-
-		.info h1{
+		.portfolio .info h1 {
 			font-size: 2em;
+			padding: 0;
+			margin: 0;
 		}
-		.info p{
+		.portfolio .info p{
 			line-height: 2em;
 		}
-		.info dl{
+		.portfolio .info .launch a{
+			color: #000d86;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.portfolio .info dl{
 			line-height: 2em;
 		}
 
-		.info dt{
+		.portfolio .info dt{
 			font-weight: bold;
 			float: left;
 		}
-		.info dd{
+		.portfolio .info dd{
 			margin-left: 50px;
 		}
-		
-		@media (min-width: 900px){
-			.info .col1{
-				float: left;
-				width: 30%
-			}
-			.info .col2{
-				float: left;
-				width: 50%;
-			}
-			.info .col3{
-				float: right;
-				width: 20%
-			}
-			.info .launch{
-				clear: both;
-			}
-		}	
-		
-		
-		button{
+		.portfolio .imglist {
+			margin-bottom: 10px;
+		}
+		.portfolio .imglist ul{
+			padding: 0;
+			margin:0;
+		}
+		.portfolio .imglist li{
+			list-style: none;
+			padding: 0;
+			margin:0;
+		}
+		.portfolio .imglist li img{
+			width: 100%;
+		}
+		.portfolio .btn a{
 			background: transparent;
-			border: none;
-			width: 200px;
-			height: 30px;
+			border: 1px solid #bbb;
 			font-family: 'Montserrat', 'Nanum Gothic',  sans-serif;
 			letter-spacing: 0.2em;
+			color: #555;
 			text-transform: uppercase;
+			cursor: pointer;
+			margin: 10px 0 0 0;
+			display: block;
+			text-align: center;
+			padding: 10px 0;
+			text-decoration: none;
 		}
-		.prevproject{
-			position: absolute;
-			top:40%;
-			left: -80px;
-			-webkit-transform : rotate(-90deg) translateY(0.5em);
-			-ms-transform : rotate(-90deg) translateY(0.5em);
-			transform: rotate(-90deg) translateY(0.5em);
+		@media (min-width: 360px){
+
 		}
-		.nextproject{
-			position: absolute;
-			top:40%;
-			right: -80px;
-			-webkit-transform : rotate(90deg) translateY(0.5em);
-			-ms-transform : rotate(90deg) translateY(0.5em);
-			transform: rotate(90deg) translateY(0.5em);
+		@media (min-width: 800px){
+			.portfolio{
+				position: relative;
+				padding: 50px 50px 0 50px;
+			}
+			
+			
+			@media (min-width: 900px){
+				.info .col1{
+					float: left;
+					width: 30%
+				}
+				.info .col2{
+					float: left;
+					width: 50%;
+				}
+				.info .col3{
+					float: right;
+					width: 20%
+				}
+				.info .launch{
+					clear: both;
+				}
+			}	
+			
+			
+			button{
+				background: transparent;
+				border: none;
+				width: 200px;
+				height: 30px;
+				font-family: 'Montserrat', 'Nanum Gothic',  sans-serif;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+			}
+			.prevproject{
+				position: fixed;
+				top:40%;
+				left: -80px;
+				-webkit-transform : rotate(-90deg) translateY(0.5em);
+				-ms-transform : rotate(-90deg) translateY(0.5em);
+				transform: rotate(-90deg) translateY(0.5em);
+			}
+			.nextproject{
+				position: fixed;
+				top:40%;
+				right: -80px;
+				-webkit-transform : rotate(90deg) translateY(0.5em);
+				-ms-transform : rotate(90deg) translateY(0.5em);
+				transform: rotate(90deg) translateY(0.5em);
+			}
 		}
+		
 	</style>
 </head>
 <body>
 	<!--섬네일에 보여질 내용-->
 	
-	<section class="portfolio">
+	<div class="portfolio">
 		<div class="mainimg">
-			<img src="mainimg" alt="">
+			<img src="./img/portfolio/img01.jpg" alt="">
 		</div>
 		<div class="info">
 			<div class="col1">
@@ -128,13 +175,17 @@
 				</dl>
 			</div>
 		</div>
-		<div class="pofol_img">
+		<div class="imglist">
 			<ul>
-				<li></li>
+				<li><img src="./img/portfolio/img01.jpg" alt=""></li>
+				<li><img src="./img/portfolio/img01.jpg" alt=""></li>
 			</ul>
 		</div>
+		<div class="btn">
+			<a href="#" class="prevproject">Previous Project</a>
+			<a href="#" class="nextproject">Next Project</a>
+		</div>
 	</div>
-	<button class="prevproject">Previous Project</button>
-	<button class="nextproject">Next Project</button>
+	
 </body>
 </html>
