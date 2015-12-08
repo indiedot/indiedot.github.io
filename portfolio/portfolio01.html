@@ -24,6 +24,7 @@
 			padding: 0;
 		}*/
 		.portfolio{
+
 		}
 		.portfolio .mainimg{
 		}
@@ -31,13 +32,23 @@
 			width: 100%;
 		}
 		.portfolio .info{
-			background: #eaeaef;
+			/*background: #eaeaef;*/
 			padding: 20px;
 		}
-		.portfolio .info h1 {
-			font-size: 2em;
-			padding: 0;
+		.portfolio .info h1{			
 			margin: 0;
+			padding: 0;
+		}
+		.portfolio .info h1 .en{
+			font-size: 1.3em;
+			line-height: 1em;
+			letter-spacing: -1px;
+		}
+		.portfolio .info h1 .ko{
+			font-size: 1.2em;
+			font-weight: 900;
+			line-height: 1.2em;
+			letter-spacing: -1px;
 		}
 		.portfolio .info p{
 			line-height: 2em;
@@ -49,6 +60,8 @@
 		}
 		.portfolio .info dl{
 			line-height: 2em;
+			margin: 0;
+			padding: 0;
 		}
 
 		.portfolio .info dt{
@@ -73,6 +86,9 @@
 		.portfolio .imglist li img{
 			width: 100%;
 		}
+		.portfolio .btn {
+			margin-bottom: 20px; 
+		}
 		.portfolio .btn a{
 			background: transparent;
 			border: 1px solid #bbb;
@@ -81,65 +97,96 @@
 			color: #555;
 			text-transform: uppercase;
 			cursor: pointer;
-			margin: 10px 0 0 0;
+			margin: 10px 20px 0 20px;
 			display: block;
 			text-align: center;
 			padding: 10px 0;
 			text-decoration: none;
 		}
-		@media (min-width: 360px){
-
-		}
-		@media (min-width: 800px){
+		@media (min-width: 600px){
 			.portfolio{
-				position: relative;
 				padding: 50px 50px 0 50px;
 			}
-			
-			
-			@media (min-width: 900px){
-				.info .col1{
-					float: left;
-					width: 30%
-				}
-				.info .col2{
-					float: left;
-					width: 50%;
-				}
-				.info .col3{
-					float: right;
-					width: 20%
-				}
-				.info .launch{
-					clear: both;
-				}
-			}	
-			
-			
-			button{
-				background: transparent;
+			.portfolio .info{
+				padding: 40px;
+			}
+			.info .row{
+				position: relative;
+				margin: 20px 0 0 0;
+			}
+			.info .row .col1{
+				margin-right:180px;
+			}
+			.info .row .col1 p{
+				margin:0;
+			}
+			.info .row .col2{
+				position: absolute;
+				top: 0;
+				right:0;
+			}
+			.info .row .col2 dl{
+				margin: 0;
+			}
+			.portfolio .btn a{
 				border: none;
+				font-size: 0.8em;
+				color: #333;
 				width: 200px;
 				height: 30px;
 				font-family: 'Montserrat', 'Nanum Gothic',  sans-serif;
 				letter-spacing: 0.2em;
 				text-transform: uppercase;
 			}
-			.prevproject{
+			.portfolio .btn .prevproject{
 				position: fixed;
-				top:40%;
+				top:45%;
 				left: -80px;
 				-webkit-transform : rotate(-90deg) translateY(0.5em);
 				-ms-transform : rotate(-90deg) translateY(0.5em);
 				transform: rotate(-90deg) translateY(0.5em);
 			}
-			.nextproject{
+
+			.portfolio .btn .nextproject{
 				position: fixed;
-				top:40%;
+				top:45%;
 				right: -80px;
 				-webkit-transform : rotate(90deg) translateY(0.5em);
 				-ms-transform : rotate(90deg) translateY(0.5em);
 				transform: rotate(90deg) translateY(0.5em);
+			}
+			.portfolio .btn a:hover{
+				color:#888;
+				text-decoration: line-through;
+			}
+		}
+		@media (min-width: 600px) and (max-width: 999px){}
+		@media (min-width: 1000px){
+			
+			.info:after{
+				clear: both; display: block; content: "";
+			}
+
+			.info h1{
+				position: relative;
+				float: left;
+				width: 24%;
+				word-wrap:break-word;
+				
+			}
+			.info .row{
+				
+				margin: 0;
+				margin-left:30%;
+			}
+			.info h1:before{
+				content: " "; 
+				position: absolute;
+				width: 1px;
+				height: 100%;
+				top: 0;
+				right:-20px;
+				background-color: #bbb;
 			}
 		}
 		
@@ -150,27 +197,28 @@
 	
 	<div class="portfolio">
 		<div class="mainimg">
-			<img src="./img/portfolio/img01.jpg" alt="">
+			<!-- <img src="./img/portfolio/img01.jpg" alt=""> -->
+			<img src="http://johnkarlsson.se/img/pingdom-modules.png" alt="">
 		</div>
 		<div class="info">
-			<div class="col1">
-				<h1>옥스팜 러브 챌린지</h1>
-			</div>
-			<div class="col2">
-				<p>옥스팜과 MBC 러브 챌린지 프로젝트. 옥스팜 가이드 컬러의 비비드함을 포인트로 잡아 디자인. 다섯명의 러브 챌린지와 옥스팜 컬러를 매칭하여 디자인 하였고, NGO의 특성상 자칫 어두워질 수 있는 분위기를 최대한 밝고 경쾌하게 풀어내려고 하였다.</p>
-				<p class="launch"><a href="http://www.lovechallenge.or.kr/" target="_blank">LAUNCH</a></p>
-			</div>
-			<div class="col3">
-				<dl>
-					<dt>type</dt>
-					<dd>web site</dd>
-					<dt>role</dt>
-					<dd>desgin (100%)</dd>
-					<dd>markup (80%)</dd>
-					<dt>date</dt>
-					<dd>april 2015</dd>
-					
-				</dl>
+			<h1><span class="ko">옥스팜 러브 챌린지</span><span class="en">OXFAM LOVE CHALLENGE</span> </h1>
+			<div class="row">
+				<div class="col1">
+					<p>옥스팜과 MBC 러브 챌린지 프로젝트. 옥스팜 가이드 컬러의 비비드함을 포인트로 잡아 디자인. 다섯명의 러브 챌린지와 옥스팜 컬러를 매칭하여 디자인 하였고, NGO의 특성상 자칫 어두워질 수 있는 분위기를 최대한 밝고 경쾌하게 풀어내려고 하였다.</p>
+					<p class="launch"><a href="http://www.lovechallenge.or.kr/" target="_blank">LAUNCH</a></p>
+				</div>
+				<div class="col2">
+					<dl>
+						<dt>type</dt>
+						<dd>web site</dd>
+						<dt>role</dt>
+						<dd>desgin (100%)</dd>
+						<dd>markup (80%)</dd>
+						<dt>date</dt>
+						<dd>april 2015</dd>
+						
+					</dl>
+				</div>
 			</div>
 		</div>
 		<div class="imglist">
