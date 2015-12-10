@@ -29,15 +29,60 @@
 				<p class="txt">indiv. can be written also as in&lt;div&gt;.</p>
 			</div>
 			<div class="thum">
-				<ul>
-					<li><span><p>qbrix</p><p>Branding</p></span><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><span><p>qbrix</p><p>Branding</p></span><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
-				</ul>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Branding</p>
+							<p class="title">Qbrix BI</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_qbirx.jpg" alt="">
+				</div>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Web Design</p>
+							<p class="title">isan fasteners</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_isan.jpg" alt="">
+				</div>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Branding</p>
+							<p class="title">Qbrix BI</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_qbirx.jpg" alt="">
+				</div>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Web Design</p>
+							<p class="title">isan fasteners</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_isan.jpg" alt="">
+				</div>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Branding</p>
+							<p class="title">Qbrix BI</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_qbirx.jpg" alt="">
+				</div>
+				<div class="item">
+					<div class="overlay">
+						<div>
+							<p class="type">Web Design</p>
+							<p class="title">isan fasteners</p>
+						</div>
+					</div>
+					<img src="img/portfolio/thum_isan.jpg" alt="">
+				</div>
 			</div>
 		</div>
 		<footer>
@@ -45,11 +90,44 @@
 		</footer>
 	</div>
 	<script>
-		$('.thum li').mouseover(function(){
-			$(this).find('span').addClass('overlay');
-		});
-		$('.thum li').mouseout(function(){
-			$(this).find('span').removeClass('overlay');
+		$('.item').mouseenter(function(){
+			
+				$(this).find('.overlay').addClass('over').animate({
+						opacity: 0.8,
+						}, 
+						500
+				);
+
+				$(this).find('.type').animate({
+					'margin-top' : '-20px',
+					'opacity': '1'
+					},
+					500
+				);
+
+				$(this).find('.title').animate({
+					'margin-top' : '0',
+					'opacity': '1'
+					},
+					500
+				);
+				
+			
+			
+			}
+		);
+		$('.item').mouseleave(function(){
+			$(this).find('.overlay').removeClass('over').css('opacity','0');
+
+			$(this).find('.type').css({
+				'margin-top' : '0', 
+				'opacity' : '0'
+			});
+
+			$(this).find('.title').css({
+				'margin-top' : '20px',
+				'opacity' : '0'
+			});
 		});
 	</script>
 </body>

@@ -13,7 +13,16 @@ body{
 }
 
 .indiv header{
-	margin: 40px;
+	background: #fff;
+	padding: 40px;
+	width: 100%;
+	height:100px;
+	position:fixed;
+	z-index: 1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
 }
 .indiv header:after{
 	clear: both; display: block; content:"";
@@ -47,6 +56,8 @@ body{
 	margin: 0;
 	padding: 0;
 	background: #eeeeee;
+	position: relative;
+	top:100px;
 }
 
 .indiv .wrap .main {
@@ -69,32 +80,46 @@ body{
 
 .indiv .wrap .thum {
 }
-.indiv .wrap .thum ul{
-	padding: 0;
-	margin: 0 40px;
-}
-.indiv .wrap .thum li{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	margin-bottom: 40px;
+.indiv .wrap .thum .item{
 	position: relative;
+	margin: 0 40px 40px 40px;
 }
-.indiv .wrap .thum li img{
+.indiv .wrap .thum .item img{
 	width: 100%;
 	display: block;
 }
-.indiv .wrap .thum li span{
-	display: none;
-}
-.indiv .wrap .thum li .overlay{
-	display: block;
-	background: blue;
-	opacity: 0.8;
+.indiv .wrap .thum .item .overlay{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	background: #000;
+	opacity: 0.9;
+	display: none;
+	overflow: hidden;
+}
+.indiv .wrap .thum .item .overlay p{
+	display: block;
+	position: absolute;
+	left: 40px;
+	top: 30%;
+
+}
+.indiv .wrap .thum .item .overlay .type{
+	display: block;
+	font-size: 1em;
+	margin:0;
+	color:#888;
+	opacity:0;
+}
+.indiv .wrap .thum .item .overlay .title{
+	display: block;
+	font-size: 3em;
+	margin-top:20px;
 	color: #fff;
+	opacity:0;
+}
+.indiv .wrap .thum .item .over{
+	display: block;
 }
 
 
