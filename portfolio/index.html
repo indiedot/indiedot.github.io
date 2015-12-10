@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/importfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+	<div class="indiv">
+		<header>
+			<h1>indiv.</h1>
+			<div class="menu">
+				<ul>
+					<li>work</li>
+					<li>about</li>
+					<li>contact</li>
+				</ul>
+			</div>
+		</header>
+		<div class="wrap">
+			<div class="main">
+				<p class="title">indiv.<span> design</span></p>
+				<p class ="txt">HELLO. <br>I'm An Hyemi, a web designer in korea.</p>
+				<p class="txt">indiv. = individual + dot || in&lt;div&gt;.</p>
+				<p class="txt">indiv. can be written also as in&lt;div&gt;.</p>
+			</div>
+			<div class="thum">
+				<ul>
+					<li><span><p>qbrix</p><p>Branding</p></span><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><span><p>qbrix</p><p>Branding</p></span><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+					<li><img src="img/portfolio/thum_qbirx.jpg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+		<footer>
+			<p>copyright by ANHYMI</p>
+		</footer>
+	</div>
+	<script>
+		$('.thum li').mouseover(function(){
+			$(this).find('span').addClass('overlay');
+		});
+		$('.thum li').mouseout(function(){
+			$(this).find('span').removeClass('overlay');
+		});
+	</script>
+</body>
+</html>
