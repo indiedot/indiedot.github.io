@@ -56,13 +56,14 @@ body{
 
 .indiv .wrap{
 	margin: 0;
+	background: #F3F3E6;
 	/*box-shadow: 0 3px 5px #645f42*/
 }
 
 .indiv .main {
 	margin: 0;
 	padding: 40px;
-	background: #BFBAA0 url(../img/logo3.png) no-repeat center;
+	font-size: 2em;
 }
 
 .indiv .main .txt{
@@ -90,7 +91,7 @@ body{
 .indiv .portfolio {
 	margin: 0;
 	padding: 40px;
-	background: #F7F4E7;
+	/*background: #F7F4E7;*/
 }
 .indiv .portfolio .filter{
 	margin:0;
@@ -156,13 +157,13 @@ body{
 }
 
 .indiv .about{
-	background: #FFB731;
+	/*background: #FFB731;*/
 	padding: 50px;
 	color:#312816;
 }
 
 .indiv .contact{
-	background: #232531;
+	/*background: #232531;*/
 	padding: 50px;
 	color:#333;
 }
@@ -192,7 +193,9 @@ body{
 }
 @media (min-width: 600px){
 	
-
+	.indiv .wrap{
+		margin: 0 50px;
+	}
 	.indiv .main{
 		margin: 0 50px;
 	}
