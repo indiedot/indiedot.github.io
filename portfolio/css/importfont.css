@@ -94,3 +94,59 @@
 	font-weight: 300;
 	font-style: italic;
 }
+
+
+
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-bold-webfont.eot);
+	src: url(../font/novecentosanswide-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../font/novecentosanswide-bold-webfont.woff2) format("woff2"), url(../font/novecentosanswide-bold-webfont.woff) format("woff"), url(../font/novecentosanswide-bold-webfont.ttf) format("truetype"), url(../font/novecentosanswide-bold-webfont.svg#novecento_sans_wide_bookbold) format("svg");
+	font-weight: 700;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-demibold-webfont.eot);
+	src: url(../font/novecentosanswide-demibold-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-demibold-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-demibold-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-demibold-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-demibold-webfont.svg#novecento_sans_widedemibold) format("svg");
+	font-weight: 600;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-normal-webfont.eot);
+	src: url(../font/novecentosanswide-normal-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-normal-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-normal-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-normal-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-normal-webfont.svg#novecento_sans_widenormal) format("svg");
+	font-weight: 500;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-medium-webfont.eot);
+	src: url(../font/novecentosanswide-medium-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-medium-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-medium-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-medium-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-medium-webfont.svg#novecento_sans_widemedium) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-light-webfont.eot);
+	src: url(../font/novecentosanswide-light-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-light-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-light-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-light-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-light-webfont.svg#novecento_sans_widelight) format("svg");
+	font-weight: 300;
+	font-style: normal
+}
+
+
