@@ -62,7 +62,7 @@ body{
 .indiv .main {
 	margin: 0;
 	padding: 40px;
-	background: #364659 url(../img/logo3.png) no-repeat center;
+	background: #BFBAA0 url(../img/logo3.png) no-repeat center;
 }
 
 .indiv .main .txt{
@@ -90,7 +90,7 @@ body{
 .indiv .portfolio {
 	margin: 0;
 	padding: 40px;
-	background: #F2F2F2;
+	background: #F7F4E7;
 }
 .indiv .portfolio .filter{
 	margin:0;
@@ -156,13 +156,13 @@ body{
 }
 
 .indiv .about{
-	background: #EC8871;
+	background: #FFB731;
 	padding: 50px;
 	color:#312816;
 }
 
 .indiv .contact{
-	background: #EA5545;
+	background: #232531;
 	padding: 50px;
 	color:#333;
 }
