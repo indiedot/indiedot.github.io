@@ -4,7 +4,7 @@
 
 body{
 	font-family: 'Nanum Gothic', 'Montserrat', 'Dotum', sans-serif;
-	font-size: small;
+	font-size: 20px;
 	margin: 0;
 	padding: 0;
 }
@@ -192,6 +192,10 @@ body{
 	font-size: 0.7em;
 }
 @media (min-width: 600px){
+
+	body{
+		font-size: 14px;
+	}
 	
 	.indiv .wrap{
 		margin: 0 50px;
