@@ -183,10 +183,13 @@ a:hover, a:active {
 	margin-bottom: 5px;
 
 }
-.indiv .contact .submit{
+
+
+input[type=submit]{
 	background: #56523D;
 	color: #f39800;
 	font-size: 1em;
+	-webkit-border-radius:5px;
 	-webkit-appearance: none;
 }
 .indiv .contact .submit:hover{
