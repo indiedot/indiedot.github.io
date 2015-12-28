@@ -19,9 +19,7 @@ a:hover, a:active {
 .indiv .wrap{
 	max-width: 900px;
 	margin:0 auto;
-	margin-right: 50px;
-	margin-left:50px;
-	padding:50px 0;
+	padding: 50px;
 }
 
 /*navigation*/
@@ -127,6 +125,9 @@ a:hover, a:active {
 
 
 .indiv .blog .post{}
+.indiv .blog .post figure img{
+	width: 100%;
+}
 .indiv .blog .post h1{
 	font-size: 1.3em;
 	margin:0;
@@ -147,7 +148,7 @@ a:hover, a:active {
 
 /*contact*/
 .indiv .contact{
-	background: #CCC6A8;
+	background: #dedac6;
 }
 
 
@@ -161,7 +162,7 @@ a:hover, a:active {
 }
 
 .indiv .contact input, .indiv .contact textarea{
-	background: #B7B194;
+	background: #c7c2a9;
 	border: none;
 	border-radius : 5px;
 	padding: 15px;
@@ -194,7 +195,7 @@ a:hover, a:active {
 
 
 .indiv .footer{
-	background: #f39800;
+	background: #fed100;
 }
 
 .indiv .footer p{
