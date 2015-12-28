@@ -187,6 +187,7 @@ a:hover, a:active {
 	background: #56523D;
 	color: #f39800;
 	font-size: 1em;
+	-webkit-appearance: none;
 }
 .indiv .contact .submit:hover{
 	background: #f39800;
