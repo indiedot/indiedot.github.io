@@ -177,7 +177,11 @@ a:hover, a:active {
 .indiv .main {
 	
 	background: #ffc71c;
-	background: url(../img/maintest4.jpg) no-repeat center;
+	background: url(../img/maintest4.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .indiv .main p{
 	text-align: center;
