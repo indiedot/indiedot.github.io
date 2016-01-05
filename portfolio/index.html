@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/importfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
+<body>
+	<div class="indiv">
+		<header>
+			<h1>indiv.</h1>
+			<!-- <img src="img/logo.png" alt="" style="
+    /* border: 1px solid black; */
+    width: 70px;
+    position: absolute;
+    top: 20px;
+"> -->
+			<div class="menu">
+				<ul>
+					<li>work</li>
+					<li>about</li>
+					<li>contact</li>
+				</ul>
+			</div>
+		</header>
+		<div class="wrap">
+			<div class="main">
+				<p style="font-size:3em;">indiv.</p>
+				<!-- <img src="img/logo2.png" alt=""> -->
+				<p>
+					My name is An Hyemi and I am a designer & developer who thrives
+on multi-disciplinary, creative exploration, and making the world
+a better place by creating captivating products.
+				</p>
+				<!-- <div class="txt">
+					<p>Web designer An Hyemi.</p>
+					<p>Welcome to indiv.</p>
+					<p class ="txt">HELLO. <br>I'm An Hyemi, a web designer in korea.</p>
+				</div> -->
+				<!-- <p>안녕하세요. 웹 디자이너 안혜미입니다. 인디브도트는 저의 개인 브랜드 이름입니다. individual + dot</p>
+				독특한 개성있는 시작과 끝
+				dot : 시작과 끝을 의미합니다. 존재하는 것 중에서 가장 단순한 디자인의 요소라고 할 수 있습니다. 또 문장의 마지막엔 점을 찍습니다. 
+				individual : 독특한, 개성 있는 이런 의미를 지니고 있습니다. 
+				제 손에서  -->
+			</div>
+			<div class="portfolio">
+				<h1 class="title">PORTFOLIO</h1>
+				<ul class="filter">
+					<li><a href="#">ALL</a></li>
+					<li><a href="#">WEB DESIGN</a></li>
+					<li><a href="#">BRANDING</a></li>
+					<li><a href="#">EVENT PAGE</a></li>
+					<li><a href="#">INTERACTIVE DESGIN</a></li>
+				</ul>
+				<div class="col">
+					<div class="item pf01">
+						<a href="portfolio01.html">
+						<div class="overlay">
+							<div>
+								<p class="type">Branding</p>
+								<p class="title">Qbrix BI</p>
+							</div>
+						</div>
+						<img src="img/portfolio/thum_qbirx.jpg" alt="">
+						</a>
+					</div>
+					<div class="item pf02">
+						<div class="overlay">
+							<div>
+								<p class="type">Web Design</p>
+								<p class="title">isan fasteners</p>
+							</div>
+						</div>
+						<img src="img/portfolio/thum_isan.jpg" alt="">
+					</div>
+					<div class="item pf03">
+						<div class="overlay">
+							<div>
+								<p class="type">Branding</p>
+								<p class="title">Qbrix BI</p>
+							</div>
+						</div>
+						<img src="img/portfolio/qbrix_main.jpg" alt="">
+					</div>
+				</div>
+				<div class="col">
+					<div class="item pf04">
+						<div class="overlay">
+							<div>
+								<p class="type">Web Design</p>
+								<p class="title">isan fasteners</p>
+							</div>
+						</div>
+						<img src="img/portfolio/isan_pattern2.jpg" alt="">
+					</div>
+					<div class="item pf05">
+						<div class="overlay">
+							<div>
+								<p class="type">Branding</p>
+								<p class="title">Qbrix BI</p>
+							</div>
+						</div>
+						<img src="img/portfolio/img01.jpg" alt="">
+					</div>
+					<div class="item pf06">
+						<div class="overlay">
+							<div>
+								<p class="type">Web Design</p>
+								<p class="title">isan fasteners</p>
+							</div>
+						</div>
+						<img src="img/portfolio/isan_color.jpg" alt="">
+					</div>
+				</div>
+				<button>view more </button>
+			</div>
+			<div class="about">
+				<h1 class="title">ABOUT</h1>
+				<dl>
+					<dt>Name</dt>
+					<dd>안혜미 an hye mi</dd>
+					<dt>birth</dt>
+					<dd>1986.02.14</dd>
+					<dt>location</dt>
+					<dd>대한민국 경기도 성남 Sungnam-si, Kyonggi-do, Korea</dd>
+					<dt>mobile</dt>
+					<dd><a href="tel:010-2794-8876">010-2794-8876</a></dd>
+					<dt>E-mail</dt>
+					<dd><a href="mailto:designer.anhyemi@gmail.com">designer.anhyemi@gmail.com</a></dd>
+					<dt>website</dt>
+					<dd><a href="http://indeidot.blog.me">http://indiedot.blog.me</a></dd>
+					<dt>work area</dt>
+					<dd>Web design</dd>
+					<dd>HTML &amp; CSS (JavaScript&amp;Jquery)</dd>
+					<dd>Adobe photoshop, illustrator, flash</dd>
+				</dl>
+					
+			</div>
+			<div class="contact">
+				<h1 class="title">CONTACT</h1>
+				<p>안녕하세요. 안혜미입니다. 언제든지 연락주세요.</p>
+				<label for="name">이름</label>
+					<input type="text" id="name">
+				<label for="title">이메일</label>
+					<input type="text" id="title">
+				<label for="text">내용</label>
+					<textarea name="" id="text" cols="30" rows="10"></textarea>
+
+			</div>
+		</div>
+		<footer>
+			<p>copyright by ANHYMI</p>
+		</footer>
+	</div>
+	<script>
+		$('.item').mouseenter(function(){
+			
+				$(this).find('.overlay').addClass('over').animate({
+						opacity: 0.8,
+						}, 
+						500
+				);
+
+				$(this).find('.type').animate({
+					'margin-top' : '-20px',
+					'opacity': '1'
+					},
+					500
+				);
+
+				$(this).find('.title').animate({
+					'margin-top' : '0',
+					'opacity': '1'
+					},
+					500
+				);
+				
+			
+			
+			}
+		);
+		$('.item').mouseleave(function(){
+			$(this).find('.overlay').removeClass('over').css('opacity','0');
+
+			$(this).find('.type').css({
+				'margin-top' : '0', 
+				'opacity' : '0'
+			});
+
+			$(this).find('.title').css({
+				'margin-top' : '20px',
+				'opacity' : '0'
+			});
+		});
+	</script>
+</body>
+</html>
