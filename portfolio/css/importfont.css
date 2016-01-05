@@ -1,0 +1,152 @@
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+ 
+ @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+@font-face {
+	font-family: 'Avenir-Heavy';
+	src: url('../font/AvenirLTStd-Heavy.eot');
+	src: url('../font/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Heavy.woff') format('woff'),
+	url('../font/AvenirLTStd-Heavy.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Light';
+	src: url('../font/AvenirLTStd-Light.eot');
+	src: url('../font/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Light.woff') format('woff'),
+	url('../font/AvenirLTStd-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-BookOblique';
+	src: url('../font/AvenirLTStd-BookOblique.eot');
+	src: url('../font/AvenirLTStd-BookOblique.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-BookOblique.woff') format('woff'),
+	url('../font/AvenirLTStd-BookOblique.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Avenir-Book';
+	src: url('../font/AvenirLTStd-Book.eot');
+	src: url('../font/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Book.woff') format('woff'),
+	url('../font/AvenirLTStd-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Medium';
+	src: url('../font/AvenirLTStd-Medium.eot');
+	src: url('../font/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Medium.woff') format('woff'),
+	url('../font/AvenirLTStd-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Oblique';
+	src: url('../font/AvenirLTStd-MediumOblique.eot');
+	src: url('../font/AvenirLTStd-MediumOblique.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-MediumOblique.woff') format('woff'),
+	url('../font/AvenirLTStd-MediumOblique.ttf') format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Avenir-Roman';
+	src: url('../font/AvenirLTStd-Roman.eot');
+	src: url('../font/AvenirLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Roman.woff') format('woff'),
+	url('../font/AvenirLTStd-Roman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Black';
+	src: url('../font/AvenirLTStd-Black.eot');
+	src: url('../font/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-Black.woff') format('woff'),
+	url('../font/AvenirLTStd-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Oblique';
+	src: url('../font/AvenirLTStd-LightOblique.eot');
+	src: url('../font/AvenirLTStd-LightOblique.eot?#iefix') format('embedded-opentype'),
+	url('../font/AvenirLTStd-LightOblique.woff') format('woff'),
+	url('../font/AvenirLTStd-LightOblique.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-bold-webfont.eot);
+	src: url(../font/novecentosanswide-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../font/novecentosanswide-bold-webfont.woff2) format("woff2"), url(../font/novecentosanswide-bold-webfont.woff) format("woff"), url(../font/novecentosanswide-bold-webfont.ttf) format("truetype"), url(../font/novecentosanswide-bold-webfont.svg#novecento_sans_wide_bookbold) format("svg");
+	font-weight: 700;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-demibold-webfont.eot);
+	src: url(../font/novecentosanswide-demibold-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-demibold-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-demibold-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-demibold-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-demibold-webfont.svg#novecento_sans_widedemibold) format("svg");
+	font-weight: 600;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-normal-webfont.eot);
+	src: url(../font/novecentosanswide-normal-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-normal-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-normal-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-normal-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-normal-webfont.svg#novecento_sans_widenormal) format("svg");
+	font-weight: 500;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-medium-webfont.eot);
+	src: url(../font/novecentosanswide-medium-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-medium-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-medium-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-medium-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-medium-webfont.svg#novecento_sans_widemedium) format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+@font-face {
+	font-family: Novecentosanswide;
+	src: url(../font/novecentosanswide-light-webfont.eot);
+	src: url(../font/novecentosanswide-light-webfont.eot?#iefix) format("embedded-opentype"), 
+	url(../font/novecentosanswide-light-webfont.woff2) format("woff2"), 
+	url(../font/novecentosanswide-light-webfont.woff) format("woff"), 
+	url(../font/novecentosanswide-light-webfont.ttf) format("truetype"), 
+	url(../font/novecentosanswide-light-webfont.svg#novecento_sans_widelight) format("svg");
+	font-weight: 300;
+	font-style: normal
+}
+
+
