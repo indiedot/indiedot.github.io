@@ -18,18 +18,20 @@
 	if(!mediaState){
 		$('.item').mouseenter(function(){
 				$(this).find('.overlay').addClass('over').animate({
-						'bottom' : '0'	 
+						'margin-top' : '0'
 					}, 
-					500
+					250
 				);
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.7)')
 			}
 		);
 		$('.item').mouseleave(function(){
 				$(this).find('.overlay').removeClass('over').animate({
-						'bottom' : '-100px'	 
+						'margin-top' : '240px'	 
 					}, 
-					500
+					250
 				);
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 1)')
 			}
 		);
 	}
@@ -121,16 +123,28 @@
 		);
 	}); 
 
+	//세로값 디바이스에 맞춰 자동 조절
+	$(document).ready(function(){
+		// $('.main').css('width', $(window).width() - 50 );
+		$('.cover').css('height', $(window).height());
+		$(window).resize(function() {
+				// $('.main').css('width', $(window).width() - 50 );
+				$('.cover').css('height', $(window).height());
+			}
+		);
+	}); 
+
 
 	$('#ss-form').submit(function(){
 			// // alert('감사합니다!');
 			// $('.thanks').text('완료되었습니다. 감사합니다.'); 
 			$('#ss-submit').attr("value", "완료되었습니다. 감사합니다.");
-			
+			$('.submit').text('완료되었습니다. 감사합니다.');
 			setTimeout(function(){
 				$('#ss-form')[0].reset();
 				// $('.thanks').text(''); 
 				$('#ss-submit').attr("value", "보내기");
+				$('.submit').text('보내기');
 				//$('#ss-submit').val() 의 값만 fadeout 하고 싶음.
 				//$('#ss-submit').fadeOut(100, function(){
 				// 	$(this).attr("value", "보내기");

@@ -1,4 +1,10 @@
-@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+/*@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);*/
+
+.oxfam .cover{
+	background: #26a443 url(../img/portfolio/oxfam_cover.jpg);
+}
+
+
 
 .isesang .main{
 	background: #1b598d url(../img/portfolio/isesang_cover.jpg);
@@ -37,11 +43,13 @@
 
 }
 .info {
-	margin: 0 auto;
-	border:10px solid #333;
+	
+	/*border:10px solid #333;*/
 	padding: 50px;
-	width: 300px;
-	margin-top: 130px;
+	max-width: 350px;
+	margin-top: 80px;
+	margin-left:50px;
+	margin-right:50px;
 	background: #fff;
 	/*background: rgba(255,  255, 255, 0.5);*/
 	font-family: 'Nanum Barun Gothic', sans-serif;
@@ -67,8 +75,8 @@
 }
 .info h1{
 	font-size: 1.5em;
-	line-height: 1.1em;
-	margin-bottom: 100px;
+	line-height: 1.5em;
+	margin-bottom: 60px;
 	text-align: center;
 	color: #000;
 	
@@ -109,8 +117,8 @@
 	padding: 50px;
 	width: 300px;
 	margin-top: 80px;
-	/*background: #fff;
-	background: rgba(255,  255, 255, 0.8);*/
+	background: #fff;
+	background: rgba(255,  255, 255, 0.8);
 	font-family: 'Nanum Barun Gothic', sans-serif;
 }
 .info2 .type{
@@ -196,7 +204,7 @@
 	width: 100%;
 }
 
-.sub{
+/*.sub{
 	
 }
 .sub h1{
@@ -204,7 +212,7 @@
 	width: 24%;
 	font-size: 1.4em;
 
-}
+}*/
 /*.sub h1:before{
 	content: " "; 
 	position: absolute;
@@ -214,7 +222,7 @@
 	right:-20px;
 	background-color: #bbb;
 }*/
-.sub p{
+/*.sub p{
 	float: left;	
 	width: 40%;
 	font-size: 0.8em;
@@ -231,7 +239,7 @@
 	display: block;
 	clear: both; 
 	content: "";
-}
+}*/
 
 .article{
 	margin: 50px 0;
@@ -283,6 +291,13 @@
 	text-transform: uppercase;
 	text-align: center;
 }
+
+.portfolio_contents .btn .backproject{
+	position: fixed;
+	top:0;
+	left: 50%;
+}
+
 .portfolio_contents .btn .prevproject{
 	position: fixed;
 	top:45%;
@@ -367,4 +382,16 @@
 }
 .btn_back.light:hover polygon{
 	fill: #fff;
+}
+
+
+
+
+
+@media (min-width: 1000px){
+	.info {
+		
+		margin: 0 auto;
+		margin-top:80px;
+	}
 }

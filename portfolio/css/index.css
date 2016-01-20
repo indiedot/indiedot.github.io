@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Dosis:800);
+/*@import url(https://fonts.googleapis.com/css?family=Dosis:800);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 
@@ -11,7 +11,8 @@
 @import url("https://googledrive.com/host/0BxmAw3HA4YGCfmN1U19nTHpWVFd2NHA2dXJ4c0FvOEdVcF9mc3ZfcWNyZjRDZ2plMy12SzQ/notokr-medium.css"); 
 @import url("https://googledrive.com/host/0BxmAw3HA4YGCflRiaUxHOFVCcXVfWmpqeERVZ3AzcDAtM2FRV25XclJDRnVrTVVqamZJcEE/notokr-thin.css");
 
-
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+*/
 .notokr-regular { font-family:notokr-regular !important; } 
 .notokr-black { font-family:notokr-black !important; } 
 .notokr-bold { font-family:notokr-bold !important; } 
@@ -33,6 +34,7 @@ body{
 	color: #444;
 	padding: 0;
 	margin: 0; 
+	font-family: 'Nanum Barun Gothic', sans-serif;
 }
 a{
 	color:#000;
@@ -120,7 +122,6 @@ a:hover, a:active {
 	padding: 15px 0;
 	text-transform: uppercase;
 	font-size: 1em;
-	font-family: 'Dosis', sans-serif;
 	border-bottom: 1px solid #ccc;
 	display: block;
 }
@@ -164,8 +165,6 @@ a:hover, a:active {
 	border-top:3px solid #222;
 	display: inline-block;
 	color: #222;
-	/*font-family: 'Montserrat', 'Nanum Gothic', 'Dotum', sans-serif;*/
-	font-family: 'Dosis', sans-serif;
 	letter-spacing:0.2em;
 }
 
@@ -173,6 +172,9 @@ a:hover, a:active {
         color:#ff7800;
     }  
 
+.indiv h1 span{
+	color:#ff7800;
+}
 
 .indiv .main {
 	
@@ -183,25 +185,23 @@ a:hover, a:active {
 	-o-background-size: cover;
 	background-size: cover;
 }
-.indiv .main p{
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	/*font-family: 'Dosis', sans-serif;*/
-	/*font-family: 'Montserrat', sans-serif;*/
+.indiv .main .maintxt{
+	
+	
+	position:absolute;
+	bottom: 0;
+	
+	width: 100%;
 
 	font-size: 1.5em;
-	position: absolute;
-	bottom: 50px;
-	left: 10%;
-	right: 50px;
-	width: 1000px;
+	text-align: center;
+	/*letter-spacing: 2em;*/
+	line-height: 2em;
+	
+
 	color: rgba(0, 0, 0, 0.8);
 	color: #e7e7e7;
-	letter-spacing: 2em;
-	line-height: 4em;
-	text-transform: uppercase;
-	font-family: 'Montserrat';
+	
 }
 
 .indiv .intro{
@@ -264,7 +264,7 @@ a:hover, a:active {
 .indiv .portfolio .item{
 	position: relative;
 	width: 100%;
-	height:240px;
+	height:330px;
 	overflow: hidden;
 	margin-bottom: 50px;
 }
@@ -275,34 +275,50 @@ a:hover, a:active {
 }
 /*pc- overlay*/
 .pc .indiv .portfolio .item .overlay {
-	bottom: -100px;
+	margin-top: 240px;
 }
 
 .pc .indiv .portfolio .item .overlay {
 	position: absolute;
 	left: 0;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(255, 255, 255, 1);
 	z-index: 1;
 	width: 100%;
 	height: 100%;
-	text-align: center;
+	text-align: left;
 	display: block;
 }
 
 .indiv .portfolio .item .overlay .title{
-	font-size: 0.9em;
-	margin: 15px 0 5px 0;
+	font-size: 1em;
+	margin: 20px 30px 10px 30px;
 	padding: 0;
-	color: #fff;
+	color: #000;
 	letter-spacing: 0.05em;
 }
 .indiv .portfolio .item .overlay .type{
-	font-size:0.8em;
-	margin: 0 0 15px 0;
-	padding: 0;
-	color: #aaa;
-
+	font-size:0.7em;
+	margin: 0 30px 50px 30px;
+	padding: 0 0 40px 0;
+	color: #888;
+	position: relative;
 }
+.indiv .portfolio .item .overlay .type:after{
+	background: #888;
+	width: 30px;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	content: "";
+}
+.indiv .portfolio .item .overlay .txt{
+	font-size:0.75em;
+	margin: 0 30px 0 30px;
+	padding: 0;
+	color: #333;
+}
+
 /*thumnail들*/
 .indiv .portfolio .oxfamlove .thum{
 	background: url(../img/portfolio/thum/thum_oxfam.jpg);
@@ -342,19 +358,18 @@ a:hover, a:active {
 }
 
 .indiv .portfolio .item .thum{
-	background-position: center;
+	background-position: top center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	width: 100%;
-	height: 100%;
+	height: 240px;
 }
 
 /*about*/
 .indiv .about h2{
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 .indiv .about dt, .indiv .about dd, .indiv .about li, .indiv .about p{
@@ -363,6 +378,57 @@ a:hover, a:active {
 	padding: 0;
 }
 
+.indiv .about .experience dt{
+	margin-top: 20px;
+	font-size:1em;
+	font-weight: bold;
+
+}
+.indiv .about .experience dd{
+	font-size:0.75em;
+	color: #777;
+}
+.indiv .about .experience dd.date{
+	font-style: italic;
+}
+
+.indiv .about .education dt{
+	margin-top: 20px;
+	font-size:1em;
+	font-weight: bold;
+
+}
+.indiv .about .education dd{
+	font-size:0.75em;
+	color: #777;
+}
+.indiv .about .education dd.date{
+	font-style: italic;
+}
+
+.indiv .about .skill {
+}
+.indiv .about .skill .col{
+	position: relative;
+	margin-bottom: 30px;
+	padding-left:80px;
+}
+.indiv .about .skill i{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size:3em;
+}
+.indiv .about .skill h3{
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+.indiv .about .skill p{
+	font-size: 0.8em;
+	margin: 0;
+	padding: 0;
+}
 .indiv .about button{
 	background: #ccc;
 	outline:none;
@@ -381,26 +447,72 @@ a:hover, a:active {
 }
 
 /*blog*/
-.indiv .blog .post{}
-.indiv .blog .post figure img{
+.indiv .blog .post{
+	margin:30px 0 ; 
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #aaa;
+}
+.indiv .blog .post:after{
+	clear:both; display: block; content: "";
+}
+.indiv .blog .post .figure {
+	float:left;
+	margin-right: 30px;
+}
+.indiv .blog .post .figure img{
 	width: 100%;
 }
 .indiv .blog .post h1{
-	font-size: 1.3em;
-	margin:0;
+	font-size: 1.4em;
+	margin:0 0 10px 0;
 	padding: 0;
 
 }
 .indiv .blog .post .date{
 	font-size: 0.8em;
-	margin:0;
+	margin:10px 0;
 	padding: 0;
 	color: #999;
-	font-family: serif;
+}
+.indiv .blog .post .tag{
+	font-size: 0.7em;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.indiv .blog .post .tag span{
+	background: #eee;
+	padding: 3px 8px;
 }
 .indiv .blog .post .maintext{
+	padding: 0;
+	margin: 0;
 	font-size: 0.8em;
+	line-height:1.8em;
 	color:#666;
+}
+.indiv .blog .post table{
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	font-size: 0.8em;
+	color: #888;
+	margin-bottom: 10px;
+}
+.indiv .blog .post table td{
+	padding: 5px 30px 5px 5px;
+
+}
+.indiv .blog .post dt{
+	float: left;
+	margin-right: 10px;
+}
+.indiv .blog .post .readmore{
+	margin: 20px 0 0 0;
+	font-size: 0.8em;
+	display: inline-block;
+}
+.indiv .blog .post .readmore i{
+	margin-right: 5px;
 }
 
 /*contact*/
@@ -418,14 +530,12 @@ a:hover, a:active {
 .indiv .contact form{
 }
 
-.indiv .contact input, .indiv .contact textarea{
+.indiv .contact input, .indiv .contact textarea, .indiv .contact button{
 	background: #c7c2a9;
 	border: none;
-	border-radius : 5px;
 	padding: 15px;
 	width: 100%;
 	color: #333;
-	font-family: 'Noto Sans Korean', sans-serif;
 	display: block;
 	outline-style:none;
 	 -webkit-box-sizing: border-box;
@@ -457,12 +567,33 @@ input[type=submit]{
 
 .indiv .footer{
 	background: #ffc71c;
+	text-align:center;
 }
 
-.indiv .footer p{
+.indiv .footer .totop{
+	font-size: 0.75em;
+	display: inline-block;
+	margin: 0 0 20px 0;
+	padding-bottom: 0;
+	border-bottom: 1px solid black;
+}
+.indiv .footer .sns{
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.indiv .footer .sns li{
+	font: normal normal normal 14px/1 FontAwesome;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.indiv .footer .copyright{
 	margin: 0;
 	font-size: 0.7em;
+	color: #8c3f00;
 }
+
 
 
 
@@ -511,13 +642,17 @@ input[type=submit]{
 		float: left;
 	}
 	.indiv .portfolio .box{
-	width: 1050px;
+		width: 1050px;
 	}
 	.indiv .portfolio .box:after{
 		clear: both; display: block; content: "";
 	}
 
-
+	.indiv .about .skill .col{
+		float: left;
+		width: 30%;
+		padding-left: 0;
+	}
 }
 
 
