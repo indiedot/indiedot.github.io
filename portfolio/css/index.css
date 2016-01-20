@@ -517,7 +517,7 @@ a:hover, a:active {
 
 /*contact*/
 .indiv .contact{
-	background: #dedac6;
+	background: #eae9e5;
 }
 
 
@@ -531,7 +531,7 @@ a:hover, a:active {
 }
 
 .indiv .contact input, .indiv .contact textarea, .indiv .contact button{
-	background: #c7c2a9;
+	background: #d2d1cd;
 	border: none;
 	padding: 15px;
 	width: 100%;
