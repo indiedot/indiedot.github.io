@@ -22,8 +22,12 @@
 .notokr-thin { font-family:notokr-thin !important; }
 
 
-::selection { background:#ff8a00; color:#363324; }
-::-moz-selection { background:#ff8a00; color:#363324; }
+/*::selection { background:#ff8a00; color:#363324; }
+::-moz-selection { background:#ff8a00; color:#363324; }*/
+
+::selection { background:#fff; color:#ff8a00; }
+::-moz-selection { background:#fff; color:#ff8a00; }
+
 body{
 	/*font-family: 'Dotum', 'Nanum Gothic', 'Noto Sans Korean', sans-serif;
 	font-family:'notokr-regular';
@@ -378,18 +382,44 @@ a:hover, a:active {
 	padding: 0;
 }
 
-.indiv .about .experience dt{
-	margin-top: 20px;
+.indiv .about .experience .row{
+	margin-bottom: 30px;
+}
+.indiv .about .experience .title{
+	position: relative;
+}
+.indiv .about .experience .title:after{
+	position: absolute;
+	bottom:-10px;
+	left: 0;
+	width: 30px;
+	height: 1px;
+	content: "";
+	background: #555;
+}
+.indiv .about .experience h3{
+	margin: 0;
+	padding: 0;
 	font-size:1em;
 	font-weight: bold;
-
 }
-.indiv .about .experience dd{
+.indiv .about .experience .job{
+	font-size: 0.9em;
+	color: #555;
+	margin-bottom: 5px;
+}
+.indiv .about .experience p{
 	font-size:0.75em;
 	color: #777;
 }
-.indiv .about .experience dd.date{
+.indiv .about .experience .date{
 	font-style: italic;
+	margin-bottom: 20px;
+}
+
+
+.indiv .about .experience .client{
+	display: none;
 }
 
 .indiv .about .education dt{
@@ -452,13 +482,7 @@ a:hover, a:active {
 	padding-bottom: 30px;
 	border-bottom: 1px dashed #aaa;
 }
-.indiv .blog .post:after{
-	clear:both; display: block; content: "";
-}
-.indiv .blog .post .figure {
-	float:left;
-	margin-right: 30px;
-}
+
 .indiv .blog .post .figure img{
 	width: 100%;
 }
@@ -594,7 +618,15 @@ input[type=submit]{
 	color: #8c3f00;
 }
 
-
+@media (min-width: 360px){
+	.indiv .blog .post:after{
+		clear:both; display: block; content: "";
+	}
+	.indiv .blog .post .figure {
+		float:left;
+		margin-right: 30px;
+	}
+}
 
 
 
@@ -653,6 +685,28 @@ input[type=submit]{
 		width: 30%;
 		padding-left: 0;
 	}
+	
+	.indiv .about .experience .title{
+		float: left;
+	}
+	.indiv .about .experience .title:after{
+		position: absolute;
+		top:0;
+		left: 200px;
+		width: 1px;
+		height: 40px;
+		content: "";
+		background: #555;
+		clear: both;
+	}
+	.indiv .about .experience .job{
+		margin-left: 250px;
+		margin-bottom: 0;
+	}
+	.indiv .about .experience .category{
+		margin-left: 250px;
+	}
+
 }
 
 
