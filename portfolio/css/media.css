@@ -1,0 +1,104 @@
+/*media query*/
+
+@media (min-width: 360px){
+	/*.blog .post:after{
+		clear:both; display: block; content: "";
+	}
+	.blog .post .figure {
+		float:left;
+		margin-right: 30px;
+	}*/
+}
+
+
+
+@media (min-width: 1000px){
+
+	/*body{
+		font-size: 14px;
+		line-height: 20px;
+	}
+	
+	.header{
+		
+	}
+	.header .menulink{
+		display: none;
+	}
+	.header .nav{
+		display: block;
+		position: relative;
+		float: right;
+		width: auto;
+		top:0;
+		margin:15px 0 0 0;
+		border: none;
+		background: transparent;
+	}
+	.header .nav li{
+		float: left;
+		margin-left:40px;
+		border-bottom: none;
+		font-size: 1.2em;
+	}
+	.header .nav li a{
+		color: #fff;
+	}
+	.scroll .nav {
+		margin: 0;
+	}
+	.scroll .nav li{
+		font-size: 0.9em;
+
+	}
+	.scroll .nav li a{
+		color: #000;
+	}
+	.portfolio .item{
+		width: 300px;
+		margin-bottom:50px;
+		margin-right: 50px;
+		float: left;
+	}
+	.portfolio .box{
+		width: 1050px;
+	}
+	.portfolio .box:after{
+		clear: both; display: block; content: "";
+	}
+
+	.about .skill .col{
+		float: left;
+		width: 30%;
+		padding-left: 0;
+	}
+	
+	.about .experience .title{
+		float: left;
+	}
+	.about .experience .title:after{
+		position: absolute;
+		top:0;
+		left: 200px;
+		width: 1px;
+		height: 40px;
+		content: "";
+		background: #555;
+		clear: both;
+	}
+	.about .experience .job{
+		margin-left: 250px;
+		margin-bottom: 0;
+	}
+	.about .experience .category{
+		margin-left: 250px;
+	}*/
+
+}
+
+
+@media (min-width: 1600px){
+	/*body{
+		font-size:20px;
+	}*/
+}

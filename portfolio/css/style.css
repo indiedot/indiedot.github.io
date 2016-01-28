@@ -1,0 +1,789 @@
+/*guide
+	p의 경우
+	font-size: 0.8em;
+	line-height: 1.8em;
+
+
+*/
+
+/*common*/
+::selection { background:#fff; color:#FFC000; }
+::-moz-selection { background:#fff; color:#FFC000; }
+
+body{
+	font-family: 'notokr-regular', 'Malgun-Gothic', 'AppleSDGothic' ,sans-serif; /*ie8에서는 본고딕이 힌팅이 적용되지 않아서 이상하게 나오니 방법을 찾아야함. */
+	font-size:16px;
+	line-height: 24px;
+	color: #444;
+	padding: 0;
+	margin: 0; 
+}
+a{color:#000;	text-decoration: none;}
+a:hover, a:active {color: #ff7800;}
+
+/*common - LAYOUT*/
+.wrap{
+	max-width: 1000px;
+	overflow: hidden;
+	margin:0 auto;
+	padding: 50px;
+}
+
+/*===============HEADER===============*/
+.header {
+	min-width: 100%;
+	height:80px;
+	position: fixed;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 5;
+	text-align: center;
+	overflow: hidden;
+	background-color: transparent;
+}
+/*header - no scroll*/
+
+
+.headerwrap{
+	max-width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+
+.backwhite{
+	background: #fff;
+}
+
+.scroll .log{
+	height: 30px;
+	overflow: hidden;
+}
+.header .logo{
+	font-size: 2em;
+	margin: 25px 0 0 0;
+	padding: 0;
+	float: left;
+	width: 187px;
+	height: 50px;
+	overflow: hidden;
+	text-indent: -9999px;
+	background: url(../img/logotest.gif) no-repeat;
+	background-size: 100px;
+}
+.header .menulink {
+	background: url(../img/menu.png) no-repeat;
+	background-size: 50px 50px;
+	display: inline-block;
+	text-indent:-9999px;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin: 15px 0 0 0;
+	border: none;
+	outline:0;
+	cursor: pointer;
+}
+.header .nav {
+	position: fixed;
+	left:0;
+	top:80px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	display: none;
+}
+
+.header .nav ul{
+	margin: 0; padding:0;
+}
+
+.header .nav li{
+	list-style: none;
+	margin: 0;
+	padding: 15px 0;
+	text-transform: uppercase;
+	font-size: 1em;
+	border-bottom: 1px solid #ccc;
+	display: block;
+}
+
+.header .on{
+	display: block;
+}
+.header:after{
+	clear:both; display:block; content: "";
+}
+/*scroll header*/
+.scroll {
+	height:50px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.85);
+	
+	/* IE에서 Filter적용을 위해 배경을 지움 */
+	background: transparent !ie;
+	/* 정상적인 Filter적용을 위해 zoom:1을 적용 */
+	zoom:1;
+	/* IE5.5-7 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff, endColorstr=#ccffffff);
+	/* IE8,9 */
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f990000, endColorstr=#7f990000)";
+	
+	border-bottom:1px solid #ccc;
+	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+.scroll .logo{
+	font-size: 1em;
+	height: 30px;
+	background-size: auto 20px;
+	margin-top: 15px;
+}
+.scroll .menulink {
+	background-size: 30px 30px;
+	width: 30px;
+	height: 30px;
+}
+.scroll .nav {
+	top:50px;
+}
+/*scroll header*/
+
+
+
+
+/*===============common - CONTENTS===============*/
+h1.article_title{
+	font-family: 'notokr-thin';
+	font-size: 2em;
+}
+h1.article_title span{color:#ff7800;}
+
+/*===============MAIN===============*/
+.main {
+	background: #ffc71c url(../img/index_cover.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.main .maintxt{
+	position:absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+.main .maintxt h1{
+	position: relative;
+	margin: 0 60px 30px 60px;
+	padding-top: 50px; 
+	font-family: 'Nanum Myeongjo', serif;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	font-weight: normal;
+	word-break: keep-all;
+	color: #e7e7e7;
+}
+.main .maintxt h1:before{
+	display: block;
+	position: absolute;
+	top:0;
+	left: 50%;
+	width: 50px;
+	height: 40px;
+	margin-left: -25px; 
+	background: url(../img/quote.png) no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+    background-position: center bottom;
+    border-top: 1px solid #fff;
+    content: "";
+}
+.main .maintxt .indivdot{
+	padding: 20px 50px;
+	background: rgba(0, 0, 0, 0.5 );
+	font-size: 0.8em;
+	line-height: 1.5em;
+	color: #D2D1CD;
+}
+.main .maintxt .indivdot strong{
+	display: block;
+	font-size: 1.2em;
+}
+.main .maintxt .indivdot strong span{
+	font-size: 0.9em;
+}
+.main .maintxt .indivdot .similar{
+	display: block;
+	font-size: 0.9em;
+	font-style: italic;
+	color: #aaa;
+}
+
+
+
+
+
+/*===============PORTFOLIO===============*/
+.portfolio{}
+/*filter*/
+.portfolio .filter{
+	margin: 30px 0;
+	padding: 0;
+}
+.portfolio .filter li{
+	list-style: none;
+	float: left;
+	margin: 0;
+	margin-right:15px;
+	padding: 0;
+	cursor: pointer;
+}
+.portfolio .filter .on{color: #ff7800;}
+.portfolio .filter .on:hover{text-decoration: underline;}
+.portfolio .filter:after{
+	clear: both; display: block; content: "";
+}
+/*item*/
+.portfolio h2{display: none;}
+.portfolio .item{
+	position: relative;
+	width: 100%;
+	height:330px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+/*overlay*/
+.portfolio .item .overlay {
+	display: block;
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin-top: 240px;
+	background: rgba(255, 255, 255, 1);
+	text-align: left;
+	z-index: 1;
+}
+.portfolio .item .overlay .title{	
+	margin: 20px 30px 10px 30px;
+	padding: 0;
+	color: #000;
+	letter-spacing: 0.05em;
+}
+.portfolio .item .overlay .type{
+	position: relative;
+	margin: 0 30px 50px 30px;
+	padding: 0 0 40px 0;
+	font-size:0.7em;
+	color: #888;
+}
+.portfolio .item .overlay .type:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 1px;
+	background: #888;
+	content: "";
+}
+.portfolio .item .overlay .txt{
+	margin: 0 30px 0 30px;	
+	padding: 0;
+	font-size:0.75em;
+	color: #333;
+}
+
+/*thumnail들*/
+.portfolio .oxfamlove .thum{background: url(../img/portfolio/thum/thum_oxfam.jpg);}
+.portfolio .artisee .thum{background: url(../img/portfolio/thum/thum_artisee.jpg);}
+.portfolio .pgm .thum{background: url(../img/portfolio/thum/thum_pgm.jpg);}
+.portfolio .isan .thum{background: url(../img/portfolio/thum/thum_isan.jpg);}
+.portfolio .ezen .thum{background: url(../img/portfolio/thum/thum_ezen.jpg);}
+.portfolio .4times .thum{background: url(../img/portfolio/thum/thum_4times.jpg);}
+.portfolio .isesang .thum{background: url(../img/portfolio/thum/thum_isesang.jpg);}
+.portfolio .newgen .thum{background: url(../img/portfolio/thum/thum_newgen.jpg);}
+.portfolio .qbrix .thum{background: url(../img/portfolio/thum/thum_qbrix.jpg);}
+.portfolio .dhl .thum{background: url(../img/portfolio/thum/thum_dhl.jpg);}
+
+.portfolio .item .thum{
+	height: 240px;
+	background-position: top center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+/*===============ABOUT===============*/
+.about{background: #eee;}
+.about h2{
+	font-size: 1.2em;
+}
+/*have*/
+.about .have{
+	margin: 0;
+	padding:0; 
+}
+.about .have li{
+	list-style: square url("../img/list01.png");
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+/*experience*/
+.about .experience .row{
+	margin-bottom: 30px;
+}
+/*.about .experience p{
+	font-size:0.75em;
+	color: #777;
+}*/
+.about .experience .title{
+	position: relative;
+}
+.about .experience .title:after{
+	position: absolute;
+	bottom:-10px;
+	left: 0;
+	width: 30px;
+	height: 1px;
+	background: #555;
+	content: "";	
+}
+.about .experience h3{
+	margin: 0;
+	padding: 0;
+	font-size:1em;
+}
+.about .experience .job{
+	margin-bottom: 5px;
+	font-size: 0.9em;
+	color: #555;
+}
+
+.about .experience .date{
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+
+.about .experience .client{
+	display: none;
+}
+
+.about .education dt{
+	margin-top: 20px;
+	font-size:1em;
+	font-weight: bold;
+
+}
+.about .education dd{
+	font-size:0.75em;
+	color: #777;
+}
+.about .education dd.date{
+	font-style: italic;
+}
+
+.about .skill {
+}
+.about .skill .col{
+	position: relative;
+	margin-bottom: 30px;
+	padding-left:80px;
+}
+.about .skill i{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size:3em;
+}
+.about .skill h3{
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+.about .skill p{
+	margin: 0;
+	padding: 0;
+}
+.about button{
+	background: #ccc;
+	outline:none;
+	border: none;
+	padding: 20px;
+	color: #333;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius:5px;
+
+}
+.about button:hover{
+	background: #ffc71c;
+	color: #56523D;
+
+}
+
+/*===============BLOG===============*/
+.blog .post{
+	margin:30px 0 ; 
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #aaa;
+}
+
+.blog .post .figure img{
+	width: 100%;
+}
+.blog .post h1{
+	font-size: 1.4em;
+	line-height: 1.2em;
+	margin:0 0 10px 0;
+	padding: 0;
+
+}
+.blog .post .date{
+	margin:10px 0;
+	padding: 0;
+	color: #999;
+}
+.blog .post .tag{
+	font-size: 0.7em;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+.blog .post .tag span{
+	background: #eee;
+	padding: 3px 8px;
+}
+.blog .post .maintext{
+	padding: 0;
+	margin: 0;
+	line-height: 1.8em;
+	color:#666;
+
+overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 3; /* 라인수 */
+ -webkit-box-orient: vertical;
+ word-wrap:break-word; 
+/* white-space:nowrap*/
+}
+.blog .post table{
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	color: #888;
+	margin-bottom: 10px;
+}
+.blog .post table td{
+	padding: 5px 30px 5px 5px;
+
+}
+.blog .post dt{
+	float: left;
+	margin-right: 10px;
+}
+.blog .post .readmore{
+	margin: 20px 0 0 0;
+	display: inline-block;
+}
+.blog .post .readmore i{
+	margin-right: 5px;
+}
+
+/*===============CONTACT===============*/
+.contact{
+	background: #eae9e5;
+}
+.contact input, .contact textarea, .contact button{
+	display: block;
+	outline-style:none;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	padding: 15px;
+	border: none;
+	background: #d2d1cd;
+}
+.contact form label{
+	display: block;
+	margin-bottom: 5px;
+}
+.contact .submit:hover{
+	background: #f39800;
+	color: #56523D;
+}
+
+
+
+
+
+
+.hide{
+	display: none;
+}
+
+/*===============FOOTER===============*/
+.footer{
+	background: #ffc71c;
+	text-align:center;
+}
+.footer .totop{
+	display: inline-block;
+	margin: 0 0 20px 0;
+	padding-bottom: 0;
+	border-bottom: 1px solid black;
+}
+.footer .sns{
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+.footer .sns li{
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font: normal normal normal 14px/1 FontAwesome;
+}
+.footer .copyright{
+	margin: 0;
+	color: #8c3f00;
+}
+
+
+
+/*==============portfolio - 상세 페이지==============*/
+/*cover - background*/
+.oxfam .cover{background: #26a443 url(../img/portfolio/oxfam_cover.jpg);}
+.isesang .cover{background: #1b598d url(../img/portfolio/isesang_cover.jpg);}
+.qbrix .cover{background: #1b598d url(../img/portfolio/qbrix_cover.jpg);}
+.dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);}
+.samsung .cover{background: #e24444 url(../img/portfolio/samsung_cover.jpg);}
+
+.portfolio_contents .main{
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+.portfolio_contents .cover{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+.portfolio_contents .info {
+	
+	/*border:10px solid #333;*/
+	padding: 50px;
+	max-width: 350px;
+	margin-top: 80px;
+	margin-left:50px;
+	margin-right:50px;
+	background: #fff;
+	/*background: rgba(255,  255, 255, 0.5);*/
+}
+.portfolio_contents .info .type{
+	position: relative;
+	font-size: 0.7em;
+	color: #000;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+.portfolio_contents .info .type:after{
+	position: absolute;
+	width: 50px;
+	height: 2px;
+	bottom: 0;
+	left: 50%;
+	margin: 0 0 0 -25px;
+	background: #ffc71c;
+	content: "";
+}
+.portfolio_contents .info h1{
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-bottom: 60px;
+	text-align: center;
+	color: #000;
+	
+}
+.portfolio_contents .info p{
+
+}
+.portfolio_contents .info dl{
+	margin: 0;
+	padding:0;  
+	font-size: 0.7em;
+	line-height: 1.5em;
+}
+.portfolio_contents .info dt{
+	font-weight: bold;
+	float: left;
+}
+.portfolio_contents .info dd{
+
+}
+.portfolio_contents .info .launch{
+	margin:30px 0 0 0;
+
+}
+.portfolio_contents .info .launch a{
+	font-size: 0.7em;
+	color: #888;
+	font-weight: bold;
+}
+
+.portfolio_contents .info .launch a:hover{
+	color: #ffac1c;
+	text-decoration: underline;
+}
+
+.portfolio_contents .article{
+	margin: 50px 0;
+	text-align: center;
+}
+.portfolio_contents .article h2{
+	position: relative;
+	padding: 0;
+	margin: 0 0 40px 0;
+	font-size: 1.2em; 
+
+}
+.portfolio_contents .article h2:after{
+	position: absolute;
+	left: 50%;
+	bottom: -15px;
+	width: 30px;
+	height: 1px;
+	background: #ffc71c; 
+	content: "";
+	margin: 0 0 0 -15px;
+}
+.portfolio_contents .article p{
+
+	margin: 0; 
+	margin-bottom: 50px;
+}
+
+.portfolio_contents .article img{
+	width: 100%;
+}
+.portfolio_contents .article:after{
+	display: block;
+	clear: both; 
+	content: "";
+}
+.portfolio_contents .btn a{
+	border: none;
+	font-size: 0.7em;
+	color: #333;
+	width: 200px;
+	height: 10px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.portfolio_contents .btn .backproject{
+	position: fixed;
+	top:0;
+	left: 50%;
+}
+
+.portfolio_contents .btn .prevproject{
+	position: fixed;
+	top:45%;
+	left: -90px;
+	-webkit-transform : rotate(-90deg) translateY(0.5em);
+	-ms-transform : rotate(-90deg) translateY(0.5em);
+	transform: rotate(-90deg) translateY(0.5em);
+}
+
+.portfolio_contents .btn .nextproject{
+	position: fixed;
+	top:45%;
+	right: -90px;
+	-webkit-transform : rotate(90deg) translateY(0.5em);
+	-ms-transform : rotate(90deg) translateY(0.5em);
+	transform: rotate(90deg) translateY(0.5em);
+}
+.portfolio_contents .btn a:hover{
+	color:#888;
+	text-decoration: line-through;
+}
+.back{
+	position: absolute;
+	z-index: 1;
+	top:50px;
+	left: 50%;
+	width: 1000px;
+	margin-left: -500px;
+	text-align: right;
+}
+
+.back2{
+	position: absolute;
+	z-index: 1;
+	top:50px;
+	padding: 0 50px;
+	max-width: 1000px;
+	text-align: left;
+}
+
+.btn_back{
+	display: inline-block;
+	width: 25px;
+	height:25px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+/*밝은 배경용*/
+.btn_back.dark{
+	border: 3px solid #333;
+}
+.btn_back.dark polygon{
+	fill:#333;
+}
+.btn_back.dark:hover{
+	background: #333;
+	border: 3px solid #333;
+}
+.btn_back.dark:hover polygon{
+	fill: #fff;
+}
+/*어두운 배경용*/
+.btn_back.light{
+	border: 3px solid #fff;
+}
+.btn_back.light polygon{
+	fill:#fff;
+}
+.btn_back.light:hover{
+	background: #333;
+	border: 3px solid #333;
+}
+.btn_back.light:hover polygon{
+	fill: #fff;
+}
