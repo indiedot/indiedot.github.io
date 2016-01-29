@@ -62,28 +62,29 @@ a:hover, a:active {color: #ff7800;}
 	overflow: hidden;
 }
 .header .logo{
-	font-size: 2em;
+	float: left;
+	overflow: hidden;
+	width: 181px;
+	height: 30px;
 	margin: 25px 0 0 0;
 	padding: 0;
-	float: left;
-	width: 187px;
-	height: 50px;
-	overflow: hidden;
+	background: url(../img/logo_indiv.gif) no-repeat; 
+	/*원래 사이즈 : 362 60*/
+	background-size: 100%;
 	text-indent: -9999px;
-	background: url(../img/logotest.gif) no-repeat;
-	background-size: 100px;
 }
 .header .menulink {
-	background: url(../img/menu.png) no-repeat;
-	background-size: 50px 50px;
 	display: inline-block;
-	text-indent:-9999px;
-	width: 50px;
-	height: 50px;
 	float: right;
-	margin: 15px 0 0 0;
+	width: 30px;
+	height: 30px;
+	margin: 25px 0 0 0;
+	padding: 0;
 	border: none;
 	outline:0;
+	background: url(../img/menu.png) no-repeat;
+	background-size: 100%;
+	text-indent:-9999px;
 	cursor: pointer;
 }
 .header .nav {
@@ -135,18 +136,17 @@ a:hover, a:active {color: #ff7800;}
 	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-	background: #3c3c3c;
 }
 .scroll .logo{
-	font-size: 1em;
-	height: 30px;
-	background-size: auto 20px;
+	width: 120px;
+	height: 20px;
 	margin-top: 15px;
 }
 .scroll .menulink {
-	background-size: 30px 30px;
-	width: 30px;
-	height: 30px;
+	margin-top: 15px;
+	width: 20px;
+	height: 20px;
+	background-size: 100%;
 }
 .scroll .nav {
 	top:50px;
@@ -186,7 +186,7 @@ h1.article_title span{color:#ff7800;}
 	line-height: 1.4em;
 	font-weight: normal;
 	word-break: keep-all;
-	color: #e7e7e7;
+	color: #fff;
 }
 .main .maintxt h1:before{
 	display: block;
