@@ -677,7 +677,7 @@ overflow: hidden;
 
 /*article*/
 .porfol_article{
-	margin-bottom:50px;
+	margin-bottom:100px;
 	text-align: center;
 }
 .porfol_article h2{
@@ -686,6 +686,7 @@ overflow: hidden;
 	font-family:'AppleSDGothicNeo-Light';
 	font-weight: normal;
 	font-size:1.8em;
+	line-height: 1.3em;
 	color:#888;
 }
 .porfol_article h2:after{

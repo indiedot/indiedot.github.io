@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="../css/style.css" rel="stylesheet" type="text/css">
 	<link href="../css/importfont.css" rel="stylesheet" type="text/css">
@@ -12,93 +12,48 @@
 </head>
 <body>
 	<div class="indiv">
-		<div class="header">
-			<h1 class="logo">indiv.</h1>
-			<button type="button" class="menulink">메뉴</button>
-			<nav class="nav">
-				<ul>
-					<li class="menuwork"><a href="">work</a></li>
-					<li class="menuabout"><a href="">about</a></li>
-					<li class="menublog"><a href="">blog</a></li>
-					<li class="menucontact"><a href="">contact</a></li>
-				</ul>
-			</nav>
-		</div>
-		<!--섬네일에 보여질 내용-->
-		
-		<div class="portfolio_contents">
-			<div class="main">
-				<div class="info">
-					<p class="type">web desgin</p>
-					<h1><span class="en">artisee woman class</span></h1>
+		<div class="portfolio_contents artisee">
+			<div class="cover">
+				<div class="porfol_info">
+					<p class="type">웹디자인</p>
+					<h1>artisee woman class</h1>
 					<p>MBC와 OXFAM에서 협력하여 제작하는 후원 사이트. 5명의 LOVE 챌린저들을 통해 다섯가지의 영역에 후원하는 시스템입니다. </p>
 					<dl>
-						<dt>type</dt>
-						<dd>web</dd>
-						<dt>role</dt>
-						<dd>desgin (100%)</dd>
-						<dd>markup (50%)</dd>
-						<dt>date</dt>
-						<dd>march 2015</dd>
+						<dt>종류</dt>
+						<dd>웹</dd>
+						<dt>역할</dt>
+						<dd>디자인 (100%)</dd>
+						<dd>마크업 (50%)</dd>
+						<dt>일자</dt>
+						<dd>2015년 3월</dd>
 						
 					</dl>
-					<p class="launch"><a href="http://womanclass.co.kr/" target="_blank">LAUNCH</a></p>
+					<a href="http://womanclass.co.kr" target="_blank" class="launch"><i class="fa fa-external-link"></i> 바로가기</a>
 				</div>
 			</div>
-			<div>
-				
-				<div class="wrap">
-					<div class="article">
-						<h2>프로젝트 내용</h2>
-						<p>MBC와 OXFAM에서 협력하여 제작하는 후원 사이트. 5명의 LOVE 챌린저들을 통해 다섯가지의 영역에 후원하는 시스템입니다. </p>
-					</div>
-					<div class="col1">
-						<div class="total">
-						<img src="img/portfolio/artisee_total.png" alt="">
-					</div>
-					<!-- <div class="sub">
-						<h1><span class="en">MBC 글로벌 나눔 프로젝트 LOVE 챌린지</span></h1>
-						<p>MBC와 OXFAM에서 협력하여 제작하는 후원 사이트. 5명의 LOVE 챌린저들을 통해 다섯가지의 영역에 후원하는 시스템입니다. </p>
-						<dl>
-							<dt>type</dt>
-							<dd>web</dd>
-							<dt>role</dt>
-							<dd>desgin (100%)</dd>
-							<dd>markup (50%)</dd>
-							<dt>date</dt>
-							<dd>april 2015</dd>
-							
-						</dl>
-					</div> -->
-					
-					<div class="article">	
-						<h2>후원의 시각화</h2>
-						<p>다섯명의 스타와 그들이 각자 맡고 있는 5가지의 후원 영역을 옥스팜 가이드 컬러와 매치하여 디자인 하였습니다.</p>
-						<p>후원 수혜자를 가시적인 그래프 및 수치로 제시하여 후원금의 이용을 보여줍니다. </p>
-					</div>
-						<img src="img/portfolio/oxfam_01.png" alt="">
-					</div>
+			<div class="wrap">
+				<div class="porfol_article">
+					<h2>프로젝트 내용</h2>
+					<p>MBC와 OXFAM에서 협력하여 제작하는 후원 사이트. 5명의 LOVE 챌린저들을 통해 다섯가지의 영역에 후원하는 시스템입니다. </p>
+					<img src="../img/portfolio/artisee_total.png" alt="">
 				</div>
 			</div>
-			<div></div>
 			<div class="btn">
 				<a href="#" class="prevproject">Previous Project</a>
 				<a href="#" class="nextproject">Next Project</a>
 			</div>
 		</div>
-
 		<div class="footer">
 			<div class="wrap">
+				<a href="#" class="totop">맨 위로 가기</a>
 				<ul class="sns">
-					<ul>
-						<li><a href="http://www.behance.net/indiedot/" target="_blank">behance</a></li>
-						<li><a href="https://github.com/indiedot/" target="_blank">github</a></li>
-					</ul>
+					<li><a href="http://www.behance.net/indiedot/" target="_blank"><i class="fa fa-behance-square"></i></a></li>
+					<li><a href="https://github.com/indiedot/" target="_blank"><i class="fa fa-github-alt"></i></a></li>
 				</ul>
-				<p>copyright © 2015 by Anhyemi. All rights reserved.</p>
+				<p class="copyright"><strong>인디브도트</strong> - 이곳의 모든 저작권은 안혜미에게 있습니다. </p>
 			</div>
 		</div>
 	</div>
-	<script src="js/common.js"></script>
+	<script src="../js/common.js"></script>
 </body>
 </html>
