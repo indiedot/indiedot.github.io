@@ -527,6 +527,7 @@ overflow: hidden;
 .contact input, .contact textarea, .contact button{
 	display: block;
 	outline-style:none;
+	-webkit-appearance: none;
 	width: 100%;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -541,6 +542,7 @@ overflow: hidden;
 	margin-bottom: 5px;
 }
 .contact .submit{
+	background: #AFAEA9;
 	font-size: 1em;
 }
 .contact .submit:hover{
