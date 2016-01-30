@@ -11,12 +11,13 @@
 ::-moz-selection { background:#fff; color:#FFC000; }
 
 body{
+	padding: 0;
+	margin: 0; 
 	font-family: 'notokr-regular', 'Malgun-Gothic', 'AppleSDGothic' ,sans-serif; /*ie8에서는 본고딕이 힌팅이 적용되지 않아서 이상하게 나오니 방법을 찾아야함. */
 	font-size:16px;
 	line-height: 24px;
+	word-break:keep-all;
 	color: #444;
-	padding: 0;
-	margin: 0; 
 }
 a{color:#000;	text-decoration: none;}
 a:hover, a:active {color: #ff7800;}
@@ -158,10 +159,16 @@ a:hover, a:active {color: #ff7800;}
 
 /*===============common - CONTENTS===============*/
 h1.article_title{
-	font-family: 'notokr-thin';
-	font-size: 2em;
+	font-family: 'notokr-light';
+	font-size: 1.5em;
+	font-weight: normal;
 }
 h1.article_title span{color:#ff7800;}
+
+p.article_txt{
+	font-family: 'Nanum Myeongjo';
+	color:#888;
+}
 
 /*===============MAIN===============*/
 .main {
@@ -239,8 +246,9 @@ h1.article_title span{color:#ff7800;}
 	list-style: none;
 	float: left;
 	margin: 0;
-	margin-right:15px;
+	margin-right:10px;
 	padding: 0;
+	font-size: 0.8em;
 	cursor: pointer;
 }
 .portfolio .filter .on{color: #ff7800;}
@@ -253,37 +261,42 @@ h1.article_title span{color:#ff7800;}
 .portfolio .item{
 	position: relative;
 	width: 100%;
-	height:330px;
+	height:200px;
 	overflow: hidden;
 	margin-bottom: 50px;
+}
+.portfolio .item a{
+	display: block;
 }
 /*overlay*/
 .portfolio .item .overlay {
 	display: block;
 	position: absolute;
+	z-index: 1;
 	top:0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	margin-top: 240px;
-	background: rgba(255, 255, 255, 1);
+	margin-top: 100px;
+	background: rgba(255, 255, 255, 0.7);
 	text-align: left;
-	z-index: 1;
+	word-break:keep-all;
 }
 .portfolio .item .overlay .title{	
-	margin: 20px 30px 10px 30px;
+	margin: 20px 20px 10px 20px;
 	padding: 0;
+	font-size: 1em;
+	line-height: 1.3em;
 	color: #000;
-	letter-spacing: 0.05em;
 }
 .portfolio .item .overlay .type{
 	position: relative;
-	margin: 0 30px 50px 30px;
-	padding: 0 0 40px 0;
-	font-size:0.7em;
+	margin: 0 20px 20px 20px;
+	padding: 0 0 20px 0;
+	font-size:0.8em;
 	color: #888;
 }
-.portfolio .item .overlay .type:after{
+.portfolio .item .overlay .type.test:after{
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -293,10 +306,12 @@ h1.article_title span{color:#ff7800;}
 	content: "";
 }
 .portfolio .item .overlay .txt{
-	margin: 0 30px 0 30px;	
+	margin: 0 20px 0 20px;	
 	padding: 0;
-	font-size:0.75em;
+	font-size:0.8em;
+	line-height: 1.4em;
 	color: #333;
+
 }
 
 /*thumnail들*/
@@ -312,7 +327,7 @@ h1.article_title span{color:#ff7800;}
 .portfolio .dhl .thum{background: url(../img/portfolio/thum/thum_dhl.jpg);}
 
 .portfolio .item .thum{
-	height: 240px;
+	height: 200px;
 	background-position: top center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -442,7 +457,7 @@ h1.article_title span{color:#ff7800;}
 	width: 100%;
 }
 .blog .post h1{
-	font-size: 1.4em;
+	font-size: 1.2em;
 	line-height: 1.2em;
 	margin:0 0 10px 0;
 	padding: 0;
@@ -451,6 +466,7 @@ h1.article_title span{color:#ff7800;}
 .blog .post .date{
 	margin:10px 0;
 	padding: 0;
+	font-size: 0.7em;
 	color: #999;
 }
 .blog .post .tag{
@@ -466,6 +482,7 @@ h1.article_title span{color:#ff7800;}
 .blog .post .maintext{
 	padding: 0;
 	margin: 0;
+	font-size: 0.9em;
 	line-height: 1.8em;
 	color:#666;
 
@@ -519,6 +536,9 @@ overflow: hidden;
 	display: block;
 	margin-bottom: 5px;
 }
+.contact .submit{
+	font-size: 1em;
+}
 .contact .submit:hover{
 	background: #f39800;
 	color: #56523D;
@@ -540,12 +560,13 @@ overflow: hidden;
 }
 .footer .totop{
 	display: inline-block;
-	margin: 0 0 20px 0;
-	padding-bottom: 0;
+	margin: 0 0 15px 0;
+	padding: 0;
 	border-bottom: 1px solid black;
+	font-size: 0.8em;
 }
 .footer .sns{
-	margin: 0 0 10px 0;
+	margin: 0 0 15px 0;
 	padding: 0;
 }
 .footer .sns li{
@@ -557,6 +578,7 @@ overflow: hidden;
 }
 .footer .copyright{
 	margin: 0;
+	font-size: 0.7em;
 	color: #8c3f00;
 }
 
