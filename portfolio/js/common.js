@@ -117,10 +117,10 @@
 	//세로값 디바이스에 맞춰 .main, .cover 자동 조절
 	$(document).ready(function(){
 		// $('.main').css('width', $(window).width() - 50 );
-		$('.main, .cover').css('height', $(window).height());
+		$('.main').css('height', $(window).height());
 		$(window).resize(function() {
 				// $('.main').css('width', $(window).width() - 50 );
-				$('.main, .cover').css('height', $(window).height());
+				$('.main').css('height', $(window).height());
 			}
 		);
 	}); 

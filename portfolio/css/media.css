@@ -1,5 +1,4 @@
 /*media query*/
-
 @media (min-width: 360px){
 	/*.blog .post:after{
 		clear:both; display: block; content: "";
