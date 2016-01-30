@@ -13,7 +13,7 @@
 body{
 	padding: 0;
 	margin: 0; 
-	font-family: 'notokr-regular', 'Malgun-Gothic', 'AppleSDGothic' ,sans-serif; /*ie8에서는 본고딕이 힌팅이 적용되지 않아서 이상하게 나오니 방법을 찾아야함. */
+	font-family: 'nanum gothic','notokr-regular', 'Malgun-Gothic', 'AppleSDGothic' ,sans-serif; /*ie8에서는 본고딕이 힌팅이 적용되지 않아서 이상하게 나오니 방법을 찾아야함. */
 	font-size:16px;
 	line-height: 24px;
 	word-break:keep-all;
@@ -159,11 +159,15 @@ a:hover, a:active {color: #ff7800;}
 
 /*===============common - CONTENTS===============*/
 h1.article_title{
-	font-family: 'notokr-light';
-	font-size: 1.5em;
+	/*font-family: 'notokr-light';*/
+	margin: 0;
+	padding: 0;
+	font-size: 2em;
 	font-weight: normal;
 }
-h1.article_title span{color:#ff7800;}
+h1.article_title span{
+	color:#ff9900;
+}
 
 p.article_txt{
 	font-family: 'Nanum Myeongjo';
@@ -540,7 +544,7 @@ overflow: hidden;
 	font-size: 1em;
 }
 .contact .submit:hover{
-	background: #f39800;
+	background: #ffc71c;
 	color: #56523D;
 }
 

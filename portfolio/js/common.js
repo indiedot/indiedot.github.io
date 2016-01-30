@@ -14,27 +14,29 @@
 	}
 	
 	
-	//포트폴리오 섬네일 모션
-	// if(!mediaState){
-	// 	$('.item').mouseenter(function(){
-	// 			$(this).find('.overlay').addClass('over').animate({
-	// 					'margin-top' : '0'
-	// 				}, 
-	// 				250
-	// 			);
-	// 			$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.7)')
-	// 		}
-	// 	);
-	// 	$('.item').mouseleave(function(){
-	// 			$(this).find('.overlay').removeClass('over').animate({
-	// 					'margin-top' : '240px'	 
-	// 				}, 
-	// 				250
-	// 			);
-	// 			$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 1)')
-	// 		}
-	// 	);
-	// }
+	//포트폴리오 섬네일 모션 - pc일 경우에만 작
+	if(!mediaState){
+		$('.item').mouseenter(function(){
+				$(this).find('.overlay').animate({
+						'margin-top' : '0'
+					}, 
+					250
+				);
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.9)');
+				$(this).find('.type').addClass('test');
+			}
+		);
+		$('.item').mouseleave(function(){
+				$(this).find('.overlay').animate({
+						'margin-top' : '100px'	 
+					}, 
+					250
+				);
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.7)');
+				$(this).find('.type').removeClass('test');
+			}
+		);
+	}
 
 
 	var idx = 0;
