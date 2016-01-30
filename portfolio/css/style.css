@@ -688,6 +688,8 @@ overflow: hidden;
 	margin: 0 0 40px 0;
 	font-family:'AppleSDGothicNeo-Light';
 	font-weight: normal;
+	font-size:1.8em;
+	color:#888;
 }
 .porfol_article h2:after{
 	position: absolute;
@@ -707,18 +709,29 @@ overflow: hidden;
 	max-width:1000px;
 }
 /*btn*/
+.btn{
+	position: fixed;
+	top:80%;
+	right: 0;
+	height: 50px;
+	margin-right: -80px;
+	-webkit-transform : rotate(-90deg) translateY(0.5em);
+	-ms-transform : rotate(-90deg) translateY(0.5em);
+	transform: rotate(-90deg) translateY(0.5em);
+}
 .btn a{
 	display: inline;
 	width: 100px;
 	font-family: 'AppleSDGothicNeo-Light';
 	text-align: center;
-	color: #333;
+	color: #333;업
+
 }
 .btn a:hover{
 	color:#000;
 	text-decoration: line-through;
 }
-.btn .backproject{
+/*.btn .backproject{
 	position: fixed;
 	top: 15px;
 	left: 50%;
@@ -741,5 +754,5 @@ overflow: hidden;
 	-webkit-transform : rotate(90deg) translateY(0.5em);
 	-ms-transform : rotate(90deg) translateY(0.5em);
 	transform: rotate(90deg) translateY(0.5em);
-}
+}*/
 
