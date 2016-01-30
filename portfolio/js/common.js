@@ -114,24 +114,13 @@
 		});
 	});
 
-	//세로값 디바이스에 맞춰 자동 조절
+	//세로값 디바이스에 맞춰 .main, .cover 자동 조절
 	$(document).ready(function(){
 		// $('.main').css('width', $(window).width() - 50 );
-		$('.main').css('height', $(window).height());
+		$('.main, .cover').css('height', $(window).height());
 		$(window).resize(function() {
 				// $('.main').css('width', $(window).width() - 50 );
-				$('.main').css('height', $(window).height());
-			}
-		);
-	}); 
-
-	//세로값 디바이스에 맞춰 자동 조절
-	$(document).ready(function(){
-		// $('.main').css('width', $(window).width() - 50 );
-		$('.cover').css('height', $(window).height());
-		$(window).resize(function() {
-				// $('.main').css('width', $(window).width() - 50 );
-				$('.cover').css('height', $(window).height());
+				$('.main, .cover').css('height', $(window).height());
 			}
 		);
 	}); 

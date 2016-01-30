@@ -2,18 +2,20 @@
 	p의 경우
 	font-size: 0.8em;
 	line-height: 1.8em;
-
-
 */
 
+/*import font*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 /*common*/
+
 ::selection { background:#fff; color:#FFC000; }
 ::-moz-selection { background:#fff; color:#FFC000; }
 
 body{
 	padding: 0;
 	margin: 0; 
-	font-family: 'nanum gothic','notokr-regular', 'Malgun-Gothic', 'AppleSDGothic' ,sans-serif; /*ie8에서는 본고딕이 힌팅이 적용되지 않아서 이상하게 나오니 방법을 찾아야함. */
+	font-family: 'AppleSDGothicNeo-Medium', 'Nanum Gothic', 'Malgun-Gothic', sans-serif;
 	font-size:16px;
 	line-height: 24px;
 	word-break:keep-all;
@@ -159,7 +161,7 @@ a:hover, a:active {color: #ff7800;}
 
 /*===============common - CONTENTS===============*/
 h1.article_title{
-	/*font-family: 'notokr-light';*/
+	font-family: 'AppleSDGothicNeo-Light';
 	margin: 0;
 	padding: 0;
 	font-size: 2em;
@@ -598,17 +600,7 @@ overflow: hidden;
 .dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);}
 .samsung .cover{background: #e24444 url(../img/portfolio/samsung_cover.jpg);}
 
-.portfolio_contents .main{
-	overflow: hidden;
-	background-position: center;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-
-}
-.portfolio_contents .cover{
+.cover{
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -618,29 +610,29 @@ overflow: hidden;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
 
-}
-.portfolio_contents .info {
-	
-	/*border:10px solid #333;*/
-	padding: 50px;
+.porfol_info {
+	overflow: hidden;
 	max-width: 350px;
-	margin-top: 80px;
-	margin-left:50px;
+	max-height:550px;
+	margin:0 auto;
+	margin-top:50px;
 	margin-right:50px;
+	margin-left:50px;
+	padding: 30px;
 	background: #fff;
-	/*background: rgba(255,  255, 255, 0.5);*/
 }
-.portfolio_contents .info .type{
+.porfol_info .type{
 	position: relative;
-	font-size: 0.7em;
-	color: #000;
-	padding-bottom: 10px;
-	text-transform: uppercase;
-	font-weight: bold;
+	margin: 0;
+	padding-bottom: 10px; 
 	text-align: center;
+	font-size: 0.8em;
+	color: #555;
+	
 }
-.portfolio_contents .info .type:after{
+.porfol_info .type:after{
 	position: absolute;
 	width: 50px;
 	height: 2px;
@@ -650,169 +642,104 @@ overflow: hidden;
 	background: #ffc71c;
 	content: "";
 }
-.portfolio_contents .info h1{
-	font-size: 1.5em;
-	line-height: 1.5em;
-	margin-bottom: 60px;
+.porfol_info h1{
+	margin: 20px 0 50px 0;
 	text-align: center;
+	line-height: 1.2em;
 	color: #000;
 	
 }
-.portfolio_contents .info p{
-
+.porfol_info p{
+	margin:0;
+	padding:0;
+	word-break: break-word;
 }
-.portfolio_contents .info dl{
-	margin: 0;
+.porfol_info dl{
+	margin: 10px 0 0 0;
 	padding:0;  
-	font-size: 0.7em;
+	font-size: 0.8em;
 	line-height: 1.5em;
+	color: #999;
 }
-.portfolio_contents .info dt{
+.porfol_info dt{
 	font-weight: bold;
 	float: left;
 }
-.portfolio_contents .info dd{
+.porfol_info dd{
 
 }
-.portfolio_contents .info .launch{
+.porfol_info .launch{
+	display: inline-block;
 	margin:30px 0 0 0;
+	color:#444;
 
 }
-.portfolio_contents .info .launch a{
-	font-size: 0.7em;
-	color: #888;
-	font-weight: bold;
+.porfol_info .launch:hover{
+	color: #ffc71c;
 }
 
-.portfolio_contents .info .launch a:hover{
-	color: #ffac1c;
-	text-decoration: underline;
-}
-
-.portfolio_contents .article{
-	margin: 50px 0;
+/*article*/
+.porfol_article{
+	margin-bottom:50px;
 	text-align: center;
 }
-.portfolio_contents .article h2{
+.porfol_article h2{
 	position: relative;
-	padding: 0;
 	margin: 0 0 40px 0;
-	font-size: 1.2em; 
-
+	font-family:'AppleSDGothicNeo-Light';
+	font-weight: normal;
 }
-.portfolio_contents .article h2:after{
+.porfol_article h2:after{
 	position: absolute;
 	left: 50%;
-	bottom: -15px;
+	bottom: -20px;
 	width: 30px;
 	height: 1px;
+	margin-left: -15px;
 	background: #ffc71c; 
 	content: "";
-	margin: 0 0 0 -15px;
 }
-.portfolio_contents .article p{
-
-	margin: 0; 
+.porfol_article p{
 	margin-bottom: 50px;
 }
-
-.portfolio_contents .article img{
+.porfol_article img{
 	width: 100%;
+	max-width:1000px;
 }
-.portfolio_contents .article:after{
-	display: block;
-	clear: both; 
-	content: "";
-}
-.portfolio_contents .btn a{
-	border: none;
-	font-size: 0.7em;
-	color: #333;
-	width: 200px;
-	height: 10px;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
+/*btn*/
+.btn a{
+	display: inline;
+	width: 100px;
+	font-family: 'AppleSDGothicNeo-Light';
 	text-align: center;
+	color: #333;
 }
-
-.portfolio_contents .btn .backproject{
+.btn a:hover{
+	color:#000;
+	text-decoration: line-through;
+}
+.btn .backproject{
 	position: fixed;
-	top:0;
+	top: 15px;
 	left: 50%;
+	margin-left: -50px;
 }
 
-.portfolio_contents .btn .prevproject{
+.btn .prevproject{
 	position: fixed;
 	top:45%;
-	left: -90px;
+	left: -30px;
 	-webkit-transform : rotate(-90deg) translateY(0.5em);
 	-ms-transform : rotate(-90deg) translateY(0.5em);
 	transform: rotate(-90deg) translateY(0.5em);
 }
 
-.portfolio_contents .btn .nextproject{
+.btn .nextproject{
 	position: fixed;
 	top:45%;
-	right: -90px;
+	right: -30px;
 	-webkit-transform : rotate(90deg) translateY(0.5em);
 	-ms-transform : rotate(90deg) translateY(0.5em);
 	transform: rotate(90deg) translateY(0.5em);
 }
-.portfolio_contents .btn a:hover{
-	color:#888;
-	text-decoration: line-through;
-}
-.back{
-	position: absolute;
-	z-index: 1;
-	top:50px;
-	left: 50%;
-	width: 1000px;
-	margin-left: -500px;
-	text-align: right;
-}
 
-.back2{
-	position: absolute;
-	z-index: 1;
-	top:50px;
-	padding: 0 50px;
-	max-width: 1000px;
-	text-align: left;
-}
-
-.btn_back{
-	display: inline-block;
-	width: 25px;
-	height:25px;
-	border-radius: 50%;
-	cursor: pointer;
-}
-/*밝은 배경용*/
-.btn_back.dark{
-	border: 3px solid #333;
-}
-.btn_back.dark polygon{
-	fill:#333;
-}
-.btn_back.dark:hover{
-	background: #333;
-	border: 3px solid #333;
-}
-.btn_back.dark:hover polygon{
-	fill: #fff;
-}
-/*어두운 배경용*/
-.btn_back.light{
-	border: 3px solid #fff;
-}
-.btn_back.light polygon{
-	fill:#fff;
-}
-.btn_back.light:hover{
-	background: #333;
-	border: 3px solid #333;
-}
-.btn_back.light:hover polygon{
-	fill: #fff;
-}
