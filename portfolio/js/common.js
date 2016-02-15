@@ -22,7 +22,7 @@
 					}, 
 					250
 				);
-				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.9)');
+				$(this).find('.overlay').css('background-color',  'rgba(0, 0, 0, 0.9)');
 				$(this).find('.type').addClass('test');
 			}
 		);
@@ -32,7 +32,7 @@
 					}, 
 					250
 				);
-				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.7)');
+				$(this).find('.overlay').css('background-color',  'rgba(0, 0, 0, 0.7)');
 				$(this).find('.type').removeClass('test');
 			}
 		);

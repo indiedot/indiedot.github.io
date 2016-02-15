@@ -15,14 +15,16 @@
 body{
 	padding: 0;
 	margin: 0; 
-	font-family: 'AppleSDGothicNeo-Medium', 'Nanum Gothic', 'Malgun-Gothic', sans-serif;
+	font-family: 'AppleSDGothicNeo-Regular', 'Nanum Gothic', 'Malgun-Gothic', sans-serif;
 	font-size:16px;
 	line-height: 24px;
 	word-break:keep-all;
 	color: #444;
 }
-a{color:#000;	text-decoration: none;}
+a{color:#000;	text-decoration: none; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
+}
 a:hover, a:active {color: #ff7800;}
+a:hover, a:active {color: #FFC000;}
 
 /*common - LAYOUT*/
 .wrap{
@@ -32,6 +34,29 @@ a:hover, a:active {color: #ff7800;}
 	padding: 50px;
 }
 
+.btn-scroll-top {
+    z-index: 10;
+    bottom: 35px;
+    right: 40px;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    display: none;
+    text-align: center;
+    text-decoration: none;
+    /*border: 1px solid #d2d2d2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.02);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;*/
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.btn-scroll-top i{
+	color: rgba(0, 0, 0, 0.5);
+}
 /*===============HEADER===============*/
 .header {
 	min-width: 100%;
@@ -43,7 +68,6 @@ a:hover, a:active {color: #ff7800;}
 	box-sizing: border-box;
 	z-index: 5;
 	text-align: center;
-	overflow: hidden;
 	background-color: transparent;
 }
 /*header - no scroll*/
@@ -209,12 +233,10 @@ p.article_txt{
 	width: 50px;
 	height: 40px;
 	margin-left: -25px; 
-	background: url(../img/quote.png) no-repeat;
-    -webkit-background-size: 20px 20px;
-    background-size: 20px 20px;
-    background-position: center bottom;
+	padding-top: 30px; 
+	font-size: 60px;
     border-top: 1px solid #fff;
-    content: "";
+    content: "\201C";
 }
 .main .maintxt .indivdot{
 	padding: 20px 50px;
@@ -284,7 +306,7 @@ p.article_txt{
 	width: 100%;
 	height: 100%;
 	margin-top: 100px;
-	background: rgba(255, 255, 255, 0.7);
+	background: rgba(0, 0, 0, 0.7);
 	text-align: left;
 	word-break:keep-all;
 }
@@ -322,7 +344,7 @@ p.article_txt{
 
 /*thumnail들*/
 .portfolio .oxfamlove .thum{background: url(../img/portfolio/thum/thum_oxfam.jpg);}
-.portfolio .artisee .thum{background: url(../img/portfolio/thum/thum_artisee.jpg);}
+.portfolio .artisee .thum{background: #eb6877 url(../img/portfolio/thum/thum_artisee.jpg);}
 .portfolio .pgm .thum{background: url(../img/portfolio/thum/thum_pgm.jpg);}
 .portfolio .isan .thum{background: url(../img/portfolio/thum/thum_isan.jpg);}
 .portfolio .ezen .thum{background: url(../img/portfolio/thum/thum_ezen.jpg);}
@@ -344,23 +366,97 @@ p.article_txt{
 
 
 /*===============ABOUT===============*/
-.about{background: #eee;}
+.about{}
 .about h2{
 	font-size: 1.2em;
 }
-/*have*/
-.about .have{
-	margin: 0;
-	padding:0; 
+.about .profile{
+	position: relative;
+	margin-top: 100px;
+	background: #eee;
+	padding-top: 50px;
 }
-.about .have li{
-	list-style: square url("../img/list01.png");
+.about .profileimg{
+	position: absolute;
+	top:-85px;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	margin-left: -85px;
+	border: 10px solid #fff;
+	border-radius:150px;
+	overflow: hidden;
+}
+.about .profile .profiletxt{
+	position: relative;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding:80px 50px;
+	font-family:'nanummyeongjo';
+	font-size: 1.2em;
+	line-height: 1.5em;
+	text-align: center;
+}
+.about .profile .profiletxt:before{
+	display: block;
+	position: absolute;
+	top:80px;
+	left: 50%;
+	margin-left: -15px;
+	font-size: 60px;
+	content: "\201C";
+}
+.about .profile .profiletxt:after{
+	display: block;
+	position: absolute;
+	bottom:30px;
+	right: 50%;
+	margin-right: -15px;
+	font-size: 60px;
+	content: "\201D";
+}
+/*have*/
+.about .me, .about .exp{
+	/*padding-top: 50px;*/ 
+}
+.about .me h2, .about .exp h2{
+	margin: 0 0 30px 0;
+	font-family: 'AppleSDGothicNeo-Bold';
+	font-weight: normal;
+	font-size: 1em;
+	color: #000;
+}
+.about .me h3, .about .exp h3{
+	margin: 0 0 30px 0;
+	font-family: 'AppleSDGothicNeo-Light';
+	font-weight: normal;
+	font-size: 1.4em;
+	line-height: 1.5em;
+	color: #000;
+}
+.about .me p{
+	color: #666;
+}
+.about .me ul{
+	margin: 0 0 100px 0;
+	padding: 0;
+	font-size: .8em;
+}
+.about .me ul li{
+	list-style: square;
+	
 	margin-left: 15px;
-	margin-bottom: 5px;
+}
+/*exp*/
+.about .exp{
+	background: #FFF9E5;
+}
+.about .exp h3{
+	margin: 0; 
 }
 /*experience*/
-.about .experience .row{
-	margin-bottom: 30px;
+.about .row{
+	margin: 0 0 100px 0;
 }
 /*.about .experience p{
 	font-size:0.75em;
@@ -369,7 +465,7 @@ p.article_txt{
 .about .experience .title{
 	position: relative;
 }
-.about .experience .title:after{
+/*.about .experience .title:after{
 	position: absolute;
 	bottom:-10px;
 	left: 0;
@@ -377,12 +473,8 @@ p.article_txt{
 	height: 1px;
 	background: #555;
 	content: "";	
-}
-.about .experience h3{
-	margin: 0;
-	padding: 0;
-	font-size:1em;
-}
+}*/
+
 .about .experience .job{
 	margin-bottom: 5px;
 	font-size: 0.9em;
@@ -390,8 +482,11 @@ p.article_txt{
 }
 
 .about .experience .date{
+	margin: 0 0 20px 0;
 	font-style: italic;
-	margin-bottom: 20px;
+	font-size: .8em;
+	color: #666;
+	
 }
 
 
@@ -413,44 +508,6 @@ p.article_txt{
 	font-style: italic;
 }
 
-.about .skill {
-}
-.about .skill .col{
-	position: relative;
-	margin-bottom: 30px;
-	padding-left:80px;
-}
-.about .skill i{
-	position: absolute;
-	top: 0;
-	left: 0;
-	font-size:3em;
-}
-.about .skill h3{
-	font-size: 1em;
-	margin: 0;
-	padding: 0;
-}
-.about .skill p{
-	margin: 0;
-	padding: 0;
-}
-.about button{
-	background: #ccc;
-	outline:none;
-	border: none;
-	padding: 20px;
-	color: #333;
-	cursor: pointer;
-	font-weight: bold;
-	border-radius:5px;
-
-}
-.about button:hover{
-	background: #ffc71c;
-	color: #56523D;
-
-}
 
 /*===============BLOG===============*/
 .blog .post{
@@ -546,6 +603,9 @@ overflow: hidden;
 .contact .submit{
 	background: #AFAEA9;
 	font-size: 1em;
+	-webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 .contact .submit:hover{
 	background: #ffc71c;
@@ -595,15 +655,18 @@ overflow: hidden;
 /*==============portfolio - 상세 페이지==============*/
 /*cover - background*/
 .oxfam .cover{background: #26a443 url(../img/portfolio/oxfam_cover.jpg);}
+.artisee .cover{background: #eb6877 url(../img/portfolio/artisee_cover.jpg);}
 .isesang .cover{background: #1b598d url(../img/portfolio/isesang_cover.jpg);}
+.pgm .cover{background: #1b598d url(../img/portfolio/pgm_cover.jpg);}
 .qbrix .cover{background: #1b598d url(../img/portfolio/qbrix_cover.jpg);}
 .dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);}
 .samsung .cover{background: #e24444 url(../img/portfolio/samsung_cover.jpg);}
 
-.cover{
+.portfolio_contents .cover{
 	position: relative;
 	display: block;
 	overflow: hidden;
+	margin-bottom: 50px;
 	background-position: center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -613,9 +676,7 @@ overflow: hidden;
 }
 
 .porfol_info {
-	overflow: hidden;
 	max-width: 350px;
-	max-height:550px;
 	margin:50px;
 	padding: 30px;
 	background: #fff;
@@ -678,7 +739,6 @@ overflow: hidden;
 /*article*/
 .porfol_article{
 	margin-bottom:100px;
-	text-align: center;
 }
 .porfol_article h2{
 	position: relative;
@@ -687,24 +747,26 @@ overflow: hidden;
 	font-weight: normal;
 	font-size:1.8em;
 	line-height: 1.3em;
-	color:#888;
+	color:#000;
 }
 .porfol_article h2:after{
 	position: absolute;
-	left: 50%;
+	left: 0;
 	bottom: -20px;
 	width: 30px;
 	height: 1px;
-	margin-left: -15px;
 	background: #ffc71c; 
 	content: "";
 }
 .porfol_article p{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	font-family: 'AppleSDGothicNeo-Light';
+	font-size: 1.1em;
+	line-height: 1.6em;
+	word-break: break-all;
 }
 .porfol_article img{
-	width: 100%;
-	max-width:1000px;
+	width:100%;
 }
 /*btn*/
 .btn{
