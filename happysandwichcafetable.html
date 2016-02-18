@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>happy</title>
+	<style type="text/css">
+		body{
+			font-size: 12px;
+		}
+		table{
+			border-top:2px solid #333;
+			border-spacing: 0;
+    		border-collapse: collapse;
+    		/*width: 2000px;*/
+		}
+		th{
+			background: #eee;
+			border-right:1px solid #333;
+			border-bottom: 1px dashed #999;
+			/*position: fixed;
+			width: 100px;*/
+
+		}
+		td{
+			padding: 8px;
+			border-bottom: 1px dashed #999;
+			border-right : 1px dashed #999;
+			color: #999;
+			text-align: center;
+
+		}
+		thead th{
+			border-bottom: 2px solid #333; 
+			background: #aaa;
+		}
+		tfoot tr{
+			border-top: 1px solid #333;
+			border-bottom: 1px solid #333;
+			border-right:1px solid #333;
+		}
+		tfoot th{
+			padding : 10px 0;
+			border-left: 1px solid #333;
+			background: #bbb;
+		}
+		tfoot td{
+			background: #ddd;
+		}
+		.check{
+			border-bottom: none;
+		}
+		.fifth-col{
+			border-right:1px solid #888;
+		}
+		.fifth-row{
+			border-bottom: 1px solid #888;
+		}
+		.last-col{
+			border-right: 1px solid #000;
+		}
+		.last-cell{
+			border-right: none;
+		}
+		.{
+			
+		}
+		.good{
+			background: #FFBEBE;
+			color:#4E4141;
+		}
+		.bad{
+			background: #E8EDF3;
+		}
+		.item{
+			display: none;
+		}
+		
+		/*checkbox*/
+		.checkON{
+			display: none;
+		}
+		.checkOFF{
+			display: table-cell;
+		}
+
+
+
+		.on{
+			display: block;
+		}
+		.off{
+			display: none;
+		}
+		.item-eggsalad{
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+	</style>
+	<script src="http://indiedot.github.io/portfolio/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>재료</th>
+				<th colspan="40">재료별 호환성</th>
+				<th>솜씨</th>
+				<th>칼로리</th>	
+				<th>비용</th>
+				<th>취득점</th>
+				<th>종류</th>
+				<th class="">색</th>
+			</tr>
+		</thead>
+		<tr class="r1">
+			<th class="c_r1"><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 계란샐러드</th>
+
+			<td class="eggsalad ">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="good">싹채소</td>
+			<td class=" fifth-col">토마토</td>
+			<td class="bad">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class=" fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class=" ">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class=" ">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class=" ">터키햄</td>
+			<td class="good ">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="good ">튀긴생선</td>
+			<td class=" ">아르굴라</td>
+			<td class=" ">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="good ">피만</td>
+			<td class="good ">아보카도</td>
+			<td class="good ">프로슈토</td>
+			<td class=" ">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good ">로메인상추</td>
+			<td class="bad ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>1</td>
+			<td class="calorie">64</td>
+			<td>6</td>
+			<td>2 ~ 6 (+?)</td>
+			<td>기타</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr class="r2">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass">오이</th>
+
+			<td class="good ">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class=" fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class="">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>2</td>
+			<td class="calorie">2</td>
+			<td>4</td>
+			<td>1 ~ 5 (+2)</td>
+			<td>채소</td>	
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass">햄</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td>3</td>
+			<td class="calorie">37</td>
+			<td>10</td>
+			<td>1 ~ 4 (+5)</td>	
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 상치</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="bad">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="bad">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>4</td>
+			<td class="calorie">1</td>
+			<td>15</td>
+			<td>1 ~ 5 (+7)</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 참치</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>3</td>
+			<td class="calorie">73</td>
+			<td>11</td>
+			<td>5 ~ 14 (+5)</td>
+			<td>해산물</td>
+			<td class=" last-cell">기타</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 삶은계란</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="bad">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>5</td>
+			<td class="calorie">84</td>
+			<td>7</td>
+			<td>10 ~ 13</td>
+			<td>기타</td>
+			<td class=" last-cell">황색 흰색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 올리브</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="good ">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="good ">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad ">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="bad">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="good">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>4</td>
+			<td class="calorie">12</td>
+			<td>10</td>
+			<td>2 ~ 7 (+5)</td>
+			<td>기타</td>
+			<td class=" last-cell">기타</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 살라미</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="good">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class="">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>5</td>
+			<td class="calorie">71</td>
+			<td>12</td>
+			<td>4 ~ 10</td>
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 싹채소</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="">햄</td>
+			<td class="bad">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="goodfifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="good">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="good">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>2</td>
+			<td class="calorie">5</td>
+			<td>5</td>
+			<td>2 ~ 8</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 토마토</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="good ">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="good">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>7</td>
+			<td class="calorie">17</td>
+			<td>17</td>
+			<td>3 ~ 12 (+8)</td>
+			<td>채소</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 정어리</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>5</td>
+			<td class="calorie">92</td>
+			<td>14</td>
+			<td>1 ~ 5</td>
+			<td>해산물</td>
+			<td class=" last-cell">기타</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 오믈렛</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="bad">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="bad">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">96</td>
+			<td>9</td>
+			<td>4 ~ 12 (+4)</td>
+			<td>기타</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 피클</th>
+
+			<td class="">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="bad">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class="bad ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>3</td>
+			<td class="calorie">11</td>
+			<td>7</td>
+			<td>4 ~ 16 (+3)</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 체다치즈</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="bad">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">81</td>
+			<td>14</td>
+			<td>2 ~ 6 (+7)</td>
+			<td>기타</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 파스트라미</th>
+
+			<td class="">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>7</td>
+			<td class="calorie">129</td>
+			<td>18</td>
+			<td>1 ~ 7</td>
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 바실</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="bad">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>8</td>
+			<td class="calorie">1</td>
+			<td>20</td>
+			<td>12 ~ 24 (+10)</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 양파</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">3</td>
+			<td>18</td>
+			<td>4 ~ 14 (+9)</td>
+			<td>채소</td>
+			<td class=" last-cell">흰색 기타</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 칠리콩</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="bad">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="bad">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>7</td>
+			<td class="calorie">75</td>
+			<td>13</td>
+			<td>6 ~ 19 (+6)</td>
+			<td>기타</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 크림치즈</th>
+
+			<td class="">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="bad">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="good">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="good">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>9</td>
+			<td class="calorie">69</td>
+			<td>16</td>
+			<td>8 ~ 15 (+8)</td>
+			<td>기타</td>
+			<td class=" last-cell">흰색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 새우</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="bad">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="bad">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>8</td>
+			<td class="calorie">35</td>
+			<td>22</td>
+			<td>6 ~ 12</td>
+			<td>해산물</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 터키햄</th>
+
+			<td class="">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="bad">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>9</td>
+			<td class="calorie">32</td>
+			<td>15</td>
+			<td>12 ~ 20</td>
+			<td>육류</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 훈제연어</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="bad">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td>11</td>
+			<td class="calorie">73</td>
+			<td>25</td>
+			<td>6 ~ 16</td>
+			<td>해산물</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 무우</th>
+
+			<td class="">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="good">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>4</td>
+			<td class="calorie">1</td>
+			<td>5</td>
+			<td>10 ~ 19</td>
+			<td>채소</td>
+			<td class=" last-cell">적색 흰색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 에멘탈치즈</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>10</td>
+			<td class="calorie">64</td>
+			<td>33</td>
+			<td>5 ~ 10 (+16)</td>
+			<td>기타</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 베이컨</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="bad">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="good fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>8</td>
+			<td class="calorie">147</td>
+			<td>40</td>
+			<td>9 ~ 18</td>
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 구운쥬키니호박</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="bad">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">23</td>
+			<td>9</td>
+			<td>1 ~ 5</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 튀긴생선</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="bad">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>10</td>
+			<td class="calorie">183</td>
+			<td>38</td>
+			<td>3 ~ 9 (+19)</td>
+			<td>해산물</td>
+			<td class=" last-cell">황색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 아르굴라</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="">살라미</td>
+			<td class="">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="bad">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="bad">양파</td>
+			<td class="">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="good">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">2</td>
+			<td>7</td>
+			<td>12 ~ 22</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 카망베르</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="">정 어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="good">피만</td>
+			<td class="good">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td>7</td>
+			<td class="calorie">56</td>
+			<td>23</td>
+			<td>6 ~ 11 (+11)</td>
+			<td>기타</td>
+			<td class=" last-cell">흰색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 브라트부르스트</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="good">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>10</td>
+			<td class="calorie">156</td>
+			<td>12</td>
+			<td>1 ~ 20</td>
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 피만</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="">햄</td>
+			<td class="good">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="good">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>6</td>
+			<td class="calorie">7</td>
+			<td>12</td>
+			<td>6 ~ 12</td>
+			<td>채소</td>
+			<td class=" last-cell">적색 황색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 아보카도</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="bad">올리브</td>
+			<td class="good">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="good fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="bad">양파</td>
+			<td class="">칠리콩</td>
+			<td class="bad">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="bad">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="bad">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>15</td>
+			<td class="calorie">28</td>
+			<td>30</td>
+			<td>18 ~ 26</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 프로슈토</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="bad">피클</td>
+			<td class="">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="good">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td>14</td>
+			<td class="calorie">49</td>
+			<td>40</td>
+			<td>11 ~ 19</td>
+			<td>육류</td>
+			<td class=" last-cell">적색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 버섯</th>
+
+			<td class="">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="bad">올리브</td>
+			<td class="good">살라미</td>
+			<td class="bad">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="bad">정어리</td>
+			<td class="good">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="good">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="bad">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="bad">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="bad">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td class="lv">9</td>
+			<td class="calorie">3</td>
+			<td class="price">20</td>
+			<td class="score">6 ~ 12</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">흰색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 구운닭</th>
+
+			<td class="">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="bad">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="bad fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="bad fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="good">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="good last-col">트뤼플</td>
+			<td>-</td>
+			<td class="calorie">-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>육류</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 로메인상추</th>
+
+			<td class="good">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="">햄</td>
+			<td class="">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="good">삶은계란</td>
+			<td class="bad">올리브</td>
+			<td class="good">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="bad">피클</td>
+			<td class="good">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="good">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="bad">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="good">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="bad">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class="good">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td>-</td>
+			<td class="calorie">-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>채소</td>
+			<td class=" last-cell">녹색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 염소치즈</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="good">햄</td>
+			<td class="bad">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="good">살라미</td>
+			<td class="">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="good fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="">양파</td>
+			<td class="">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="good fifth-col">새우</td>
+			<td class="good">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="bad fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="good">구운쇠고기</td>
+			<td class="">노랑토마토</td>
+			<td class="last-col">트뤼플</td>
+			<td>12</td>
+			<td class="calorie">56</td>
+			<td>23</td>
+			<td>2 ~ 20</td>
+			<td>기타</td>
+			<td class=" last-cell">흰색</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 구운쇠고기</th>
+
+			<td class="bad">계란샐러드</td>
+			<td class="">오이</td>
+			<td class="bad">햄</td>
+			<td class="">상치</td>
+			<td class="bad fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="good">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="bad">오믈렛</td>
+			<td class="">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="">바실</td>
+			<td class="">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="good">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="bad">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="bad">구운쥬키니호박</td>
+			<td class="bad">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="bad">프로슈토</td>
+			<td class="">버섯</td>
+			<td class="bad fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class="good">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class="bad last-col">트뤼플</td>
+			<td>-</td>
+			<td class="calorie">-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>육류</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass" name="chk_list"> 노랑토마토</th>
+
+			<td class="">계란샐러드</td>
+			<td class="good">오이</td>
+			<td class="bad">햄</td>
+			<td class="good">상치</td>
+			<td class="good fifth-col">참치</td>
+			<td class="">삶은계란</td>
+			<td class="bad">올리브</td>
+			<td class="">살라미</td>
+			<td class="good">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="good">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="good">피클</td>
+			<td class="">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="good">바실</td>
+			<td class="good">양파</td>
+			<td class="good">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="">훈제연어</td>
+			<td class="bad">무우</td>
+			<td class="bad">에멘탈치즈</td>
+			<td class="good fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="good">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="bad">피만</td>
+			<td class="">아보카도</td>
+			<td class="">프로슈토</td>
+			<td class="bad">버섯</td>
+			<td class=" fifth-col">구운닭</td>
+			<td class="good">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class=" ">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td class="lv">2</td>
+			<td class="calorie">5</td>
+			<td class="price">7</td>
+			<td class="score">1 ~ 8</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">황색</td>
+		</tr>
+		<tr class="fifth-row">
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass" name="chk_list"> 트뤼플</th>
+
+			<td class="">계란샐러드</td>
+			<td class="bad">오이</td>
+			<td class="good">햄</td>
+			<td class="bad">상치</td>
+			<td class="fifth-col">참치</td>
+			<td class="bad">삶은계란</td>
+			<td class="">올리브</td>
+			<td class="bad">살라미</td>
+			<td class="">싹채소</td>
+			<td class="bad fifth-col">토마토</td>
+			<td class="">정어리</td>
+			<td class="">오믈렛</td>
+			<td class="">피클</td>
+			<td class="bad">체다치즈</td>
+			<td class="fifth-col">파스트라미</td>
+			<td class="bad">바실</td>
+			<td class="bad">양파</td>
+			<td class="bad">칠리콩</td>
+			<td class="">크림치즈</td>
+			<td class="fifth-col">새우</td>
+			<td class="">터키햄</td>
+			<td class="good">훈제연어</td>
+			<td class="">무우</td>
+			<td class="">에멘탈치즈</td>
+			<td class="bad fifth-col">베이컨</td>
+			<td class="">구운쥬키니호박</td>
+			<td class="">튀긴생선</td>
+			<td class="">아르굴라</td>
+			<td class="good">카망베르</td>
+			<td class="fifth-col">브라트부르스트</td>
+			<td class="">피만</td>
+			<td class="">아보카도</td>
+			<td class="good">프로슈토</td>
+			<td class="good">버섯</td>
+			<td class="good fifth-col">구운닭</td>
+			<td class=" ">로메인상추</td>
+			<td class=" ">염소치즈</td>
+			<td class="bad">구운쇠고기</td>
+			<td class=" ">노랑토마토</td>
+			<td class=" last-col">트뤼플</td>
+			<td class="lv">20</td>
+			<td class="calorie">16</td>
+			<td class="price">60</td>
+			<td class="score">1 ~ 6</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">기타</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 흰빵</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>1</td>
+			<td class="calorie">169</td>
+			<td>5</td>
+			<td>1 ~ 2</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 수제흰빵</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>1</td>
+			<td class="calorie">154</td>
+			<td>10</td>
+			<td>2 ~ 6</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 통밀빵</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>2</td>
+			<td class="calorie">146</td>
+			<td>15</td>
+			<td>6 ~ 12</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 호밀빵</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>4</td>
+			<td class="calorie">162</td>
+			<td>20</td>
+			<td>4 ~ 15</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 잉글리쉬머핀</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>6</td>
+			<td class="calorie">144</td>
+			<td>25</td>
+			<td>5 ~ 25</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 참깨빵</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>10</td>
+			<td class="calorie">151</td>
+			<td>30</td>
+			<td>5 ~ 20</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 베이글</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>12</td>
+			<td class="calorie">212</td>
+			<td>35</td>
+			<td>10 ~ 25</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tr>
+			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 바게뜨</th>
+			<td class="last-col" colspan="40"> - </td>
+			<td>16</td>
+			<td class="calorie">136</td>
+			<td>35</td>
+			<td>6 ~ 20</td>
+			<td>-</td>
+			<td class=" last-cell">-</td>
+		</tr>
+		<tfoot>
+			<tr>
+				<th>층</th>
+				<td id="layer" colspan="7"></td>
+				<th>솜씨</th>
+				<td colspan="7"></td>
+				<th>칼로리</th>
+				<td id="cal" colspan="7"></td>
+				<th>비용</th>
+				<td colspan="7"></td>
+				<th>종류</th>
+				<td id="kind" colspan="7"></td>
+				<th>색</th>
+				<td colspan="7"></td>
+			</tr>
+		</tfoot>
+	</table>
+	<div class="material">
+		<div class="item item-eggsalad">
+			<h2>계란샐러드</h2>
+			<img src="img/eggsalad.jpg">	
+		</div>
+	</div>
+
+	<script>
+		// $("input:checkbox[id='chkBox']").is(":checked") ;
+		// $("input:checkbox").is("checked", false).$('tr').addClass('off');
+
+		$('.eggsalad').click(
+			function(){
+				console.log('클릭됨')
+				$('.item-eggsalad').addClass('on');
+			}
+		)
+
+		// $('.c_r1').click(
+		// 	function(){
+		// 		$('.r1 td').addClass('off');
+		// 	}
+		// )
+		// $(document).ready(function(){
+		// 	$("#checkBoxId").change(function(){
+		// 		if($("#checkBoxId").is(":checked")){
+		// 			//alert("체크박스 체크했음!");
+		// 			$('.r1 td').removeClass('checkOFF');		
+		// 			$('.r1 td').addClass('checkON');		
+					
+		// 		}else{
+		// 			//alert("체크박스 체크 해제!");
+		// 			$('.r1 td').removeClass('checkON');		
+		// 			$('.r1 td').addClass('checkOFF');
+		// 		}
+		// 		var checklength = $("#checkBoxId:checked").length;
+		// 		console.log(checklength);
+		// 	});
+
+		// });
+		
+		$(document).ready(
+			function(){
+				$(".checkBoxClass").change(
+					function(){
+						//층 수 
+						var checklength = $(".checkBoxClass:checked").length - $('.bread:checked').length;
+						//console.log(checklength);
+						//$("#layer").html(checklength);
+						$("#layer").text(checklength + ' 층');
+
+						
+						//칼로리 값
+						var checkCal = $(".checkBoxClass:checked").parent().parent().find('.calorie').text();
+						// console.log(checkCal);
+
+
+						//칼로리값2
+						var sum = 0;
+						//var count = frm.chkbox.length;
+						var count = $(".checkBoxClass:checked").length;
+						//console.log(count);
+						
+
+						for(var i=0; i < count; i++ ){
+							//sum += parseInt(checkCal);
+							sum = parseInt(checkCal);
+
+
+							// if($(".checkBoxClass:checked")){
+							// 	sum += parseInt(checkCal[i]);
+							// 	}
+						}
+						//frm.total_sum.value = sum;
+						
+
+
+						console.log(checkCal);	
+
+						console.log('sum : ' + sum);
+								
+
+
+						$("#cal").text(sum);
+
+							var kindArray = new Array;
+							var checkKind = $(".checkBoxClass:checked").parent().parent().find('.kind').text();
+							
+							
+
+							//kindArray.push(checkKind);
+							kindArray.push($(".checkBoxClass:checked").parent().parent().find('.kind').text())
+							console.log(kindArray);
+
+							$("#kind").text(checkKind + '/');
+
+							
+
+
+					}
+				);
+			}
+		);
+
+
+	</script>
+	<p>
+		설명
+	
+	</p>
+	<ul>
+		<li>빵은 체크되어도 층, 종류, 색에 포함되지 않습니다.</li>
+	</ul>
+</body>
+</html>

@@ -290,14 +290,14 @@ p.article_txt{
 	position: relative;
 	width: 100%;
 	height:200px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	margin-bottom: 50px;
 }
 .portfolio .item a{
 	display: block;
 }
 /*overlay*/
-.portfolio .item .overlay {
+/*.portfolio .item .overlay {
 	display: block;
 	position: absolute;
 	z-index: 1;
@@ -306,7 +306,51 @@ p.article_txt{
 	width: 100%;
 	height: 100%;
 	margin-top: 100px;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(80, 80, 80, 0.7);
+	text-align: left;
+	word-break:keep-all;
+}
+.portfolio .item .overlay .title{	
+	margin: 20px 20px 10px 20px;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.3em;
+	color: #000;
+}
+.portfolio .item .overlay .type{
+	position: relative;
+	margin: 0 20px 20px 20px;
+	padding: 0 0 20px 0;
+	font-size:0.8em;
+	color: #888;
+}
+.portfolio .item .overlay .type.test:after{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30px;
+	height: 1px;
+	background: #888;
+	content: "";
+}
+.portfolio .item .overlay .txt{
+	margin: 0 20px 0 20px;	
+	padding: 0;
+	font-size:0.8em;
+	line-height: 1.4em;
+	color: #333;
+
+}*/
+.portfolio .item .overlay {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top:60px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin-top: 100px;
+	/*background: rgba(80, 80, 80, 0.7);*/
 	text-align: left;
 	word-break:keep-all;
 }
@@ -443,9 +487,19 @@ p.article_txt{
 	font-size: .8em;
 }
 .about .me ul li{
-	list-style: square;
-	
-	margin-left: 15px;
+	position: relative;
+	list-style: none;
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+.about .me li:before{
+	position: absolute;
+	left: 0;
+	top:10px;
+	width: 10px;
+	height: 1px;
+	background: #aaa;
+	content: "";
 }
 /*exp*/
 .about .exp{
