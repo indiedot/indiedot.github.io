@@ -7,22 +7,33 @@
 	<style type="text/css">
 		body{
 			font-size: 12px;
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			/*padding: 0 0 100px 0;*/
 		}
 		table{
-			border-top:2px solid #333;
+			width: 100%;
 			border-spacing: 0;
     		border-collapse: collapse;
+    		padding: 50px;
+		}
+		.sandwich{
+			border-top:2px solid #333;
+			
     		/*width: 2000px;*/
 		}
-		th{
+		.sandwich th{
 			background: #eee;
 			border-right:1px solid #333;
 			border-bottom: 1px dashed #999;
+			text-align:left;
 			/*position: fixed;
 			width: 100px;*/
 
 		}
-		td{
+		.sandwich td{
 			padding: 8px;
 			border-bottom: 1px dashed #999;
 			border-right : 1px dashed #999;
@@ -30,23 +41,17 @@
 			text-align: center;
 
 		}
-		thead th{
-			border-bottom: 2px solid #333; 
+		.sandwich thead{
+			/*position: fixed;*/
+		}
+		.sandwich thead th{
+
+		 	border-bottom: 2px solid #333; 
 			background: #aaa;
 		}
-		tfoot tr{
-			border-top: 1px solid #333;
-			border-bottom: 1px solid #333;
-			border-right:1px solid #333;
-		}
-		tfoot th{
-			padding : 10px 0;
-			border-left: 1px solid #333;
-			background: #bbb;
-		}
-		tfoot td{
-			background: #ddd;
-		}
+
+		
+
 		.check{
 			border-bottom: none;
 		}
@@ -97,11 +102,39 @@
 			top:0;
 			left: 0;
 		}
+
+		tr:hover{
+			border:3px solid #000;
+		}
+
+		.total{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+		.total table{
+			width: 100%;
+			background: #eee;
+			border: 2px solid #000;
+		}
+		.total th{
+			width: 5%;
+			text-align: center;
+			padding: 10px 0;
+			border: none;
+			background: #aaa;
+		}
+		.total td{
+			border: none;
+		}
+
 	</style>
 	<script src="http://indiedot.github.io/portfolio/js/jquery-1.11.3.min.js"></script>
 </head>
 <body>
-	<table>
+	<div class="wrap">
+	<table class="sandwich">
 		<thead>
 			<tr>
 				<th>재료</th>
@@ -157,12 +190,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>1</td>
+			<td class="lv">1</td>
 			<td class="calorie">64</td>
-			<td>6</td>
-			<td>2 ~ 6 (+?)</td>
-			<td>기타</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">6</td>
+			<td class="score">2 ~ 6 (+?)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr class="r2">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass">오이</th>
@@ -207,12 +240,12 @@
 			<td class="">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>2</td>
+			<td class="lv">2</td>
 			<td class="calorie">2</td>
-			<td>4</td>
-			<td>1 ~ 5 (+2)</td>
-			<td>채소</td>	
-			<td class=" last-cell">녹색</td>
+			<td class="price">4</td>
+			<td class="score">1 ~ 5 (+2)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass">햄</th>
@@ -257,12 +290,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class="good last-col">트뤼플</td>
-			<td>3</td>
+			<td class="lv">3</td>
 			<td class="calorie">37</td>
-			<td>10</td>
-			<td>1 ~ 4 (+5)</td>	
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">10</td>
+			<td class="score">1 ~ 4 (+5)</td>	
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 상치</th>
@@ -307,12 +340,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>4</td>
+			<td class="lv">4</td>
 			<td class="calorie">1</td>
-			<td>15</td>
-			<td>1 ~ 5 (+7)</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">15</td>
+			<td class="score">1 ~ 5 (+7)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 참치</th>
@@ -357,12 +390,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>3</td>
+			<td class="lv">3</td>
 			<td class="calorie">73</td>
-			<td>11</td>
-			<td>5 ~ 14 (+5)</td>
-			<td>해산물</td>
-			<td class=" last-cell">기타</td>
+			<td class="price">11</td>
+			<td class="score">5 ~ 14 (+5)</td>
+			<td class="kind">해산물</td>
+			<td class="color last-cell">기타</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 삶은계란</th>
@@ -407,12 +440,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>5</td>
+			<td class="lv">5</td>
 			<td class="calorie">84</td>
-			<td>7</td>
-			<td>10 ~ 13</td>
-			<td>기타</td>
-			<td class=" last-cell">황색 흰색</td>
+			<td class="price">7</td>
+			<td class="score">10 ~ 13</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">황색 흰색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 올리브</th>
@@ -457,12 +490,12 @@
 			<td class="good">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>4</td>
+			<td class="lv">4</td>
 			<td class="calorie">12</td>
-			<td>10</td>
-			<td>2 ~ 7 (+5)</td>
-			<td>기타</td>
-			<td class=" last-cell">기타</td>
+			<td class="price">10</td>
+			<td class="score">2 ~ 7 (+5)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">기타</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 살라미</th>
@@ -507,12 +540,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class="">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>5</td>
+			<td class="lv">5</td>
 			<td class="calorie">71</td>
-			<td>12</td>
-			<td>4 ~ 10</td>
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">12</td>
+			<td class="score">4 ~ 10</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 싹채소</th>
@@ -557,12 +590,12 @@
 			<td class="good">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>2</td>
+			<td class="lv">2</td>
 			<td class="calorie">5</td>
-			<td>5</td>
-			<td>2 ~ 8</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">5</td>
+			<td class="score">2 ~ 8</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 토마토</th>
@@ -607,12 +640,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>7</td>
+			<td class="lv">7</td>
 			<td class="calorie">17</td>
-			<td>17</td>
-			<td>3 ~ 12 (+8)</td>
-			<td>채소</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">17</td>
+			<td class="score">3 ~ 12 (+8)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 정어리</th>
@@ -657,12 +690,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>5</td>
+			<td class="lv">5</td>
 			<td class="calorie">92</td>
-			<td>14</td>
-			<td>1 ~ 5</td>
-			<td>해산물</td>
-			<td class=" last-cell">기타</td>
+			<td class="price">14</td>
+			<td class="score">1 ~ 5</td>
+			<td class="kind">해산물</td>
+			<td class="color last-cell">기타</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 오믈렛</th>
@@ -707,12 +740,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">96</td>
-			<td>9</td>
-			<td>4 ~ 12 (+4)</td>
-			<td>기타</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">9</td>
+			<td class="score">4 ~ 12 (+4)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 피클</th>
@@ -757,12 +790,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>3</td>
+			<td class="lv">3</td>
 			<td class="calorie">11</td>
-			<td>7</td>
-			<td>4 ~ 16 (+3)</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">7</td>
+			<td class="score">4 ~ 16 (+3)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 체다치즈</th>
@@ -807,12 +840,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">81</td>
-			<td>14</td>
-			<td>2 ~ 6 (+7)</td>
-			<td>기타</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">14</td>
+			<td class="score">2 ~ 6 (+7)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 파스트라미</th>
@@ -857,12 +890,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>7</td>
+			<td class="lv">7</td>
 			<td class="calorie">129</td>
-			<td>18</td>
-			<td>1 ~ 7</td>
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">18</td>
+			<td class="score">1 ~ 7</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 바실</th>
@@ -907,12 +940,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>8</td>
+			<td class="lv">8</td>
 			<td class="calorie">1</td>
-			<td>20</td>
-			<td>12 ~ 24 (+10)</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">20</td>
+			<td class="score">12 ~ 24 (+10)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 양파</th>
@@ -957,12 +990,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">3</td>
-			<td>18</td>
-			<td>4 ~ 14 (+9)</td>
-			<td>채소</td>
-			<td class=" last-cell">흰색 기타</td>
+			<td class="price">18</td>
+			<td class="score">4 ~ 14 (+9)</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">흰색 기타</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 칠리콩</th>
@@ -1007,12 +1040,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>7</td>
+			<td class="lv">7</td>
 			<td class="calorie">75</td>
-			<td>13</td>
-			<td>6 ~ 19 (+6)</td>
-			<td>기타</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">13</td>
+			<td class="score">6 ~ 19 (+6)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 크림치즈</th>
@@ -1057,12 +1090,12 @@
 			<td class="good">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>9</td>
+			<td class="lv">9</td>
 			<td class="calorie">69</td>
-			<td>16</td>
-			<td>8 ~ 15 (+8)</td>
-			<td>기타</td>
-			<td class=" last-cell">흰색</td>
+			<td class="price">16</td>
+			<td class="score">8 ~ 15 (+8)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">흰색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 새우</th>
@@ -1107,12 +1140,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>8</td>
+			<td class="lv">8</td>
 			<td class="calorie">35</td>
-			<td>22</td>
-			<td>6 ~ 12</td>
-			<td>해산물</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">22</td>
+			<td class="score">6 ~ 12</td>
+			<td class="kind">해산물</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 터키햄</th>
@@ -1157,12 +1190,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>9</td>
+			<td class="lv">9</td>
 			<td class="calorie">32</td>
-			<td>15</td>
-			<td>12 ~ 20</td>
-			<td>육류</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">15</td>
+			<td class="score">12 ~ 20</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 훈제연어</th>
@@ -1207,12 +1240,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="good last-col">트뤼플</td>
-			<td>11</td>
+			<td class="lv">11</td>
 			<td class="calorie">73</td>
-			<td>25</td>
-			<td>6 ~ 16</td>
-			<td>해산물</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">25</td>
+			<td class="score">6 ~ 16</td>
+			<td class="kind">해산물</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 무우</th>
@@ -1257,12 +1290,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>4</td>
+			<td class="lv">4</td>
 			<td class="calorie">1</td>
-			<td>5</td>
-			<td>10 ~ 19</td>
-			<td>채소</td>
-			<td class=" last-cell">적색 흰색</td>
+			<td class="price">5</td>
+			<td class="score">10 ~ 19</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">적색 흰색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 에멘탈치즈</th>
@@ -1307,12 +1340,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>10</td>
+			<td class="lv">10</td>
 			<td class="calorie">64</td>
-			<td>33</td>
-			<td>5 ~ 10 (+16)</td>
-			<td>기타</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">33</td>
+			<td class="score">5 ~ 10 (+16)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 베이컨</th>
@@ -1357,12 +1390,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>8</td>
+			<td class="lv">8</td>
 			<td class="calorie">147</td>
-			<td>40</td>
-			<td>9 ~ 18</td>
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">40</td>
+			<td class="score">9 ~ 18</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 구운쥬키니호박</th>
@@ -1407,12 +1440,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">23</td>
-			<td>9</td>
-			<td>1 ~ 5</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">9</td>
+			<td class="score">1 ~ 5</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 튀긴생선</th>
@@ -1457,12 +1490,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>10</td>
+			<td class="lv">10</td>
 			<td class="calorie">183</td>
-			<td>38</td>
-			<td>3 ~ 9 (+19)</td>
-			<td>해산물</td>
-			<td class=" last-cell">황색</td>
+			<td class="price">38</td>
+			<td class="score">3 ~ 9 (+19)</td>
+			<td class="kind">해산물</td>
+			<td class="color last-cell">황색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 아르굴라</th>
@@ -1507,12 +1540,12 @@
 			<td class="good">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">2</td>
-			<td>7</td>
-			<td>12 ~ 22</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">7</td>
+			<td class="score">12 ~ 22</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 카망베르</th>
@@ -1557,12 +1590,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class="good last-col">트뤼플</td>
-			<td>7</td>
+			<td class="lv">7</td>
 			<td class="calorie">56</td>
-			<td>23</td>
-			<td>6 ~ 11 (+11)</td>
-			<td>기타</td>
-			<td class=" last-cell">흰색</td>
+			<td class="price">23</td>
+			<td class="score">6 ~ 11 (+11)</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">흰색</td>
 		</tr>
 		<tr class="fifth-row">
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 브라트부르스트</th>
@@ -1607,12 +1640,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>10</td>
+			<td class="lv">10</td>
 			<td class="calorie">156</td>
-			<td>12</td>
-			<td>1 ~ 20</td>
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">12</td>
+			<td class="score">1 ~ 20</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 피만</th>
@@ -1657,12 +1690,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="bad">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">7</td>
-			<td>12</td>
-			<td>6 ~ 12</td>
-			<td>채소</td>
-			<td class=" last-cell">적색 황색</td>
+			<td class="price">12</td>
+			<td class="score">6 ~ 12</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">적색 황색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 아보카도</th>
@@ -1707,12 +1740,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>15</td>
+			<td class="lv">15</td>
 			<td class="calorie">28</td>
-			<td>30</td>
-			<td>18 ~ 26</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="price">30</td>
+			<td class="score">18 ~ 26</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 프로슈토</th>
@@ -1757,12 +1790,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="good last-col">트뤼플</td>
-			<td>14</td>
+			<td class="lv">14</td>
 			<td class="calorie">49</td>
-			<td>40</td>
-			<td>11 ~ 19</td>
-			<td>육류</td>
-			<td class=" last-cell">적색</td>
+			<td class="price">40</td>
+			<td class="score">11 ~ 19</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 버섯</th>
@@ -1857,12 +1890,12 @@
 			<td class="bad">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="good last-col">트뤼플</td>
-			<td>-</td>
-			<td class="calorie">-</td>
-			<td>-</td>
-			<td>-</td>
-			<td>육류</td>
-			<td class=" last-cell">-</td>
+			<td class="lv">12</td>
+			<td class="calorie">161</td>
+			<td class="price">45</td>
+			<td class="score">7 ~ 14</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">기타</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 로메인상추</th>
@@ -1907,12 +1940,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class="good">노랑토마토</td>
 			<td class=" last-col">트뤼플</td>
-			<td>-</td>
-			<td class="calorie">-</td>
-			<td>-</td>
-			<td>-</td>
-			<td>채소</td>
-			<td class=" last-cell">녹색</td>
+			<td class="lv">10</td>
+			<td class="calorie">1</td>
+			<td class="price">19</td>
+			<td class="score">1 ~ 22</td>
+			<td class="kind">채소</td>
+			<td class="color last-cell">녹색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 염소치즈</th>
@@ -1957,12 +1990,12 @@
 			<td class="good">구운쇠고기</td>
 			<td class="">노랑토마토</td>
 			<td class="last-col">트뤼플</td>
-			<td>12</td>
+			<td class="lv">12</td>
 			<td class="calorie">56</td>
-			<td>23</td>
-			<td>2 ~ 20</td>
-			<td>기타</td>
-			<td class=" last-cell">흰색</td>
+			<td class="price">23</td>
+			<td class="score">2 ~ 20</td>
+			<td class="kind">기타</td>
+			<td class="color last-cell">흰색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass"> 구운쇠고기</th>
@@ -2007,12 +2040,12 @@
 			<td class=" ">구운쇠고기</td>
 			<td class=" ">노랑토마토</td>
 			<td class="bad last-col">트뤼플</td>
-			<td>-</td>
-			<td class="calorie">-</td>
-			<td>-</td>
-			<td>-</td>
-			<td>육류</td>
-			<td class=" last-cell">-</td>
+			<td class="lv">15</td>
+			<td class="calorie">71</td>
+			<td class="price">50</td>
+			<td class="score">7 ~ 16</td>
+			<td class="kind">육류</td>
+			<td class="color last-cell">적색</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass" name="chk_list"> 노랑토마토</th>
@@ -2117,100 +2150,123 @@
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 흰빵</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>1</td>
+			<td class="lv">1</td>
 			<td class="calorie">169</td>
-			<td>5</td>
-			<td>1 ~ 2</td>
-			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="price">5</td>
+			<td class="score">1 ~ 2</td>
+			<td class="">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 수제흰빵</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>1</td>
+			<td class="lv">1</td>
 			<td class="calorie">154</td>
-			<td>10</td>
-			<td>2 ~ 6</td>
+			<td class="price">10</td>
+			<td class="score">2 ~ 6</td>
 			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 통밀빵</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>2</td>
+			<td class="lv">2</td>
 			<td class="calorie">146</td>
-			<td>15</td>
-			<td>6 ~ 12</td>
-			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="price">15</td>
+			<td class="score">6 ~ 12</td>
+			<td class="">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 호밀빵</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>4</td>
+			<td class="lv">4</td>
 			<td class="calorie">162</td>
-			<td>20</td>
-			<td>4 ~ 15</td>
+			<td class="price">20</td>
+			<td class="score">4 ~ 15</td>
 			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 잉글리쉬머핀</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>6</td>
+			<td class="lv">6</td>
 			<td class="calorie">144</td>
-			<td>25</td>
-			<td>5 ~ 25</td>
+			<td class="price">25</td>
+			<td class="score">5 ~ 25</td>
 			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 참깨빵</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>10</td>
+			<td class="lv">10</td>
 			<td class="calorie">151</td>
-			<td>30</td>
-			<td>5 ~ 20</td>
+			<td class="price">30</td>
+			<td class="score">5 ~ 20</td>
 			<td>-</td>
-			<td class=" last-cell">-</td>
+			<td class="last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 베이글</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>12</td>
+			<td class="lv">12</td>
 			<td class="calorie">212</td>
-			<td>35</td>
-			<td>10 ~ 25</td>
+			<td class="price">35</td>
+			<td class="score">10 ~ 25</td>
 			<td>-</td>
 			<td class=" last-cell">-</td>
 		</tr>
 		<tr>
 			<th class=""><input type="checkbox" id="checkBoxId" class="checkBoxClass bread"> 바게뜨</th>
 			<td class="last-col" colspan="40"> - </td>
-			<td>16</td>
+			<td class="lv">16</td>
 			<td class="calorie">136</td>
-			<td>35</td>
-			<td>6 ~ 20</td>
+			<td class="price">35</td>
+			<td class="score">6 ~ 20</td>
 			<td>-</td>
 			<td class=" last-cell">-</td>
 		</tr>
-		<tfoot>
+		<!-- <tfoot>
 			<tr>
 				<th>층</th>
-				<td id="layer" colspan="7"></td>
+				<td id="sumLayer" colspan="6"></td>
 				<th>솜씨</th>
-				<td colspan="7"></td>
+				<td id="sumLv" colspan="6"></td>
 				<th>칼로리</th>
-				<td id="cal" colspan="7"></td>
+				<td id="sumCal" colspan="6"></td>
 				<th>비용</th>
-				<td colspan="7"></td>
+				<td id="sumPrice" colspan="6"></td>
+				<th>취득점</th>
+				<td id="sumScore" colspan="6"></td>
 				<th>종류</th>
-				<td id="kind" colspan="7"></td>
+				<td id="sumKind" colspan="6"></td>
 				<th>색</th>
-				<td colspan="7"></td>
+				<td id="sumColor" colspan="6"></td>
 			</tr>
-		</tfoot>
+		</tfoot> -->
 	</table>
+	</div>
+	<div class="total">
+		<table>
+			<tr>
+				<th>층</th>
+				<td id="sumLayer"></td>
+				<th>솜씨</th>
+				<td id="sumLv"></td>
+				<th>칼로리</th>
+				<td id="sumCal"></td>
+				<th>비용</th>
+				<td id="sumPrice"></td>
+				<th>취득점</th>
+				<td id="sumScore"></td>
+				<th>종류</th>
+				<td id="sumKind"></td>
+				<th>색</th>
+				<td id="sumColor"></td>
+			</tr>
+		</table>
+	</div>
 	<div class="material">
 		<div class="item item-eggsalad">
 			<h2>계란샐러드</h2>
@@ -2222,12 +2278,12 @@
 		// $("input:checkbox[id='chkBox']").is(":checked") ;
 		// $("input:checkbox").is("checked", false).$('tr').addClass('off');
 
-		$('.eggsalad').click(
-			function(){
-				console.log('클릭됨')
-				$('.item-eggsalad').addClass('on');
-			}
-		)
+		// $('.eggsalad').click(
+		// 	function(){
+		// 		console.log('클릭됨')
+		// 		$('.item-eggsalad').addClass('on');
+		// 	}
+		// )
 
 		// $('.c_r1').click(
 		// 	function(){
@@ -2256,59 +2312,84 @@
 			function(){
 				$(".checkBoxClass").change(
 					function(){
-						//층 수 
-						var checklength = $(".checkBoxClass:checked").length - $('.bread:checked').length;
-						//console.log(checklength);
-						//$("#layer").html(checklength);
-						$("#layer").text(checklength + ' 층');
+						$('.checkBoxClass:checked').parent().parent().css('border', '3px solid black')
 
+						//층 수
+						var checkLength = $('.checkBoxClass:checked').length;
+						var breadLength = $('.bread:checked').length; 
+						var checkLayer = checkLength - breadLength;
+						$("#sumLayer").text(checkLayer + ' 층 (빵 : ' + breadLength + '개)');
+
+
+						//솜씨 합
+						var checkLv = $(".checkBoxClass:checked").parent().parent().find('.lv');
+						var checkLvSum = 0;
+
+						for(var i = 0; i < checkLength; i++){
+							checkLvSum += parseInt($(checkLv[i]).text());
+						};
 						
-						//칼로리 값
-						var checkCal = $(".checkBoxClass:checked").parent().parent().find('.calorie').text();
-						// console.log(checkCal);
-
-
-						//칼로리값2
-						var sum = 0;
-						//var count = frm.chkbox.length;
-						var count = $(".checkBoxClass:checked").length;
-						//console.log(count);
-						
-
-						for(var i=0; i < count; i++ ){
-							//sum += parseInt(checkCal);
-							sum = parseInt(checkCal);
-
-
-							// if($(".checkBoxClass:checked")){
-							// 	sum += parseInt(checkCal[i]);
-							// 	}
-						}
-						//frm.total_sum.value = sum;
+						$('#sumLv').text(checkLvSum +' (' + (checkLvSum + 1) + ' 레벨 이상 제작 가능)');
 						
 
+						//칼로리 합
+						var checkCal = $(".checkBoxClass:checked").parent().parent().find('.calorie')
+						var checkCalSum = 0;
+						
+						for(var i = 0; i < checkLength; i++){
+							checkCalSum += parseInt($(checkCal[i]).text());
+						};
 
-						console.log(checkCal);	
-
-						console.log('sum : ' + sum);
-								
+						$('#sumCal').text(checkCalSum + ' Kcal');
 
 
-						$("#cal").text(sum);
+						//가격 합
+						var checkPrice = $(".checkBoxClass:checked").parent().parent().find('.price')
+						var checkPriceSum = 0;
+						
+						for(var i = 0; i < checkLength; i++){
+							checkPriceSum += parseInt($(checkPrice[i]).text());
+						};
 
-							var kindArray = new Array;
-							var checkKind = $(".checkBoxClass:checked").parent().parent().find('.kind').text();
+						$('#sumPrice').text(checkPriceSum + ' G');
+
+
+						//취득점 합
+						var checkScore = $(".checkBoxClass:checked").parent().parent().find('.score')
+						var checkScoreSum = '';
+						
+						for(var i = 0; i < checkLength; i++){
+							checkScoreSum += $(checkScore[i]).text() +'<br>';
+						};
+
+						$('#sumScore').html(checkScoreSum);
+
+
+						//유형 합
+						//var checkKindTitle = $(".checkBoxClass:checked").parent().parent().find('th')
+						var checkKind = $(".checkBoxClass:checked").parent().parent().find('.kind')
+						var checkKindSum = '';
+						
+						for(var i = 0; i < checkLength; i++){
+							checkKindSum += $(checkKind[i]).text() + ' / ';
+						};
+
+						$('#sumKind').text(checkKindSum);
+
+
+						//색 합
+						var checkColor = $(".checkBoxClass:checked").parent().parent().find('.color')
+						var checkColorSum = '';
+						
+						for(var i = 0; i < checkLength; i++){
+							checkColorSum += $(checkColor[i]).text() + ' / ';
+						};
+
+						$('#sumColor').text(checkColorSum);
 							
-							
 
-							//kindArray.push(checkKind);
-							kindArray.push($(".checkBoxClass:checked").parent().parent().find('.kind').text())
-							console.log(kindArray);
-
-							$("#kind").text(checkKind + '/');
-
-							
-
+						var wrapPadding = $('.total').height();
+						$('.wrap').css('padding-bottom', wrapPadding)
 
 					}
 				);
@@ -2317,12 +2398,12 @@
 
 
 	</script>
-	<p>
+	<!-- <p>
 		설명
 	
 	</p>
 	<ul>
 		<li>빵은 체크되어도 층, 종류, 색에 포함되지 않습니다.</li>
-	</ul>
+	</ul> -->
 </body>
-</html>
+</html
