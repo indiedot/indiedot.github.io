@@ -138,7 +138,7 @@ a:hover, a:active {color: #FFC000;}
 h1.article_title{
 	position: relative;
 	font-family: 'AppleSDGothicNeo-Light';
-	margin: 0;
+	margin: 0 0 70px 0;
 	padding: 0;
 	font-size: 1.8em;
 	font-weight: normal;
@@ -146,15 +146,17 @@ h1.article_title{
 /*h1.article_title span{
 	color:#ff9900;
 }*/
-h1.article_title:before{
+h1.article_title:after{
 	display: block;
 	position: absolute;
-	top: -20px;
+	bottom: -20px;
 	left: 0;
 	width: 30px;
 	height: 1px;
-	background: #ffc71c;
+	
+	background: #000;
 	content: "";
+
 }
 
 p.article_txt{
@@ -199,9 +201,9 @@ p.article_txt{
 }
 .main .maintxt .indivdot:before{
 	display: block;
-	width: 50px;
+	width: 120px;
 	height: 1px;
-	border-top: 1px solid #000;
+	border-top: 5px solid #bbb;
 	content: "";
 }
 .main .maintxt .indivdot p{
@@ -594,7 +596,7 @@ overflow: hidden;
 	display: inline-block;
 	margin: 0 0 15px 0;
 	padding: 0;
-	border-bottom: 1px solid black;
+	/*border-bottom: 1px solid black;*/
 	font-size: 0.8em;
 }
 .footer .sns{

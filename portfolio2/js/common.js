@@ -114,14 +114,12 @@
 				$('.header').addClass('backwhite');
 				$(this).removeClass('off');
 				$(this).addClass('on');
-				$(window).bind('touchmove', handler);
 				idx = 1;	
 			}else {
 				$('.nav').slideUp(150).removeClass('on');
 				$('.header').removeClass('backwhite');
 				$(this).removeClass('on');
 				$(this).addClass('off');
-				$(window).unbind('touchmove', handler);
 				idx = 0;
 			}
 			
