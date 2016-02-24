@@ -107,26 +107,34 @@
 
 
 	
-
+	//메뉴 열림
 	$('.menulink').click(function(){
 			if(idx == 0){
 				$('.nav').slideDown(500).addClass('on');
-				// $('.header').addClass('backwhite');
-
-				// $('.header').animate({
-				// 		backgoundColor : '#CD3333',
-				// 		left:'-50px'
-				// 	}, 500);
+				$('.header').addClass('backwhite');
+				$(this).removeClass('off');
+				$(this).addClass('on');
 				idx = 1;	
 			}else {
 				$('.nav').slideUp(150).removeClass('on');
-				// $('.header').removeClass('backwhite');
+				$('.header').removeClass('backwhite');
+				$(this).removeClass('on');
+				$(this).addClass('off');
 				idx = 0;
 			}
 			
 
 		}
 	);
+	//메뉴의 세로값을 디바이스에 맞춤
+	$(document).ready(function(){
+		$('.nav').css('height', $(window).height() - 90);
+		$(window).resize(function() {
+				$('.nav').css('height', $(window).height() - 90);
+			}
+		);
+	});
+
 
 	//스크롤 시 메뉴 변경
 	// $(function() {
@@ -150,6 +158,10 @@
 	// 		}
 	// 	);
 	// }); 
+	
+	
+	
+
 
 	//연락 전송 버튼 클릭시 모션
 	$('#ss-form').submit(function(){
