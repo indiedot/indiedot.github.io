@@ -135,7 +135,7 @@ h1.article_title{
 	font-family: 'AppleSDGothicNeo-Light';
 	margin: 0;
 	padding: 0;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: normal;
 }
 h1.article_title span{
@@ -146,11 +146,13 @@ p.article_txt{
 	font-family: 'Nanum Myeongjo';
 	color:#888;
 }
-
+.contents{
+	padding-top: 100px;
+}
 /*===============MAIN===============*/
 .main {
 	
-	padding-top: 100px;
+	
 }
 .main .maintxt{
 	/*position:absolute;
@@ -208,7 +210,7 @@ p.article_txt{
 
 /*===============PORTFOLIO===============*/
 .portfolio{
-	background: #e5e5e5;
+	/*background: #e5e5e5;*/
 }
 /*filter*/
 .portfolio .filter{
@@ -242,60 +244,17 @@ p.article_txt{
 	display: block;
 }
 /*overlay*/
-/*.portfolio .item .overlay {
-	display: block;
-	position: absolute;
-	z-index: 1;
-	top:0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin-top: 100px;
-	background: rgba(80, 80, 80, 0.7);
-	text-align: left;
-	word-break:keep-all;
-}
-.portfolio .item .overlay .title{	
-	margin: 20px 20px 10px 20px;
-	padding: 0;
-	font-size: 1em;
-	line-height: 1.3em;
-	color: #000;
-}
-.portfolio .item .overlay .type{
-	position: relative;
-	margin: 0 20px 20px 20px;
-	padding: 0 0 20px 0;
-	font-size:0.8em;
-	color: #888;
-}
-.portfolio .item .overlay .type.test:after{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 30px;
-	height: 1px;
-	background: #888;
-	content: "";
-}
-.portfolio .item .overlay .txt{
-	margin: 0 20px 0 20px;	
-	padding: 0;
-	font-size:0.8em;
-	line-height: 1.4em;
-	color: #333;
-
-}*/
 .portfolio .item .overlay {
 	display: none;
 	position: absolute;
 	z-index: 1;
-	top:60px;
+	top:0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	margin-top: 100px;
-	/*background: rgba(80, 80, 80, 0.7);*/
+	background: rgba(255, 255, 255, 0.7);
+	/*background: yellow;*/
 	text-align: left;
 	word-break:keep-all;
 }
@@ -360,10 +319,6 @@ p.article_txt{
 	font-size: 1.2em;
 }
 .about .profile{
-	position: relative;
-	margin-top: 100px;
-	background: #eee;
-	padding-top: 50px;
 }
 .about .profileimg{
 	position: absolute;
@@ -380,11 +335,11 @@ p.article_txt{
 	position: relative;
 	max-width: 1000px;
 	margin: 0 auto;
-	padding:80px 50px;
+	padding:0;
 	font-family:'nanummyeongjo';
 	font-size: 1.2em;
 	line-height: 1.5em;
-	text-align: center;
+	/*text-align: center;*/
 }
 .about .profile .profiletxt:before{
 	display: block;
@@ -409,14 +364,14 @@ p.article_txt{
 	/*padding-top: 50px;*/ 
 }
 .about .me h2, .about .exp h2{
-	margin: 0 0 30px 0;
+	margin: 0;
 	font-family: 'AppleSDGothicNeo-Bold';
 	font-weight: normal;
 	font-size: 1em;
 	color: #000;
 }
 .about .me h3, .about .exp h3{
-	margin: 0 0 30px 0;
+	margin: 0;
 	font-family: 'AppleSDGothicNeo-Light';
 	font-weight: normal;
 	font-size: 1.4em;

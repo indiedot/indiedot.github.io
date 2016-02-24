@@ -14,7 +14,7 @@
 	}
 	
 	
-	//포트폴리오 섬네일 모션 - pc일 경우에만 작
+	//포트폴리오 섬네일 모션
 	// if(!mediaState){
 	// 	$('.item').mouseenter(function(){
 	// 			$(this).find('.overlay').animate({
@@ -37,6 +37,32 @@
 	// 		}
 	// 	);
 	// }
+	if(!mediaState){
+		$('.item').mouseenter(function(){
+				// $(this).find('.overlay').animate({
+				// 		'margin-top' : '0'
+				// 	}, 
+				// 	250
+				// );
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.9)');
+				$(this).find('.overlay').css('display',  'block');
+				$(this).find('.type').addClass('test');
+			}
+		);
+		$('.item').mouseleave(function(){
+				// $(this).find('.overlay').animate({
+				// 		'margin-top' : '100px'	 
+				// 	}, 
+				// 	250
+				// );
+				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0)');
+				$(this).find('.overlay').css('display',  'none');
+				$(this).find('.type').removeClass('test');
+			}
+		);
+	}
+
+
 
 
 	var idx = 0;
