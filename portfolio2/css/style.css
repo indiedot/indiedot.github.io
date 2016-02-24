@@ -127,10 +127,10 @@ a:hover, a:active {color: #FFC000;}
 .header .nav {
 	position: fixed;
 	left:0;
+	bottom:0;
 	top:80px;
 	width: 100%;
 	background: #fff;
-	border-top: 1px solid #ccc;
 	display: none;
 }
 
@@ -144,7 +144,6 @@ a:hover, a:active {color: #FFC000;}
 	padding: 15px 0;
 	text-transform: uppercase;
 	font-size: 1em;
-	border-bottom: 1px solid #ccc;
 	display: block;
 }
 

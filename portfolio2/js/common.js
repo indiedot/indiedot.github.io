@@ -85,7 +85,7 @@
 	$('.menulink').click(function(){
 			if(idx == 0){
 				$('.nav').slideDown(500).addClass('on');
-				$('.header').addClass('backwhite');
+				// $('.header').addClass('backwhite');
 
 				// $('.header').animate({
 				// 		backgoundColor : '#CD3333',
@@ -94,7 +94,7 @@
 				idx = 1;	
 			}else {
 				$('.nav').slideUp(150).removeClass('on');
-				$('.header').removeClass('backwhite');
+				// $('.header').removeClass('backwhite');
 				idx = 0;
 			}
 			
