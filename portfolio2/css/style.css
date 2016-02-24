@@ -60,68 +60,41 @@ a:hover, a:active {color: #FFC000;}
 /*===============HEADER===============*/
 .header {
 	min-width: 100%;
-	height:80px;
 	position: fixed;
+	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 	z-index: 5;
-	text-align: center;
-	background-color: transparent;
 }
+
 /*header - no scroll*/
-
-
 .headerwrap{
-	max-width: 1000px;
 	overflow: hidden;
-	margin: 0 auto;
-	padding: 0 50px;
-}
-
-.backwhite{
-	background: #fff;
-}
-
-.scroll .log{
-	height: 30px;
-	overflow: hidden;
+	padding: 30px;
 }
 .header .logo{
 	float: left;
-	overflow: hidden;
-	width: 181px;
 	height: 30px;
-	margin: 25px 0 0 0;
+	margin: 0;
 	padding: 0;
-	/*background: url(../img/logo_indiv.gif) no-repeat; */
-	/*원래 사이즈 : 362 60*/
-	background-size: 100%;
-	/*text-indent: -9999px;*/
 	font-size: 1em;
-	text-align: left;
 }
 .header .menulink {
 	display: inline-block;
 	float: right;
-	width: 30px;
-	height: 30px;
-	margin: 25px 0 0 0;
+	width: 20px;
+	height: 20px;
 	padding: 0;
 	border: none;
 	outline:0;
-	/*background: url(../img/menu.png) no-repeat;*/
-	background-size: 100%;
 	text-indent:-9999px;
 	cursor: pointer;
 	background: transparent;
 }
 .header .menulink .icon-bar{
 	display: block;
-	width: 30px;
-	height: 3px;
-	margin-bottom: 5px;
+	width: 100%;
+	height: 2px;
+	margin-bottom: 4px;
 	background: #000;
 }
 .header .nav {
@@ -229,7 +202,7 @@ p.article_txt{
 }
 .main .maintxt h1{
 	position: relative;
-	margin: 0 60px 30px 60px;
+	margin: 30px;
 	padding-top: 50px; 
 	font-family: 'Nanum Myeongjo', serif;
 	font-size: 2em;
@@ -241,22 +214,26 @@ p.article_txt{
 .main .maintxt h1:before{
 	display: block;
 	position: absolute;
-	top:0;
-	left: 50%;
-	width: 50px;
-	height: 40px;
-	margin-left: -25px; 
-	padding-top: 30px; 
-	font-size: 60px;
-    border-top: 1px solid #fff;
+	top:30px;
+	left: 0; 
+	font-size: 70px;
     content: "\201C";
 }
 .main .maintxt .indivdot{
-	padding: 20px 50px;
-	background: rgba(0, 0, 0, 0.5 );
+	padding: 30px;
+	/*background: rgba(0, 0, 0, 0.5 );
+	background: #e5e5e5;*/
 	font-size: 0.8em;
 	line-height: 1.5em;
 	color: #D2D1CD;
+	color: #000;
+}
+.main .maintxt .indivdot:before{
+	display: block;
+	width: 50px;
+	height: 1px;
+	border-top: 1px solid #000;
+	content: "";
 }
 .main .maintxt .indivdot strong{
 	display: block;

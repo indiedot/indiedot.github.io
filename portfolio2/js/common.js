@@ -103,16 +103,16 @@
 	);
 
 	//스크롤 시 메뉴 변경
-	$(function() {
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 80) { // 스크롤 내릴 표시
-				$('.header').addClass('scroll');
-			}
-			 else {
-				$('.header').removeClass('scroll');
-			}
-		});
-	});
+	// $(function() {
+	// 	$(window).scroll(function () {
+	// 		if ($(this).scrollTop() > 80) { // 스크롤 내릴 표시
+	// 			$('.header').addClass('scroll');
+	// 		}
+	// 		 else {
+	// 			$('.header').removeClass('scroll');
+	// 		}
+	// 	});
+	// });
 
 	//세로값 디바이스에 맞춰 .main, .cover 자동 조절
 	$(document).ready(function(){
