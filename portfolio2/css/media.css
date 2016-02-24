@@ -1,0 +1,153 @@
+/*media query*/
+@media (min-width: 360px){
+	/*.blog .post:after{
+		clear:both; display: block; content: "";
+	}
+	.blog .post .figure {
+		float:left;
+		margin-right: 30px;
+	}*/
+}
+
+
+
+@media (min-width: 1000px){
+
+	
+	.header{
+		
+	}
+	.header .menulink{
+		display: none;
+	}
+	.header .nav{
+		display: block;
+		position: relative;
+		float: right;
+		width: auto;
+		top:0;
+		margin:15px 0 0 0;
+		border: none;
+		background: transparent;
+	}
+	.header .nav li{
+		float: left;
+		margin-left:40px;
+		border-bottom: none;
+		font-size: 1.2em;
+	}
+	.header .nav li a{
+		color: #fff;
+	}
+	.scroll .nav {
+		margin: 0;
+	}
+	.scroll .nav li{
+		font-size: 0.9em;
+
+	}
+	.scroll .nav li a{
+		color: #000;
+	}
+	
+	/*porfolio*/
+	.portfolio .item{
+		height:400px;
+		overflow: hidden;
+		margin-bottom: 50px;
+		background: gray;
+	}
+	/*overlay*/
+	.portfolio .item .overlay {
+		display: block;
+		position: absolute;
+		z-index: 1;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin-top: 250px;
+		background: rgba(255, 255, 255, 0.7);
+		text-align: left;
+		word-break:keep-all;
+	}
+	.portfolio .item .thum{
+	height: 400px;
+	}
+
+
+	/*portfolio_contents*/
+	.porfol_info {
+		margin:100px auto;
+		padding: 50px;
+	}
+	/*article*/
+	.porfol_article .alignImg{
+		float: left;
+		width: 350px;
+		margin-top:80px;
+	}
+	.porfol_article .alignLeft{
+		float:left;
+		margin-right: 50px;
+		width: 600px;
+	}
+	.porfol_article .alignRight{
+		float: right;
+		margin-left: 50px;
+		width: 600px;
+	}
+	.porfol_article:after{
+		display: block;
+		clear:both;
+		content: "";
+	}
+
+	/*about*/
+	
+	/*have*/
+	
+	.about .me h2, .about .exp h2{
+		float: left;
+		line-height: 33px;
+	}
+	.about .me h3, .about .me p, .about .me ul{
+		margin-left: 300px;
+	}
+	.about .exp .row{
+		margin-left: 300px;
+	}
+	.about .exp .title{
+	}
+	.about .exp .title:after{
+		position: absolute;
+		bottom:-10px;
+		left: 0;
+		width: 1px;
+		height: 30px;
+		background: #555;
+		content: "";
+	}
+	.blog .post{
+		display: block; clear: both; content: "";
+	}
+	.blog .post .figure {
+		display: inline-block;
+		float: left;
+		margin-right: 20px;
+	}
+	.blog .post .figure img{
+		
+		width: 300px;
+	}
+}
+
+
+@media (min-width: 1600px){
+	/*body{
+		font-size:20px;
+	}*/
+	.header .headerwrap{
+		max-width: 2000px;
+	}
+}
