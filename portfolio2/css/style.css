@@ -96,6 +96,7 @@ a:hover, a:active {color: #FFC000;}
 }
 .header .nav {
 	position: fixed;
+	overflow: hidden;
 	left:0;
 	top: 90px;
 	width: 100%;

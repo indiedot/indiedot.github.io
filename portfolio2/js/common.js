@@ -114,12 +114,14 @@
 				$('.header').addClass('backwhite');
 				$(this).removeClass('off');
 				$(this).addClass('on');
+				$(window).bind('touchmove', handler);
 				idx = 1;	
 			}else {
 				$('.nav').slideUp(150).removeClass('on');
 				$('.header').removeClass('backwhite');
 				$(this).removeClass('on');
 				$(this).addClass('off');
+				$(window).unbind('touchmove', handler);
 				idx = 0;
 			}
 			
@@ -128,9 +130,9 @@
 	);
 	//메뉴의 세로값을 디바이스에 맞춤
 	$(document).ready(function(){
-		$('.nav').css('height', $(window).height() - 90);
+		$('.nav').css('height', $(window).height());
 		$(window).resize(function() {
-				$('.nav').css('height', $(window).height() - 90);
+				$('.nav').css('height', $(window).height());
 			}
 		);
 	});
