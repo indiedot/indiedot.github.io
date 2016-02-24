@@ -116,8 +116,9 @@ a:hover, a:active {color: #FFC000;}
 	padding: 30px;
 	text-align: center;
 	font-size: 2em;
-	
-
+}
+.header .nav .on a{
+	color:#ffc71c;
 }
 .header .nav a{
 	display: block;
