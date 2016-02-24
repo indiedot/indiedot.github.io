@@ -126,40 +126,6 @@ a:hover, a:active {color: #FFC000;}
 .header:after{
 	clear:both; display:block; content: "";
 }
-/*scroll header*/
-.scroll {
-	height:50px;
-	background: #fff;
-
-	background: rgba(255, 255, 255, 0);
-	
-	/* IE에서 Filter적용을 위해 배경을 지움 */
-	background: transparent !ie;
-	/* 정상적인 Filter적용을 위해 zoom:1을 적용 */
-	zoom:1;
-	/* IE5.5-7 */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ccffffff, endColorstr=#ccffffff);
-	/* IE8,9 */
-	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f990000, endColorstr=#7f990000)";
-	
-	
-	/*background: #ffc71c;*/
-}
-.scroll .logo{
-	width: 120px;
-	height: 20px;
-	margin-top: 15px;
-}
-.scroll .menulink {
-	margin-top: 15px;
-	width: 20px;
-	height: 20px;
-	background-size: 100%;
-}
-.scroll .nav {
-	top:50px;
-}
-/*scroll header*/
 
 
 
@@ -183,15 +149,7 @@ p.article_txt{
 
 /*===============MAIN===============*/
 .main {
-	/*background: #ffc71c url(../img/index_cover.jpg) no-repeat top center;*/
-	background: #ffc71c;
-	background: #304FFF;
-	background: #e5e5e5;
-	background: #fff;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	
 	padding-top: 100px;
 }
 .main .maintxt{
@@ -221,12 +179,6 @@ p.article_txt{
 }
 .main .maintxt .indivdot{
 	padding: 30px;
-	/*background: rgba(0, 0, 0, 0.5 );
-	background: #e5e5e5;*/
-	font-size: 0.8em;
-	line-height: 1.5em;
-	color: #D2D1CD;
-	color: #000;
 }
 .main .maintxt .indivdot:before{
 	display: block;
@@ -235,16 +187,17 @@ p.article_txt{
 	border-top: 1px solid #000;
 	content: "";
 }
+.main .maintxt .indivdot p{
+	font-size: 0.8em;
+	line-height: 1.5em;
+}
 .main .maintxt .indivdot strong{
 	display: block;
 	font-size: 1.2em;
 }
-.main .maintxt .indivdot strong span{
-	font-size: 0.9em;
-}
 .main .maintxt .indivdot .similar{
 	display: block;
-	font-size: 0.9em;
+	font-size: 1em;
 	font-style: italic;
 	color: #aaa;
 }
@@ -254,7 +207,9 @@ p.article_txt{
 
 
 /*===============PORTFOLIO===============*/
-.portfolio{}
+.portfolio{
+	background: #e5e5e5;
+}
 /*filter*/
 .portfolio .filter{
 	margin: 30px 0;
@@ -662,10 +617,7 @@ overflow: hidden;
 
 /*===============FOOTER===============*/
 .footer{
-	position: fixed;
-	bottom: 0;
-	/*background: #ffc71c;*/
-	text-align:center;
+
 }
 .footer .totop{
 	display: inline-block;

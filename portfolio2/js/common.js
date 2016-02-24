@@ -115,15 +115,15 @@
 	// });
 
 	//세로값 디바이스에 맞춰 .main, .cover 자동 조절
-	$(document).ready(function(){
-		// $('.main').css('width', $(window).width() - 50 );
-		$('.main').css('height', $(window).height());
-		$(window).resize(function() {
-				// $('.main').css('width', $(window).width() - 50 );
-				$('.main').css('height', $(window).height());
-			}
-		);
-	}); 
+	// $(document).ready(function(){
+	// 	// $('.main').css('width', $(window).width() - 50 );
+	// 	$('.main').css('height', $(window).height());
+	// 	$(window).resize(function() {
+	// 			// $('.main').css('width', $(window).width() - 50 );
+	// 			$('.main').css('height', $(window).height());
+	// 		}
+	// 	);
+	// }); 
 
 	//연락 전송 버튼 클릭시 모션
 	$('#ss-form').submit(function(){
