@@ -18,7 +18,7 @@ body{
 	font-family: 'AppleSDGothicNeo-Regular', 'Nanum Gothic', 'Malgun-Gothic', sans-serif;
 	font-size:16px;
 	line-height: 24px;
-	word-break:keep-all;
+	/*word-break:keep-all;*/
 	color: #444;
 }
 a{color:#000;	text-decoration: none; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
@@ -31,7 +31,7 @@ a:hover, a:active {color: #FFC000;}
 	max-width: 1000px;
 	overflow: hidden;
 	margin:0 auto;
-	padding: 50px;
+	padding: 30px;
 }
 
 .btn-scroll-top {
