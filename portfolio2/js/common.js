@@ -127,13 +127,13 @@
 		}
 	);
 	//메뉴의 세로값을 디바이스에 맞춤
-	$(document).ready(function(){
-		$('.nav').css('height', $(window).height());
-		$(window).resize(function() {
-				$('.nav').css('height', $(window).height());
-			}
-		);
-	});
+	// $(document).ready(function(){
+	// 	$('.nav').css('height', $(window).height());
+	// 	$(window).resize(function() {
+	// 			$('.nav').css('height', $(window).height());
+	// 		}
+	// 	);
+	// });
 
 
 	//스크롤 시 메뉴 변경

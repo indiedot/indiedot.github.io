@@ -5,8 +5,9 @@
 */
 
 /*import font*/
-@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 /*common*/
 
 ::selection { background:#fff; color:#FFC000; }
@@ -42,7 +43,7 @@ a:hover, a:active {color: #FFC000;}
 	padding: 0;
 	z-index: 5;
 	background: #fff;
-	
+
 }
 .backwhite{
 	background: #fff;
@@ -58,7 +59,19 @@ a:hover, a:active {color: #FFC000;}
 	margin: 0;
 	padding: 0;
 	font-family: 'AppleSDGothicNeo-Bold';
+	font-family: 'Montserrat', sans-serif;
+	background: url(../img/logo.png);
 	font-size: 1em;
+}
+.header .logo{
+	float: left;
+	overflow: hidden;
+	width: 50px;
+	padding: 0;
+	background: url(../img/logo.png) no-repeat; 
+	/*원래 사이즈 : 362 60*/
+	background-size: 100%;
+	text-indent: -9999px;
 }
 .header .menulink {
 	display: inline-block;
@@ -70,7 +83,6 @@ a:hover, a:active {color: #FFC000;}
 	outline:0;
 	text-indent:-9999px;
 	cursor: pointer;
-	background: transparent;
 }
 .header .icon-bar{
 	position: relative;
@@ -97,7 +109,7 @@ a:hover, a:active {color: #FFC000;}
 	left: -3px;
 	width: 26px;
 }
-.header .nav {
+/*.header .nav {
 	position: fixed;
 	overflow: hidden;
 	left:0;
@@ -126,7 +138,15 @@ a:hover, a:active {color: #FFC000;}
 }
 .header .nav a{
 	display: block;
+}*/
+
+
+.header .go_about{
+	float: right;
 }
+
+
+
 .header .on{
 	display: block;
 }
@@ -163,7 +183,6 @@ h1.article_title:after{
 }
 
 p.article_txt{
-	font-family: 'Nanum Myeongjo';
 	color:#888;
 }
 .contents{
@@ -184,10 +203,9 @@ p.article_txt{
 	position: relative;
 	margin: 30px;
 	padding-top: 50px; 
-	font-family: 'Nanum Myeongjo', serif;
 	font-family: 'AppleSDGothicNeo-thin', serif;
 	font-size: 2em;
-	font-size: 3em;
+	font-size: 2.5em;
 	line-height: 1.4em;
 	font-weight: normal;
 	word-break: keep-all;
@@ -269,7 +287,7 @@ p.article_txt{
 }
 /*overlay*/
 .portfolio .item .overlay {
-	display: none;
+	/*display: none;*/
 	position: absolute;
 	z-index: 1;
 	top:0;
@@ -277,17 +295,22 @@ p.article_txt{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(255, 255, 255, 0.7);
+	/*background: rgba(255, 255, 255, 0.7);*/
 	/*background: yellow;*/
+	/*background: #0046ff;
+	background: rgba(0, 70, 255, 0.8);*/
 	text-align: left;
 	word-break:keep-all;
 }
 .portfolio .item .overlay .title{	
 	margin: 20px 20px 10px 20px;
 	padding: 0;
-	font-size: 1em;
+	font-family: 'AppleSDGothicNeo-Light';
+	font-size: 2em;
+	font-weight: normal;
 	line-height: 1.3em;
 	color: #000;
+	color: #fff;
 }
 .portfolio .item .overlay .type{
 	position: relative;
@@ -312,6 +335,9 @@ p.article_txt{
 	line-height: 1.4em;
 	color: #333;
 
+}
+.portfolio .item .overlay i{
+	color: #fff;
 }
 
 /*thumnail들*/
@@ -360,7 +386,6 @@ p.article_txt{
 	max-width: 1000px;
 	margin: 0 auto;
 	padding:0;
-	font-family:'nanummyeongjo';
 	font-size: 1.2em;
 	line-height: 1.5em;
 	/*text-align: center;*/
