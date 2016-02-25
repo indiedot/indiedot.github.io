@@ -55,6 +55,7 @@ a:hover, a:active {color: #FFC000;}
 	height: 30px;
 	margin: 0;
 	padding: 0;
+	font-family: 'AppleSDGothicNeo-Bold';
 	font-size: 1em;
 }
 .header .menulink {
@@ -187,6 +188,7 @@ p.article_txt{
 	font-weight: normal;
 	word-break: keep-all;
 	/*color: #fff;*/
+	color:#0056FF;
 }
 .main .maintxt h1:before{
 	display: block;
@@ -201,9 +203,9 @@ p.article_txt{
 }
 .main .maintxt .indivdot:before{
 	display: block;
-	width: 120px;
+	width: 60px;
 	height: 1px;
-	border-top: 5px solid #bbb;
+	border-top: 1px solid #bbb;
 	content: "";
 }
 .main .maintxt .indivdot p{
@@ -379,6 +381,7 @@ p.article_txt{
 }
 /*have*/
 .about .me, .about .exp{
+	word-break: keep-all;
 	/*padding-top: 50px;*/ 
 }
 .about .me h2, .about .exp h2{
