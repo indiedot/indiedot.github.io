@@ -41,6 +41,7 @@ a:hover, a:active {color: #FFC000;}
 	margin: 0;
 	padding: 0;
 	z-index: 5;
+	background: #fff;
 }
 .backwhite{
 	background: #fff;
@@ -183,7 +184,9 @@ p.article_txt{
 	margin: 30px;
 	padding-top: 50px; 
 	font-family: 'Nanum Myeongjo', serif;
+	font-family: 'AppleSDGothicNeo-thin', serif;
 	font-size: 2em;
+	font-size: 3em;
 	line-height: 1.4em;
 	font-weight: normal;
 	word-break: keep-all;
