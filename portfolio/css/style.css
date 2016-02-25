@@ -352,6 +352,7 @@ p.article_txt{
 	height: 100%;
 	margin-top: 100px;
 	/*background: rgba(80, 80, 80, 0.7);*/
+	background: rgba(255, 255, 255, 0.7);
 	text-align: left;
 	word-break:keep-all;
 }
