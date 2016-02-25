@@ -22,9 +22,8 @@ body{
 	/*word-break:keep-all;*/
 	color: #000;
 }
-a{color:#000;	text-decoration: none; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
+a, a:visited{color:#000;	text-decoration: none; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
 }
-a:hover, a:active {color: #ff7800;}
 a:hover, a:active {color: #FFC000;}
 
 /*common - LAYOUT*/
@@ -58,21 +57,12 @@ a:hover, a:active {color: #FFC000;}
 	height: 30px;
 	margin: 0;
 	padding: 0;
-	font-family: 'AppleSDGothicNeo-Bold';
-	font-family: 'Montserrat', sans-serif;
-	background: url(../img/logo.png);
+	font-family: 'AppleSDGothicNeo-Regular';
+	font-weight: normal;
+	/*font-family: 'Montserrat', sans-serif;*/
 	font-size: 1em;
 }
-.header .logo{
-	float: left;
-	overflow: hidden;
-	width: 50px;
-	padding: 0;
-	background: url(../img/logo.png) no-repeat; 
-	/*원래 사이즈 : 362 60*/
-	background-size: 100%;
-	text-indent: -9999px;
-}
+
 .header .menulink {
 	display: inline-block;
 	float: right;
