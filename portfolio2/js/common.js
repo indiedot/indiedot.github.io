@@ -109,10 +109,11 @@
 				$(this).find('.title').animate({
 						'margin' : '80px',
 						'font-size' : '2em',
-						'color' : '#fff'
+						// 'color' : '#fff'
 					}, 
 					250
 				);
+				$(this).find('.title').css('color',  '#000');
 				$(this).find('.overlay').css('background-color',  '#0056FF');	
 			}
 		);
@@ -125,10 +126,11 @@
 				$(this).find('.title').animate({
 						'margin' : '20px',
 						'font-size' : '1.2em',
-						'color' : '#000'
+						// 'color' : '#000'
 					}, 
 					250
 				);
+				$(this).find('.title').css('color',  '#000');
 				$(this).find('.overlay').css('background-color',  '#FFFFFF');	
 			}
 		);
