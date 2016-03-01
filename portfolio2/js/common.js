@@ -103,18 +103,19 @@
 			);
 			$(this).find('.title').animate({
 					'margin' : '80px',
-					'font-size' : '2em'
+					'font-size' : '2em',
+					'color' : '#fff'
 				}, 
 				250
 			);
 			
 			$(this).find('.overlay').css('background-color',  'rgba(0, 70, 255, 0.9)');	
-			$(this).find('.title').css('color',  '#fff');
-			$(this).find('.detail').css('color',  '#fff');
+			// $(this).find('.title').css('color',  '#fff');
+			// $(this).find('.detail').css('color',  '#fff');
 			$(this).find('line').css('stroke', '#fff')
 			$(this).find('polyline').css('stroke', '#fff')
 			// $(this).find('.overlay').css('display',  'block');
-			$(this).find('.type').addClass('test');
+			// $(this).find('.type').addClass('test');
 		}
 	);
 	$('.item').mouseleave(function(){
@@ -125,19 +126,23 @@
 			);
 			$(this).find('.title').animate({
 					'margin' : '20px',
-					'font-size' : '1.2em'
+					'font-size' : '1.2em',
+					'color' : '#000'
 				}, 
 				250
 			);
 			
 			$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.8)');	
-			$(this).find('.title').css('color',  '#000');
+			// $(this).find('.title').css('color',  '#000');
 			$(this).find('line').css('stroke', '#000')
 			$(this).find('polyline').css('stroke', '#000')
 			// $(this).find('.overlay').css('display',  'none');
-			$(this).find('.type').removeClass('test');
+			// $(this).find('.type').removeClass('test');
 		}
 	);
+
+
+	//IE 일때 
 	if(!browserIE){
 		$('.item').mouseenter(function(){
 				$(this).find('.overlay').animate({
@@ -147,7 +152,8 @@
 				);
 				$(this).find('.title').animate({
 						'margin' : '80px',
-						'font-size' : '2em'
+						'font-size' : '2em',
+						'color' : '#fff'
 					}, 
 					250
 				);
@@ -169,7 +175,8 @@
 				);
 				$(this).find('.title').animate({
 						'margin' : '20px',
-						'font-size' : '1.2em'
+						'font-size' : '1.2em',
+						'color' : '#000'
 					}, 
 					250
 				);
