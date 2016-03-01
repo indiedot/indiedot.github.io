@@ -4,6 +4,7 @@
 	var log = document.getElementById('log'); 
 	var useragent = window.navigator.userAgent; 
 	var mediaState = false; // false =  PC, true = mobile
+	var browserIE = false; // false = other browser, true = IE
 
 	if(useragent.indexOf('Pad') > -1 || useragent.indexOf('Android') > -1 || useragent.indexOf('Phone') > -1)  {
 		mediaState = true; 
@@ -12,8 +13,10 @@
 		mediaState = false; 
 		$('body').addClass('pc');
 	}
-	
 
+	if(useragent.indexOf('MSIE') > -1){
+		browserIE = true;
+	}
 	
 	
 	//포트폴리오 섬네일 모션
@@ -39,7 +42,102 @@
 	// 		}
 	// 	);
 	// }
-	if(!mediaState){
+	// if(!mediaState){
+	// 	$('.item').mouseenter(function(){
+	// 			$(this).find('.overlay').animate({
+	// 					'margin' : '0'
+	// 				}, 
+	// 				250
+	// 			);
+	// 			$(this).find('.title').animate({
+	// 					'margin' : '80px',
+	// 					'font-size' : '2em'
+	// 				}, 
+	// 				250
+	// 			);
+				
+	// 			$(this).find('.overlay').css('background-color',  'rgba(0, 70, 255, 0.9)');	
+	// 			if ($.browser.msie) {
+	// 				$(this).find('.overlay').css('background-color',  '#0056FF');
+	// 			}
+	// 			$(this).find('.title').css('color',  '#fff');
+	// 			$(this).find('.detail').css('color',  '#fff');
+	// 			$(this).find('line').css('stroke', '#fff')
+	// 			$(this).find('polyline').css('stroke', '#fff')
+	// 			// $(this).find('.overlay').css('display',  'block');
+	// 			$(this).find('.type').addClass('test');
+	// 		}
+	// 	);
+	// 	$('.item').mouseleave(function(){
+	// 			$(this).find('.overlay').animate({
+	// 					'margin' : '20px'	 
+	// 				}, 
+	// 				250
+	// 			);
+	// 			$(this).find('.title').animate({
+	// 					'margin' : '20px',
+	// 					'font-size' : '1.2em'
+	// 				}, 
+	// 				250
+	// 			);
+				
+	// 			$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.8)');	
+	// 			if ($.browser.msie) {
+	// 				$(this).find('.overlay').css('background-color',  '#fff');
+	// 			}
+	// 			$(this).find('.title').css('color',  '#000');
+	// 			$(this).find('line').css('stroke', '#000')
+	// 			$(this).find('polyline').css('stroke', '#000')
+	// 			// $(this).find('.overlay').css('display',  'none');
+	// 			$(this).find('.type').removeClass('test');
+	// 		}
+	// 	);
+	// }
+
+	$('.item').mouseenter(function(){
+			$(this).find('.overlay').animate({
+					'margin' : '0'
+				}, 
+				250
+			);
+			$(this).find('.title').animate({
+					'margin' : '80px',
+					'font-size' : '2em'
+				}, 
+				250
+			);
+			
+			$(this).find('.overlay').css('background-color',  'rgba(0, 70, 255, 0.9)');	
+			$(this).find('.title').css('color',  '#fff');
+			$(this).find('.detail').css('color',  '#fff');
+			$(this).find('line').css('stroke', '#fff')
+			$(this).find('polyline').css('stroke', '#fff')
+			// $(this).find('.overlay').css('display',  'block');
+			$(this).find('.type').addClass('test');
+		}
+	);
+	$('.item').mouseleave(function(){
+			$(this).find('.overlay').animate({
+					'margin' : '20px'	 
+				}, 
+				250
+			);
+			$(this).find('.title').animate({
+					'margin' : '20px',
+					'font-size' : '1.2em'
+				}, 
+				250
+			);
+			
+			$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.8)');	
+			$(this).find('.title').css('color',  '#000');
+			$(this).find('line').css('stroke', '#000')
+			$(this).find('polyline').css('stroke', '#000')
+			// $(this).find('.overlay').css('display',  'none');
+			$(this).find('.type').removeClass('test');
+		}
+	);
+	if(!browserIE){
 		$('.item').mouseenter(function(){
 				$(this).find('.overlay').animate({
 						'margin' : '0'
@@ -53,10 +151,7 @@
 					250
 				);
 				
-				$(this).find('.overlay').css('background-color',  'rgba(0, 70, 255, 0.9)');
-				if (agent.indexOf("msie") != -1) {
-					$(this).find('.overlay').css('background-color',  '#0056FF');
-				};
+				$(this).find('.overlay').css('background-color',  '#0056FF');	
 				$(this).find('.title').css('color',  '#fff');
 				$(this).find('.detail').css('color',  '#fff');
 				$(this).find('line').css('stroke', '#fff')
@@ -77,10 +172,8 @@
 					}, 
 					250
 				);
-				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.8)');
-				if (agent.indexOf("msie") != -1) {
-					$(this).find('.overlay').css('background-color',  '#0056FF');
-				};
+				
+				$(this).find('.overlay').css('background-color',  '#fff');	
 				$(this).find('.title').css('color',  '#000');
 				$(this).find('line').css('stroke', '#000')
 				$(this).find('polyline').css('stroke', '#000')
