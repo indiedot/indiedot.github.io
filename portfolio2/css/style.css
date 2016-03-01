@@ -70,20 +70,17 @@ a:hover, a:active {color: #0056FF;}
 	font-weight: normal;
 	font-size: 1em;
 }
-.header .logo{
-	width: 50px;
-	background: url(../img/logo.png) no-repeat;
-	background-size: 50px; 
-	background-position: left 3px;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
-	src='../img/logo.png',
-	sizingMethod='scale');
 
-	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
-	src='../img/logo.png',
-	sizingMethod='scale')";
-	text-indent:-9999px;
+@media(min-width: 1px){
+	.header .logo{
+		width: 50px;
+		background: url(../img/logo.png) no-repeat;
+		background-size: 50px; 
+		background-position: left 3px;
+		text-indent:-9999px;
+	}	
 }
+
 
 .header .menulink {
 	display: inline-block;
