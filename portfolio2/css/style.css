@@ -75,6 +75,13 @@ a:hover, a:active {color: #0056FF;}
 	background: url(../img/logo.png) no-repeat;
 	background-size: 50px; 
 	background-position: left 3px;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/logo.png',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/logo.png',
+	sizingMethod='scale')";
 	text-indent:-9999px;
 }
 
@@ -684,10 +691,34 @@ overflow: hidden;
 .artisee .cover{background: #eb6877 url(../img/portfolio/artisee_cover.jpg);}
 .isesang .cover{background: #1b598d url(../img/portfolio/isesang_cover.jpg);}
 .pgm .cover{background: #1b598d url(../img/portfolio/pgm_cover.jpg);}
-.qbrix .cover{background: #1b598d url(../img/portfolio/qbrix_cover.jpg);}
-.dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);}
+.qbrix .cover{background: #1b598d url(../img/portfolio/qbrix_cover.jpg);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/qbrix_cover.jpg',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/qbirix_cover.jpg',
+	sizingMethod='scale')";
+}
+.dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/dhl_cover.jpg',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/dhl_cover.jpg',
+	sizingMethod='scale')";
+}
 .samsung .cover{background: #e24444 url(../img/portfolio/samsung_cover.jpg);}
-.sony .cover{background: #093b6a url(../img/portfolio/sony_cover.jpg);}
+.sony .cover{background: #093b6a url(../img/portfolio/sony_cover.jpg);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/sony_cover.jpg',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/sony_cover.jpg',
+	sizingMethod='scale')";
+}
 
 .portfolio_contents .cover{
 	position: relative;
