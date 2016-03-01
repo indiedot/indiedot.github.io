@@ -16,6 +16,7 @@
 
 	if(useragent.indexOf('MSIE') > -1){
 		browserIE = true;
+		alert('ie')
 	}
 	
 	
