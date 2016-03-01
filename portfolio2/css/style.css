@@ -76,10 +76,10 @@ a:hover, a:active {color: #0056FF;}
 @media(min-width: 1px){
 	.header .logo{
 		width: 50px;
-		background: url(../img/logo.png) no-repeat;
+		/*background: url(../img/logo.png) no-repeat;
 		background-size: 50px; 
 		background-position: left 3px;
-		text-indent:-9999px;
+		text-indent:-9999px;*/
 	}	
 }
 
