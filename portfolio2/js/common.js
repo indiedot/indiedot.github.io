@@ -95,9 +95,50 @@
 	// 	);
 	// }
 
+	
+
+
+	//IE 일때 
+	if(!browserIE){
+		$('.item').mouseenter(function(){
+				$(this).find('.overlay').animate({
+						'margin' : '0'
+					}, 
+					250
+				);
+				$(this).find('.title').animate({
+						'margin' : '80px',
+						'font-size' : '2em',
+						'color' : '#fff'
+					}, 
+					250
+				);
+				$(this).find('.overlay').css('background-color',  '#0056FF');	
+			}
+		);
+		$('.item').mouseleave(function(){
+				$(this).find('.overlay').animate({
+						'margin' : '20px'
+					},
+					250
+				);
+				$(this).find('.title').animate({
+						'margin' : '20px',
+						'font-size' : '1.2em',
+						'color' : '#000'
+					}, 
+					250
+				);
+				$(this).find('.overlay').css('background-color',  '#FFFFFF');	
+			}
+		);
+	}
+
 	$('.item').mouseenter(function(){
+			//console.log('오버')
 			$(this).find('.overlay').animate({
-					'margin' : '0'
+					'margin' : '0',
+					// 'background-color' : 'rgba(0, 70, 255, 0.9)'
 				}, 
 				250
 			);
@@ -119,8 +160,10 @@
 		}
 	);
 	$('.item').mouseleave(function(){
+			//console.log('안오버')
 			$(this).find('.overlay').animate({
-					'margin' : '20px'	 
+					'margin' : '20px',
+					// 'background-color' : 'rgba(255, 255, 255, 0.8)'
 				}, 
 				250
 			);
@@ -140,58 +183,6 @@
 			// $(this).find('.type').removeClass('test');
 		}
 	);
-
-
-	//IE 일때 
-	if(!browserIE){
-		$('.item').mouseenter(function(){
-				$(this).find('.overlay').animate({
-						'margin' : '0'
-					}, 
-					250
-				);
-				$(this).find('.title').animate({
-						'margin' : '80px',
-						'font-size' : '2em',
-						'color' : '#fff'
-					}, 
-					250
-				);
-				
-				$(this).find('.overlay').css('background',  '#0056FF');	
-				$(this).find('.title').css('color',  '#fff');
-				$(this).find('.detail').css('color',  '#fff');
-				$(this).find('line').css('stroke', '#fff')
-				$(this).find('polyline').css('stroke', '#fff')
-				// $(this).find('.overlay').css('display',  'block');
-				$(this).find('.type').addClass('test');
-			}
-		);
-		$('.item').mouseleave(function(){
-				$(this).find('.overlay').animate({
-						'margin' : '20px'	 
-					}, 
-					250
-				);
-				$(this).find('.title').animate({
-						'margin' : '20px',
-						'font-size' : '1.2em',
-						'color' : '#000'
-					}, 
-					250
-				);
-				
-				$(this).find('.overlay').css('background',  '#fff');	
-				$(this).find('.title').css('color',  '#000');
-				$(this).find('line').css('stroke', '#000')
-				$(this).find('polyline').css('stroke', '#000')
-				// $(this).find('.overlay').css('display',  'none');
-				$(this).find('.type').removeClass('test');
-			}
-		);
-	}
-
-
 
 
 	var idx = 0;
