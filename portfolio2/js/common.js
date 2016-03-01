@@ -16,7 +16,7 @@
 
 	if(useragent.indexOf('MSIE') > -1){
 		browserIE = true;
-		alert('ie')
+		// alert('ie입니다.')
 	}
 	
 	
@@ -152,7 +152,7 @@
 					250
 				);
 				
-				$(this).find('.overlay').css('background-color',  '#0056FF');	
+				$(this).find('.overlay').css('background',  '#0056FF');	
 				$(this).find('.title').css('color',  '#fff');
 				$(this).find('.detail').css('color',  '#fff');
 				$(this).find('line').css('stroke', '#fff')
@@ -174,7 +174,7 @@
 					250
 				);
 				
-				$(this).find('.overlay').css('background-color',  '#fff');	
+				$(this).find('.overlay').css('background',  '#fff');	
 				$(this).find('.title').css('color',  '#000');
 				$(this).find('line').css('stroke', '#000')
 				$(this).find('polyline').css('stroke', '#000')
