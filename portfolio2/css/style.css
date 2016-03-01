@@ -692,6 +692,8 @@ overflow: hidden;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
 
 .porfol_info {
