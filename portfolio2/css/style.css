@@ -371,7 +371,7 @@ p.article_txt{
 .portfolio .item .thum{
 	height: 200px;
 	background-position: top center;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -687,7 +687,7 @@ overflow: hidden;
 	overflow: hidden;
 	margin-bottom: 50px;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
