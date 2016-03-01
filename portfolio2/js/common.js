@@ -22,11 +22,12 @@
 	var agent = navigator.userAgent.toLowerCase();
 
 	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
-		alert("인터넷 익스플로러 브라우저 입니다.");
-			browserIE = true;
+		// alert("인터넷 익스플로러 브라우저 입니다.");
+		browserIE = true;
 	}
 	else {
-		alert("인터넷 익스플로러 브라우저가 아닙니다.");
+		browserIE = false;
+		// alert("인터넷 익스플로러 브라우저가 아닙니다.");
 	}
 	
 	//포트폴리오 섬네일 모션
@@ -122,8 +123,8 @@
 					}, 
 					250
 				);
-				$(this).find('.title').css('color',  '#000');
-				$(this).find('.overlay').css('background-color',  '#0056FF');	
+				$(this).find('.title').css('color', '#000 !important');
+				$(this).find('.overlay').css('background-color',  '#0056FF !important');	
 			}
 		);
 		$('.item').mouseleave(function(){
@@ -139,8 +140,8 @@
 					}, 
 					250
 				);
-				$(this).find('.title').css('color',  '#000');
-				$(this).find('.overlay').css('background-color',  '#FFFFFF');	
+				$(this).find('.title').css('color',  '#000 !important');
+				$(this).find('.overlay').css('background-color',  '#FFFFFF !important');	
 			}
 		);
 	}
