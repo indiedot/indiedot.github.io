@@ -309,6 +309,7 @@ p.article_txt{
 	bottom: 0;
 	left: 0;
 	margin: 20px;
+	background: #fff;
 	background: rgba(255, 255, 255, 0.8);
 	/*background: yellow;*/
 	/*background: #0046ff;*/
@@ -631,12 +632,13 @@ overflow: hidden;
 	margin-bottom: 5px;
 }
 .contact .submit{
-	background: #AFAEA9;
+	background: #e6e6e6;
 	font-size: 1em;
 	-webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     border: none;
+    font-family: 'Nanum Barun Gothic';
 }
 .contact .submit:hover{
 	background: #0056ff;

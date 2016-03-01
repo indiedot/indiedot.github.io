@@ -13,6 +13,12 @@
 		$('body').addClass('pc');
 	}
 	
+
+	var ie = 0;
+	if (agent.indexOf("msie") != -1) {
+		//ie 브라우저
+		ie = 1;
+	}
 	
 	//포트폴리오 섬네일 모션
 	// if(!mediaState){
@@ -52,6 +58,9 @@
 				);
 				
 				$(this).find('.overlay').css('background-color',  'rgba(0, 70, 255, 0.9)');
+				if(ie == 1){
+					$(this).find('.overlay').css('background-color',  '#0056FF');
+				} 
 				$(this).find('.title').css('color',  '#fff');
 				$(this).find('.detail').css('color',  '#fff');
 				$(this).find('line').css('stroke', '#fff')
@@ -73,6 +82,9 @@
 					250
 				);
 				$(this).find('.overlay').css('background-color',  'rgba(255, 255, 255, 0.8)');
+				if(ie == 1){
+					$(this).find('.overlay').css('background-color',  '#fff');
+				} 
 				$(this).find('.title').css('color',  '#000');
 				$(this).find('line').css('stroke', '#000')
 				$(this).find('polyline').css('stroke', '#000')
