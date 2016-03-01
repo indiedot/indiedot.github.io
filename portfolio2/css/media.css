@@ -1,5 +1,5 @@
 /*media query*/
-@media (min-width: 360px){
+@media (min-width: 490px){
 	/*.blog .post:after{
 		clear:both; display: block; content: "";
 	}
@@ -7,6 +7,10 @@
 		float:left;
 		margin-right: 30px;
 	}*/
+	.porfol_info {
+		margin:100px auto;
+		padding: 50px;
+	}
 }
 
 
@@ -55,10 +59,7 @@
 
 
 	/*portfolio_contents*/
-	.porfol_info {
-		margin:100px auto;
-		padding: 50px;
-	}
+	
 	/*article*/
 	.porfol_article .alignImg{
 		float: left;

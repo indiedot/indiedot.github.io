@@ -736,9 +736,18 @@ overflow: hidden;
 
 .porfol_info {
 	max-width: 350px;
-	margin:90px 30px 30px 30px;
-	padding: 30px;
+	margin:100px auto;
+	padding: 50px;
 	background: #fff;
+}
+@media(min-width: 1px){
+	.porfol_info {
+		max-width: 350px;
+		margin:90px 30px 30px 30px;
+		padding: 30px;
+		background: #fff;
+	}
+	
 }
 .porfol_info .type{
 	position: relative;
