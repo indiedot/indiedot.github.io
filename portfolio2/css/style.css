@@ -10,6 +10,7 @@
 /*@import url(https://fonts.googleapis.com/css?family=Montserrat:400);*/
 /*@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);*/
 @import url(https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700);
 /*weight는 Bold(700), Regular(400), Light(300), UltraLight(200)*/
 /*common*/
 
@@ -21,7 +22,8 @@
 body{
 	padding: 0;
 	margin: 0; 
-	font-family: 'AppleSDGothicNeo-Regular', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
+	/*font-family: 'AppleSDGothicNeo-Regular', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;*/
+	font-family: 'Ubuntu',"애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","나눔바른고딕",NanumBarunGothic,"나눔고딕",NanumGothic,"맑은 고딕","Malgun Gothic","돋움",dotum,AppleGothic,sans-serif;
 	/*font-family:'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;*/
 	font-size:16px;
 	line-height: 24px;
@@ -66,7 +68,6 @@ a:hover, a:active {color: #0056FF;}
 	height: 30px;
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat';
 	font-weight: normal;
 	font-size: 1em;
 	cursor: pointer;
@@ -170,11 +171,10 @@ a:hover, a:active {color: #0056FF;}
 /*===============common - CONTENTS===============*/
 h1.article_title{
 	position: relative;
-	font-family: 'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
 	margin: 0 0 70px 0;
 	padding: 0;
 	font-size: 1.8em;
-	font-weight: 200;
+	font-weight: 100;
 }
 /*h1.article_title span{
 	color:#ff9900;
@@ -213,11 +213,10 @@ p.article_txt{
 	position: relative;
 	margin: 30px;
 	padding-top: 50px; 
-	font-family: 'AppleSDGothicNeo-thin', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
 	font-size: 2em;
 	font-size: 2.5em;
 	line-height: 1.4em;
-	font-weight: 200;
+	font-weight: 100;
 	word-break: keep-all;
 	letter-spacing: -1.5px;
 	/*color: #fff;*/
@@ -320,8 +319,7 @@ p.article_txt{
 .portfolio .item .overlay .title{	
 	margin: 20px 20px 10px 20px;
 	padding: 0;
-	font-family: 'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	font-size: 1.2em;
 	line-height: 1.3em;
 	color: #000;
@@ -410,8 +408,7 @@ p.article_txt{
 	max-width: 1000px;
 	margin: 0 auto;
 	padding:0;
-	font-family: 'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	font-size: 1.1em;
 	line-height: 1.5em;
 	/*text-align: center;*/
@@ -441,15 +438,13 @@ p.article_txt{
 }
 .about .me h2, .about .exp h2{
 	margin: 0 0 30px 0;
-	font-family: 'AppleSDGothicNeo-Bold' ,'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;;
 	font-weight: bold;
 	font-size: 1em;
 	color: #000;
 }
 .about .me h3, .about .exp h3{
 	margin: 0 0 30px 0;
-	font-family: 'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	font-size: 1.4em;
 	line-height: 1.5em;
 	color: #000;
@@ -812,8 +807,7 @@ overflow: hidden;
 .porfol_article h2{
 	position: relative;
 	margin: 0 0 40px 0;
-	font-family:'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	font-size:1.8em;
 	line-height: 1.3em;
 	color:#000;
@@ -829,8 +823,7 @@ overflow: hidden;
 }
 .porfol_article p{
 	margin-bottom: 30px;
-	font-family:'AppleSDGothicNeo-Light', 'Montserrat', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-weight: 200;
+	font-weight: 100;
 	font-size: 1.1em;
 	line-height: 1.6em;
 	word-break: break-all;
