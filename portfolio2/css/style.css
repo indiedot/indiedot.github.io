@@ -66,9 +66,10 @@ a:hover, a:active {color: #0056FF;}
 	height: 30px;
 	margin: 0;
 	padding: 0;
-	font-family: 'AppleSDGothicNeo-Regular';
+	font-family: 'Montserrat';
 	font-weight: normal;
 	font-size: 1em;
+	cursor: pointer;
 }
 
 @media(min-width: 1px){
@@ -292,6 +293,7 @@ p.article_txt{
 	height:200px;
 	/*overflow: hidden;*/
 	margin-bottom: 30px;
+	cursor:pointer;
 }
 .portfolio .item a{
 	display: block;
