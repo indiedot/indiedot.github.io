@@ -672,7 +672,15 @@ overflow: hidden;
 
 /*==============portfolio - 상세 페이지==============*/
 /*cover - background*/
-.oxfam .cover{background: #26a443 url(../img/portfolio/oxfam_cover.jpg);}
+.oxfam .cover{background: #26a443 url(../img/portfolio/oxfam_cover.jpg);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/oxfam_cover.jpg',
+	sizingMethod='scale');
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(
+	src='../img/portfolio/oxfam_cover.jpg',
+	sizingMethod='scale')";
+	}
 .artisee .cover{background: #eb6877 url(../img/portfolio/artisee_cover.jpg);}
 .isesang .cover{background: #1b598d url(../img/portfolio/isesang_cover.jpg);}
 .pgm .cover{background: #1b598d url(../img/portfolio/pgm_cover.jpg);}
@@ -692,8 +700,6 @@ overflow: hidden;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
 }
 
 .porfol_info {
