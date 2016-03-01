@@ -12,14 +12,16 @@
 /*weight는 Bold(700), Regular(400), Light(300), UltraLight(200)*/
 /*common*/
 
-::selection { background:#fff; color:#FFC000; }
-::-moz-selection { background:#fff; color:#FFC000; }
+/*::selection { background:#fff; color:#FFC000; }
+::-moz-selection { background:#fff; color:#FFC000; }*/
+::selection { background:#fff; color:#0056FF; }
+::-moz-selection { background:#fff; color:#0056FF; }
 
 body{
 	padding: 0;
 	margin: 0; 
 	font-family: 'AppleSDGothicNeo-Regular', 'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
-	font-family:'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;
+	/*font-family:'Nanum Barun Gothic', 'Malgun-Gothic', sans-serif;*/
 	font-size:16px;
 	line-height: 24px;
 	/*word-break:keep-all;*/
@@ -27,7 +29,9 @@ body{
 }
 a, a:visited{color:#000;	text-decoration: none; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
 }
-a:hover, a:active {color: #FFC000;}
+/*a:hover, a:active {color: #FFC000;}*/
+a:hover, a:active {color: #0056FF;}
+
 
 /*common - LAYOUT*/
 .wrap{
@@ -44,7 +48,6 @@ a:hover, a:active {color: #FFC000;}
 	margin: 0;
 	padding: 0;
 	z-index: 5;
-	background: #fff;
 
 }
 .backwhite{
@@ -52,8 +55,10 @@ a:hover, a:active {color: #FFC000;}
 }
 /*header - no scroll*/
 .headerwrap{
+	max-width: 1000px;
 	overflow: hidden;
 	padding: 30px;
+	margin: 0 auto;
 }
 .header .logo{
 	float: left;
@@ -62,8 +67,14 @@ a:hover, a:active {color: #FFC000;}
 	padding: 0;
 	font-family: 'AppleSDGothicNeo-Regular';
 	font-weight: normal;
-	/*font-family: 'Montserrat', sans-serif;*/
 	font-size: 1em;
+}
+.header .logo{
+	width: 50px;
+	background: url(../img/logo.png) no-repeat;
+	background-size: 50px; 
+	background-position: left 3px;
+	text-indent:-9999px;
 }
 
 .header .menulink {
@@ -246,6 +257,7 @@ p.article_txt{
 
 /*===============PORTFOLIO===============*/
 .portfolio{
+	padding-top: 50px;
 	/*background: #e5e5e5;*/
 }
 /*filter*/
@@ -283,6 +295,7 @@ p.article_txt{
 .portfolio .item .overlay {
 	/*display: none;*/
 	position: absolute;
+	overflow: hidden;
 	z-index: 1;
 	top:0;
 	right:0;
@@ -352,6 +365,7 @@ p.article_txt{
 .portfolio .newgen .thum{background: url(../img/portfolio/thum/thum_newgen.jpg);}
 .portfolio .qbrix .thum{background: url(../img/portfolio/thum/thum_qbrix.jpg);}
 .portfolio .dhl .thum{background: url(../img/portfolio/thum/thum_dhl.jpg);}
+.portfolio .sony .thum{background: #093b6a url(../img/portfolio/thum/thum_sony.jpg);}
 
 .portfolio .item .thum{
 	height: 200px;
@@ -370,6 +384,7 @@ p.article_txt{
 	font-size: 1.2em;
 }
 .about .profile{
+	margin-bottom: 100px;
 }
 .about .profileimg{
 	position: absolute;
@@ -387,11 +402,12 @@ p.article_txt{
 	max-width: 1000px;
 	margin: 0 auto;
 	padding:0;
-	font-size: 1.2em;
+	font-family: 'AppleSDGothicNeo-Light';
+	font-size: 1.1em;
 	line-height: 1.5em;
 	/*text-align: center;*/
 }
-.about .profile .profiletxt:before{
+/*.about .profile .profiletxt:before{
 	display: block;
 	position: absolute;
 	top:80px;
@@ -408,7 +424,7 @@ p.article_txt{
 	margin-right: -15px;
 	font-size: 60px;
 	content: "\201D";
-}
+}*/
 /*have*/
 .about .me, .about .exp{
 	word-break: keep-all;
@@ -586,7 +602,7 @@ overflow: hidden;
 
 /*===============CONTACT===============*/
 .contact{
-	background: #f6f6f6;
+	/*background: #f6f6f6;*/
 }
 .contact input, .contact textarea, .contact button{
 	display: block;
@@ -597,11 +613,11 @@ overflow: hidden;
 	box-sizing: border-box;
 	margin-bottom: 15px;
 	padding: 15px;
-	border: 0;
+	border: 1px solid #ccc;
 	outline-style:none;
 	outline: 0;
-	border-bottom: 2px solid #000;
-	background: transparent;
+	/*border-bottom: 2px solid #000;
+	background: transparent;*/
 }
 .contact form label{
 	display: block;
@@ -613,10 +629,11 @@ overflow: hidden;
 	-webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
+    border: none;
 }
 .contact .submit:hover{
-	background: #ffc71c;
-	color: #56523D;
+	background: #0056ff;
+	color: #fff;
 }
 
 
@@ -661,6 +678,7 @@ overflow: hidden;
 .qbrix .cover{background: #1b598d url(../img/portfolio/qbrix_cover.jpg);}
 .dhl .cover{background: #1b598d url(../img/portfolio/dhl_cover.jpg);}
 .samsung .cover{background: #e24444 url(../img/portfolio/samsung_cover.jpg);}
+.sony .cover{background: #093b6a url(../img/portfolio/sony_cover.jpg);}
 
 .portfolio_contents .cover{
 	position: relative;
@@ -766,10 +784,93 @@ overflow: hidden;
 	word-break: break-all;
 }
 .porfol_article img{
+	display: inline-block;
 	width:100%;
+	margin: 0;
+	padding: 0; 
+	border:0;
 }
+
+
+.browser {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-bottom:50px;
+}
+.browser:after, .browser:before {
+	content: "";
+	display: table
+}
+.browser:after {
+	clear: both
+}
+.browser .header-browser {
+	height: 10px;
+	display: block;
+	/*width: 100%;*/
+	border-radius: 5px 5px 0 0;
+	background-clip: padding-box;
+	background-color: #dbdbdb;
+	padding: 15px
+}
+.browser .header-browser .button-browser {
+	float: left;
+	width: 50px;
+	height: 10px;
+	position: relative
+}
+.browser .header-browser .button-browser span {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	top: 0;
+	left: 50%;
+	margin-left: -5px;
+	border-radius: 45px;
+	background-clip: padding-box;
+	background-color: #aeaeae
+}
+.browser .header-browser .button-browser span:after, .browser .header-browser .button-browser span:before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 45px;
+	background-clip: padding-box;
+	background-color: #aeaeae;
+}
+.browser .header-browser .button-browser span:before {
+	left: -20px
+}
+.browser .header-browser .button-browser span:after {
+	right: -20px
+}
+.browser .header-browser .bar-browser {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: 20px;
+	top: -5px;
+	margin-left: 70px;
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	background-clip: padding-box
+}
+.browser .cont-browser {
+}
+.browser .cont-browser img {
+	width: 100%;
+	height: auto;
+	display: block
+}
+
+
 /*btn*/
-.btn{
+/*.btn{
 	position: fixed;
 	top:80%;
 	right: 0;
@@ -790,6 +891,26 @@ overflow: hidden;
 .btn a:hover{
 	color:#000;
 	text-decoration: line-through;
+}*/
+.btn{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px;
+}
+.btn .backproject{
+	display: block;
+	padding: 30px;
+	/*background: #eee;*/
+	/*border-top: 2px solid #0056FF;*/
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+.btn .backproject a{
+	display: block;
+}
+.btn .nextproject, .btn .prevproject{
+	display: none;
 }
 /*.btn .backproject{
 	position: fixed;
