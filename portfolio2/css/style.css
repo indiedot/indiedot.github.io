@@ -336,6 +336,10 @@ p.article_txt{
 	bottom: 10px;
 	right: 20px;
 }
+.portfolio .item .overlay .detail svg{
+	width: 20px;
+	height: 10px;
+}
 
 /*thumnail들*/
 .portfolio .oxfamlove .thum{background: url(../img/portfolio/thum/thum_oxfam.jpg);}
