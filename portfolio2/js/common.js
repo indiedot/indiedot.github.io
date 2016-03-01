@@ -14,11 +14,20 @@
 		$('body').addClass('pc');
 	}
 
-	if(useragent.indexOf('MSIE') > -1){
-		browserIE = true;
-		// alert('ie입니다.')
-	}
+	// if(useragent.indexOf('MSIE') > -1){
+	// 	browserIE = true;
+	// 	// alert('ie입니다.')
+	// }
 	
+	var agent = navigator.userAgent.toLowerCase();
+
+	if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+		alert("인터넷 익스플로러 브라우저 입니다.");
+			browserIE = true;
+	}
+	else {
+		alert("인터넷 익스플로러 브라우저가 아닙니다.");
+	}
 	
 	//포트폴리오 섬네일 모션
 	// if(!mediaState){
