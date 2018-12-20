@@ -1,1606 +1,3644 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <!-- Standard Meta -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>D-LOCKER</title>
+    
+    <link rel="stylesheet" type="text/css" href="resource/lib/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="resource/lib/material-design-icons-master/material-icons.css">
 
-<link rel="image_src" type="image/jpeg" href="https://semantic-ui.com/images/logo.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<!-- Site Properities -->
-<meta name="generator" content="DocPad v6.79.4" />
-<title>Semantic UI</title>
+    <style type="text/css">
+    	@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body,
+html{
+    height:100%;
+}
+body {
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    /* font-family: 'Apple SD 산돌고딕 Neo', 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif; */
+    font-family: 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    color: #2D3641;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nanum Square', sans-serif;
+}
 
-<meta name="description" content="Semantic empowers designers and developers by creating a shared vocabulary for UI." />
-<meta name="keywords" content="html5, ui, library, framework, javascript" />
-  
-<link rel="stylesheet" type="text/css" class="ui" href="https://semantic-ui.com/dist/semantic.min.css">
+a {
+    color: #598DBF;
+}
+a:hover {
+    color: #3E6285;
+}
+
+
+/*---------------
+    scroll bar
+---------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(145, 163, 189, 0.3); 
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(145, 163, 189, 0.8); 
+}
+
+
+.container {
+    padding-right: 16px;
+    padidng-left: 16px;
+}
+
+.container-fluid{
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1156px;
+    }
+    .container-fluid{
+        max-width: 1156px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/*--------------
+      R O W
+--------------*/
+.row {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+/*--------------
+    T A B L E
+--------------*/
+.table th,
+.table td {
+    padding: 1rem 0.5rem;
+    vertical-align: middle;
+    border-top: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.table thead th{
+    padding: 0.5rem 0.5rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #D1D5DB;
+    background-color: #F2F3F5;
+}
+.table tbody td{
+    color: inherit;
+}
+.table caption{
+    display: none;
+}
+
+.table-fixed{
+    table-layout: fixed;
+}
+.table-hover tbody tr:hover {
+  background-color: #F4F8FE;
+}
+/*    table active   */
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: #F4F8FE;
+}
+
+.table-hover .table-active:hover {
+  background-color: #e8ecf3;
+}
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: #e8ecf3;
+}
+
+.table p{
+    margin:0;
+}
+.table th.sorting:after{
+    font-family: 'Material Icons';
+    content: 'unfold_more';
+    vertical-align: middle;
+}
+.table th.sorting-desc:after{
+    font-family: 'Material Icons';
+    content: 'expand_less';
+    vertical-align: middle
+}
+.table th.sorting-asc:after{
+    font-family: 'Material Icons';
+    content: 'expand_more';
+    vertical-align: middle;
+}
+/*------------
+    F O R M
+------------*/
+.form-control {
+    height: 2rem;
+    padding: .1rem .75rem;
+    font-size: 1em;
+    color: inherit;
+    border: 1px solid #D1D5DB;
+}
+.form-control:focus {
+    color: inherit;
+    background-color: #F8F8F9;
+    border-color: #BEC2C8;
+}
+.form-control::-webkit-input-placeholder{
+    color: #A3ACB8;
+}
+.form-control::-ms-input-placeholder {
+    color: #A3ACB8;
+}
+.form-control::placeholder {
+    color: #A3ACB8;
+}
+.form-control:required:invalid {
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+.form{}
+.col-form-label {
+    padding-top: 0.2rem;
+    padding-bottom: 0.35rem;
+    color: #5F6E84;
+}
+.form-label{
+    color: #5F6E84;
+}
+.form > .form-group:last-child,
+.form-row:last-child .form-group{
+    margin-bottom: 0;
+}
+.form-group.required label:after{
+    color: #B51400;
+    content: "*";
+}
+.form-row .form-check{
+    padding-top:25px;
+}
+.form-row > [class*=col-] > .form-group.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.form-row > [class*=col-] > .form-group.row .col-form-label {
+    padding-left: 0;
+}
+/*----------------
+    B U T T O N
+----------------*/
+.btn{
+    padding: 0.282rem 1.2rem;
+    font-size: 1em
+}
+/*    btn Primary    */
+.btn-primary {
+    background-color: #1B447E;
+    border-color: #1B447E;
+}
+.btn-primary:hover{
+    background: #0F2D56;
+    border-color: #0F2D56;
+}
+.btn-primary:focus, .btn-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    opacity: 0.1;
+}
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+/*    btn secondary    */
+.btn-secondary {
+    background-color: #A2ABB8;
+    border-color: #A2ABB8;
+}
+.btn-secondary:hover{
+    background: #7F8691;
+    border-color: #7F8691;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+.btn-secondary.disabled, .btn-secondary:disabled {
+    opacity: 0.1;
+}
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/*    btn outline primary    */
+.btn-outline-primary {
+  color: #1B447E;
+  background-color: transparent;
+  background-image: none;
+  border-color: #1B447E;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #1B447E;
+  border-color: #1B447E;
+}
+
+/*    btn outline secondary    */
+.btn-outline-secondary {
+  color: #A2ABB8;
+  border-color: #A2ABB8;
+}
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #A2ABB8;
+  border-color: #A2ABB8;
+}
+
+.btn > .material-icons{
+    font-size:20px;
+    vertical-align: top;
+}
+.btn-icon {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0.375rem;
+
+}
+.btn-icon .material-icons{
+    font-size: 18px;
+}
+/*--------------------------------
+    D R O P D O W N    M E N U
+--------------------------------*/
+.dropdown-menu {
+    font-size: 1em;
+    color: inherit;
+}
+.dropdown-item.active, .dropdown-item:active{
+    background: #A2ABB8;
+}
+/*--------------------------------
+    I N P U T    G R O U P
+--------------------------------*/
+
+
+/*--------------------------------
+    D R O P D O W N    M E N U
+--------------------------------*/
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::before{
+    background: #598DBF;
+}
+.custom-control-nolabel {
+    position: relative;
+    margin:0;
+    padding:0;
+}
+.custom-control-nolabel .custom-control-label{
+    width: 1rem;
+    height: 1rem;
+}
+.custom-control-nolabel .custom-control-label::before {
+    left:0;
+}
+.custom-control-nolabel .custom-control-label::after {
+    left:0;
+}
+/*------------------------
+    T A B    M E N U
+-------------------------*/
+.nav-pills .nav-link{
+    padding: .532rem .5rem;
+    border-radius: 0;
+    font-size: 1rem;
+}
+@media (min-width: 992px){
+    .nav-pills .nav-link{
+        padding: 0.8rem .5rem;
+    }
+}
+/*    tab menu    */
+.tab-menu.sticky-top{
+    top: 0;
+    background: #e6eaed;
+    border-bottom: 1px solid #d0d5da;
+}
+@media (min-width: 992px){
+    .tab-menu.sticky-top{
+        position: relative;
+        top: 0px;
+    }
+}
+.nav-pills .nav-link{
+    border-bottom: 0.25rem solid #e6eaed;
+    color: #333;
+}
+.nav-pills .nav-link.active{
+    background: transparent;
+    border-color: #598DBF;
+    color: #1B447E;
+}
+@media (min-width: 992px){
+    .nav-pills .nav-link{
+        margin-bottom: -1px;
+        border:1px solid transparent;
+        /* border-top-right-radius: 0.25rem;
+        border-top-left-radius: 0.25rem; */
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-right: 0.5rem;
+    }
+    .nav-pills .nav-link:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+    }
+    .nav-pills .nav-link.active{
+        background: transparent;
+        border-color: #A3ACB8;
+    }
+}
+/*------------------------------------------
+            N A V I G A T I O N
+------------------------------------------*/
+.navbar {
+    padding: 0;
+    height: 60px;
+}
+.navbar > .container,
+.navbar > .container-fluid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+    width: 104px;
+    height: 15px;
+    font-size: 0;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: 104px;
+}
+@media (min-width: 992px){
+    .navbar {
+        height: 80px;
+    }
+    .navbar > .container-fluid {
+        position: relative;
+    }
+    .navbar-expand-lg .navbar-brand {
+        width: 160px;
+        height: 23px;
+        background-size: 160px;
+    }
+}
+.navbar-nav .nav-link {
+    padding: 16px;
+    color: #333333;
+    font-family: 'Nanum Square', sans-serif;
+    font-size: 1rem;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #598DBF;
+}
+.navbar-nav .show > .nav-link,
+.navbar-nav .active > .nav-link,
+.navbar-nav .nav-link.show,
+.navbar-nav .nav-link.active {
+    border-left: 4px solid currentColor;
+    background-color: #FBFBFB;
+    color: #598DBF;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        border: none;
+    }
+    .navbar-nav .show > .nav-link,
+    .navbar-nav .active > .nav-link,
+    .navbar-nav .nav-link.show,
+    .navbar-nav .nav-link.active {
+        background-color: transparent;
+    }
+}
+.navbar-toggler,
+.navbar-toggler-search,
+.navbar-toggler-close{
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    color: #91A3BD;
+    background-color: transparent;
+    font-size: 1.8rem;
+    line-height: 1;
+    outline: 0;
+}
+.navbar-toggler{
+    left:0;
+}
+.navbar-toggler-search {
+    right: 0;
+}
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+.navbar-toggler-search:hover,
+.navbar-toggler-search:focus,
+.navbar-toggler-close:hover,
+.navbar-toggler-close:focus {
+    outline: none;
+    color: #1B447E;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled),
+.navbar-toggler-search:not(:disabled):not(.disabled),
+.navbar-toggler-close:not(:disabled):not(.disabled){
+    cursor: pointer;
+}
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-toggler,
+    .navbar-expand-lg .navbar-toggler-search{
+        display: none;
+    }
+}
+
+/*    M E N U    B O X    */
+.menu-box{
+	background-color: #fff;
+	position: fixed;
+	top:0;
+	right:0;
+	left:0;
+}
+.menu-box .navbar-toggler-close{
+    top: 10px;
+    right:0;
+    z-index: 1;
+}
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-collapse.menu-box{
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+		left: auto;
+		background-color: transparent;
+	}
+    .navbar-expand-lg .menu-box .navbar-toggler-close{
+        display: none;
+    }
+}
+/*    T O P    M E N U    */
+.top-menu{
+	position: relative;
+	margin-top:80px;
+	background-color: #fff;
+}
+.top-menu .nav-item{
+	border-bottom: 1px solid #E1E4E8;
+}
+@media (min-width: 992px){
+    .top-menu{
+		margin-top: 0;
+        background-color: transparent;
+	}
+	.top-menu .nav-item{
+		border: none;
+	}
+	.top-menu .nav-item .nav-link{
+		font-size: 18px;
+	}
+}
+/*    Q U I C K    M E N U    */
+.quick-menu .menu-item-notice,
+.quick-menu .menu-item-admin,
+.quick-menu .menu-item-search{
+	width: 48px;
+	height: 24px;
+	text-align: center;
+	color: #91A3BD;
+}
+.quick-menu .menu-item-admin,
+.quick-menu .menu-item-search{
+  display: none;
+}
+.quick-menu .menu-item-notice{
+  position: absolute;
+  top:28px;
+  right:60px;
+  z-index: 1;
+}
+.quick-menu .menu-item-notice:hover,
+.quick-menu .menu-item-admin:hover,
+.quick-menu .menu-item-search:hover{
+	color: #1B447E;
+}
+.quick-menu .menu-item-notice.active:after{
+	position: absolute;
+	top:-4px;
+	right:6px;
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
+	background-color: #3ED4D4;
+	content: "";
+}
+@media (min-width: 992px){
+    .quick-menu{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin-left: 16px;
+        margin-right: 16px;
+		padding-right: 16px;
+		padding-left: 16px;
+		border-left: 1px solid #e6eaed;
+		border-right: 1px solid #e6eaed;
+	}
+	.quick-menu .menu-item-notice{
+		position: relative;
+		top:auto;
+		right: auto;
+		z-index: 0;
+	}
+	.quick-menu .menu-item-admin,
+	.quick-menu .menu-item-search{
+		display: block;
+	}
+}
+
+/*    U S E R    I N F O    */
+.user-info{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 80px;
+	padding: 0 16px;
+	background-color: #041C3E;
+
+}
+.user-photo{
+	display: inline-block;
+	width:47px;
+	height: 47px;
+	border-radius: 100%;
+	overflow: hidden;
+	text-align: center;
+    background-color: #fff;
+}
+.user-photo img{
+	height:47px;
+}
+.user-name{
+	pointer-events: none;
+	color: #FFFFFF;
+}
+.user-setting{
+	display: -ms-flexbox !important;
+  	display: -webkit-box !important;
+  	display: flex !important;
+  	-ms-flex-direction: row;
+  	-webkit-box-orient: horizontal;
+  	-webkit-box-direction: normal;
+  	        flex-direction: row;
+			border-bottom: 1px solid #D1D5DB;
+			-webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+			        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+.user-setting .list-group-item{
+	margin:0;
+	border: none;
+	border-radius: 0;
+	text-align: center;
+	color: #91A3BD;
+	font-size: 14px;
+}
+.user-setting .list-group-item:first-child{
+	border-right: 1px solid #E1E4E8;
+}
+.user-setting .list-group-item i{
+	position: relative;
+	font-size: 14px;
+	margin-right: 4px;
+	top: 1px;
+}
+@media (min-width: 992px){
+    .user-info{
+        position: relative;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+    }
+    .user-name{
+		pointer-events: auto;
+        color: #757575;
+	}
+    .user-name:hover{
+        text-decoration: none;
+    }
+    .user-setting.collapse:not(.show){
+		display: none !important;
+	}
+    .user-setting{
+		position: absolute;
+		top: 88px;
+		right:0;
+		min-width: 120px;
+		border-radius: 4px;
+		background-color: #fff;
+		-webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+		        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+    .user-setting .list-group-item{
+		text-align: left;
+		font-size: 12px;
+	}
+	.user-setting .list-group-item:first-child{
+		border-right: none;
+		border-bottom: 1px solid #d8d8d8;
+	}
+}
+
+/*    S E A R C H    B O X    */
+.navbar-collapse.search-box{
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    -webkit-box-shadow: 0px 0 10px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar-collapse.search-box.collapsing {
+    -webkit-transition: all 0s cubic-bezier(0.52, 0.16, 0.24, 1);
+    transition: all 0s cubic-bezier(0.52, 0.16, 0.24, 1);
+}
+.search-box .navbar-toggler-close{
+    top: 0;
+    right: 0;
+}
+@media (min-width: 992px){
+    .navbar-collapse.search-box{
+    	position: absolute;
+    	left:200px;
+    	top: 0;
+    	right:0;
+    	height: 80px;
+    	-webkit-box-shadow: none;
+    	        box-shadow: none;
+    	display: none !important;
+    }
+    .search-box.show{
+    	display: -ms-flexbox !important;
+  		display: -webkit-box !important;
+  		display: flex !important;
+    }
+    .search-box.collapse:not(.show){
+    	display: none !important;
+    }
+    .search-box .navbar-toggler-close{
+    	top:10px;
+    }
+}
+.search-box .input-group{
+    width: calc(100% -  57px);
+}
+.search-box .dropdown{
+    border-right: 1px solid #e6eaed;
+}
+.search-box .dropdown .btn{
+    padding: 1.219rem 1rem;
+    border-radius: 0;
+}
+.search-box .input-group .form-control{
+    height: 60px;
+    border: none;
+    border-radius: 0;
+}
+.search-box .input-group .btn{
+    border: none;
+    border-radius: 0;
+}
+.search-box .input-group .input-group-append{
+    display: none;
+}
+@media (min-width: 992px){
+    .search-box .input-group{
+        border-right: 1px solid #D1D5DB;
+    }
+    .search-box .dropdown .btn{
+        padding: 0.597rem 1rem;
+    }
+    .search-box .input-group .form-control{
+        height: 40px;
+    }
+    .search-box .input-group .input-group-append{
+        display: block;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .search-box .input-group .input-group-append .btn{
+        width: 40px;
+        height: 40px;
+        padding: 0.35rem 0.5rem;
+        border-radius: 100%;
+    }
+    .search-box .input-group .input-group-append .btn:hover{
+        background-color: #eee;
+        color: #6c757d;
+    }
+}
+/*-------------
+    C A R D
+--------------*/
+.card {
+    margin-bottom: 2.5rem;
+    border-color: #D1D5DB;
+    border-radius: 0;
+}
+.card-header {
+    background-color: #F2F3F5;
+    background-color: #ffffff;
+    border-color: #D1D5DB;
+}
+.card-header.d-flex{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+@media (min-width: 576px) {
+    .card-header{
+        min-height: 56px;
+    }
+    .card-header.d-flex{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+.card-header .card-title {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1em;
+}
+.card-header .card-control{
+    margin-top: 0.5rem;
+}
+@media (min-width: 576px) {
+    .card-header .card-control{
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .card-body .form-row .form-group{
+        margin-bottom: 0;
+    }
+}
+.card-footer {
+    background-color: #F2F3F5;
+    background-color: #ffffff;
+    border-color: #D1D5DB;
+}
+.card .table-responsive .table:last-child{
+    margin:0;
+}
+.card .table-responsive .table:last-child tbody tr:last-child td{
+    border-bottom: none;
+}
+.card-search .card-footer{
+    padding: 0;
+}
+.card-search .card-footer .btn{
+    padding:1rem 1rem;
+    background-color: transparent;
+    border: none;
+    color: #5E6D83;
+    border-radius: 0;
+}
+.card-search .card-footer .btn:hover,
+.card-search .card-footer .btn:active,
+.card-search .card-footer .btn:focus{
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #5E6D83;
+}
+/* @media (min-width: 576px) {
+    .card-deck {
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: flex;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+    }
+
+    .card-deck .card {
+      margin-bottom: 15px;
+    }
+} */
+@media (min-width: 992px) {
+  .card-deck {
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  .card-deck .card {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex: 1 0 0%;
+    -webkit-box-flex: 1;
+            flex: 1 0 0%;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin-right: 8px;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+}
+
+/*---------------
+    A L E R T
+----------------*/
+.alert-primary{
+
+}
+
+/*-------------
+    L I S T
+--------------*/
+.list-group-item:hover, .list-group-item:focus {
+    color: #598DBF;
+}
+
+.list-group-item.active{
+    background-color: #598DBF;
+    border-color: #598DBF;
+}
+.list-group-item.active:hover, .list-group-item.active:focus{
+    color: #fff;
+}
+
+/*-------------
+    M O D A L
+--------------*/
+.modal-content {
+    border-color: transparent;
+}
+.modal-header {
+    border-color: #D1D5DB;
+}
+.modal-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.modal-body {
+    color: #757575;
+}
+.modal-footer {
+    border-color: #D1D5DB;
+}
+/*modal bug fix*/
+.dlk-modal[style] {
+    padding-right:0 !important;
+}
+.dlk-modal.modal-open {
+    overflow: auto;
+}
+
+/*-------------------------------
+    M O D A L - A L E R T
+--------------------------------*/
+.modal.alert {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+/*.modal.alert .modal-content {
+    border-color: #D1D5DB;
+}*/
+.modal.alert .modal-body p{
+    margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .modal.alert .modal-dialog{
+        margin: 0 auto;
+    }
+}
+.modal.alert .modal-body{
+    padding: 3rem 1rem;
+    background-color: #FBFBFB;
+    border-radius: calc(0.25rem - 1px);
+}
+.modal.alert .modal-footer{
+    padding: 0;
+}
+.modal.alert .modal-footer .btn{
+    padding: 0.782rem 1.2rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border-color: #fff;
+    background-color: #fff;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.modal.alert .modal-footer .btn-primary{
+    color: #1B447E;
+}
+.modal.alert .modal-footer .btn-secondary{
+    color: #91A3BD;
+}
+.modal.alert .modal-footer .btn:hover{
+    border-color: #E8EAED;
+    background-color: #E8EAED;
+}
+.modal.alert .modal-footer > :not(:last-child){
+    margin:0;
+    border-right: 1px solid #D1D5DB;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.modal.alert .modal-footer > :not(:first-child){
+    margin:0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*-------------------
+    T O O L T I P
+--------------------*/
+.tooltip-inner {
+    font-size: 12px;
+    font-family: 'Apple SD 산돌고딕 Neo', 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif;
+}
+
+/*-------------
+    T E X T
+--------------*/
+.text-primary {
+  color: #1B447E !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: #010D1E !important;
+}
+
+.text-info {
+    color: #3ED4D4 !important;
+}
+
+/*==========================================
+
+            C U S T O M    U I
+
+==========================================*/
+/*--------------------------------------------
+                S E L E C T
+--------------------------------------------*/
+.bootstrap-select .btn{
+    border-color: #D1D5DB;
+}
+.bootstrap-select .btn-outline-secondary:hover,
+.bootstrap-select .btn-outline-secondary.dropdown-toggle:focus,
+.bootstrap-select > .btn-outline-secondary.dropdown-toggle:active,
+.show.bootstrap-select > .btn-outline-secondary.dropdown-toggle{
+    background-color: #f2f4f6;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: inherit;
+}
+.search-box .input-group .input-group-append .btn
+.bootstrap-select .btn-outline-secondary.dropdown-toggle:focus,
+.bootstrap-select .btn-outline-secondary.dropdown-toggle:active{
+-webkit-box-shadow: 0 0 0 0.2rem rgba(117, 117, 117, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba(117, 117, 117, 0.25);
+        outline: none !important;
+}
+
+
+.no-img {
+    background: #E8EAEB;
+    display: block;
+    min-height: 4rem;
+    height: calc(100% - 40px);
+}
 
 
 
 
-<link rel="stylesheet" type="text/css" href="https://semantic-ui.com/stylesheets/docs.css">
-<link rel="stylesheet" type="text/css" href="https://semantic-ui.com/stylesheets/rtl.css">
+
+/*==========================================
+
+                L A Y O U T
+
+==========================================*/
+.page{
+    display: block;
+    flex-direction: initial;
+}
+/*------------------------
+		H E A D E R
+------------------------*/
+.page-header{
+	background-color: #fff;
+	border-bottom: 1px solid #D1D5DB;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/*--------------------
+		B O D Y
+--------------------*/
+.page-container {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        flex-direction: column;
+
+    padding-top: 60px;
+}
+.page-body{
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+
+}
+.page-content{
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+@media (min-width: 992px){
+    .page-container {
+        padding-top: 80px;
+    }
+    .page-body{
+
+    }
+}
+/*    P A G E    H E A D E R    */
+.container-fluid.page-body-header{
+    position: relative;
+	height: 3rem;
+    border-bottom:1px solid #D1D5DB;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+}
+.page-title{
+	margin:0;
+	text-align: center;
+	color: #041C3E;
+	font-size: 16px;
+	font-weight: 400;
+    font-family: 'Nanum Square', sans-serif;
+}
+.page-body-header .back{
+	position: absolute;
+    top: 0;
+    left: 0.5rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+    font-size: 0;
+}
+@media (min-width: 992px){
+    .container-fluid.page-body-header{
+		position: relative;
+        height: 5rem;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		border-bottom: none;
+        margin-bottom: 0;
+	}
+	.page-title{
+		font-size: 24px;
+	}
+	.page-title span{
+		font-weight: 400;
+	}
+    .page-body-header .back{
+        top: 1.5rem;
+    	right: 1rem;
+        left: auto;
+        padding: 0.4rem;
+        border: 1px solid #A2ABB8;
+        border-radius: 0.25rem;
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+}
+@media (min-width: 1200px){
+    .page-body-header .back{
+        right: 0;
+    }
+}
+/*------------------------
+	    F O O T E R
+------------------------*/
+.page-footer {
+    border-top: 1px solid #D1D5DB;
+}
+.page-footer > .container-fluid{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80px;
+}
+.page-footer img{
+    display: inline-block;
+	width: 3rem;
+	margin:0 0 1rem 0;
+}
+.page-footer p{
+    margin: 1rem 0 0.5rem 0;
+	font-size: 11px;
+	line-height: 1em;
+	color: #BAC0CA;
+    text-transform: uppercase;
+}
+@media (min-width: 992px){
+    .page-footer > .container-fluid{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    .page-footer img, .page-footer p{
+        margin: 1rem 0;
+    }
+}
+
+
+/*--------------------------------------
+	T H U M B N A I L    I M A G E
+--------------------------------------*/
+.vs-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(../img/vs-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 100px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-around;
+    
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+@media (min-width: 400px) {
+    .vs-img {
+        min-height: 120px;
+    }
+}
+@media (min-width: 500px) {
+    .vs-img {
+        min-height: 140px;
+    }
+}
+@media (min-width: 576px) {
+    .vs-img {
+        min-height: 160px;
+    }
+}
+@media (min-width: 768px) {
+    .vs-img {
+        min-height: 120px;
+    }
+}
+@media (min-width: 992px) {
+    .vs-img {
+        min-height: 160px;
+    }
+}
+.vs-img .team{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex: 0 0 30%;
+    -webkit-box-flex: 0;
+          flex: 0 0 30%;
+    max-width: 30%;
+
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.vs-img .team:first-child{
+    margin-right:5%;
+}
+.vs-img .team:last-child{
+    margin-left:5%;
+}
+
+.vs-img .team img {
+    width: 100%;
+    height: 100%;
+}
+
+    </style>
+    <style type="text/css">
+    	@charset "UTF-8";
+/*==========================================
+
+            U S E R    L A Y O U T
+
+==========================================*/
+body {
+    background-color: #FFFFFF;
+}
+/*------------------------
+          B O D Y
+------------------------*/
+.page-container {
+    background-color: #E8EAED;
+}
+.page-body {
+}
+.page-content {
+    padding: 1rem 0;
+    background-color: #FFFFFF;
+    /*-webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;*/
+}
+@media (min-width: 992px){
+    .page-content{
+        padding: 2.5rem 0;
+    }
+    .main .page-body .container-fluid{
+        padding-top: 2rem;
+    }
+}
+/*------------------------
+	    F O O T E R
+------------------------*/
+.page-footer {
+    background-color: #FFFFFF;
+}
+/*------------------------
+    T A B    M E N U
+-------------------------*/
+
+@media (min-width: 992px){
+    .tab-menu.sticky-top{
+        border-bottom: none;
+    }
+    .nav-pills .nav-link {
+        margin-bottom: 0;
+        background-color: transparent
+    }
+    .nav-pills .nav-link.active{
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+}
+/*==========================================
+
+            U S E R    U I
+
+==========================================*/
+
+/*------------------------
+          공지알렷
+------------------------*/
+.notice{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.notice .alert{
+    background-color: #C8A076;
+    border-color: #aa8459;
+    border-radius: 0;
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+}
+.notice p i{
+    display: none;
+    position: relative;
+    top: -5px;
+    color: #fff;
+    font-size: 20px;
+}
+.notice p i:after{
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 24px;
+    width:1px;
+    height:30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    content: "";
+}
+.notice .btn{
+    font-size: 0;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+}
+@media (min-width: 576px) {
+    .notice p i {
+        display: block;
+    }
+}
+@media (min-width: 992px){
+    .notice{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .notice .alert{
+        margin-bottom: 2rem;
+    }
+
+    .notice .btn{
+        padding: 0.375rem 1rem;
+        font-size: 12px;
+    }
+}
+
+/*------------------------
+         팀 선택
+------------------------*/
+.team-box{
+    padding-top: 1rem;
+    background-color: #e6eaed;
+}
+@media (min-width: 992px){
+    .team-box{
+        padding-top: 0;
+        margin-bottom: 1rem;
+        background-color: #e6eaed;
+    }
+}
+.team-box .btn{
+    padding: 0.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid #D0D5DA;
+    border-radius: 0;
+}
+.team-box .btn:hover {
+    background-color: #F2F4F6;
+}
+.team-list {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 0.5rem;
+    padding: 0 0 1rem 0;
+    list-style: none;
+    overflow-y: auto;
+}
+.team-list li{
+    width: 100px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100px;
+            flex: 1 0 100px;
+}
+.team-list li a{
+    display: block;
+    margin: 0 2px;
+    height: 100%;
+    border: 1px solid #BBBBBB;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.team-list li a .team-emblem {
+    height: 5rem;
+    text-align: center;
+}
+.team-list li a .team-emblem img{
+    width: 80px;
+    opacity: 0.7;
+}
+.team-list li a .team-name{
+    margin:0;
+    border-top: 1px solid #BBBBBB;
+    text-align: center;
+    line-height: 2rem;
+    color: #666666;
+}
+.team-list li a:hover{
+    background-color: #F4F8FE;
+    color: #041C3E;
+    text-decoration: none
+}
+.team-list li.active-1 a{
+    border: 2px solid #041C3E;
+}
+.team-list li.active-1 .team-emblem img{
+    opacity: 1;
+}
+.team-list li.active-1 .team-name{
+    background-color: #041C3E;
+    color: #FFFFFF;
+}
+.team-list li.active-2 a{
+    border: 2px solid #113A3A;
+}
+.team-list li.active-2 .team-emblem img{
+    opacity: 1;
+}
+.team-list li.active-2 .team-name{
+    background-color: #113A3A;
+    color: #FFFFFF;
+}
+
+
+/*------------------------
+         선수 정보
+------------------------*/
+.player-info {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.player-info .card{
+    margin: 0;
+    padding-top: 60px;
+}
+.player-info .card .card-img-top {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
+    overflow: hidden;
+    border:1px solid #D1D5DB;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+.player-info .card .card-img-top img{
+
+}
+.player-info .card .card-title {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+}
+.player-info .card .card-body{
+    padding: 1rem;
+}
+.player-info ul{
+    margin: 1rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.player-info ul li{
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.33333%;
+            flex: 1 0 33.33333%;
+    border-right:1px solid #EEEEEE;
+    padding: 0 1rem;
+    color: #757575;
+    font-size: 12px;
+    text-align: center;
+}
+.player-info ul li:last-child{
+    border-right: none;
+}
+.player-info ul li strong{
+    display: block;
+    color: #333333;
+    font-size: 14px;
+}
+.player-info .btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+@media (min-width: 768px){
+    .player-info{
+        margin-top: 1rem;
+    }
+    .player-info .card{
+        padding: 0;
+        min-height: 140px;
+    }
+    .player-info .card .card-img-top{
+        top: 10px;
+        left: 100px;
+    }
+    .player-info .card .card-title {
+        text-align: left;
+        margin: 0;
+    }
+    .player-info .card .card-body{
+        padding: 1.5rem 1.5rem 1.5rem 200px;
+    }
+    .player-info ul li{
+        text-align: left;
+    }
+}
+@media (min-width: 992px){
+    .player-info {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .player-info .card{
+        margin: 0;
+        margin-bottom: 2rem;
+        min-height: auto;
+    }
+    /* .player-info .card .card-img-top {
+        left: 0;
+        top: 0;
+        margin: 0;
+        height: 100%;
+        border: none;
+        border-right: 1px solid #EEEEEE;
+        -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+    .player-info .card .card-body{
+        padding-left: 130px;
+    }
+    .player-info ul {
+        margin-top: 0.5rem;
+    }
+    .player-info ul li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 20%;
+                flex: 0 0 20%;
+
+    } */
+}
+/*    핫콜드존 - 투수   */
+.chart.pitcher {
+    margin-bottom: 2rem;
+}
+/*    핫콜드존 - 타지   */
+.chart.hitter{
+    margin-bottom: 2rem;
+}
+.chart.hitter .sub-title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.05rem;
+}
+.chart.hitter .chart-item-group{
+
+}
+.chart.hitter .chart-item{
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+.chart.hitter .nav-tabs{
+    margin-bottom: 1rem;
+    border: none;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+}
+.chart.hitter .nav-tabs .nav-item {
+    margin:0;
+    margin-left: -1px;
+    max-width: 10rem;
+}
+.chart.hitter .nav-tabs .nav-link {
+    border-radius: 0;
+    border-color: #D1D5DB;
+    color: #757575;
+}
+.chart.hitter .nav-tabs .nav-link:hover {
+    background-color: #598DBF;
+    border-color: #598DBF;
+    color: #FFFFFF;
+}
+.chart.hitter .nav-tabs .nav-link.active{
+    background-color: #598DBF;
+    border-color: #598DBF;
+    color: #FFFFFF;
+}
+/*    시계열    */
+.chart.valo {
+    margin-bottom: 1rem;
+    overflow-y: auto;
+}
+.chart.valo .chart-item {
+    padding-bottom: 10px;
+}
+/*    볼배합    */
+.chart.sequence {
+    margin-left:  -0.5rem;
+    margin-right:  -0.5rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.chart.sequence .chart-item {
+    padding: 0 0.5rem 1rem 0.5rem;
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+            flex: 0 0 50%;
+    max-width: 50%;
+}
+@media (min-width: 768px) {
+    .chart.sequence .chart-item {
+        -ms-flex: 0 0 33.333333%;
+        -webkit-box-flex: 0;
+                flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+.chart-legend,
+.chart-attach{
+    background-color: #F4F4F4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.chart-legend .title,
+.chart-attach .title {
+    font-size: 16px;
+}
+.chart-attach .title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.chart-legend .title {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+.chart-attach .control .btn {
+    font-size: 12px;
+    padding: 0.282rem 1rem;
+}
+.chart-legend ul {
+    margin : 0;
+    padding: 0;
+    list-style: none;
+}
+.chart-legend ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.chart-legend ul li span {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+/*------------------------
+        리스트 필터
+------------------------*/
+.list-search {
+    height: 48px;
+    margin-bottom: 2rem;
+    background: #FAFBFC;
+    border: 1px solid #D1D5DB;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+.list-search > * {
+    border-right: 1px solid #D1D5DB;
+}
+.list-search .form-group{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+.list-search .btn,
+.list-search .form-control{
+    border: none;
+    border-radius: 0;
+    height: auto;
+}
+.list-search .dropdown-toggle {
+    line-height: 37px;
+    background-color: #FFFFFF;
+    color: #6C757D !important;
+}
+.list-search .dropdown-menu {
+    margin-top: 8px;
+    padding: 0;
+    border-radius: 0;
+}
+.list-search .dropdown-menu .dropdown-item{
+    padding: 0.6rem 1.5rem;
+}
+.list-search .form-control{
+    height: auto;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+.list-search > .btn:last-child {
+    width: 48px;
+    margin-left: -1px;
+    background-color: #FFFFFF;
+    border-left: 1px solid #D1D5DB;
+    border-right: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.list-search > .btn:last-child:hover{
+    background-color: #1B447E;
+}
+
+/*------------------------
+        리스트 제목
+------------------------*/
+.list-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.list-header .list-title{
+    font-size: 20px;
+    margin: 0;
+}
+.list-header .list-title span{
+    color: #598DBF;
+}
+.list-header .control .btn-group {
+    font-size: 12px;
+}
+.list-header .control .btn-group .active {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.list-header .control .btn-group .btn {
+    padding: 0.282rem 0.8rem;
+    border-radius: 0;
+}
+.list-header .control .btn-group .btn-outline-secondary:not(:disabled):not(.disabled).active{
+    background-color: #7B96B0;
+    border-color: #7B96B0;
+}
+
+.sub .list-header .list-title{
+    font-size: 18px;
+}
+
+
+/*------------------------
+        섬네일형 리스트
+------------------------*/
+.video-list .card{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+
+}
+.video-list .card .card-img-top{
+    width: 50%;
+    border-bottom-left-radius: calc(.25rem - 1px);
+    border-top-right-radius : 0;
+    background: #B9B9B9;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+}
+.video-list .card .card-img-top > img{
+    width: 100%;
+}
+.video-list .card .card-body {
+    padding: 0.2rem 1rem;
+}
+.video-list .card .card-body .card-text{
+    margin: 0;
+}
+.video-list .card .card-body .card-title{
+    margin: 0;
+    font-size: 1rem;
+}
+.video-list .card .card-body .card-title:hover{
+    text-decoration: none;
+    color: #598DBF;
+}
+.video-list .text-danger{
+    padding: 4rem 1rem;
+}
+@media (min-width: 650px){
+    .video-list .card .card-img-top{
+        width: 40%;
+    }
+}
+@media (min-width: 768px){
+    .video-list .card{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .video-list .card .card-img-top{
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius : calc(.25rem - 1px);
+    }
+    .video-list .card .card-body{
+        text-align: center;
+        min-height: 4.5rem;
+
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        
+        -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+              flex-direction: column;
+
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+            justify-content: center;
+    }
+}
+/*서브페이지 섬네일형 리스트*/
+.sub .list-header {
+    margin-top: 1rem;
+}
+.sub .video-list .card {
+    border-color: transparent;
+    margin-bottom: 0.5rem;
+}
+.sub .video-list .card .card-img-top{
+    width: 130px;
+}
+.sub .video-list > *:after{
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 0.5rem;
+    background-color: #E7EAEE;
+    content: "";
+}
+.sub .video-list > *:last-child:after{
+    display: none;
+}
+@media (min-width: 768px){
+    .sub .video-list > *:after{
+        display: none;
+    }
+    .sub .video-list .card{
+        border-color: #D1D5DB;
+    }
+    .sub .video-list .card .card-img-top{
+        width: 100%;
+    }
+}
+
+/*------------------------
+        섬네일형 상세
+------------------------*/
+.video-view{
+    margin-left: -1rem;
+    margin-right: -1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.video-view .current-video .video-thumb{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video-view .current-video .video-thumb .video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-view .current-video .video-thumb img{
+    width: 100%;
+}
+.video-view .current-video .video-info{
+    min-height:85px;
+}
+.video-view .current-video .video-title {
+    margin: 0;
+    padding: 1.2rem 1rem 0.3rem 1rem;
+    font-size: 1.25rem;
+}
+.video-view .current-video .video-text{
+    padding: 0rem 1rem 0.7rem 1rem;
+    color: rgba(0,0,0,.5)!important;
+}
+.video-view .video-text{
+    margin: 0;
+}
+.video-view .current-list {
+    padding: 0 1rem 1.5rem 1rem;
+    border-top: 1px solid #D8DADE;
+    border-bottom: 1px solid #D8DADE;
+}
+.video-view .current-list .list-control {
+    padding: 0.5rem 0;
+}
+.video-view .current-list .list-control .title {
+    margin:0;
+    font-size: 0.875rem;
+}
+.video-view .current-list .list-control .title .text-muted{
+    margin-left: 0.25rem;
+}
+.video-view .current-list .list-control .title .text-muted span{
+    color: #007bff;
+}
+.video-view .current-list .list-group{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow-y: auto;
+}
+.video-view .current-list .list-item{
+    width: 200px;
+    position: relative;
+    margin: 0 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #FFFFFF;
+    flex-shrink: 0;
+}
+.video-view .current-list .list-item:first-child{
+    margin-left: 0;
+}
+.video-view .current-list .list-item .btn-play{
+    position: absolute;
+    top:110px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: #395A7A;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.video-view .current-list .list-item .btn-play i {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.video-view .current-list .list-item .video-thumb{
+    width: 200px;
+}
+.video-view .current-list .list-item.active{
+
+    background-color: #07294B;
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+}
+.video-view .current-list .list-item.active .btn-play{
+    background-color: #FFFFFF;
+}
+.video-view .current-list .list-item.active .btn-play i{
+    color: #395A7A;
+}
+.video-view .current-list .list-item .btn-play:hover{
+    background-color: #07294B;
+    text-decoration: none;
+}
+.video-view .current-list .list-item.active .video-thumb img{
+    opacity: 0.8;
+}
+.video-view .current-list .list-item .info-box{
+    padding: 0.5rem 1rem;
+}
+.video-view .current-list .list-title{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3em;
+    width: 85%;
+}
+.video-view .video-text .date:after{
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #A3ACB8;
+    content: "";
+}
+@media (min-width: 992px){
+    .video-view {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 2rem;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        align-items: flex-start;
+    }
+    .video-view .current-video{
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 70%;
+                flex: 0 0 70%;
+        max-width: 70%;
+    }
+    .video-view .current-video .video-info{
+        border-left:1px solid #D1D5DB;
+        border-bottom:1px solid #D1D5DB;
+        background-color: #FFFFFF;
+    }
+    .video-view .current-list{
+        padding: 0.5rem 0 0 0;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 30%;
+                flex: 0 0 30%;
+        max-width: 30%;
+        background-color: #FFFFFF;
+        border: 1px solid #D1D5DB;
+    }
+    .video-view .current-list .list-control{
+        height: 32px;
+        padding: 0 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .video-view .current-list .list-group {
+        padding: 0 1rem;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .video-view .current-list .list-item{
+        width: 100%;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        margin: 0 0 0.5rem 0;
+    }
+    .video-view .current-list .list-item:last-child{
+        margin-bottom: 0;
+    }
+    .video-view .current-list .list-item .btn-play{
+        width: 20px;
+        height: 20px;
+        top:28px;
+        right: 10px;
+    }
+    .video-view .current-list .list-item .video-thumb {
+        width: 100px;
+    }
+    .video-view .current-list .list-item .info-box {
+        margin: 0;
+        padding: 0;
+    }
+    .video-view .current-list .video-info{
+        display: block;
+        font-size: 11px;
+        margin-top: 0.5rem;
+    }
+
+}
+
+/*------------------------
+    섬네일형 리스트 - 선수
+------------------------*/
+.player-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.player-list .card{
+    border: none;
+    margin-bottom: 1rem;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.player-list .card:hover{
+    text-decoration: none;
+}
+.player-list .card .card-img-top{
+    border: 1px solid #D1D5DB;
+}
+.player-list .card:hover .card-img-top{
+    border-color: #7C889A;
+}
+.player-list .card .card-img-top img{
+    width: 100%;
+}
+.player-list .card .card-body {
+    padding: 0.2rem 0 0.5rem 0;
+}
+.player-list .card .card-body p{
+    margin: 0;
+}
+.player-list .card{
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+          flex: 0 0 50%;
+    max-width: 50%;
+}
+@media (min-width: 300px){
+    .player-list .card{
+        -ms-flex: 0 0 33.333333%;
+        -webkit-box-flex: 0;
+              flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+@media (min-width: 400px){
+    .player-list .card{
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+              flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (min-width: 500px){
+    .player-list .card{
+        -ms-flex: 0 0 20%;
+        -webkit-box-flex: 0;
+              flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 600px){
+    .player-list .card{
+        -ms-flex: 0 0 16.666667%;
+        -webkit-box-flex: 0;
+              flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+}
+@media (min-width: 700px){
+    .player-list .card{
+        -ms-flex: 0 0 14.285714%;
+        -webkit-box-flex: 0;
+                flex: 0 0 14.285714%;
+        max-width: 14.285714%;
+    }
+}
+@media (min-width: 800px){
+    .player-list .card{
+        -ms-flex: 0 0 12.5%;
+        -webkit-box-flex: 0;
+                flex: 0 0 12.5%;
+        max-width: 12.5%;
+    }
+}
+@media (min-width: 900px){
+    .player-list .card{
+        -ms-flex: 0 0 11.111111%;
+        -webkit-box-flex: 0;
+                flex: 0 0 11.111111%;
+        max-width: 11.111111%;
+    }
+}
+@media (min-width: 1000px){
+    .player-list .card{
+        -ms-flex: 0 0 10%;
+        -webkit-box-flex: 0;
+                flex: 0 0 10%;
+        max-width: 10%;
+    }
+}
+
+/*------------------------
+        목록형 리스트
+------------------------*/
+.card-list .list-group-title{
+    display: none;
+    padding: .8rem 2rem;
+    font-weight: 700;
+    color: #92A0AE;
+    background-color: #F6F8F9;
+}
+.card-list .num{
+    width: 10%;
+}
+.card-list .writer{
+    width: 10%;
+}
+.card-list .title{
+    -webkit-box-flex:1;
+        -ms-flex-positive:1;
+            flex-grow:1;
+}
+.card-list .title i {
+    display: none;
+}
+.card-list .title .badge{
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 0;
+    font-size: 11px;
+}
+.card-list .list-group .list-group-item{
+    padding: 1rem 2rem;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+    border-color: #D1D5DB;
+}
+.card-list .list-group .list-group-item:hover {
+  background-color: #F4F8FE;
+}
+.card-list .list-group .list-group-item .d-flex p{
+    margin-bottom: 0;
+}
+.card-list .date {
+    margin-top:0.2rem;
+    font-size: 13px;
+    color: #7C889A;
+}
+.card-list .list-group .list-group-item .d-flex{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.card-list .list-group .list-alert {
+    color: #C8A076;
+    line-height: 1em;
+}
+.card-list .list-group .list-alert i{
+    position: relative;
+    top: -1px;
+    margin-right: 0.25rem;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.list-header .num,
+.card-list .num,
+.list-header .writer,
+.card-list .writer {
+    display: none;
+}
+@media (min-width: 992px){
+    .card-list .title i {
+        display: block;
+        font-size: 18px;
+        vertical-align: middle;
+        color: #A8B0B9;
+        float: right;
+    }
+    .card-list .list-group-title,
+    .list-header .num,
+    .card-list .num,
+    .list-header .writer,
+    .card-list .writer {
+        display: block;
+    }
+    .card-list .list-group .list-group-item .d-flex{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    .card-list .date{
+        width: 10%;
+        margin: 0;
+        text-align: center;
+        font-size: 14px;
+        color: #92A0AE;
+    }
+    .card-list .list-group .date{
+        color: #495057;
+    }
+}
+
+/*------------------------
+        목록형 리스트 - 선수
+------------------------*/
+.card-list.player{
+    border-right: none;
+    border-left: none;
+}
+.card-list.player .list-group .list-group-item {
+    padding: 1rem 0;
+}
+.card-list.player .list-group .list-group-item p {
+    margin: 0;
+}
+.card-list.player .list-group .list-group-item .btn{
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+.team-img {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+.team-img img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+.player-img {
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.player-img img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+.name {
+    font-size: 1.25em;
+    color: #1B447E;
+}
+@media (min-width: 992px){
+    .card-list.player .list-group{
+        flex-direction: row;
+    }
+    .card-list.player .list-group .list-group-item{
+        width: 33.3%;
+        
+    }
+}
+/*------------------------
+        목록형 뷰
+------------------------*/
+.card-view {
+    border: none;
+}
+.card-view .card-header {
+    padding: 0 0 1rem 0;
+}
+.card-view .card-header .title{
+    margin: 0;
+    font-size: 1.25rem;
+}
+.card-view .card-header .info{
+    color: #7C889A;
+}
+.card-view .card-header .txt-bar{
+    margin: 0 0.5rem;
+    color: #A8B0B9;
+    font-size: 12px;
+    vertical-align: top;
+}
+.card-view .card-body {
+    padding:0;
+}
+.card-view .attach-file{
+    margin: 0;
+    padding: 1rem;
+    list-style: none;
+    background-color: #F6F8F9;
+}
+.card-view .attach-file li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.card-view .attach-file li a{
+    color: #7C889A;
+}
+.card-view .attach-file i{
+    margin-right: 0.25rem;
+    font-size: 18px;
+    vertical-align: middle;
+    color: #A8B0B9;
+    -webkit-transform: rotate(125deg);
+            transform: rotate(125deg);
+}
+.card-view .content{
+    min-height: 400px;
+    padding: 1rem 0;
+}
+
+    </style>
+    <style type="text/css">
+    	@charset "UTF-8";
+/*==========================================
+
+            U S E R    L A Y O U T
+
+==========================================*/
+.page-body .container-fluid{
+    padding-top: 1rem;
+}
+.main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.page-footer {
+    background-color: transparent;
+}
+@media (min-width: 768px) {
+    .main-container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+}
+@media (min-width: 992px){
+    .page-body .container-fluid{
+        padding-top: 2rem;
+    }
+}
+
+
+
+
+
+/*  프로필  */
+.profile {
+    position: relative;
+    border: 1px solid #D4D8DC;
+    background-color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.profile .profile-img {
+    position: relative;
+    max-height: 250px;
+    overflow: hidden;
+    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.profile .profile-img img {
+
+}
+.profile .profile-info {
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+@media (min-width: 576px) {
+    .profile {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+
+    }
+    .profile .profile-img {
+        max-height: 400px;
+
+    }
+    .profile .profile-info{
+        border-left: 1px solid #D4D8DC;
+    }
+
+}
+@media (min-width: 768px) {
+  .profile {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+        width: 32%;
+  }
+  .profile .profile-info{
+        border-left: none;
+    }
+}
+.profile .profile-text {
+    padding: 1.5rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    word-break: keep-all;
+}
+.profile .profile-text .t-date{
+    font-size: 16px;
+    color: #757575;
+}
+.profile .profile-text .t-greeting{
+    font-size: 30px;
+    color: #1B447E;
+    letter-spacing: -0.5px;
+}
+.profile .profile-text .t-greeting:before{
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 1rem;
+    background-color: #1B447E;
+    content: "";
+}
+.profile .profile-text .btn{
+    padding: 0.6rem 1.3rem;
+    background-color: #041C3E;
+    border-radius: 0;
+    color: #FFFFFF;
+    line-height: 1em;
+}
+.profile .profile-text .btn i{
+    font-size: 16px;
+    margin-left: 1rem;
+}
+.profile .profile-text .t-guide{
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #757575;
+}
+.profile .my-menu {
+    width: 100%;
+    border-top: 1px solid #D8D8D8;
+    background-color: #F6F8F9
+}
+.profile .my-menu .control{
+    padding: 0.5rem 1.5rem;
+}
+.profile .my-menu .title {
+    margin: 0;
+    color: #92A0AE;
+    font-size: 14px;
+}
+.profile .my-menu .control a{
+    color: #A8B0B9;
+    line-height: 1em;
+}
+.profile .my-menu .control a i {
+    font-size: 18px;
+}
+.profile .my-menu .menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #D8D8D8;
+}
+.profile .my-menu .menu li{
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+    text-align: center;
+}
+.profile .my-menu .menu li:first-child{
+    border-right: 1px solid #D8D8D8;
+}
+.profile .my-menu .menu li a {
+    display: block;
+    padding: 0.6rem;
+    color: #7C889A;
+}
+.profile .my-menu .menu li a:hover{
+    color: #4F5763;
+    text-decoration: none;
+}
+
+.briefing {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+}
+.briefing .title,
+.player .title {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #041C3E;
+    font-size: 20px;
+    line-height: 2.5em;
+    color: #041C3E;
+    letter-spacing: -0.5px;
+}
+.briefing .schedule {
+    margin-top: 2rem;
+    position: relative;
+}
+.briefing .schedule .control {
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+.briefing .schedule .control .thisweek{
+    margin: 0 0.2rem;
+    vertical-align: middle;
+    color: #757575;
+}
+.briefing .schedule .btn-prevweek,
+.briefing .schedule .btn-nextweek{
+    padding: 0;
+    border: 1px solid #757575;
+    background-color: transparent;
+    line-height: 0;
+}
+.briefing .schedule .btn-prevweek i,
+.briefing .schedule .btn-nextweek i{
+    color: #757575;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.briefing .schedule .list-group-item{
+    padding : 0.8rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-color: transparent;
+    border-radius: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+.briefing .schedule .list-group-item.active{
+    border-color: #598DBF;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.briefing .schedule .list-group-item.active:before{
+    position: absolute;
+    top: -20px;
+    left: -1px;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #598DBF;
+    border-radius: 0.25rem 0.25rem 0 0;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 11px;
+    line-height: 20px;
+    content: "오늘";
+    -webkit-box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.briefing .schedule .list-group-item.disabled {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.briefing .schedule .list-group-item > p{
+    margin-bottom: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+
+    order: 0;
+}
+.briefing .schedule .list-group-item > p .line{
+    display: inline-block;
+    width:1px;
+    height: 1rem;
+    background: #D5DEE7;
+}
+.briefing .schedule .date{
+    color: #333333;
+    font-size: 16px;
+    line-height: 1em;
+}
+.briefing .schedule .list-group-item.active .date {
+    color: #1B447E;
+}
+.briefing .schedule .time,
+.briefing .schedule .stadium{
+    color: #757575;
+    line-height: 1em;
+}
+.briefing .schedule .time:after{
+    margin-left: 1rem;
+}
+.briefing .schedule .match{
+    margin-top: 0.8rem;
+    padding: 0.8rem 0 0 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 1px solid #D8D8D8;
+    color: #BBBBBB;
+}
+.briefing .schedule .match img{
+    width: 40px;
+}
+.briefing .schedule .match > span{
+    margin: 0 2rem;
+}
+.briefing .schedule .match .my-team,
+.briefing .schedule .match .opponent-team {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+.briefing .schedule .match .my-team {
+    text-align: right;
+}
+.briefing .schedule .match .opponent-team {
+    text-align: left;
+}
+.briefing .schedule .match .my-team span{
+    margin-right: 0.5rem;
+    color: #70717C;
+    vertical-align: middle;
+}
+.briefing .schedule .match .opponent-team span{
+    margin-left: 0.5rem;
+    color: #70717C;
+    vertical-align: middle;
+}
+@media (min-width: 576px) {
+    .briefing {
+        margin-top: 0;
+        margin-left: 1rem;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+    .briefing .schedule {
+        margin: 0;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+    .briefing .schedule .list-group-item{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .briefing .schedule .list-group-item.active:before{
+        width: 60px;
+        height: 24px;
+        top: -24px;
+        font-size: 12px;
+    }
+    .briefing .schedule .match{
+        margin: 0;
+        margin-left: 1.5rem;
+        padding: 0;
+        border: none;
+        border-left: 1px solid #D8D8D8;
+        padding-left: 1.5rem;
+
+        flex-grow: 1;
+    }
+    .briefing .schedule .match > span {
+        margin: 0 1rem;
+    }
+    .briefing .schedule .match img {
+        width: 50px;
+    }
+    .briefing .schedule .date,
+    .briefing .schedule .time,
+    .briefing .schedule .line{
+        margin-right: 0.5rem;
+    }
+    .briefing .schedule .time,
+    .briefing .schedule .time + .line{
+        display: none !important;
+    }
+}
+@media (min-width: 768px) {
+    .briefing .schedule .list-group-item{
+        padding: 0.8rem 1rem;
+    }
+}
+@media (min-width: 950px){
+    .briefing .schedule .list-group-item{
+        padding: 0.5rem 1.5rem;
+    }
+    .briefing .schedule .match img {
+        width: 60px;
+    }
+    .briefing .schedule .date,
+    .briefing .schedule .time,
+    .briefing .schedule .line{
+        margin-right: 1rem;
+    }
+    .briefing .schedule .time,
+    .briefing .schedule .time + .line{
+        display: inline-block !important;
+    }
+}
+@media (min-width: 1100px){
+    .briefing .schedule .date,
+    .briefing .schedule .time,
+    .briefing .schedule .line{
+        margin-right: 1.5rem;
+    }
+    .briefing .schedule .match{
+        width: 300px;
+        margin-left: 5rem;
+    }
+}
+.briefing .game {
+    margin-top: 2rem;
+}
+/* .briefing .game .list-group-item{
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 0;
+}
+.briefing .game .list-group-item span{
+    display: block;
+    color: #757575;
+    font-size: 13px;
+}
+.briefing .game .list-group-item strong{
+    display: block;
+    color: #333333;
+    font-weight: 700;
+}
+.briefing .game .list-group-item i{
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    margin-top: -12px;
+    color: #757575;
+} */
+.briefing .game .list-group-item{
+    padding: 0.5rem 0.8rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-radius: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.briefing .game .list-group-item .date{
+    display: block;
+    color: #333333;
+    font-size: 12px;
+}
+.briefing .game .list-group-item .stadium{
+    display: block;
+    color: #757575;
+    font-size: 12px;
+}
+.briefing .game .list-group-item .btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -18px;
+    padding: 0.469rem;
+    color: #9CAFC1;;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .briefing .game {
+        margin: 0;
+    }
+    .briefing .game .list-group{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    .briefing .game .list-group-item {
+        margin : 0;
+        margin-right: 0.5rem;
+        padding: 0.5rem;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+    .briefing .game .list-group-item:last-child {
+        margin-right: 0;
+    }
+    .briefing .game .list-group-item .btn {
+        position: relative;
+        top:0;
+        margin-top: 0.5rem;
+        border-color: #EAEEF2;
+    }
+    .briefing .game .list-group-item .btn:hover{
+        background-color: #EAEEF2;
+    }
+}
+@media (min-width: 992px){
+    .briefing .game .list-group-item {
+        padding: 0.8rem 1rem;
+    }
+}
+.player{
+    margin-top: 2rem;
+}
 
 
 
 
 
 
-  <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/stylesheets/home.css">
-  <link rel="stylesheet/less" type="text/css" href="https://semantic-ui.com/src/definitions/elements/button.less" />
 
- 
+
+
+
+
+
+
+.current-list {
+    padding: 0 1rem 0.5rem 1rem;
+    border-top: 1px solid #D8DADE;
+    border-bottom: 1px solid #D8DADE;
+}
+.current-list .list-control {
+    padding: 0.5rem 0;
+}
+.current-list .list-group{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow: auto;
+
+    max-height: 470px;
+}
+.current-list .list-item{
+    width: 200px;
+    position: relative;
+    margin: 0 0.5rem 1rem 0.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #FFFFFF;
+}
+.current-list .list-item:first-child{
+    margin-left: 0;
+}
+.current-list .list-item .btn-play{
+    position: absolute;
+    top:110px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    background-color: #395A7A;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.current-list .list-item .btn-play i {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+.current-list .list-item .video-thumb{
+    width: 200px;
+}
+.current-list .list-item .video-thumb img{
+    width: 100%;
+}
+.current-list .list-item.active{
+
+    background-color: #07294B;
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    color: #FFFFFF;
+}
+.current-list .list-item.active .btn-play{
+    background-color: #FFFFFF;
+}
+.current-list .list-item.active .btn-play i{
+    color: #395A7A;
+}
+.current-list .list-item .btn-play:hover{
+    background-color: #07294B;
+    text-decoration: none;
+}
+.current-list .list-item.active .video-thumb img{
+    opacity: 0.8;
+}
+.current-list .list-item .info-box{
+    padding: 0.5rem 1rem;
+}
+.current-list .list-title{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.3em;
+    width: 85%;
+}
+@media (min-width: 768px) {
+    .current-list .list-group{
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        overflow: visible;
+    }
+}
+
+.card-img-top img {
+    width: 100%;
+}
+.player {
+    position: relative;
+    padding-bottom: 2rem;
+}
+.player .player-video{
+    overflow: auto;
+    -webkit-box-pack: row;
+        -ms-flex-pack: row;
+            justify-content: row;
+    padding-bottom: 0.5rem;
+}
+.player .control {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.player .btn-more{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #757575;
+}
+.player .btn-more:hover{
+    color: #1B447E;
+    text-decoration: none;
+}
+.player .btn-more i {
+    vertical-align: middle;
+}
+.player .col-lg-3{
+    width: 275px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+}
+.player .card {
+    margin-bottom: 0;
+}
+.player .card .card-img-top .vs-img{
+    min-height: 160px;
+}
+.player .card .card-body{
+    text-align: center;
+    padding: 0.5rem;
+}
+.player .card-title {
+    font-size: 16px;
+}
+.player .card p{
+    margin: 0;
+}
+@media (min-width: 992px) {
+    .player .card{
+        margin-bottom: 1rem;
+    }
+    .player .flex-nowrap{
+        -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+    }
+}
+
+    </style>
 
 </head>
-<body id="example" class="index" ontouchstart="">
+<body>
+    <div class="page main">
 
-  <div class="ui vertical inverted sidebar menu" id="toc">
-  
+        <!--  H E A D E R  -->
+    	<header class="page-header fixed-top">
+    		<nav class="navbar navbar-expand-lg">
+    			<div class="container-fluid">
+    				<a class="navbar-brand" href="01-user-00홈.html">D-LOCKER</a>
 
+    				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    					<i class="material-icons">menu</i>
+    				</button>
 
+    				<button class="navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    					<i class="material-icons">search</i>
+    				</button>
 
+    				<!--메뉴-->
+    				<div class="collapse navbar-collapse menu-box" id="navbarTogglerDemo01">
+    					<button class="navbar-toggler-close" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    						<i class="material-icons">clear</i>
+    					</button>
 
+    					<!-- 메인 메뉴 -->
+    					<ul class="navbar-nav ml-auto top-menu">
+                            <li class="nav-item">
+    							<a class="nav-link" href="01-user-01브리핑-01분석자료.html">브리핑</a>
+    						</li>
+    						<li class="nav-item">
+    							<a class="nav-link" href="01-user-02선수정보-01투수-01.html">선수정보</a>
+    						</li>
+    						<li class="nav-item">
+    							<a class="nav-link" href="01-user-03풀영상-01.html">풀영상</a>
+    						</li>
+    						<li class="nav-item">
+    							<a class="nav-link" href="01-user-04공지-01전체알림-01.html">공지</a>
+    						</li>
+                            <li class="nav-item">
+    							<a class="nav-link" href="01-user-05라이브러리-01.html">라이브러리</a>
+    						</li>
+    					</ul>
 
+    					<!-- 퀵 메뉴 -->
+    					<div class="quick-menu">
+    						<a href="" class="menu-item-notice active" title="공지사항" data-toggle="tooltip"><i class="material-icons">notifications_none</i></a>
+    						<a href="00-admin-01야구정보관리-01일정관리.html" class="menu-item-admin" title="관리자" data-toggle="tooltip"><i class="material-icons">tune</i></a>
+    						<a href="" class="menu-item-search" title="선수검색" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" ><span data-toggle="tooltip" title="검색"><i class="material-icons">search</i></span></a>
+    					</div>
 
+    					<!-- 사용자 정보 -->
+    					<div class="user-info d-flex align-items-center">
+    						<div class="user-photo d-inline-block mr-2"><img src="https://www.koreabaseball.com/file/person/middle/2018/62907.jpg"></div>
+    						<a class="user-name mb-0 d-inline-block" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">박민우님</a>
+    					</div>
+    					<div class="list-group user-setting collapse" id="collapseExample">
+    						<a class="list-group-item list-group-item-action" href="#"><i class="material-icons">settings</i>설정</a>
+    						<a class="list-group-item list-group-item-action" href="#"><i class="material-icons">power_settings_new</i>로그아웃</a>
+    					</div>
+    				</div>
 
+    				<!--검색-->
+    				<div class="collapse navbar-collapse search-box" id="navbarTogglerDemo02">
+    					<button class="navbar-toggler-close" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    						<i class="material-icons">clear</i>
+    					</button>
+    					<div class="input-group">
+    						<select class="selectpicker" data-width="auto">
+    							<option selected>선수이름</option>
+    							<option>등번호</option>
+    						</select>
+    						<input type="search" name="" class="form-control" placeholder="검색할 선수의 이름이나 등번호를 입력하세요.">
+    						<div class="input-group-append d-flex">
+    							<button class="btn btn-outline-secondary" type="button"><i class="material-icons">search</i></button>
+    						</div>
+    					</div>
+    				</div>
 
-<div class="item">
-  <a class="ui logo icon image" href="https://semantic-ui.com/">
-    <img src="/images/logo.png">
-  </a>
-  <a href="https://semantic-ui.com/"><b>UI Docs</b></a>
-</div>
-<a class="item" href="https://semantic-ui.com/introduction/getting-started.html">
-  <b>Getting Started</b>
-</a>
-<a class="item" href="https://semantic-ui.com/introduction/new.html">
-  <b>New in 2.4</b>
-</a>
-<div class="item">
-  <div class="header">Introduction</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/introduction/integrations.html">
-        Integrations
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/introduction/build-tools.html">
-        Build Tools
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/introduction/advanced-usage.html">
-        Recipes
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/introduction/glossary.html">
-        Glossary
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class="header">Usage</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/usage/theming.html">
-        Theming
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/usage/layout.html">
-        Layouts
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Globals</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/globals/reset.html">
-        Reset
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/globals/site.html">
-        Site
-        
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Elements</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/elements/button.html">
-        Button
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/container.html">
-        Container
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/divider.html">
-        Divider
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/flag.html">
-        Flag
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/header.html">
-        Header
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/icon.html">
-        Icon
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/image.html">
-        Image
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/input.html">
-        Input
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/label.html">
-        Label
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/list.html">
-        List
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/loader.html">
-        Loader
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/placeholder.html">
-        Placeholder
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/rail.html">
-        Rail
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/reveal.html">
-        Reveal
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/segment.html">
-        Segment
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/elements/step.html">
-        Step
-        
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Collections</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/collections/breadcrumb.html">
-        Breadcrumb
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/collections/form.html">
-        Form
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/collections/grid.html">
-        Grid
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/collections/menu.html">
-        Menu
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/collections/message.html">
-        Message
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/collections/table.html">
-        Table
-        
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Views</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/views/advertisement.html">
-        Advertisement
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/views/card.html">
-        Card
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/views/comment.html">
-        Comment
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/views/feed.html">
-        Feed
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/views/item.html">
-        Item
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/views/statistic.html">
-        Statistic
-        
-      </a>
-    
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Modules</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/modules/accordion.html">
-        Accordion
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/checkbox.html">
-        Checkbox
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/dimmer.html">
-        Dimmer
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/dropdown.html">
-        Dropdown
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/embed.html">
-        Embed
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/modal.html">
-        Modal
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/popup.html">
-        Popup
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/progress.html">
-        Progress
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/rating.html">
-        Rating
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/search.html">
-        Search
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/shape.html">
-        Shape
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/sidebar.html">
-        Sidebar
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/sticky.html">
-        Sticky
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/tab.html">
-        Tab
-        
-      </a>
-  
-      <a class="item" href="https://semantic-ui.com/modules/transition.html">
-        Transition
-        
-      </a>
-  
-  </div>
-</div>
-<div class="item">
-  <div class=" header">Behaviors</div>
-  <div class="menu">
-    
-      <a class="item" href="https://semantic-ui.com/behaviors/api.html">
-        API
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/behaviors/form.html">
-        Form Validation
-        
-      </a>
-    
-      <a class="item" href="https://semantic-ui.com/behaviors/visibility.html">
-        Visibility
-        
-      </a>
-    
-  </div>
-</div>
+    			</div>
+    		</nav>
+    	</header>
 
-</div>
-
-<div class="ui black big launch right attached fixed button">
-  <i class="content icon"></i>
-  <span class="text">Menu</span>
-</div>
-  
+        <div class="page-container">
+      		<!--  B O D Y  -->
+          	<div class="page-body">
+                  <div class="container-fluid">
+                      <div class="main-container d-flex">
 
 
+                              <div class="profile d-flex">
+                                <div class="profile-img d-flex align-items-center">
+                                      <img src="http://ncdinos.firstmall.kr/data/player/42_1521793090_23171759_profile.jpg" alt="내사진">
+                                  </div>
+                                  <div class="profile-info d-flex flex-column">
+                                      <div class="profile-text">
+                                          <p class="t-date">2018년 11월 10일</p>
+                                          <h1 class="t-greeting">안녕하세요. 박민우님</h1>
+                                          <p class="t-guide">오늘은 <strong>KIA 타이거즈</strong>와 경기가 있는 날입니다. <br>오늘의 브리핑을 확인해 보세요.</p>
+                                          <a href="" class="btn">오늘의 브리핑 보기<i class="material-icons">arrow_forward</i></a>
+                                      </div>
+                                      <div class="my-menu">
+                                          <div class="control d-flex justify-content-between">
+                                              <h1 class="title">즐겨찾는 메뉴</h1>
+                                              <a href=""><i class="material-icons">settings</i></a>
+                                          </div>
+                                          <ul class="menu d-flex">
+                                              <li><a href="">선수정보</a></li>
+                                              <li><a href="">풀영상</a></li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                              </div>
 
-
-<div class="ui fixed inverted main menu">
-  <div class="ui container">
-    <a class="launch icon item">
-      <i class="content icon"></i>
-    </a>
-    
-    <div class="right menu">
-      
-      <div class="vertically fitted borderless item">
-        <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-      </div>
-      
-      <!--
-      <div class="item">
-        <div class="ui hidden right aligned search input" id="search">
-          <div class="ui transparent icon input">
-            <input class="prompt" type="text" placeholder="Search...">
-            <i class="inverted search link icon" data-content="Search UI"></i>
-          </div>
-          <div class="results"></div>
-        </div>
-      </div>
-      -->
-    </div>
-  </div>
-</div>
-
-
-  <div class="pusher">
-    <div class="full height">
-      <div class="following bar" style="background-color: blue">
-  <div class="ui container">
-    <div class="ui large inverted secondary network menu">
-      <div class="item">
-        <div class="ui logo shape">
-          <div class="sides">
-            <div class="active ui side">
-              <img class="ui image" src="/images/logo.png">
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="view-ui item">
-        <i class="sidebar icon"></i> Menu
-      </a>
-      <div class="right menu">
-        <div class="item">
-          
-          <a class="twitter-share-button twitter" href="https://twitter.com/share" data-text="Semantic UI 2.0 is out!" data-url="http://semantic-ui.com" data-via="semanticui">
-          </a>
-          <script type="text/javascript">
-          window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
-          </script>
-          <iframe class="github" src="//ghbtns.com/github-btn.html?user=semantic-org&amp;repo=semantic-ui&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
-          
-        </div>
-        <div class="ui language floating dropdown link item" id="languages">
-          <i class="world icon"></i>
-          <div class="text">English</div>
-          <div class="menu">
-            <div class="header">Search Languages</div>
-            <div class="ui icon search input">
-              <i class="search icon"></i>
-              <input type="text" placeholder="Search languages...">
-            </div>
-            <div class="scrolling menu">
-  <div class="item" data-percent="100" data-value="en" data-english="English">
-    <span class="description">English</span>
-    English
-  </div>
-  <div class="item" data-percent="94" data-value="da" data-english="Danish">
-    <span class="description">dansk</span>
-    Danish
-  </div>
-  <div class="item" data-percent="94" data-value="es" data-english="Spanish">
-    <span class="description">Español</span>
-    Spanish
-  </div>
-  <div class="item" data-percent="34" data-value="zh" data-english="Chinese">
-    <span class="description">简体中文</span>
-    Chinese
-  </div>
-  <div class="item" data-percent="54" data-value="zh_TW" data-english="Chinese (Taiwan)">
-    <span class="description">中文 (臺灣)</span>
-    Chinese (Taiwan)
-  </div>
-  <div class="item" data-percent="79" data-value="fa" data-english="Persian">
-    <span class="description">پارسی</span>
-    Persian
-  </div>
-  <div class="item" data-percent="41" data-value="fr" data-english="French">
-    <span class="description">Français</span>
-    French
-  </div>
-  <div class="item" data-percent="37" data-value="el" data-english="Greek">
-    <span class="description">ελληνικά</span>
-    Greek
-  </div>
-  <div class="item" data-percent="37" data-value="ru" data-english="Russian">
-    <span class="description">Русский</span>
-    Russian
-  </div>
-  <div class="item" data-percent="36" data-value="de" data-english="German">
-    <span class="description">Deutsch</span>
-    German
-  </div>
-  <div class="item" data-percent="23" data-value="it" data-english="Italian">
-    <span class="description">Italiano</span>
-    Italian
-  </div>
-  <div class="item" data-percent="21" data-value="nl" data-english="Dutch">
-    <span class="description">Nederlands</span>
-    Dutch
-  </div>
-  <div class="item" data-percent="19" data-value="pt_BR" data-english="Portuguese">
-    <span class="description">Português(BR)</span>
-    Portuguese
-  </div>
-  <div class="item" data-percent="17" data-value="id" data-english="Indonesian">
-    <span class="description">Indonesian</span>
-    Indonesian
-  </div>
-  <div class="item" data-percent="12" data-value="lt" data-english="Lithuanian">
-    <span class="description">Lietuvių</span>
-    Lithuanian
-  </div>
-  <div class="item" data-percent="11" data-value="tr" data-english="Turkish">
-    <span class="description">Türkçe</span>
-    Turkish
-  </div>
-  <div class="item" data-percent="10" data-value="kr" data-english="Korean">
-    <span class="description">한국어</span>
-    Korean
-  </div>
-  <div class="item" data-percent="7"  data-value="ar" data-english="Arabic">
-    <span class="description">العربية</span>
-    Arabic
-  </div>
-  <div class="item" data-percent="6"  data-value="hu" data-english="Hungarian">
-    <span class="description">Magyar</span>
-    Hungarian
-  </div>
-  <div class="item" data-percent="6"  data-value="vi" data-english="Vietnamese">
-    <span class="description">tiếng Việt</span>
-    Vietnamese
-  </div>
-  <div class="item" data-percent="5"  data-value="sv" data-english="Swedish">
-    <span class="description">svenska</span>
-    Swedish
-  </div>
-  <div class="item" data-precent="4"  data-value="pl" data-english="Polish">
-    <span class="description">polski</span>
-    Polish
-  </div>
-  <div class="item" data-percent="6"  data-value="ja" data-english="Japanese">
-    <span class="description">日本語</span>
-    Japanese
-  </div>
-  <div class="item" data-percent="0"  data-value="ro" data-english="Romanian">
-    <span class="description">românește</span>
-    Romanian
-  </div>
-</div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="zoomed masthead segment">
-  <div class="ui container">
-    <div class="introduction">
-      <a class="ui black version label" href="https://github.com/Semantic-Org/Semantic-UI/blob/master/RELEASE-NOTES.md">
-        2.4.2
-      </a>
-      <h1 class="ui inverted header">
-        <span class="library">
-          Semantic UI
-        </span>
-        <span class="tagline">
-          User Interface is the language of the web
-        </span>
-      </h1>
-      <div class="ui hidden divider"></div>
-
-      <a href="https://semantic-ui.com/introduction/getting-started.html" class="ui huge inverted download button">
-        Get Started
-      </a>
-      <a href="https://semantic-ui.com/introduction/new.html" class="ui huge inverted basic button">New in 2.4</a>
-    </div>
-    <div class="inverted advertisement">
-      
-      <div id="carbonads-container">
-        <div class="carbonad">
-          <div id="azcarbon"></div>
-          <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "//engine.carbonads.com/z/51619/azcarbon_2_1_0_VERTDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-<div class="ui vertical stripe intro segment">
-  <div class="ui stackable very relaxed center aligned grid container">
-    <div class="row">
-      <div class="twelve wide column">
-        <img class="ui fluid image" src="/images/devices.png">
-        <h1 class="ui header">Design Beautiful Websites Quickly</h1>
-        <p>Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.</p>
-      </div>
-    </div>
-  </div>
-  <div class="stackable very relaxed ui grid container">
-    <div class="row">
-      <div class="seven wide column">
-        <h2 class="ui header">Concise HTML</h2>
-        <p>Semantic UI treats words and classes as exchangeable concepts.</p>
-        <p>Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.</p>
-        <p>Get the same benefits as <a href="https://en.bem.info" target="_blank">BEM</a> or <a href="https://smacss.com" target="_blank">SMACSS</a>, but without the tedium.</p>
-        </p>
-      </div>
-      <div class="nine wide column">
-        <div class="hidden code" data-type="html">
-          <div class="ui three buttons">
-            <button class="ui active button">One</button>
-            <button class="ui button">Two</button>
-            <button class="ui button">Three</button>
-          </div>
-        </div>
-        <div class="ui three demo buttons">
-          <div class="ui active button">One</div>
-          <div class="ui button">Two</div>
-          <div class="ui button">Three</div>
-        </div>
-      </div>
-    </div>
-    <div class="ui divider"></div>
-    <div class="row">
-      <div class="seven wide column">
-        <h2 class="ui header">Intuitive Javascript</h2>
-        <p>Semantic uses simple phrases called behaviors that trigger functionality.</p>
-        <p>Any arbitrary decision in a component is included as a setting that developers can modify.</p>
-      </div>
-      <div class="nine wide column">
-        <div class="hidden code" data-demo="true" data-type="javascript">
-          $('select.dropdown')
-            .dropdown('set selected', ['meteor', 'ember'])
-          ;
-        </div>
-        <div class="hidden code" data-type="html">
-          <select name="skills" multiple class="ui fluid dropdown">
-            <option value="">Skills</option>
-            <option value="angular">Angular</option>
-            <option value="css">CSS</option>
-            <option value="ember">Ember</option>
-            <option value="html">HTML</option>
-            <option value="javascript">Javascript</option>
-            <option value="meteor">Meteor</option>
-            <option value="node">NodeJS</option>
-          </select>
-        </div>
-        <select multiple class="ui fluid dropdown">
-          <option value="">Skills</option>
-          <option value="angular">Angular</option>
-          <option value="css">CSS</option>
-          <option value="ember">Ember</option>
-          <option value="html">HTML</option>
-          <option value="javascript">Javascript</option>
-          <option value="meteor">Meteor</option>
-          <option value="node">NodeJS</option>
-        </select>
-      </div>
-    </div>
-    <div class="ui divider"></div>
-    <div class="row">
-      <div class="seven wide column">
-        <h2 class="ui header">Simplified Debugging</h2>
-        <p>Performance logging lets you track down bottlenecks without digging through stack traces.</p>
-        <div class="ui info message">Don't have access to development tools right now? Check out <a href="https://t.co/GOUQx8iCyG">this short clip</a>.</a>
-        </div>
-      </div>
-      <div class="nine wide column">
-        <div class="hidden code" data-demo="true" data-type="javascript">
-        $('.sequenced.images .image')
-          .transition({
-            debug     : true,
-            animation : 'jiggle',
-            duration  : 500,
-            interval  : 200
-          })
-        ;
-        </div>
-        <div class="ui small sequenced images">
-          <img src="/images/avatar2/large/elyse.png" class="ui circular image">
-          <img src="/images/avatar2/large/matthew.png" class="ui circular image">
-          <img src="/images/avatar2/large/kristy.png" class="ui circular image">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ui email alternate stripe vertical segment">
-  <div class="ui center aligned grid container">
-    <div class="column">
-      <h3 class="ui header">
-        Semantic is growing fast. Want to see just how much? Sign up and we'll let you know
-      </h3>
-      <form class="ui form" method="post" action="https://semantic-ui.clients.ubivox.com/handlers/post/">
-        <input type="hidden" name="action" value="subscribe" />
-        <input type="hidden" name="lists" value="29450" />
-        <div class="field">
-          <div class="ui huge input">
-            <input type="text" name="email_address" data-validate="email" placeholder="E-mail">
-          </div>
-          <button type="submit" value="Subscribe" class="ui huge secondary submit button">
-            Sign-up
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-<div class="ui stripe theming vertical segment">
-  <div class="ui stackable very relaxed two column grid container">
-    <div class="center aligned column">
-      <h1 class="ui icon header">
-        <img src="/images/icons/theming.png" class="ui icon image">
-        Unbelievable Theming
-      </h1>
-      <p>Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
-      <p>Develop your UI once, then deploy with the same code everywhere.</p>
-      <div class="ui large source button" style="display:none;">
-        <i class="docs code icon"></i> View Source
-      </div>
-    </div>
-    <div class="left aligned column">
-      <div data-type="element" data-element="button" class="ui large floating dropdown theme button">
-        <span class="text">Select Theme</span>
-        <i class="dropdown icon"></i>
-        <div class="menu ui transition hidden" tabindex="-1">
-          <div data-value="Default" class="item">Semantic UI</div>
-          <div data-value="Amazon" class="item">Amazon</div>
-          <div data-value="Material" class="item">Google Material</div>
-          <div data-value="GitHub" class="item">GitHub</div>
-          <div data-value="Bootstrap3" class="item">Bootstrap</div>
-          <div data-value="Twitter" class="item">Twitter</div>
-          <div class="divider"></div>
-          <div data-value="Raised" class="item">Raised</div>
-          <div data-value="Chubby" class="item">Chubby</div>
-          <div data-value="Classic" class="item">Classic</div>
-        </div>
-      </div>
-      <div class="ui divider"></div>
-      <div class="ui button">
-        View
-      </div>
-      <div class="ui primary button">
-        <i class="shop icon"></i> Add to Cart
-      </div>
-      <div class="ui secondary button">
-        <i class="save icon"></i> Save for Later
-      </div>
-      <div class="ui labeled icon button">
-        <i class="star icon"></i>
-        Rate
-      </div>
-      <div class="ui demo buttons">
-        <div class="ui active button">1</div>
-        <div class="ui button">2</div>
-        <div class="ui button">3</div>
-      </div>
-    </div>
-  </div>
-  <div class="ui two column center aligned relaxed stackable source grid">
-    <div class="column">
-      <h3 class="ui header">Variable File</h3>
-      <div class="variable code" data-type="less" data-preserve="true">
-      </div>
-    </div>
-    <div class="column">
-      <h3 class="ui header">Override File</h3>
-      <div class="override code" data-type="less" data-preserve="true">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="feature alternate ui stripe vertical segment">
-  <div class="ui three column center aligned divided relaxed stackable grid container">
-    <div class="row">
-      <div class="column">
-        <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/paint.png">
-          3000+ Theming Variables
-        </h2>
-        <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-        <a class="ui large button" href="https://semantic-ui.com/usage/theming.html">Theming Guide</a>
-      </div>
-      <div class="column">
-        <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/book.png">
-          50+ UI Components
-        </h2>
-        <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
-        <div class="ui primary view-ui large button">Browse UI</div>
-      </div>
-      <div class="column">
-        <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/lab.png">
-          5000+ Commits
-        </h2>
-        <p>
-          Semantic UI is a <b>free open source</b> project already used in multiple <a href="http://www.quirky.com" target="_blank">large</a> scale <a href="https://www.newrepublic.com" target="_blank">production</a> environments.
-        </p>
-        <a href="https://github.com/Semantic-Org/Semantic-UI/issues" class="ui large button">Visit GitHub</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ui stripe vertical segment">
-  <div class="ui stackable very relaxed grid container">
-    <div class="fourteen wide center aligned centered column">
-      <h1 class="ui icon header">
-        <img src="/images/icons/toolbox.png" class="ui icon image">
-        Unbelievable Breadth
-      </h1>
-      <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
-      <a class="ui large primary button" href="https://semantic-ui.com/usage/layout.html">
-        See Layout Examples
-        <i class="right chevron icon"></i>
-      </a>
-    </div>
-    <div class="three column computer one column mobile demo row">
-      <div class="column">
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/collections/menu.html">Menu</a>
-          </h4>
-          <div class="ui vertical demo menu">
-            <a class="active teal item">
-              Inbox
-              <div class="ui teal label">1</div>
-            </a>
-            <a class="item">
-              Trash
-              <div class="ui label">1</div>
-            </a>
-            <div class="item">
-              <div class="ui transparent icon input">
-                <input type="text" placeholder="Search mail...">
-                <i class="search icon"></i>
-              </div>
-            </div>
-          </div>
-          <div class="ui fluid demo tabular menu">
-            <a class="active item">
-              Tab
-            </a>
-            <a class="item">
-              Tab
-            </a>
-          </div>
-          <div class="ui secondary vertical demo menu">
-            <a class="active item">
-              Inbox
-            </a>
-            <a class="item">
-              Starred
-            </a>
-            <a class="item">
-              Trash
-            </a>
-          </div>
-          <div class="ui secondary pointing vertical demo menu">
-            <a class="active item">
-              Inbox
-            </a>
-            <a class="item">
-              Starred
-            </a>
-            <a class="item">
-              Trash
-            </a>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/elements/divider.html">Divider</a>
-          </h4>
-          <div class="ui two column stackable center aligned grid segment">
-            <div class="column">
-              <div class="ui button">A</div>
-            </div>
-            <div class="ui vertical divider">or</div>
-            <div class="column">
-              <div class="teal ui button">B</div>
-            </div>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/modules/accordion.html">Accordion</a>
-          </h4>
-          <div class="ui vertical fluid accordion menu">
-            <div class="item">
-              <a class="active title">
-                <i class="dropdown icon"></i>
-                Size
-              </a>
-              <div class="active content">
-                <div class="ui form">
-                  <div class="grouped fields">
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="small">
-                        <label>Small</label>
+                          <div class="briefing d-flex flex-column">
+                              <div class="schedule">
+                                  <h1 class="title">오늘의 브리핑</h1>
+                                  <div class="control">
+                                      <button type="button" class="btn-prevweek"><i class="material-icons">keyboard_arrow_left</i></button>
+                                      <span class="thisweek">2018년 11월 첫째주</span>
+                                      <button type="button" class="btn-nextweek"><i class="material-icons">keyboard_arrow_right</i></button>
+                                  </div>
+                                  <div class="list-group">
+                                    <div class="list-group-item d-flex disabled">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 05일 월요일</span>
+                                        </p>
+                                        <p>경기가 없습니다.</p>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 06일 화요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 07일 수요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 08일 목요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 09일 금요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex active">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 10일 토요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex">
+                                        <p class="d-flex align-items-center">
+                                            <span class="date">11월 11일 일요일</span>
+                                            <span class="line"></span>
+                                            <span class="time">19:30</span>
+                                            <span class="line"></span>
+                                            <span class="stadium">마산야구장</span>
+                                        </p>
+                                        <div class="match d-flex">
+                                            <div class="my-team">
+                                                <span>NC</span>
+                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
+                                            </div>
+                                            <span>vs</span>
+                                            <div class="opponent-team">
+                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
+                                                <span>KIA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="game">
+                                  <h1 class="title">최근 KIA와 경기</h1>
+                                  <div class="list-group d-flex">
+                                      <div href="#" class="list-group-item d-flex">
+                                          <span class="date">2018년 07월 05일 화요일</span>
+                                          <span class="stadium">수원야구장</span>
+                                          <a href="#" class="btn">
+                                              브리핑 바로가기
+                                              <i class="material-icons">chevron_right</i>
+                                          </a>
+                                      </div>
+                                      <div href="#" class="list-group-item d-flex">
+                                          <span class="date">2018년 07월 05일 화요일</span>
+                                          <span class="stadium">수원야구장</span>
+                                          <a href="#" class="btn">
+                                              브리핑 바로가기
+                                              <i class="material-icons">chevron_right</i>
+                                          </a>
+                                      </div>
+                                      <div href="#" class="list-group-item d-flex">
+                                          <span class="date">2018년 07월 05일 화요일</span>
+                                          <span class="stadium">수원야구장</span>
+                                          <a href="#" class="btn">
+                                              브리핑 바로가기
+                                              <i class="material-icons">chevron_right</i>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="medium">
-                        <label>Medium</label>
+
+                      <div class="player">
+                          <h1 class="title">박민수님의 선수정보</h1>
+                          <div class="control">
+                              <a href="#" class="btn-more">자세히 보기<i class="material-icons">keyboard_arrow_right</i></a>
+                          </div>
+                          <div class="player-video row d-flex flex-nowrap">
+                              <div class="col-lg-3">
+                                  <div class="card">
+                                      <div class="card-img-top">
+                                          <div class="vs-img">
+                                                <div class="team">
+                                                    <img src="resource/img/emblem-NC.png" alt="nc dinos">
+                                                </div>
+                                                <div class="team">
+                                                    <img src="resource/img/emblem-SS.png" alt="samsung lions">
+                                                </div>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
+                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">NC 다이노스 VS 삼성 라이온즈</a>
+                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-3">
+                                  <div class="card">
+                                      <div class="card-img-top">
+                                          <div class="vs-img">
+                                              <div class="team">
+                                                  <img src="resource/img/emblem-NC.png" alt="nc dinos">
+                                              </div>
+                                              <div class="team">
+                                                <img src="resource/img/emblem-HH.png" alt="Lotte egles">
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
+                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
+                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-3">
+                                  <div class="card">
+                                      <div class="card-img-top">
+                                          <div class="vs-img">
+                                              <div class="team">
+                                                  <span class="nc"></span>
+                                              </div>
+                                              <div class="team">
+                                                  <span class="lt"></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
+                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
+                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-3">
+                                  <div class="card">
+                                      <div class="card-img-top">
+                                          <div class="vs-img">
+                                              <div class="team">
+                                                  <span class="nc"></span>
+                                              </div>
+                                              <div class="team">
+                                                  <span class="sk"></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
+                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
+                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-3">
+                                  <div class="card">
+                                      <div class="card-img-top">
+                                          <div class="vs-img">
+                                              <div class="team">
+                                                  <span class="nc"></span>
+                                              </div>
+                                              <div class="team">
+                                                  <span class="hh"></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="card-body">
+                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
+                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
+                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="large">
-                        <label>Large</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="size" value="x-large">
-                        <label>X-Large</label>
-                      </div>
-                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <a class="title">
-                <i class="dropdown icon"></i>
-                Colors
-              </a>
-              <div class="content">
-                <div class="ui form">
-                  <div class="grouped fields">
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="color">
-                        <label>Red</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="color">
-                        <label>Orange</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="color">
-                        <label>Green</label>
-                      </div>
-                    </div>
-                    <div class="field">
-                      <div class="ui radio checkbox">
-                        <input type="radio" name="color">
-                        <label>Blue</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/collections/message.html">Message</a>
-          </h4>
-          <div class="ui message">
-            <i class="close icon"></i>
-            This site uses cookies
-          </div>
-          <div class="ui warning icon message">
-            <div class="content">
-              <div class="header">Looking for help? </div>
-              <ul class="list">
-                <li>Use our <a href="#">help center</a></li>
-                <li>Check our <a href"#"="">FAQ</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="ui info message">
-            <div class="header">We're creating your profile page</div>
-            <p>It will be ready in just a second.</p>
-          </div>
-        </div>
-      </div>
-      <div class="tablet only computer only column">
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/views/card.html">Card</a>
-          </h4>
-          <div class="ui card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted button">Add Friend</div>
-                  </div>
-                </div>
-              </div>
-              <img src="/images/avatar2/large/rachel.png">
-            </div>
-            <div class="content">
-              <div class="header">Rachel Maddaw</div>
-              <div class="meta">
-                <a class="group">Pundit</a>
-              </div>
-            </div>
-            <div class="extra content">
-              <a class="right floated created">
-                Joined in 1998
-              </a>
-              <a class="friends">
-                <i class="user icon"></i>
-                22 Friends
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/views/feed.html">Feed</a>
-          </h4>
-          <div class="ui feed">
-            <div class="event">
-              <div class="label">
-                <img src="/images/avatar2/small/mark.png">
-              </div>
-              <div class="content">
-                <div class="summary">
-                  <a class="user">
-                    Mark
-                  </a> added you as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="label">
-                <img src="/images/avatar2/small/lena.png">
-              </div>
-              <div class="content">
-                You added Lena to the group <a>Close Friends</a>
-              </div>
-            </div>
-            <div class="event">
-              <div class="label">
-                <img src="/images/avatar2/small/eve.png">
-              </div>
-              <div class="content">
-                Eve just <a>posted on your page</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/elements/label.html">Label</a>
-          </h4>
-          <div class="ui image label">
-            <img src="/images/avatar2/small/molly.png">
-            molly@thebears.com
-            <i class="delete icon"></i>
-          </div>
-          <a class="ui teal label">
-            <i class="mail icon"></i> 23 New
-          </a>
-          <a class="ui tag label">Dresses</a>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/elements/step.html">Step</a>
-          </h4>
-          <div class="ui fluid vertical steps">
-            <a class="step">
-              <i class="truck icon"></i>
-              <div class="content">
-                <div class="title">Shipping</div>
-                <div class="description">Choose your shipping options</div>
-              </div>
-            </a>
-            <a class="active step">
-              <i class="payment icon"></i>
-              <div class="content">
-                <div class="title">Billing</div>
-                <div class="description">Enter billing information</div>
-              </div>
-            </a>
-            <a class="disabled step">
-              <i class="info icon"></i>
-              <div class="content">
-                <div class="title">Confirm Order</div>
-                <div class="description">Verify order details</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="tablet only computer only column">
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/modules/dropdown.html">Dropdown</a>
-          </h4>
-          <div class="ui fluid search selection dropdown">
-            <input type="hidden" name="country">
-            <i class="dropdown icon"></i>
-            <input class="search" tabindex="0"><div class="default text">Select Country</div>
-            <div class="menu" tabindex="-1">
-              <div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
-              <div class="item" data-value="ae"><i class="ae flag"></i>United Arab Emirates</div>
-              <div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-              <div class="item" data-value="ag"><i class="ag flag"></i>Antigua</div>
-              <div class="item" data-value="ai"><i class="ai flag"></i>Anguilla</div>
-              <div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-              <div class="item" data-value="am"><i class="am flag"></i>Armenia</div>
-              <div class="item" data-value="an"><i class="an flag"></i>Netherlands Antilles</div>
-              <div class="item" data-value="ao"><i class="ao flag"></i>Angola</div>
-              <div class="item" data-value="ar"><i class="ar flag"></i>Argentina</div>
-              <div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
-              <div class="item" data-value="at"><i class="at flag"></i>Austria</div>
-              <div class="item" data-value="au"><i class="au flag"></i>Australia</div>
-              <div class="item" data-value="aw"><i class="aw flag"></i>Aruba</div>
-              <div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-              <div class="item" data-value="az"><i class="az flag"></i>Azerbaijan</div>
-              <div class="item" data-value="ba"><i class="ba flag"></i>Bosnia</div>
-              <div class="item" data-value="bb"><i class="bb flag"></i>Barbados</div>
-              <div class="item" data-value="bd"><i class="bd flag"></i>Bangladesh</div>
-              <div class="item" data-value="be"><i class="be flag"></i>Belgium</div>
-              <div class="item" data-value="bf"><i class="bf flag"></i>Burkina Faso</div>
-              <div class="item" data-value="bg"><i class="bg flag"></i>Bulgaria</div>
-              <div class="item" data-value="bh"><i class="bh flag"></i>Bahrain</div>
-              <div class="item" data-value="bi"><i class="bi flag"></i>Burundi</div>
-              <div class="item" data-value="bj"><i class="bj flag"></i>Benin</div>
-              <div class="item" data-value="bm"><i class="bm flag"></i>Bermuda</div>
-              <div class="item" data-value="bn"><i class="bn flag"></i>Brunei</div>
-              <div class="item" data-value="bo"><i class="bo flag"></i>Bolivia</div>
-              <div class="item" data-value="br"><i class="br flag"></i>Brazil</div>
-              <div class="item" data-value="bs"><i class="bs flag"></i>Bahamas</div>
-              <div class="item" data-value="bt"><i class="bt flag"></i>Bhutan</div>
-              <div class="item" data-value="bv"><i class="bv flag"></i>Bouvet Island</div>
-              <div class="item" data-value="bw"><i class="bw flag"></i>Botswana</div>
-              <div class="item" data-value="by"><i class="by flag"></i>Belarus</div>
-              <div class="item" data-value="bz"><i class="bz flag"></i>Belize</div>
-              <div class="item" data-value="ca"><i class="ca flag"></i>Canada</div>
-              <div class="item" data-value="cc"><i class="cc flag"></i>Cocos Islands</div>
-              <div class="item" data-value="cd"><i class="cd flag"></i>Congo</div>
-              <div class="item" data-value="cf"><i class="cf flag"></i>Central African Republic</div>
-              <div class="item" data-value="cg"><i class="cg flag"></i>Congo Brazzaville</div>
-              <div class="item" data-value="ch"><i class="ch flag"></i>Switzerland</div>
-              <div class="item" data-value="ci"><i class="ci flag"></i>Cote Divoire</div>
-              <div class="item" data-value="ck"><i class="ck flag"></i>Cook Islands</div>
-              <div class="item" data-value="cl"><i class="cl flag"></i>Chile</div>
-              <div class="item" data-value="cm"><i class="cm flag"></i>Cameroon</div>
-              <div class="item" data-value="cn"><i class="cn flag"></i>China</div>
-              <div class="item" data-value="co"><i class="co flag"></i>Colombia</div>
-              <div class="item" data-value="cr"><i class="cr flag"></i>Costa Rica</div>
-              <div class="item" data-value="cs"><i class="cs flag"></i>Serbia</div>
-              <div class="item" data-value="cu"><i class="cu flag"></i>Cuba</div>
-              <div class="item" data-value="cv"><i class="cv flag"></i>Cape Verde</div>
-              <div class="item" data-value="cx"><i class="cx flag"></i>Christmas Island</div>
-              <div class="item" data-value="cy"><i class="cy flag"></i>Cyprus</div>
-              <div class="item" data-value="cz"><i class="cz flag"></i>Czech Republic</div>
-              <div class="item" data-value="de"><i class="de flag"></i>Germany</div>
-              <div class="item" data-value="dj"><i class="dj flag"></i>Djibouti</div>
-              <div class="item" data-value="dk"><i class="dk flag"></i>Denmark</div>
-              <div class="item" data-value="dm"><i class="dm flag"></i>Dominica</div>
-              <div class="item" data-value="do"><i class="do flag"></i>Dominican Republic</div>
-              <div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
-              <div class="item" data-value="ec"><i class="ec flag"></i>Ecuador</div>
-              <div class="item" data-value="ee"><i class="ee flag"></i>Estonia</div>
-              <div class="item" data-value="eg"><i class="eg flag"></i>Egypt</div>
-              <div class="item" data-value="eh"><i class="eh flag"></i>Western Sahara</div>
-              <div class="item" data-value="er"><i class="er flag"></i>Eritrea</div>
-              <div class="item" data-value="es"><i class="es flag"></i>Spain</div>
-              <div class="item" data-value="et"><i class="et flag"></i>Ethiopia</div>
-              <div class="item" data-value="eu"><i class="eu flag"></i>European Union</div>
-              <div class="item" data-value="fi"><i class="fi flag"></i>Finland</div>
-              <div class="item" data-value="fj"><i class="fj flag"></i>Fiji</div>
-              <div class="item" data-value="fk"><i class="fk flag"></i>Falkland Islands</div>
-              <div class="item" data-value="fm"><i class="fm flag"></i>Micronesia</div>
-              <div class="item" data-value="fo"><i class="fo flag"></i>Faroe Islands</div>
-              <div class="item" data-value="fr"><i class="fr flag"></i>France</div>
-              <div class="item" data-value="ga"><i class="ga flag"></i>Gabon</div>
-              <div class="item" data-value="gb"><i class="gb flag"></i>England</div>
-              <div class="item" data-value="gd"><i class="gd flag"></i>Grenada</div>
-              <div class="item" data-value="ge"><i class="ge flag"></i>Georgia</div>
-              <div class="item" data-value="gf"><i class="gf flag"></i>French Guiana</div>
-              <div class="item" data-value="gh"><i class="gh flag"></i>Ghana</div>
-              <div class="item" data-value="gi"><i class="gi flag"></i>Gibraltar</div>
-              <div class="item" data-value="gl"><i class="gl flag"></i>Greenland</div>
-              <div class="item" data-value="gm"><i class="gm flag"></i>Gambia</div>
-              <div class="item" data-value="gn"><i class="gn flag"></i>Guinea</div>
-              <div class="item" data-value="gp"><i class="gp flag"></i>Guadeloupe</div>
-              <div class="item" data-value="gq"><i class="gq flag"></i>Equatorial Guinea</div>
-              <div class="item" data-value="gr"><i class="gr flag"></i>Greece</div>
-              <div class="item" data-value="gs"><i class="gs flag"></i>Sandwich Islands</div>
-              <div class="item" data-value="gt"><i class="gt flag"></i>Guatemala</div>
-              <div class="item" data-value="gu"><i class="gu flag"></i>Guam</div>
-              <div class="item" data-value="gw"><i class="gw flag"></i>Guinea-Bissau</div>
-              <div class="item" data-value="gy"><i class="gy flag"></i>Guyana</div>
-              <div class="item" data-value="hk"><i class="hk flag"></i>Hong Kong</div>
-              <div class="item" data-value="hm"><i class="hm flag"></i>Heard Island</div>
-              <div class="item" data-value="hn"><i class="hn flag"></i>Honduras</div>
-              <div class="item" data-value="hr"><i class="hr flag"></i>Croatia</div>
-              <div class="item" data-value="ht"><i class="ht flag"></i>Haiti</div>
-              <div class="item" data-value="hu"><i class="hu flag"></i>Hungary</div>
-              <div class="item" data-value="id"><i class="id flag"></i>Indonesia</div>
-              <div class="item" data-value="ie"><i class="ie flag"></i>Ireland</div>
-              <div class="item" data-value="il"><i class="il flag"></i>Israel</div>
-              <div class="item" data-value="in"><i class="in flag"></i>India</div>
-              <div class="item" data-value="io"><i class="io flag"></i>Indian Ocean Territory</div>
-              <div class="item" data-value="iq"><i class="iq flag"></i>Iraq</div>
-              <div class="item" data-value="ir"><i class="ir flag"></i>Iran</div>
-              <div class="item" data-value="is"><i class="is flag"></i>Iceland</div>
-              <div class="item" data-value="it"><i class="it flag"></i>Italy</div>
-              <div class="item" data-value="jm"><i class="jm flag"></i>Jamaica</div>
-              <div class="item" data-value="jo"><i class="jo flag"></i>Jordan</div>
-              <div class="item" data-value="jp"><i class="jp flag"></i>Japan</div>
-              <div class="item" data-value="ke"><i class="ke flag"></i>Kenya</div>
-              <div class="item" data-value="kg"><i class="kg flag"></i>Kyrgyzstan</div>
-              <div class="item" data-value="kh"><i class="kh flag"></i>Cambodia</div>
-              <div class="item" data-value="ki"><i class="ki flag"></i>Kiribati</div>
-              <div class="item" data-value="km"><i class="km flag"></i>Comoros</div>
-              <div class="item" data-value="kn"><i class="kn flag"></i>Saint Kitts and Nevis</div>
-              <div class="item" data-value="kp"><i class="kp flag"></i>North Korea</div>
-              <div class="item" data-value="kr"><i class="kr flag"></i>South Korea</div>
-              <div class="item" data-value="kw"><i class="kw flag"></i>Kuwait</div>
-              <div class="item" data-value="ky"><i class="ky flag"></i>Cayman Islands</div>
-              <div class="item" data-value="kz"><i class="kz flag"></i>Kazakhstan</div>
-              <div class="item" data-value="la"><i class="la flag"></i>Laos</div>
-              <div class="item" data-value="lb"><i class="lb flag"></i>Lebanon</div>
-              <div class="item" data-value="lc"><i class="lc flag"></i>Saint Lucia</div>
-              <div class="item" data-value="li"><i class="li flag"></i>Liechtenstein</div>
-              <div class="item" data-value="lk"><i class="lk flag"></i>Sri Lanka</div>
-              <div class="item" data-value="lr"><i class="lr flag"></i>Liberia</div>
-              <div class="item" data-value="ls"><i class="ls flag"></i>Lesotho</div>
-              <div class="item" data-value="lt"><i class="lt flag"></i>Lithuania</div>
-              <div class="item" data-value="lu"><i class="lu flag"></i>Luxembourg</div>
-              <div class="item" data-value="lv"><i class="lv flag"></i>Latvia</div>
-              <div class="item" data-value="ly"><i class="ly flag"></i>Libya</div>
-              <div class="item" data-value="ma"><i class="ma flag"></i>Morocco</div>
-              <div class="item" data-value="mc"><i class="mc flag"></i>Monaco</div>
-              <div class="item" data-value="md"><i class="md flag"></i>Moldova</div>
-              <div class="item" data-value="me"><i class="me flag"></i>Montenegro</div>
-              <div class="item" data-value="mg"><i class="mg flag"></i>Madagascar</div>
-              <div class="item" data-value="mh"><i class="mh flag"></i>Marshall Islands</div>
-              <div class="item" data-value="mk"><i class="mk flag"></i>MacEdonia</div>
-              <div class="item" data-value="ml"><i class="ml flag"></i>Mali</div>
-              <div class="item" data-value="ar"><i class="ar flag"></i>Burma</div>
-              <div class="item" data-value="mn"><i class="mn flag"></i>Mongolia</div>
-              <div class="item" data-value="mo"><i class="mo flag"></i>MacAu</div>
-              <div class="item" data-value="mp"><i class="mp flag"></i>Northern Mariana Islands</div>
-              <div class="item" data-value="mq"><i class="mq flag"></i>Martinique</div>
-              <div class="item" data-value="mr"><i class="mr flag"></i>Mauritania</div>
-              <div class="item" data-value="ms"><i class="ms flag"></i>Montserrat</div>
-              <div class="item" data-value="mt"><i class="mt flag"></i>Malta</div>
-              <div class="item" data-value="mu"><i class="mu flag"></i>Mauritius</div>
-              <div class="item" data-value="mv"><i class="mv flag"></i>Maldives</div>
-              <div class="item" data-value="mw"><i class="mw flag"></i>Malawi</div>
-              <div class="item" data-value="mx"><i class="mx flag"></i>Mexico</div>
-              <div class="item" data-value="my"><i class="my flag"></i>Malaysia</div>
-              <div class="item" data-value="mz"><i class="mz flag"></i>Mozambique</div>
-              <div class="item" data-value="na"><i class="na flag"></i>Namibia</div>
-              <div class="item" data-value="nc"><i class="nc flag"></i>New Caledonia</div>
-              <div class="item" data-value="ne"><i class="ne flag"></i>Niger</div>
-              <div class="item" data-value="nf"><i class="nf flag"></i>Norfolk Island</div>
-              <div class="item" data-value="ng"><i class="ng flag"></i>Nigeria</div>
-              <div class="item" data-value="ni"><i class="ni flag"></i>Nicaragua</div>
-              <div class="item" data-value="nl"><i class="nl flag"></i>Netherlands</div>
-              <div class="item" data-value="no"><i class="no flag"></i>Norway</div>
-              <div class="item" data-value="np"><i class="np flag"></i>Nepal</div>
-              <div class="item" data-value="nr"><i class="nr flag"></i>Nauru</div>
-              <div class="item" data-value="nu"><i class="nu flag"></i>Niue</div>
-              <div class="item" data-value="nz"><i class="nz flag"></i>New Zealand</div>
-              <div class="item" data-value="om"><i class="om flag"></i>Oman</div>
-              <div class="item" data-value="pa"><i class="pa flag"></i>Panama</div>
-              <div class="item" data-value="pe"><i class="pe flag"></i>Peru</div>
-              <div class="item" data-value="pf"><i class="pf flag"></i>French Polynesia</div>
-              <div class="item" data-value="pg"><i class="pg flag"></i>New Guinea</div>
-              <div class="item" data-value="ph"><i class="ph flag"></i>Philippines</div>
-              <div class="item" data-value="pk"><i class="pk flag"></i>Pakistan</div>
-              <div class="item" data-value="pl"><i class="pl flag"></i>Poland</div>
-              <div class="item" data-value="pm"><i class="pm flag"></i>Saint Pierre</div>
-              <div class="item" data-value="pn"><i class="pn flag"></i>Pitcairn Islands</div>
-              <div class="item" data-value="pr"><i class="pr flag"></i>Puerto Rico</div>
-              <div class="item" data-value="ps"><i class="ps flag"></i>Palestine</div>
-              <div class="item" data-value="pt"><i class="pt flag"></i>Portugal</div>
-              <div class="item" data-value="pw"><i class="pw flag"></i>Palau</div>
-              <div class="item" data-value="py"><i class="py flag"></i>Paraguay</div>
-              <div class="item" data-value="qa"><i class="qa flag"></i>Qatar</div>
-              <div class="item" data-value="re"><i class="re flag"></i>Reunion</div>
-              <div class="item" data-value="ro"><i class="ro flag"></i>Romania</div>
-              <div class="item" data-value="rs"><i class="rs flag"></i>Serbia</div>
-              <div class="item" data-value="ru"><i class="ru flag"></i>Russia</div>
-              <div class="item" data-value="rw"><i class="rw flag"></i>Rwanda</div>
-              <div class="item" data-value="sa"><i class="sa flag"></i>Saudi Arabia</div>
-              <div class="item" data-value="sb"><i class="sb flag"></i>Solomon Islands</div>
-              <div class="item" data-value="sc"><i class="sc flag"></i>Seychelles</div>
-              <div class="item" data-value="sd"><i class="sd flag"></i>Sudan</div>
-              <div class="item" data-value="se"><i class="se flag"></i>Sweden</div>
-              <div class="item" data-value="sg"><i class="sg flag"></i>Singapore</div>
-              <div class="item" data-value="sh"><i class="sh flag"></i>Saint Helena</div>
-              <div class="item" data-value="si"><i class="si flag"></i>Slovenia</div>
-              <div class="item" data-value="sj"><i class="sj flag"></i>Svalbard, I Flag Jan Mayen</div>
-              <div class="item" data-value="sk"><i class="sk flag"></i>Slovakia</div>
-              <div class="item" data-value="sl"><i class="sl flag"></i>Sierra Leone</div>
-              <div class="item" data-value="sm"><i class="sm flag"></i>San Marino</div>
-              <div class="item" data-value="sn"><i class="sn flag"></i>Senegal</div>
-              <div class="item" data-value="so"><i class="so flag"></i>Somalia</div>
-              <div class="item" data-value="sr"><i class="sr flag"></i>Suriname</div>
-              <div class="item" data-value="st"><i class="st flag"></i>Sao Tome</div>
-              <div class="item" data-value="sv"><i class="sv flag"></i>El Salvador</div>
-              <div class="item" data-value="sy"><i class="sy flag"></i>Syria</div>
-              <div class="item" data-value="sz"><i class="sz flag"></i>Swaziland</div>
-              <div class="item" data-value="tc"><i class="tc flag"></i>Caicos Islands</div>
-              <div class="item" data-value="td"><i class="td flag"></i>Chad</div>
-              <div class="item" data-value="tf"><i class="tf flag"></i>French Territories</div>
-              <div class="item" data-value="tg"><i class="tg flag"></i>Togo</div>
-              <div class="item" data-value="th"><i class="th flag"></i>Thailand</div>
-              <div class="item" data-value="tj"><i class="tj flag"></i>Tajikistan</div>
-              <div class="item" data-value="tk"><i class="tk flag"></i>Tokelau</div>
-              <div class="item" data-value="tl"><i class="tl flag"></i>Timorleste</div>
-              <div class="item" data-value="tm"><i class="tm flag"></i>Turkmenistan</div>
-              <div class="item" data-value="tn"><i class="tn flag"></i>Tunisia</div>
-              <div class="item" data-value="to"><i class="to flag"></i>Tonga</div>
-              <div class="item" data-value="tr"><i class="tr flag"></i>Turkey</div>
-              <div class="item" data-value="tt"><i class="tt flag"></i>Trinidad</div>
-              <div class="item" data-value="tv"><i class="tv flag"></i>Tuvalu</div>
-              <div class="item" data-value="tw"><i class="tw flag"></i>Taiwan</div>
-              <div class="item" data-value="tz"><i class="tz flag"></i>Tanzania</div>
-              <div class="item" data-value="ua"><i class="ua flag"></i>Ukraine</div>
-              <div class="item" data-value="ug"><i class="ug flag"></i>Uganda</div>
-              <div class="item" data-value="um"><i class="um flag"></i>Us Minor Islands</div>
-              <div class="item" data-value="us"><i class="us flag"></i>United States</div>
-              <div class="item" data-value="uy"><i class="uy flag"></i>Uruguay</div>
-              <div class="item" data-value="uz"><i class="uz flag"></i>Uzbekistan</div>
-              <div class="item" data-value="va"><i class="va flag"></i>Vatican City</div>
-              <div class="item" data-value="vc"><i class="vc flag"></i>Saint Vincent</div>
-              <div class="item" data-value="ve"><i class="ve flag"></i>Venezuela</div>
-              <div class="item" data-value="vg"><i class="vg flag"></i>British Virgin Islands</div>
-              <div class="item" data-value="vi"><i class="vi flag"></i>Us Virgin Islands</div>
-              <div class="item" data-value="vn"><i class="vn flag"></i>Vietnam</div>
-              <div class="item" data-value="vu"><i class="vu flag"></i>Vanuatu</div>
-              <div class="item" data-value="wf"><i class="wf flag"></i>Wallis and Futuna</div>
-              <div class="item" data-value="ws"><i class="ws flag"></i>Samoa</div>
-              <div class="item" data-value="ye"><i class="ye flag"></i>Yemen</div>
-              <div class="item" data-value="yt"><i class="yt flag"></i>Mayotte</div>
-              <div class="item" data-value="za"><i class="za flag"></i>South Africa</div>
-              <div class="item" data-value="zm"><i class="zm flag"></i>Zambia</div>
-              <div class="item" data-value="zw"><i class="zw flag"></i>Zimbabwe</div>
-            </div>
-          </div>
+          	</div>
 
-          <div class="ui divider"></div>
-          <div class="ui floating dropdown labeled icon button">
-            <i class="filter icon"></i>
-            <span class="text">Filter Posts</span>
-            <div class="menu">
-              <div class="ui icon search input">
-                <i class="search icon"></i>
-                <input type="text" placeholder="Search tags...">
-              </div>
-              <div class="header">
-                <i class="tags icon"></i>
-                Tag Label
-              </div>
-              <div class="scrolling menu">
-                <div class="item">
-                  <div class="ui red empty circular label"></div>
-                  Important
-                </div>
-                <div class="item">
-                  <div class="ui blue empty circular label"></div>
-                  Announcement
-                </div>
-                <div class="item">
-                  <div class="ui black empty circular label"></div>
-                  Cannot Fix
-                </div>
-                <div class="item">
-                  <div class="ui purple empty circular label"></div>
-                  News
-                </div>
-                <div class="item">
-                  <div class="ui orange empty circular label"></div>
-                  Enhancement
-                </div>
-                <div class="item">
-                  <div class="ui empty circular label"></div>
-                  Change Declined
-                </div>
-                <div class="item">
-                  <div class="ui yellow empty circular label"></div>
-                  Off Topic
-                </div>
-                <div class="item">
-                  <div class="ui pink empty circular label"></div>
-                  Interesting
-                </div>
-                <div class="item">
-                  <div class="ui green empty circular label"></div>
-                  Discussion
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-        <div class="no segment example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/elements/segment.html">Segment</a>
-          </h4>
-          <div class="ui stacked segment"></div>
-          <div class="ui raised segment"></div>
-          <div class="ui secondary segment"></div>
-          <div class="ui tertiary segment"></div>
-
-          <div class="ui top attached segment"></div>
-          <div class="ui attached segment"></div>
-          <div class="ui bottom attached segment"></div>
+          	<!--  F O O T E R  -->
+          	<footer class="page-footer">
+          		<div class="container-fluid d-flex">
+                      <p>Copyright ⓒ NC Dinos Baseball Company. All Rights Reserved.</p>
+                      <img src="resource/img/logo-ncdinos.png" alt="NC Dinos">
+          		</div>
+          	</footer>
         </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/elements/input.html">Input</a>
-          </h4>
-          <div class="ui action left icon input">
-            <i class="search icon"></i>
-            <input type="text" placeholder="Search...">
-            <div class="ui teal button">Search</div>
-          </div>
-          <div class="ui hidden divider"></div>
-          <div class="ui labeled right icon input">
-            <div class="ui label">
-              http://
-            </div>
-            <input type="text" placeholder="mysite.com">
-            <i class="linkify link icon"></i>
-          </div>
 
-          <div class="ui hidden divider"></div>
-          <div class="ui right labeled input">
-            <input type="text" placeholder="Enter categories">
-            <a class="ui tag label">
-              Add Tags
-            </a>
-          </div>
-        </div>
-        <div class="no example">
-          <h4 class="ui header">
-            <a href="https://semantic-ui.com/modules/checkbox.html">Checkbox</a>
-          </h4>
-          <div class="ui checkbox">
-            <input type="checkbox" name="fun">
-            <label>I enjoy having fun</label>
-          </div>
+    </div>
 
-          <div class="ui hidden divider"></div>
-          <div class="ui slider checkbox">
-            <input type="checkbox" name="newsletter">
-            <label>Receive weekly poodle newsletter</label>
-          </div>
 
-          <div class="ui hidden divider"></div>
-          <div class="ui toggle checkbox">
-            <input type="checkbox" name="public">
-            <label>Make my dog's profile public</label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ui stripe community vertical segment">
-  <div class="ui two column center aligned divided very relaxed stackable grid container">
-    <div class="row">
-      <div class="column">
-        <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/mobile.png">
-          Responsively Designed
-        </h2>
-        <p>Semantic is <b>designed completely with em</b> making responsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
-        <a class="ui large button" href="https://semantic-ui.com/usage/layout.html">Responsive Examples</a>
-      </div>
-      <div class="column">
-        <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/heart.png">
-          Partners with Libraries You Love
-        </h2>
-        <p>Semantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
-        <a class="ui large button" href="https://semantic-ui.com/introduction/integrations.html">See Integrations</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ui alternate stripe vertical segment">
-  <div class="ui stackable center aligned grid container">
-    <div class="fourteen wide column">
-      <h1 class="ui icon header">
-        <img class="ui inline icon image" src="/images/icons/rocket.png">
-        Liberate your Development
-      </h1>
-      <div class="ui stackable center aligned vertically padded grid">
-        <div class="eight wide column">
-          <h3 class="ui header">Enterprise Ready</h3>
-          <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
-          <a class="ui large right labeled primary icon button" href="https://semantic-ui.com/introduction/getting-started.html">
-            <i class="right chevron icon"></i>
-            Get Started Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    </div>
-    <div class="ui  vertical footer segment">
-  <div class="ui center aligned container">
-    <div class="ui stackable grid">
-      <div class="three wide column">
-        <h4 class="ui header">Community</h4>
-        <div class="ui link list">
-          <a class="item" href="https://www.transifex.com/organization/semantic-org/" target="_blank">Help Translate</a>
-          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI/issues" target="_blank">Submit an Issue</a>
-          <a class="item" href="https://gitter.im/Semantic-Org/Semantic-UI" target="_blank">Join our Chat</a>
-          <a class="item" href="https://semantic-ui.com/cla.html" target="_blank">CLA</a>
-        </div>
-      </div>
-      <div class="three wide column">
-        <h4 class="ui header">Network</h4>
-        <div class="ui link list">
-          <a class="item" href="https://github.com/Semantic-Org/Semantic-UI" target="_blank">GitHub Repo</a>
-          <a class="item" href="http://forums.semantic-ui.com" target="_blank">User Forums</a>
-          <a class="item" href="http://1.semantic-ui.com">1.x Docs</a>
-          <a class="item" href="http://legacy.semantic-ui.com">0.x Docs</a>
-        </div>
-      </div>
-      <div class="seven wide right floated column">
-        <h4 class="ui header">Help Preserve This Project</h4>
-        <p> Support for the continued development of Semantic UI comes directly from the community.</p>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
-          <button type="submit" class="ui large teal button">Donate Today</button>
-        </form>
-      </div>
-    </div>
-    <div class="ui section divider"></div>
-    <img src="/images/logo.png" class="ui centered mini image">
-    <div class="ui horizontal small divided link list">
-      <a class="item" href="http://semantic-ui.mit-license.org/" target="_blank">Free & Open Source (MIT)</a>
-    </div>
-  </div>
-</div>
 
-  </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-  <div class="ui basic language modal">
-  <i class="close icon"></i>
-  <div class="header">The <span class="name"></span> Translation Needs Your Help</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="world icon"></i>
-    </div>
-    <div class="description">
-      <p>This translation is only <b><span class="complete"></span>%</b> complete!</p>
-      <div class="ui inverted indicating progress">
-        <div class="bar"></div>
-      </div>
-      <p>We need your help to make Semantic available to  people who speak your language.</p>
-      <p>Our translation tools are easy to use and allow you to translate text without having to leave the site.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted cancel button">No Thanks</div>
-    <a href="https://github.com/Semantic-Org/Semantic-UI/wiki/Translating-Semantic-UI-Docs" target="_blank" class="ui inverted approve teal button">
-      <i class="mail icon"></i>
-      Help Translate
-    </a>
-  </div>
-</div>
-
-<div class="ui basic chinese modal">
-  <i class="close icon"></i>
-  <div class="header">Would you like to visit the mirror site?</div>
-  <div class="image content">
-    <div class="middle aligned image">
-      <i class="question icon"></i>
-    </div>
-    <div class="description">
-      <p>Semantic is available at <a href="http://www.semantic-ui.cn">semantic-ui.cn</a> a mirror site hosted inside China. This should make browsing much faster for those visiting from mainland China.
-      </p>
-    </div>
-  </div>
-  <div class="actions">
-    <div class="ui inverted red cancel button">No Thanks</div>
-    <a href="http://www.semantic-ui.cn" class="ui inverted green approve button">
-      <i class="mail icon"></i>
-      Yes, take me to the mirror
-    </a>
-  </div>
-</div>
-
-  
-
+    <script src="resource/js/common.js" type="text/javascript"></script>
 </body>
-
 </html>
