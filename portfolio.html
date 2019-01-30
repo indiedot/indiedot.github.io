@@ -1,3644 +1,1563 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>D-LOCKER</title>
-    
-    <link rel="stylesheet" type="text/css" href="resource/lib/fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="resource/lib/material-design-icons-master/material-icons.css">
+<head lang="ko">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" href="resource/img/favicon.png">
+	
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="resource/img/favicon-apple.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="resource/img/favicon-apple-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="resource/img/favicon-apple-114.png">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<title>운행기록부</title>
+	
+	<link rel="stylesheet" type="text/css" href="resource/lib/fonts/fonts.css">
+	
+	<style type="text/css">
+		/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
-    <style type="text/css">
-    	@charset "UTF-8";
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
-body,
-html{
-    height:100%;
-}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
 body {
-    padding: 0;
-    overflow-x: hidden;
-    min-width: 320px;
-    /* font-family: 'Apple SD 산돌고딕 Neo', 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif; */
-    font-family: 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif;
-    font-size: 0.875rem;
-    color: #2D3641;
+  margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nanum Square', sans-serif;
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
 }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
 
 a {
-    color: #598DBF;
-}
-a:hover {
-    color: #3E6285;
-}
-
-
-/*---------------
-    scroll bar
----------------*/
-/* width */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(145, 163, 189, 0.3); 
-  border-radius: 4px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(145, 163, 189, 0.8); 
-}
-
-
-.container {
-    padding-right: 16px;
-    padidng-left: 16px;
-}
-
-.container-fluid{
-    padding-right: 16px;
-    padding-left: 16px;
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1156px;
-    }
-    .container-fluid{
-        max-width: 1156px;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
-
-/*--------------
-      R O W
---------------*/
-.row {
-  margin-right: -8px;
-  margin-left: -8px;
-}
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
-.col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
-.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
-.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
-.col-xl-auto {
-  padding-right: 8px;
-  padding-left: 8px;
-}
-/*--------------
-    T A B L E
---------------*/
-.table th,
-.table td {
-    padding: 1rem 0.5rem;
-    vertical-align: middle;
-    border-top: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-}
-.table thead th{
-    padding: 0.5rem 0.5rem;
-    vertical-align: middle;
-    border-bottom: 1px solid #D1D5DB;
-    background-color: #F2F3F5;
-}
-.table tbody td{
-    color: inherit;
-}
-.table caption{
-    display: none;
-}
-
-.table-fixed{
-    table-layout: fixed;
-}
-.table-hover tbody tr:hover {
-  background-color: #F4F8FE;
-}
-/*    table active   */
-.table-active,
-.table-active > th,
-.table-active > td {
-  background-color: #F4F8FE;
-}
-
-.table-hover .table-active:hover {
-  background-color: #e8ecf3;
-}
-
-.table-hover .table-active:hover > td,
-.table-hover .table-active:hover > th {
-  background-color: #e8ecf3;
-}
-
-.table p{
-    margin:0;
-}
-.table th.sorting:after{
-    font-family: 'Material Icons';
-    content: 'unfold_more';
-    vertical-align: middle;
-}
-.table th.sorting-desc:after{
-    font-family: 'Material Icons';
-    content: 'expand_less';
-    vertical-align: middle
-}
-.table th.sorting-asc:after{
-    font-family: 'Material Icons';
-    content: 'expand_more';
-    vertical-align: middle;
-}
-/*------------
-    F O R M
-------------*/
-.form-control {
-    height: 2rem;
-    padding: .1rem .75rem;
-    font-size: 1em;
-    color: inherit;
-    border: 1px solid #D1D5DB;
-}
-.form-control:focus {
-    color: inherit;
-    background-color: #F8F8F9;
-    border-color: #BEC2C8;
-}
-.form-control::-webkit-input-placeholder{
-    color: #A3ACB8;
-}
-.form-control::-ms-input-placeholder {
-    color: #A3ACB8;
-}
-.form-control::placeholder {
-    color: #A3ACB8;
-}
-.form-control:required:invalid {
-    outline: none;
-}
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    -webkit-box-shadow: 0 0 0 30px white inset;
-}
-.form{}
-.col-form-label {
-    padding-top: 0.2rem;
-    padding-bottom: 0.35rem;
-    color: #5F6E84;
-}
-.form-label{
-    color: #5F6E84;
-}
-.form > .form-group:last-child,
-.form-row:last-child .form-group{
-    margin-bottom: 0;
-}
-.form-group.required label:after{
-    color: #B51400;
-    content: "*";
-}
-.form-row .form-check{
-    padding-top:25px;
-}
-.form-row > [class*=col-] > .form-group.row{
-    margin-left: 0;
-    margin-right: 0;
-}
-.form-row > [class*=col-] > .form-group.row .col-form-label {
-    padding-left: 0;
-}
-/*----------------
-    B U T T O N
-----------------*/
-.btn{
-    padding: 0.282rem 1.2rem;
-    font-size: 1em
-}
-/*    btn Primary    */
-.btn-primary {
-    background-color: #1B447E;
-    border-color: #1B447E;
-}
-.btn-primary:hover{
-    background: #0F2D56;
-    border-color: #0F2D56;
-}
-.btn-primary:focus, .btn-primary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-.btn-primary.disabled, .btn-primary:disabled {
-    opacity: 0.1;
-}
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-/*    btn secondary    */
-.btn-secondary {
-    background-color: #A2ABB8;
-    border-color: #A2ABB8;
-}
-.btn-secondary:hover{
-    background: #7F8691;
-    border-color: #7F8691;
-}
-.btn-secondary:focus, .btn-secondary.focus {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-.btn-secondary.disabled, .btn-secondary:disabled {
-    opacity: 0.1;
-}
-.btn-secondary:not(:disabled):not(.disabled):active,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-
-/*    btn outline primary    */
-.btn-outline-primary {
-  color: #1B447E;
   background-color: transparent;
-  background-image: none;
-  border-color: #1B447E;
 }
 
-.btn-outline-primary:hover {
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+/*******************************
+             Page
+*******************************/
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  min-width: 320px;
+  background: #FFFFFF;
+  font-family: 'Apple SD 산돌고딕 Neo', 'Nanum Barun Gothic', 'Malgun Gothic', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #757575;
+  font-smoothing: antialiased;
+}
+
+/*******************************
+             Headers
+*******************************/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.28571429em;
+  margin: calc(2rem -  0.14285714em ) 0em 1rem;
+  font-weight: bold;
+  padding: 0em;
+}
+
+h1 {
+  min-height: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.71428571rem;
+}
+
+h3 {
+  font-size: 1.28571429rem;
+}
+
+h4 {
+  font-size: 1.07142857rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child {
+  margin-top: 0em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child {
+  margin-bottom: 0em;
+}
+
+/*******************************
+             Text
+*******************************/
+
+p {
+  margin: 0em 0em 1em;
+  line-height: 1.4285em;
+}
+
+p:first-child {
+  margin-top: 0em;
+}
+
+p:last-child {
+  margin-bottom: 0em;
+}
+
+/*-------------------
+        Links
+--------------------*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e70bf;
+  text-decoration: none;
+}
+
+/*******************************
+         Scrollbars
+*******************************/
+/* Force Simple Scrollbars */
+
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+body ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+}
+
+body ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+
+body ::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 135, 139, 0.8);
+}
+
+
+/*******************************
+          Highlighting
+*******************************/
+
+/* Site */
+
+::-webkit-selection {
+  background-color: #ff0060;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+::-moz-selection {
+  background-color: #ff0060;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+::selection {
+  background-color: #ff0060;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Form */
+
+textarea::-webkit-selection,
+input::-webkit-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::-moz-selection,
+input::-moz-selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+textarea::selection,
+input::selection {
+  background-color: rgba(100, 100, 100, 0.4);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
+
+/*=======================================
+
+    C   O   M   P   O   N   E   N   T
+
+=======================================*/
+/*-----------------
+      F O R M
+-----------------*/
+.input {
+	display: inline-flex;
+	padding: 0.25rem 1rem;
+	border: 1px solid #e5e5e5;
+	border-radius: 0.25rem;
+	background-color: #fff;
+	transition: border-color 0.2s ease;
+}
+.input.focus {
+	border-color: #726267;
+}
+.input input{
+	outline: none;
+	border: none;
+	background-color: transparent;
+	line-height: 1em;
+}
+/*-----------------
+    B U T T O N
+-----------------*/
+.button {
+	padding: 0.65rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+	outline: none;
+	line-height: 1em;
+	cursor: pointer;
+}
+.button:hover{
+}
+.button.primary-button{
+	background-color: #726267;
+	color: #fff;
+}
+.button.primary-button:hover{
+	background-color: #5c4f53;
+}
+
+/*------------------
+  checkbox/radio
+------------------*/
+
+/*------------------
+  checkbox/radio
+------------------*/
+.checkbox,
+.radio{
+  position: relative;
+  display: block;
+  height: 16px;
+  margin-bottom: 8px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: none;
+  font-size: 14px;
+  line-height: 15px;
+  vertical-align: middle;
+}
+.checkbox input[type="checkbox"],
+.radio input[type="radio"]{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0 !important;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+  cursor: pointer;
+}
+.reverse.checkbox input[type="checkbox"],
+.reverse.radio input[type="radio"]{
+  left:auto;
+  right:-15px;
+}
+.checkbox input[type="checkbox"]{
+  width:14px;
+  height:14px;
+}
+.radio input[type="radio"] {
+  width: 14px;
+  height: 14px;
+}
+.checkbox label,
+.radio label {
+  position: relative;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  outline: none;
+  cursor: pointer;
+  min-height: 14px;
+  padding-left: 1.3rem;
+}
+.checkbox label:before,
+.radio label:before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top:0;
+  left:0;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+  box-shadow: inset 0 1px 1px 1px rgba(0, 0, 0, 0.1)
+}
+.checkbox label:before{
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+.radio label:before {
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+}
+.radio input[type="radio"]:checked + label,
+.checkbox input[type="checkbox"]:checked + label{
+  color: #3d8e8d;
+}
+.radio input[type="radio"]:checked + label:before {
+  background-color: #fff;
+  border-color: #3d8e8d;
   color: #fff;
-  background-color: #1B447E;
-  border-color: #1B447E;
+  font-weight: normal;
+  content: "";
+}
+.checkbox input[type="checkbox"]:checked + label:before{
+  background-color: #3d8e8d;
+  border-color: #2b6362;
+}
+.checkbox input[type="checkbox"]:checked + label:after{
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  content: '';
+  display: block;
+  /*Make it a small rectangle so the border will create an L-shape*/
+  width: 3px;
+  height: 6px;
+  /*Add a white border on the bottom and left, creating that 'L' */
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  /*Rotate the L 45 degrees to turn it into a checkmark*/
+  transform: rotate(45deg);
 }
 
-/*    btn outline secondary    */
-.btn-outline-secondary {
-  color: #A2ABB8;
-  border-color: #A2ABB8;
-}
-.btn-outline-secondary:hover {
-  color: #fff;
-  background-color: #A2ABB8;
-  border-color: #A2ABB8;
+
+.radio input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  background: #3d8e8d;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
 
-.btn > .material-icons{
-    font-size:20px;
-    vertical-align: top;
-}
-.btn-icon {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    padding: 0.375rem;
-
-}
-.btn-icon .material-icons{
-    font-size: 18px;
-}
-/*--------------------------------
-    D R O P D O W N    M E N U
---------------------------------*/
-.dropdown-menu {
-    font-size: 1em;
-    color: inherit;
-}
-.dropdown-item.active, .dropdown-item:active{
-    background: #A2ABB8;
-}
-/*--------------------------------
-    I N P U T    G R O U P
---------------------------------*/
-
-
-/*--------------------------------
-    D R O P D O W N    M E N U
---------------------------------*/
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
-.custom-radio .custom-control-input:checked~.custom-control-label::before{
-    background: #598DBF;
-}
-.custom-control-nolabel {
-    position: relative;
-    margin:0;
-    padding:0;
-}
-.custom-control-nolabel .custom-control-label{
-    width: 1rem;
-    height: 1rem;
-}
-.custom-control-nolabel .custom-control-label::before {
-    left:0;
-}
-.custom-control-nolabel .custom-control-label::after {
-    left:0;
-}
-/*------------------------
-    T A B    M E N U
--------------------------*/
-.nav-pills .nav-link{
-    padding: .532rem .5rem;
-    border-radius: 0;
-    font-size: 1rem;
-}
-@media (min-width: 992px){
-    .nav-pills .nav-link{
-        padding: 0.8rem .5rem;
-    }
-}
-/*    tab menu    */
-.tab-menu.sticky-top{
-    top: 0;
-    background: #e6eaed;
-    border-bottom: 1px solid #d0d5da;
-}
-@media (min-width: 992px){
-    .tab-menu.sticky-top{
-        position: relative;
-        top: 0px;
-    }
-}
-.nav-pills .nav-link{
-    border-bottom: 0.25rem solid #e6eaed;
-    color: #333;
-}
-.nav-pills .nav-link.active{
-    background: transparent;
-    border-color: #598DBF;
-    color: #1B447E;
-}
-@media (min-width: 992px){
-    .nav-pills .nav-link{
-        margin-bottom: -1px;
-        border:1px solid transparent;
-        /* border-top-right-radius: 0.25rem;
-        border-top-left-radius: 0.25rem; */
-        background-color: rgba(0, 0, 0, 0.05);
-        margin-right: 0.5rem;
-    }
-    .nav-pills .nav-link:hover{
-        background-color: rgba(0, 0, 0, 0.08);
-    }
-    .nav-pills .nav-link.active{
-        background: transparent;
-        border-color: #A3ACB8;
-    }
-}
-/*------------------------------------------
-            N A V I G A T I O N
-------------------------------------------*/
-.navbar {
-    padding: 0;
-    height: 60px;
-}
-.navbar > .container,
-.navbar > .container-fluid {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-.navbar-brand {
-    margin: 0;
-    padding: 0;
-    width: 104px;
-    height: 15px;
-    font-size: 0;
-    background-image: url(../img/logo.png);
-    background-repeat: no-repeat;
-    background-size: 104px;
-}
-@media (min-width: 992px){
-    .navbar {
-        height: 80px;
-    }
-    .navbar > .container-fluid {
-        position: relative;
-    }
-    .navbar-expand-lg .navbar-brand {
-        width: 160px;
-        height: 23px;
-        background-size: 160px;
-    }
-}
-.navbar-nav .nav-link {
-    padding: 16px;
-    color: #333333;
-    font-family: 'Nanum Square', sans-serif;
-    font-size: 1rem;
-}
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-    color: #598DBF;
-}
-.navbar-nav .show > .nav-link,
-.navbar-nav .active > .nav-link,
-.navbar-nav .nav-link.show,
-.navbar-nav .nav-link.active {
-    border-left: 4px solid currentColor;
-    background-color: #FBFBFB;
-    color: #598DBF;
+.checkbox.disabled label:after,
+.checkbox input[type="checkbox"].disabled + label:after,
+.checkbox input[type="checkbox"][disabled] + label:after,
+.radio.disabled label:before,
+.radio input[type="radio"].disabled + label:before,
+.radio input[type="radio"][disabled] + label:before{
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
-        border: none;
-    }
-    .navbar-nav .show > .nav-link,
-    .navbar-nav .active > .nav-link,
-    .navbar-nav .nav-link.show,
-    .navbar-nav .nav-link.active {
-        background-color: transparent;
-    }
+.checkbox input[type="checkbox"].disabled + label,
+.checkbox input[type="checkbox"][disabled] + label,
+.radio input[type="radio"].disabled + label,
+.radio input[type="radio"][disabled] + label{
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  cursor: not-allowed;
 }
-.navbar-toggler,
-.navbar-toggler-search,
-.navbar-toggler-close{
-    position: absolute;
-    top: 0;
+
+
+
+.checkbox-inline,
+.radio-inline{
+  display: inline-block;
+  margin:0;
+  padding-left:0;
+}
+.form-group-inline{
+  display: flex;
+  flex-direction: row;
+  margin-bottom:15px;
+}
+.form-group .checkbox,
+.form-group .radio,
+.form-group .checkbox-inline,
+.form-group .radio-inline{
+  margin-top:0;
+  font-size: 12px;
+}
+.checkbox.reverse label,
+.radio.reverse label{
+  padding-left:0;
+}
+.checkbox.reverse label:after,
+.radio.reverse label:before{
+  left:auto;
+  right:-18px;
+}
+.radio.reverse input[type="radio"]:checked + label:after {
+  left:auto;
+  right: -18px;
+}
+.checkbox-inline+.checkbox-inline,
+.radio-inline+.radio-inline{
+  margin-left:20px;
+}
+.checkbox-inline.reverse + .checkbox-inline.reverse,
+.radio-inline.reverse + .radio-inline.reverse{
+  margin-left:40px;
+}
+
+
+/*=======================================
+
+          L  A   Y   O   U  T
+
+=======================================*/
+.page{
+	position: relative;
+	background-color: #eaeaea;
+	min-height: 100%;
+}
+/*--------------
+  H E A D E R
+--------------*/
+.page-header{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 3.5rem;
+	background-color: #726267;
+	z-index: 1;
+}
+.page-title{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: 0;
+	margin-top: -11px;
+	margin-left: -42px;
+	color: #fff;
+	font-size: 1.125rem;
+	font-weight: normal;
+}
+.button-all-add{
+	background-color: transparent;
+	border-radius: 0;
+	color: #fff;
+	font-size: 0.875rem;
+}
+.button-logout{
+	background-color: transparent;
+	border-radius: 0;
+	color: #fff;
+	font-size: 0.875rem;
+}
+.button-all-add-2{
+	width:3rem;
+	height: 3rem;
+	padding: 0;
+	border-radius: 0;
+	background: transparent url(../img/iconx2.png) no-repeat;
+	background-position: -90px;
+	background-size: auto 48px;
+	font-size: 0;
+}
+.button-logout-2{
+	width:3rem;
+	height: 3rem;
+	padding: 0;
+	border-radius: 0;
+	background: transparent url(../img/iconx2.png) no-repeat;
+	background-position: 0;
+	background-size: auto 48px;
+	font-size: 0;
+}
+/*--------------
+    B O D Y
+--------------*/
+.page-body {
+	position: relative;
+	margin: 0;
+	padding: 3.5rem 0 1rem 0;
+}
+.car-selected{
+	position: relative;
+	padding: 1rem 0;
+	padding-left: 100px;
+	border-bottom: 1px solid #d5d5d5;
+	background-color: #fff;
+}
+.car-selected:before{
+	position: absolute;
+	left: 1.5rem;
+	top: 1.5rem;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #736368;
+	background: #fff url(../img/icon-car.png) no-repeat;
+	background-size: 35px;
+	background-position: 0.5rem 50%;
+	content: "";
+}
+.car-selected .car-info{
+	margin: 0 0 0.5rem 0;
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: #3d3537;
+}
+.car-selected .car-info .car-name{
+	display: inline-block;
+	margin-right: 0.5rem;
+	padding: 0.2rem 0.5rem;
+	border:1px solid #bfaab1;
+	border-radius: 0.25rem;
+	background-color: #e8e1e1;
+	font-size: 0.875rem;
+	line-height: 1em;
+	vertical-align: middle;
+}
+.car-selected .driver-info{
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.875rem;
+	line-height: 1.4em;
+}
+.car-list {
+	position: sticky;
+	top: 3.5rem;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	border-bottom: 1px solid #736368;
+	background-color: #fff;
+	z-index: 1;
+}
+.car-list .car-list-item {
+	display: inline-block;
+	margin: 0;
+	padding: 2px 0 0 0;
+	border-bottom: 2px solid transparent;
+}
+.car-list .car-list-item.active{
+	border-bottom: 2px solid #736368;
+}
+.car-list .car-list-item a {
+	display: inline-block;
+	padding: 0.25rem 1rem;
+	color: #757575;
+	font-size: 0.875rem;
+}
+.car-list .car-list-item.active a {
+	color: #736368;
+	font-weight: 700;
+}
+.car-list-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.car-list-flexbox .car-list-item {
+  flex: 0 0 auto;
+  margin-right: 3px;
+}
+.car-list, .car-list-flexbox {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.car-list::-webkit-scrollbar, .car-list-flexbox::-webkit-scrollbar {
+  display: none;
+}
+
+/*----- 운행기록 ------*/
+.record-list {
+	position: relative;
+	padding: 0 0.5rem;
+}
+.record-list .record-title{
+	margin:1rem 0 0.5rem 0;
+	font-size: 1rem;
+	text-align: center;
+	color: #2e2e2e
+}
+.record-list .info-text{
+	margin:0 0 1rem 0;
+	padding: 0.5rem 1rem;
+	border:1px solid #ffc6c5;
+	background-color: #fff5f5;
+	font-size: 0.875rem;
+	color: #d76666;
+}
+.record-list-item {
+	position: relative;
+	margin:0 0 0.5rem 0;
+	background-color: #fff;
+}
+.record-list-item .header{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	border-bottom: 1px solid #d5d5d5;
+	/*background-color: #e3e0e1;*/
+}
+.record-list-item .date{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	font-size: 1.125rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #393134;
+	color: #2e2e2e;
+}
+.record-list-item .list-check{
+	visibility: hidden;
+	width: 36px;
+	height: 36px;
+	border-right: 1px solid #d5d5d5;
+	border-radius: 0;
+	background: #fff url(../img/iconx2.png) no-repeat;
+	background-position: -108px;
+	background-size: auto 36px;
+}
+
+.record-list-item .list-check input[type="checkbox"]{
+	cursor: pointer;
+	position: absolute; 
+	top: 0px;
+	left: 0px;
+	width: 20px;
+	height: 20px;
+	opacity: 0 !important;
+	outline: none;
+	clip:rect(0,0,0,0); 
+	border: 0 ;
+}
+
+.record-list-item .list-check input[type="checkbox"] + label { 
+	cursor: auto;
+	display: inline-block; 
+	-webkit-user-select: none; 
+	   -moz-user-select: none; 
+	    -ms-user-select: none;
+	outline: none;
+} 
+
+.record-list-item .list-check input[type="checkbox"] + label:before { 
+	position: absolute;
+	left:0;
+	top:0;
+	display: inline-block; 
+	width: 36px; 
+	height: 36px;
+	margin: 0 0 0 0; 
+	background: transparent;
+	text-align: center; 
+	vertical-align: middle; 
+	line-height: 36px; 
+	cursor: pointer;
+	content: ''; 
+} 
+.record-list-item .list-check input[type="checkbox"]:checked + label:before { 
+	content: ''; 
+	background: #726267 url(../img/iconx2.png) no-repeat;
+	background-position: -144px;
+	background-size: auto 36px;
+}
+.record-list-item.no-data .list-check.active{
+	visibility: visible;
+}
+.record-list-item .add-record{
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	border-left: 1px solid #d5d5d5;
+	border-radius: 0;
+	background: #fff url(../img/iconx2.png) no-repeat;
+	background-position: -72px;
+	background-size: auto 36px;
+	font-size: 0;
+}
+.record-list-item .business,
+.record-list-item .non-business{
+	border-bottom: 1px solid #d5d5d5;
+}
+.record-list-item .business:last-child,
+.record-list-item .non-business:last-child{
+	border-bottom: none;
+}
+.record-list-item .business,
+.record-list-item .non-business{
+	position: relative;
+	margin: 0 1rem;
+	padding: 1rem 0;
+}
+.record-list-item .business h2,
+.record-list-item .non-business h2{
+	position: absolute;
+	left:0rem;
+	top: 1rem;
+	width: 50px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	font-size: 0.875rem;
+	font-weight: 400;
+	border: 1px solid #e3e0e1;
+	line-height :40px;
+	text-align: center;
+}
+.record-list-item dl{
+	margin: 0 0 0 70px;
+	padding: 0;
+}
+.record-list-item dl:after{
+	display: block;
+	clear: both;
+	content: "";
+}
+.record-list-item dt,
+.record-list-item dd{
+	float: left;
+	padding: 0;
+	margin: 0;
+	font-size: 0.75rem;
+	line-height: 1.4em;
+}
+.record-list-item dt{
+	clear: both;
+
+}
+.record-list-item dd{
+	margin-left: 0.5rem;
+}
+.record-list-item dt.last-distance{
+	margin-top: 0.2rem;
+	margin-bottom: 0.1rem;
+	color: #2e2e2e;
+	font-size: 0.875rem;
+}
+.record-list-item dd.last-distance{
+	color: #736368;
+	font-weight: 700;
+	font-size: 1rem;
+}
+.record-list-item.no-data p{
+	padding: 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	color: #757575
+}
+/*----- 운행기록 없을때 ------*/
+.no-car{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	height:100vh;
+	padding: 0;
+	background-color: #fff
+}
+.no-car .alert-img {
+	margin-bottom: 0.5rem;
+}
+.no-car .alert-img img{
+	width: 72px;
+}
+.no-car p{
+	margin-bottom: 10rem;
+}
+
+.record-list-control{
+	display: none;
+	position: fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	width: 100%;
+	z-index: 2;
+	border-top: 1px solid #726267;
+}
+.record-list-control.active{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.record-list-control .button{
+	padding: 1rem;
+	flex: 1 0 50%;
+	border-radius: 0;
+}
+.record-list-control .button-all-check,
+.record-list-control .button-all-noncheck{
+	display: none;
+	background-color: #fff;
+	color: #726267;
+}
+.record-list-control .button-all-check.active,
+.record-list-control .button-all-noncheck.active{
+	display: block;
+}
+.record-list-control .button-add{
+	background-color: #726267;
+	color: #fff;
+}
+/*--------------
+  F O O T E R
+--------------*/
+.button-top {
+    position: fixed;
+    display: block;
     padding: 1rem;
-    border: none;
-    border-radius: 0;
-    color: #91A3BD;
-    background-color: transparent;
-    font-size: 1.8rem;
-    line-height: 1;
-    outline: 0;
-}
-.navbar-toggler{
-    left:0;
-}
-.navbar-toggler-search {
+    left: 0;
     right: 0;
-}
-.navbar-toggler:hover,
-.navbar-toggler:focus,
-.navbar-toggler-search:hover,
-.navbar-toggler-search:focus,
-.navbar-toggler-close:hover,
-.navbar-toggler-close:focus {
+    bottom: 0;
+    width: 100%;
     outline: none;
-    color: #1B447E;
+    background: #ede7e9;
+    border-top: 1px solid #cbc5c7;
+    border-radius: 0;
+    /*-webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transition: all .3s,
+    	opacity .5s, visibility .5s;
+    transition: all .3s,
+    	opacity .5s, visibility .5s;
+    opacity: 0;*/
+    visibility: hidden;
+    line-height: 1em;
+    text-align: center;
+    color: #757575;
+    font-size: 0.875rem;
 }
-
-.navbar-toggler:not(:disabled):not(.disabled),
-.navbar-toggler-search:not(:disabled):not(.disabled),
-.navbar-toggler-close:not(:disabled):not(.disabled){
+.button-top:hover{
+    background-color: #F6F8F9;
+    color: #91A3BD;
     cursor: pointer;
 }
+.button-top:focus,
+.button-top:active{
+    outline: none;
+}
+.button-top.show {
+    opacity: 1;
+    visibility: visible;
+}
 @media (min-width: 992px){
-    .navbar-expand-lg .navbar-toggler,
-    .navbar-expand-lg .navbar-toggler-search{
-        display: none;
+    .button-top {
+        bottom: 0.5rem;
     }
 }
 
-/*    M E N U    B O X    */
-.menu-box{
-	background-color: #fff;
+
+
+/*=======================================
+
+          A L E R T & M O D A L
+
+=======================================*/
+.alert-background{
+	visibility: hidden;
 	position: fixed;
 	top:0;
 	right:0;
 	left:0;
+	bottom:0;
+	background: rgba(0, 0, 0, 0.6);
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	z-index: 99;
 }
-.menu-box .navbar-toggler-close{
-    top: 10px;
-    right:0;
-    z-index: 1;
+.alert-background.show{
+	visibility: visible;
 }
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-collapse.menu-box{
-		position: relative;
-		top: auto;
-		right: auto;
-		bottom: auto;
-		left: auto;
-		background-color: transparent;
-	}
-    .navbar-expand-lg .menu-box .navbar-toggler-close{
-        display: none;
-    }
-}
-/*    T O P    M E N U    */
-.top-menu{
-	position: relative;
-	margin-top:80px;
+.alert{
+	margin: 0 2rem;
+	border-radius: 0.25rem;
 	background-color: #fff;
 }
-.top-menu .nav-item{
-	border-bottom: 1px solid #E1E4E8;
-}
-@media (min-width: 992px){
-    .top-menu{
-		margin-top: 0;
-        background-color: transparent;
-	}
-	.top-menu .nav-item{
-		border: none;
-	}
-	.top-menu .nav-item .nav-link{
-		font-size: 18px;
-	}
-}
-/*    Q U I C K    M E N U    */
-.quick-menu .menu-item-notice,
-.quick-menu .menu-item-admin,
-.quick-menu .menu-item-search{
-	width: 48px;
-	height: 24px;
+.alert-body{
+	padding: 2rem 2.5rem;
 	text-align: center;
-	color: #91A3BD;
 }
-.quick-menu .menu-item-admin,
-.quick-menu .menu-item-search{
-  display: none;
+.alert-footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	border-top: 1px solid #eaeaea;
 }
-.quick-menu .menu-item-notice{
-  position: absolute;
-  top:28px;
-  right:60px;
-  z-index: 1;
+.alert-footer .button{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+	 background-color: #fff;
 }
-.quick-menu .menu-item-notice:hover,
-.quick-menu .menu-item-admin:hover,
-.quick-menu .menu-item-search:hover{
-	color: #1B447E;
+.alert-footer .button:first-child{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0.25rem !important;
+	border-left: none !important;
 }
-.quick-menu .menu-item-notice.active:after{
-	position: absolute;
-	top:-4px;
-	right:6px;
-	display: block;
-	width: 8px;
-	height: 8px;
-	border-radius: 8px;
-	background-color: #3ED4D4;
-	content: "";
-}
-@media (min-width: 992px){
-    .quick-menu{
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		margin-left: 16px;
-        margin-right: 16px;
-		padding-right: 16px;
-		padding-left: 16px;
-		border-left: 1px solid #e6eaed;
-		border-right: 1px solid #e6eaed;
-	}
-	.quick-menu .menu-item-notice{
-		position: relative;
-		top:auto;
-		right: auto;
-		z-index: 0;
-	}
-	.quick-menu .menu-item-admin,
-	.quick-menu .menu-item-search{
-		display: block;
-	}
+.alert-footer .button:last-child{
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left: 1px solid #eaeaea;
 }
 
-/*    U S E R    I N F O    */
-.user-info{
-	position: absolute;
+.record-form{
+	display: none;
+	position: fixed;
 	top:0;
+	right:0;
 	left:0;
-	width: 100%;
-	height: 80px;
-	padding: 0 16px;
-	background-color: #041C3E;
-
-}
-.user-photo{
-	display: inline-block;
-	width:47px;
-	height: 47px;
-	border-radius: 100%;
-	overflow: hidden;
-	text-align: center;
-    background-color: #fff;
-}
-.user-photo img{
-	height:47px;
-}
-.user-name{
-	pointer-events: none;
-	color: #FFFFFF;
-}
-.user-setting{
-	display: -ms-flexbox !important;
-  	display: -webkit-box !important;
-  	display: flex !important;
-  	-ms-flex-direction: row;
-  	-webkit-box-orient: horizontal;
-  	-webkit-box-direction: normal;
-  	        flex-direction: row;
-			border-bottom: 1px solid #D1D5DB;
-			-webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-			        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-.user-setting .list-group-item{
-	margin:0;
-	border: none;
-	border-radius: 0;
-	text-align: center;
-	color: #91A3BD;
-	font-size: 14px;
-}
-.user-setting .list-group-item:first-child{
-	border-right: 1px solid #E1E4E8;
-}
-.user-setting .list-group-item i{
-	position: relative;
-	font-size: 14px;
-	margin-right: 4px;
-	top: 1px;
-}
-@media (min-width: 992px){
-    .user-info{
-        position: relative;
-        width: auto;
-        padding: 0;
-        background-color: transparent;
-    }
-    .user-name{
-		pointer-events: auto;
-        color: #757575;
-	}
-    .user-name:hover{
-        text-decoration: none;
-    }
-    .user-setting.collapse:not(.show){
-		display: none !important;
-	}
-    .user-setting{
-		position: absolute;
-		top: 88px;
-		right:0;
-		min-width: 120px;
-		border-radius: 4px;
-		background-color: #fff;
-		-webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-		        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-	}
-    .user-setting .list-group-item{
-		text-align: left;
-		font-size: 12px;
-	}
-	.user-setting .list-group-item:first-child{
-		border-right: none;
-		border-bottom: 1px solid #d8d8d8;
-	}
-}
-
-/*    S E A R C H    B O X    */
-.navbar-collapse.search-box{
-    background-color: #fff;
-    position: fixed;
-    top:0;
-    right:0;
-    left:0;
-    -webkit-box-shadow: 0px 0 10px 5px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0 10px 5px rgba(0, 0, 0, 0.1);
-}
-.navbar-collapse.search-box.collapsing {
-    -webkit-transition: all 0s cubic-bezier(0.52, 0.16, 0.24, 1);
-    transition: all 0s cubic-bezier(0.52, 0.16, 0.24, 1);
-}
-.search-box .navbar-toggler-close{
-    top: 0;
-    right: 0;
-}
-@media (min-width: 992px){
-    .navbar-collapse.search-box{
-    	position: absolute;
-    	left:200px;
-    	top: 0;
-    	right:0;
-    	height: 80px;
-    	-webkit-box-shadow: none;
-    	        box-shadow: none;
-    	display: none !important;
-    }
-    .search-box.show{
-    	display: -ms-flexbox !important;
-  		display: -webkit-box !important;
-  		display: flex !important;
-    }
-    .search-box.collapse:not(.show){
-    	display: none !important;
-    }
-    .search-box .navbar-toggler-close{
-    	top:10px;
-    }
-}
-.search-box .input-group{
-    width: calc(100% -  57px);
-}
-.search-box .dropdown{
-    border-right: 1px solid #e6eaed;
-}
-.search-box .dropdown .btn{
-    padding: 1.219rem 1rem;
-    border-radius: 0;
-}
-.search-box .input-group .form-control{
-    height: 60px;
-    border: none;
-    border-radius: 0;
-}
-.search-box .input-group .btn{
-    border: none;
-    border-radius: 0;
-}
-.search-box .input-group .input-group-append{
-    display: none;
-}
-@media (min-width: 992px){
-    .search-box .input-group{
-        border-right: 1px solid #D1D5DB;
-    }
-    .search-box .dropdown .btn{
-        padding: 0.597rem 1rem;
-    }
-    .search-box .input-group .form-control{
-        height: 40px;
-    }
-    .search-box .input-group .input-group-append{
-        display: block;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    .search-box .input-group .input-group-append .btn{
-        width: 40px;
-        height: 40px;
-        padding: 0.35rem 0.5rem;
-        border-radius: 100%;
-    }
-    .search-box .input-group .input-group-append .btn:hover{
-        background-color: #eee;
-        color: #6c757d;
-    }
-}
-/*-------------
-    C A R D
---------------*/
-.card {
-    margin-bottom: 2.5rem;
-    border-color: #D1D5DB;
-    border-radius: 0;
-}
-.card-header {
-    background-color: #F2F3F5;
-    background-color: #ffffff;
-    border-color: #D1D5DB;
-}
-.card-header.d-flex{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-@media (min-width: 576px) {
-    .card-header{
-        min-height: 56px;
-    }
-    .card-header.d-flex{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-}
-.card-header .card-title {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1em;
-}
-.card-header .card-control{
-    margin-top: 0.5rem;
-}
-@media (min-width: 576px) {
-    .card-header .card-control{
-        margin-top: 0;
-    }
-}
-@media (min-width: 992px) {
-    .card-body .form-row .form-group{
-        margin-bottom: 0;
-    }
-}
-.card-footer {
-    background-color: #F2F3F5;
-    background-color: #ffffff;
-    border-color: #D1D5DB;
-}
-.card .table-responsive .table:last-child{
-    margin:0;
-}
-.card .table-responsive .table:last-child tbody tr:last-child td{
-    border-bottom: none;
-}
-.card-search .card-footer{
-    padding: 0;
-}
-.card-search .card-footer .btn{
-    padding:1rem 1rem;
-    background-color: transparent;
-    border: none;
-    color: #5E6D83;
-    border-radius: 0;
-}
-.card-search .card-footer .btn:hover,
-.card-search .card-footer .btn:active,
-.card-search .card-footer .btn:focus{
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #5E6D83;
-}
-/* @media (min-width: 576px) {
-    .card-deck {
-      display: -ms-flexbox;
-      display: -webkit-box;
-      display: flex;
-      -ms-flex-direction: column;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column;
-    }
-
-    .card-deck .card {
-      margin-bottom: 15px;
-    }
-} */
-@media (min-width: 992px) {
-  .card-deck {
-    -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-flow: row wrap;
-    margin-right: -8px;
-    margin-left: -8px;
-  }
-  .card-deck .card {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex: 1 0 0%;
-    -webkit-box-flex: 1;
-            flex: 1 0 0%;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    margin-right: 8px;
-    margin-bottom: 0;
-    margin-left: 8px;
-  }
-}
-
-/*---------------
-    A L E R T
-----------------*/
-.alert-primary{
-
-}
-
-/*-------------
-    L I S T
---------------*/
-.list-group-item:hover, .list-group-item:focus {
-    color: #598DBF;
-}
-
-.list-group-item.active{
-    background-color: #598DBF;
-    border-color: #598DBF;
-}
-.list-group-item.active:hover, .list-group-item.active:focus{
-    color: #fff;
-}
-
-/*-------------
-    M O D A L
---------------*/
-.modal-content {
-    border-color: transparent;
-}
-.modal-header {
-    border-color: #D1D5DB;
-}
-.modal-title {
-    font-size: 1rem;
-    font-weight: 700;
-}
-.modal-body {
-    color: #757575;
-}
-.modal-footer {
-    border-color: #D1D5DB;
-}
-/*modal bug fix*/
-.dlk-modal[style] {
-    padding-right:0 !important;
-}
-.dlk-modal.modal-open {
-    overflow: auto;
-}
-
-/*-------------------------------
-    M O D A L - A L E R T
---------------------------------*/
-.modal.alert {
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-}
-/*.modal.alert .modal-content {
-    border-color: #D1D5DB;
-}*/
-.modal.alert .modal-body p{
-    margin-bottom: 0;
-}
-
-@media (min-width: 576px) {
-    .modal.alert .modal-dialog{
-        margin: 0 auto;
-    }
-}
-.modal.alert .modal-body{
-    padding: 3rem 1rem;
-    background-color: #FBFBFB;
-    border-radius: calc(0.25rem - 1px);
-}
-.modal.alert .modal-footer{
-    padding: 0;
-}
-.modal.alert .modal-footer .btn{
-    padding: 0.782rem 1.2rem;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    border-color: #fff;
-    background-color: #fff;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-.modal.alert .modal-footer .btn-primary{
-    color: #1B447E;
-}
-.modal.alert .modal-footer .btn-secondary{
-    color: #91A3BD;
-}
-.modal.alert .modal-footer .btn:hover{
-    border-color: #E8EAED;
-    background-color: #E8EAED;
-}
-.modal.alert .modal-footer > :not(:last-child){
-    margin:0;
-    border-right: 1px solid #D1D5DB;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-.modal.alert .modal-footer > :not(:first-child){
-    margin:0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-/*-------------------
-    T O O L T I P
---------------------*/
-.tooltip-inner {
-    font-size: 12px;
-    font-family: 'Apple SD 산돌고딕 Neo', 'Noto Sans KR','Malgun Gothic', '맑은 고딕', Arial, Helvetica, sans-serif;
-}
-
-/*-------------
-    T E X T
---------------*/
-.text-primary {
-  color: #1B447E !important;
-}
-
-a.text-primary:hover, a.text-primary:focus {
-  color: #010D1E !important;
-}
-
-.text-info {
-    color: #3ED4D4 !important;
-}
-
-/*==========================================
-
-            C U S T O M    U I
-
-==========================================*/
-/*--------------------------------------------
-                S E L E C T
---------------------------------------------*/
-.bootstrap-select .btn{
-    border-color: #D1D5DB;
-}
-.bootstrap-select .btn-outline-secondary:hover,
-.bootstrap-select .btn-outline-secondary.dropdown-toggle:focus,
-.bootstrap-select > .btn-outline-secondary.dropdown-toggle:active,
-.show.bootstrap-select > .btn-outline-secondary.dropdown-toggle{
-    background-color: #f2f4f6;
-    border-color: rgba(0, 0, 0, 0.1);
-    color: inherit;
-}
-.search-box .input-group .input-group-append .btn
-.bootstrap-select .btn-outline-secondary.dropdown-toggle:focus,
-.bootstrap-select .btn-outline-secondary.dropdown-toggle:active{
--webkit-box-shadow: 0 0 0 0.2rem rgba(117, 117, 117, 0.25);
-        box-shadow: 0 0 0 0.2rem rgba(117, 117, 117, 0.25);
-        outline: none !important;
-}
-
-
-.no-img {
-    background: #E8EAEB;
-    display: block;
-    min-height: 4rem;
-    height: calc(100% - 40px);
-}
-
-
-
-
-
-/*==========================================
-
-                L A Y O U T
-
-==========================================*/
-.page{
-    display: block;
-    flex-direction: initial;
-}
-/*------------------------
-		H E A D E R
-------------------------*/
-.page-header{
+	bottom: 0;
 	background-color: #fff;
-	border-bottom: 1px solid #D1D5DB;
-    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
-            box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+	z-index: 3;
 }
-
-/*--------------------
-		B O D Y
---------------------*/
-.page-container {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        flex-direction: column;
-
-    padding-top: 60px;
+.record-form.show{
+	display: block;
 }
-.page-body{
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-
+.form-header{
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	height: 3.5rem;
+	background-color: #726267;
 }
-.page-content{
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-}
-@media (min-width: 992px){
-    .page-container {
-        padding-top: 80px;
-    }
-    .page-body{
-
-    }
-}
-/*    P A G E    H E A D E R    */
-.container-fluid.page-body-header{
-    position: relative;
-	height: 3rem;
-    border-bottom:1px solid #D1D5DB;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center;
-}
-.page-title{
-	margin:0;
-	text-align: center;
-	color: #041C3E;
-	font-size: 16px;
+.form-title {
+	margin: 0;
+	color: #fff;
+	font-size: 1.125rem;
 	font-weight: 400;
-    font-family: 'Nanum Square', sans-serif;
 }
-.page-body-header .back{
-	position: absolute;
-    top: 0;
-    left: 0.5rem;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 0;
-    outline: none;
-    background-color: transparent;
-    font-size: 0;
+.form-header .button{
+	background-color: transparent;
+	border-radius: 0;
+	color: #fff;
+	font-size: 0.875rem;
 }
-@media (min-width: 992px){
-    .container-fluid.page-body-header{
-		position: relative;
-        height: 5rem;
-		-webkit-box-pack: start;
-		    -ms-flex-pack: start;
-		        justify-content: flex-start;
-		border-bottom: none;
-        margin-bottom: 0;
-	}
-	.page-title{
-		font-size: 24px;
-	}
-	.page-title span{
-		font-weight: 400;
-	}
-    .page-body-header .back{
-        top: 1.5rem;
-    	right: 1rem;
-        left: auto;
-        padding: 0.4rem;
-        border: 1px solid #A2ABB8;
-        border-radius: 0.25rem;
-        font-size: 0.9rem;
-        color: #6c757d;
-    }
+
+.record-form .form-body{
 }
-@media (min-width: 1200px){
-    .page-body-header .back{
-        right: 0;
-    }
+
+.record-form .form-group{
+	max-width: 300px;
+	margin: 1rem auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
-/*------------------------
-	    F O O T E R
-------------------------*/
-.page-footer {
-    border-top: 1px solid #D1D5DB;
+.record-form .form-group .form-label{
+	display: block;
+	margin-bottom: 0.25rem;
+	font-size: 0.875rem;
 }
-.page-footer > .container-fluid{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 80px;
+.record-form .form-group .input{
+	padding: 0.6rem 1rem;
 }
-.page-footer img{
-    display: inline-block;
-	width: 3rem;
-	margin:0 0 1rem 0;
+.record-form .form-group .input input{
+	width: 100%;
 }
-.page-footer p{
-    margin: 1rem 0 0.5rem 0;
-	font-size: 11px;
+.record-form .form-group p{
+	margin-top: 0.5rem;
+	font-size: 0.875rem;
+	color: #d76666;
+}
+.segment {
+	background-color: #e5e5e5;
+	overflow: hidden;
+	border-radius: 0.25rem;
+}
+.segment label {
+  float:left;
+  width: 50%;
+}
+.segment label span {
+	position: relative;
+	display:block;
+	margin: 2px;
+	padding: 0.8rem 2rem;
+	border-radius: 0.25rem;
+	color: #9f9f9f;
+	font-size: 1rem;
+	text-align:center;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	cursor: pointer;
 	line-height: 1em;
-	color: #BAC0CA;
-    text-transform: uppercase;
 }
-@media (min-width: 992px){
-    .page-footer > .container-fluid{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
-    }
-    .page-footer img, .page-footer p{
-        margin: 1rem 0;
-    }
+.segment label input {
+  position:absolute;
+  top:-9999px;
+}
+.segment input:checked + span {
+  background-color:#fff;
+  color:#726267;
+  font-weight: 700;
+}
+/*=======================================
+
+          L O G I N 	P A G E
+
+=======================================*/
+.login {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+
+	background-color: #393134;
+}
+.login .page-title {
+	position: relative;
+	left: auto;
+	top: auto;
+	margin: 6rem 0 0 0;
+}
+.login .page-title img{
+	display: block;
+	width: 80px;
+	margin-bottom: 1rem;
+}
+.login .login-form{
+	width: 80%;
+	max-width: 30rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	color: #fff;
+}
+.login .login-form .input{
+	margin-bottom: 1rem;
+	padding: 0;
+	height: 2rem;
+	border: none;
+	border-bottom:1px solid rgba(255, 255, 255, .5);
+	border-radius: 0;
+	background-color: transparent;
+	line-height: 2rem;
+	font-size: 0.875rem;
+}
+.login .login-form .input.focus{
+	border-bottom-color: rgba(255, 255, 255, 1);
+}
+.login .login-form .input label{
+	display: inline-block;
+	width: 3rem;
+	padding-left:0.5rem;
+}
+.login .login-form input{
+	background:none;
+	border:none;
+	outline: none;
+	color: #fff;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	width:calc(100% - 2rem);
+}
+.login .input input::-webkit-input-placeholder{
+	color: rgba(255, 255, 255, 0.5);
+}
+.login .login-form .checkbox{
+	margin-top: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.875rem;
+}
+.login .login-form .button-login{
+	background-color: #736368;
+	color: #fff;
+}
+.login .login-form .button-login[disabled]{
+	opacity: 0.5;
+}
+.login .page-footer p{
+	margin: 2rem 0;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 0.75rem;
 }
 
-
-/*--------------------------------------
-	T H U M B N A I L    I M A G E
---------------------------------------*/
-.vs-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-image: url(../img/vs-img.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    min-height: 100px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-around;
-    
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-@media (min-width: 400px) {
-    .vs-img {
-        min-height: 120px;
-    }
-}
-@media (min-width: 500px) {
-    .vs-img {
-        min-height: 140px;
-    }
-}
-@media (min-width: 576px) {
-    .vs-img {
-        min-height: 160px;
-    }
-}
-@media (min-width: 768px) {
-    .vs-img {
-        min-height: 120px;
-    }
-}
-@media (min-width: 992px) {
-    .vs-img {
-        min-height: 160px;
-    }
-}
-.vs-img .team{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -ms-flex: 0 0 30%;
-    -webkit-box-flex: 0;
-          flex: 0 0 30%;
-    max-width: 30%;
-
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-.vs-img .team:first-child{
-    margin-right:5%;
-}
-.vs-img .team:last-child{
-    margin-left:5%;
-}
-
-.vs-img .team img {
-    width: 100%;
-    height: 100%;
-}
-
-    </style>
-    <style type="text/css">
-    	@charset "UTF-8";
-/*==========================================
-
-            U S E R    L A Y O U T
-
-==========================================*/
-body {
-    background-color: #FFFFFF;
-}
-/*------------------------
-          B O D Y
-------------------------*/
-.page-container {
-    background-color: #E8EAED;
-}
-.page-body {
-}
-.page-content {
-    padding: 1rem 0;
-    background-color: #FFFFFF;
-    /*-webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;*/
-}
-@media (min-width: 992px){
-    .page-content{
-        padding: 2.5rem 0;
-    }
-    .main .page-body .container-fluid{
-        padding-top: 2rem;
-    }
-}
-/*------------------------
-	    F O O T E R
-------------------------*/
-.page-footer {
-    background-color: #FFFFFF;
-}
-/*------------------------
-    T A B    M E N U
--------------------------*/
-
-@media (min-width: 992px){
-    .tab-menu.sticky-top{
-        border-bottom: none;
-    }
-    .nav-pills .nav-link {
-        margin-bottom: 0;
-        background-color: transparent
-    }
-    .nav-pills .nav-link.active{
-        background-color: #FFFFFF;
-        border-color: #FFFFFF;
-    }
-}
-/*==========================================
-
-            U S E R    U I
-
-==========================================*/
-
-/*------------------------
-          공지알렷
-------------------------*/
-.notice{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.notice .alert{
-    background-color: #C8A076;
-    border-color: #aa8459;
-    border-radius: 0;
-    color: #ffffff;
-    font-size: 16px;
-    margin: 0;
-}
-.notice p i{
-    display: none;
-    position: relative;
-    top: -5px;
-    color: #fff;
-    font-size: 20px;
-}
-.notice p i:after{
-    position: relative;
-    top: 5px;
-    display: inline-block;
-    margin-left: 16px;
-    margin-right: 24px;
-    width:1px;
-    height:30px;
-    background-color: rgba(255, 255, 255, 0.5);
-    content: "";
-}
-.notice .btn{
-    font-size: 0;
-    color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 1rem;
-}
-@media (min-width: 576px) {
-    .notice p i {
-        display: block;
-    }
-}
-@media (min-width: 992px){
-    .notice{
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .notice .alert{
-        margin-bottom: 2rem;
-    }
-
-    .notice .btn{
-        padding: 0.375rem 1rem;
-        font-size: 12px;
-    }
-}
-
-/*------------------------
-         팀 선택
-------------------------*/
-.team-box{
-    padding-top: 1rem;
-    background-color: #e6eaed;
-}
-@media (min-width: 992px){
-    .team-box{
-        padding-top: 0;
-        margin-bottom: 1rem;
-        background-color: #e6eaed;
-    }
-}
-.team-box .btn{
-    padding: 0.25rem;
-    margin-bottom: 1rem;
-    border: 1px solid #D0D5DA;
-    border-radius: 0;
-}
-.team-box .btn:hover {
-    background-color: #F2F4F6;
-}
-.team-list {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    margin: 0 0.5rem;
-    padding: 0 0 1rem 0;
-    list-style: none;
-    overflow-y: auto;
-}
-.team-list li{
-    width: 100px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100px;
-            flex: 1 0 100px;
-}
-.team-list li a{
-    display: block;
-    margin: 0 2px;
-    height: 100%;
-    border: 1px solid #BBBBBB;
-    background-color: #FFFFFF;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-}
-.team-list li a .team-emblem {
-    height: 5rem;
-    text-align: center;
-}
-.team-list li a .team-emblem img{
-    width: 80px;
-    opacity: 0.7;
-}
-.team-list li a .team-name{
-    margin:0;
-    border-top: 1px solid #BBBBBB;
-    text-align: center;
-    line-height: 2rem;
-    color: #666666;
-}
-.team-list li a:hover{
-    background-color: #F4F8FE;
-    color: #041C3E;
-    text-decoration: none
-}
-.team-list li.active-1 a{
-    border: 2px solid #041C3E;
-}
-.team-list li.active-1 .team-emblem img{
-    opacity: 1;
-}
-.team-list li.active-1 .team-name{
-    background-color: #041C3E;
-    color: #FFFFFF;
-}
-.team-list li.active-2 a{
-    border: 2px solid #113A3A;
-}
-.team-list li.active-2 .team-emblem img{
-    opacity: 1;
-}
-.team-list li.active-2 .team-name{
-    background-color: #113A3A;
-    color: #FFFFFF;
-}
-
-
-/*------------------------
-         선수 정보
-------------------------*/
-.player-info {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-}
-.player-info .card{
-    margin: 0;
-    padding-top: 60px;
-}
-.player-info .card .card-img-top {
-    position: absolute;
-    top: -4rem;
-    left: 50%;
-    width: 120px;
-    height: 120px;
-    margin-left: -60px;
-    overflow: hidden;
-    border:1px solid #D1D5DB;
-    text-align: center;
-    background-color: #FFFFFF;
-}
-.player-info .card .card-img-top img{
-
-}
-.player-info .card .card-title {
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 32px;
-}
-.player-info .card .card-body{
-    padding: 1rem;
-}
-.player-info ul{
-    margin: 1rem 0 0 0;
-    padding: 0;
-    list-style: none;
-}
-.player-info ul li{
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 33.33333%;
-            flex: 1 0 33.33333%;
-    border-right:1px solid #EEEEEE;
-    padding: 0 1rem;
-    color: #757575;
-    font-size: 12px;
-    text-align: center;
-}
-.player-info ul li:last-child{
-    border-right: none;
-}
-.player-info ul li strong{
-    display: block;
-    color: #333333;
-    font-size: 14px;
-}
-.player-info .btn{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-@media (min-width: 768px){
-    .player-info{
-        margin-top: 1rem;
-    }
-    .player-info .card{
-        padding: 0;
-        min-height: 140px;
-    }
-    .player-info .card .card-img-top{
-        top: 10px;
-        left: 100px;
-    }
-    .player-info .card .card-title {
-        text-align: left;
-        margin: 0;
-    }
-    .player-info .card .card-body{
-        padding: 1.5rem 1.5rem 1.5rem 200px;
-    }
-    .player-info ul li{
-        text-align: left;
-    }
-}
-@media (min-width: 992px){
-    .player-info {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .player-info .card{
-        margin: 0;
-        margin-bottom: 2rem;
-        min-height: auto;
-    }
-    /* .player-info .card .card-img-top {
-        left: 0;
-        top: 0;
-        margin: 0;
-        height: 100%;
-        border: none;
-        border-right: 1px solid #EEEEEE;
-        -webkit-box-shadow: none !important;
-                box-shadow: none !important;
-        border-radius: 0 !important;
-    }
-    .player-info .card .card-body{
-        padding-left: 130px;
-    }
-    .player-info ul {
-        margin-top: 0.5rem;
-    }
-    .player-info ul li {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 20%;
-                flex: 0 0 20%;
-
-    } */
-}
-/*    핫콜드존 - 투수   */
-.chart.pitcher {
-    margin-bottom: 2rem;
-}
-/*    핫콜드존 - 타지   */
-.chart.hitter{
-    margin-bottom: 2rem;
-}
-.chart.hitter .sub-title {
-    margin-bottom: 1rem;
-    text-align: center;
-    font-size: 1.05rem;
-}
-.chart.hitter .chart-item-group{
-
-}
-.chart.hitter .chart-item{
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-}
-.chart.hitter .nav-tabs{
-    margin-bottom: 1rem;
-    border: none;
-     -webkit-box-pack: center;
-         -ms-flex-pack: center;
-             justify-content: center;
-}
-.chart.hitter .nav-tabs .nav-item {
-    margin:0;
-    margin-left: -1px;
-    max-width: 10rem;
-}
-.chart.hitter .nav-tabs .nav-link {
-    border-radius: 0;
-    border-color: #D1D5DB;
-    color: #757575;
-}
-.chart.hitter .nav-tabs .nav-link:hover {
-    background-color: #598DBF;
-    border-color: #598DBF;
-    color: #FFFFFF;
-}
-.chart.hitter .nav-tabs .nav-link.active{
-    background-color: #598DBF;
-    border-color: #598DBF;
-    color: #FFFFFF;
-}
-/*    시계열    */
-.chart.valo {
-    margin-bottom: 1rem;
-    overflow-y: auto;
-}
-.chart.valo .chart-item {
-    padding-bottom: 10px;
-}
-/*    볼배합    */
-.chart.sequence {
-    margin-left:  -0.5rem;
-    margin-right:  -0.5rem;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-}
-.chart.sequence .chart-item {
-    padding: 0 0.5rem 1rem 0.5rem;
-    -ms-flex: 0 0 50%;
-    -webkit-box-flex: 0;
-            flex: 0 0 50%;
-    max-width: 50%;
-}
-@media (min-width: 768px) {
-    .chart.sequence .chart-item {
-        -ms-flex: 0 0 33.333333%;
-        -webkit-box-flex: 0;
-                flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
-.chart-legend,
-.chart-attach{
-    background-color: #F4F4F4;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-.chart-legend .title,
-.chart-attach .title {
-    font-size: 16px;
-}
-.chart-attach .title {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-.chart-legend .title {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #ddd;
-}
-.chart-attach .control .btn {
-    font-size: 12px;
-    padding: 0.282rem 1rem;
-}
-.chart-legend ul {
-    margin : 0;
-    padding: 0;
-    list-style: none;
-}
-.chart-legend ul li {
-    display: inline-block;
-    margin-right: 1rem;
-}
-.chart-legend ul li span {
-    vertical-align: middle;
-    margin-right: 0.5rem;
-}
-
-/*------------------------
-        리스트 필터
-------------------------*/
-.list-search {
-    height: 48px;
-    margin-bottom: 2rem;
-    background: #FAFBFC;
-    border: 1px solid #D1D5DB;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-}
-.list-search > * {
-    border-right: 1px solid #D1D5DB;
-}
-.list-search .form-group{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-}
-.list-search .btn,
-.list-search .form-control{
-    border: none;
-    border-radius: 0;
-    height: auto;
-}
-.list-search .dropdown-toggle {
-    line-height: 37px;
-    background-color: #FFFFFF;
-    color: #6C757D !important;
-}
-.list-search .dropdown-menu {
-    margin-top: 8px;
-    padding: 0;
-    border-radius: 0;
-}
-.list-search .dropdown-menu .dropdown-item{
-    padding: 0.6rem 1.5rem;
-}
-.list-search .form-control{
-    height: auto;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-}
-.list-search > .btn:last-child {
-    width: 48px;
-    margin-left: -1px;
-    background-color: #FFFFFF;
-    border-left: 1px solid #D1D5DB;
-    border-right: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-.list-search > .btn:last-child:hover{
-    background-color: #1B447E;
-}
-
-/*------------------------
-        리스트 제목
-------------------------*/
-.list-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-bottom: 1rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-}
-.list-header .list-title{
-    font-size: 20px;
-    margin: 0;
-}
-.list-header .list-title span{
-    color: #598DBF;
-}
-.list-header .control .btn-group {
-    font-size: 12px;
-}
-.list-header .control .btn-group .active {
-    -webkit-box-shadow: none;
-            box-shadow: none;
-}
-.list-header .control .btn-group .btn {
-    padding: 0.282rem 0.8rem;
-    border-radius: 0;
-}
-.list-header .control .btn-group .btn-outline-secondary:not(:disabled):not(.disabled).active{
-    background-color: #7B96B0;
-    border-color: #7B96B0;
-}
-
-.sub .list-header .list-title{
-    font-size: 18px;
-}
-
-
-/*------------------------
-        섬네일형 리스트
-------------------------*/
-.video-list .card{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 1rem;
-
-}
-.video-list .card .card-img-top{
-    width: 50%;
-    border-bottom-left-radius: calc(.25rem - 1px);
-    border-top-right-radius : 0;
-    background: #B9B9B9;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-}
-.video-list .card .card-img-top > img{
-    width: 100%;
-}
-.video-list .card .card-body {
-    padding: 0.2rem 1rem;
-}
-.video-list .card .card-body .card-text{
-    margin: 0;
-}
-.video-list .card .card-body .card-title{
-    margin: 0;
-    font-size: 1rem;
-}
-.video-list .card .card-body .card-title:hover{
-    text-decoration: none;
-    color: #598DBF;
-}
-.video-list .text-danger{
-    padding: 4rem 1rem;
-}
-@media (min-width: 650px){
-    .video-list .card .card-img-top{
-        width: 40%;
-    }
-}
-@media (min-width: 768px){
-    .video-list .card{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    .video-list .card .card-img-top{
-        width: 100%;
-        border-bottom-left-radius: 0;
-        border-top-right-radius : calc(.25rem - 1px);
-    }
-    .video-list .card .card-body{
-        text-align: center;
-        min-height: 4.5rem;
-
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        
-        -ms-flex-direction: column;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-              flex-direction: column;
-
-        -ms-flex-pack: center;
-        -webkit-box-pack: center;
-            justify-content: center;
-    }
-}
-/*서브페이지 섬네일형 리스트*/
-.sub .list-header {
-    margin-top: 1rem;
-}
-.sub .video-list .card {
-    border-color: transparent;
-    margin-bottom: 0.5rem;
-}
-.sub .video-list .card .card-img-top{
-    width: 130px;
-}
-.sub .video-list > *:after{
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-bottom: 0.5rem;
-    background-color: #E7EAEE;
-    content: "";
-}
-.sub .video-list > *:last-child:after{
-    display: none;
-}
-@media (min-width: 768px){
-    .sub .video-list > *:after{
-        display: none;
-    }
-    .sub .video-list .card{
-        border-color: #D1D5DB;
-    }
-    .sub .video-list .card .card-img-top{
-        width: 100%;
-    }
-}
-
-/*------------------------
-        섬네일형 상세
-------------------------*/
-.video-view{
-    margin-left: -1rem;
-    margin-right: -1rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.video-view .current-video .video-thumb{
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-}
-.video-view .current-video .video-thumb .video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.video-view .current-video .video-thumb img{
-    width: 100%;
-}
-.video-view .current-video .video-info{
-    min-height:85px;
-}
-.video-view .current-video .video-title {
-    margin: 0;
-    padding: 1.2rem 1rem 0.3rem 1rem;
-    font-size: 1.25rem;
-}
-.video-view .current-video .video-text{
-    padding: 0rem 1rem 0.7rem 1rem;
-    color: rgba(0,0,0,.5)!important;
-}
-.video-view .video-text{
-    margin: 0;
-}
-.video-view .current-list {
-    padding: 0 1rem 1.5rem 1rem;
-    border-top: 1px solid #D8DADE;
-    border-bottom: 1px solid #D8DADE;
-}
-.video-view .current-list .list-control {
-    padding: 0.5rem 0;
-}
-.video-view .current-list .list-control .title {
-    margin:0;
-    font-size: 0.875rem;
-}
-.video-view .current-list .list-control .title .text-muted{
-    margin-left: 0.25rem;
-}
-.video-view .current-list .list-control .title .text-muted span{
-    color: #007bff;
-}
-.video-view .current-list .list-group{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    overflow-y: auto;
-}
-.video-view .current-list .list-item{
-    width: 200px;
-    position: relative;
-    margin: 0 0.5rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #FFFFFF;
-    flex-shrink: 0;
-}
-.video-view .current-list .list-item:first-child{
-    margin-left: 0;
-}
-.video-view .current-list .list-item .btn-play{
-    position: absolute;
-    top:110px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    background-color: #395A7A;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-.video-view .current-list .list-item .btn-play i {
-    font-size: 12px;
-    color: #FFFFFF;
-}
-.video-view .current-list .list-item .video-thumb{
-    width: 200px;
-}
-.video-view .current-list .list-item.active{
-
-    background-color: #07294B;
-    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-    color: #FFFFFF;
-}
-.video-view .current-list .list-item.active .btn-play{
-    background-color: #FFFFFF;
-}
-.video-view .current-list .list-item.active .btn-play i{
-    color: #395A7A;
-}
-.video-view .current-list .list-item .btn-play:hover{
-    background-color: #07294B;
-    text-decoration: none;
-}
-.video-view .current-list .list-item.active .video-thumb img{
-    opacity: 0.8;
-}
-.video-view .current-list .list-item .info-box{
-    padding: 0.5rem 1rem;
-}
-.video-view .current-list .list-title{
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.3em;
-    width: 85%;
-}
-.video-view .video-text .date:after{
-    display: inline-block;
-    width: 1px;
-    height: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-    background-color: #A3ACB8;
-    content: "";
-}
-@media (min-width: 992px){
-    .video-view {
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 2rem;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        align-items: flex-start;
-    }
-    .video-view .current-video{
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 70%;
-                flex: 0 0 70%;
-        max-width: 70%;
-    }
-    .video-view .current-video .video-info{
-        border-left:1px solid #D1D5DB;
-        border-bottom:1px solid #D1D5DB;
-        background-color: #FFFFFF;
-    }
-    .video-view .current-list{
-        padding: 0.5rem 0 0 0;
-        -webkit-box-flex: 0;
-            -ms-flex: 0 0 30%;
-                flex: 0 0 30%;
-        max-width: 30%;
-        background-color: #FFFFFF;
-        border: 1px solid #D1D5DB;
-    }
-    .video-view .current-list .list-control{
-        height: 32px;
-        padding: 0 1rem;
-        margin-bottom: 0.5rem;
-    }
-    .video-view .current-list .list-group {
-        padding: 0 1rem;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-    }
-    .video-view .current-list .list-item{
-        width: 100%;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -ms-flex-line-pack: center;
-            align-content: center;
-        margin: 0 0 0.5rem 0;
-    }
-    .video-view .current-list .list-item:last-child{
-        margin-bottom: 0;
-    }
-    .video-view .current-list .list-item .btn-play{
-        width: 20px;
-        height: 20px;
-        top:28px;
-        right: 10px;
-    }
-    .video-view .current-list .list-item .video-thumb {
-        width: 100px;
-    }
-    .video-view .current-list .list-item .info-box {
-        margin: 0;
-        padding: 0;
-    }
-    .video-view .current-list .video-info{
-        display: block;
-        font-size: 11px;
-        margin-top: 0.5rem;
-    }
-
-}
-
-/*------------------------
-    섬네일형 리스트 - 선수
-------------------------*/
-.player-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-}
-.player-list .card{
-    border: none;
-    margin-bottom: 1rem;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-.player-list .card:hover{
-    text-decoration: none;
-}
-.player-list .card .card-img-top{
-    border: 1px solid #D1D5DB;
-}
-.player-list .card:hover .card-img-top{
-    border-color: #7C889A;
-}
-.player-list .card .card-img-top img{
-    width: 100%;
-}
-.player-list .card .card-body {
-    padding: 0.2rem 0 0.5rem 0;
-}
-.player-list .card .card-body p{
-    margin: 0;
-}
-.player-list .card{
-    -ms-flex: 0 0 50%;
-    -webkit-box-flex: 0;
-          flex: 0 0 50%;
-    max-width: 50%;
-}
-@media (min-width: 300px){
-    .player-list .card{
-        -ms-flex: 0 0 33.333333%;
-        -webkit-box-flex: 0;
-              flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
-@media (min-width: 400px){
-    .player-list .card{
-        -ms-flex: 0 0 25%;
-        -webkit-box-flex: 0;
-              flex: 0 0 25%;
-        max-width: 25%;
-    }
-}
-@media (min-width: 500px){
-    .player-list .card{
-        -ms-flex: 0 0 20%;
-        -webkit-box-flex: 0;
-              flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
-@media (min-width: 600px){
-    .player-list .card{
-        -ms-flex: 0 0 16.666667%;
-        -webkit-box-flex: 0;
-              flex: 0 0 16.666667%;
-        max-width: 16.666667%;
-    }
-}
-@media (min-width: 700px){
-    .player-list .card{
-        -ms-flex: 0 0 14.285714%;
-        -webkit-box-flex: 0;
-                flex: 0 0 14.285714%;
-        max-width: 14.285714%;
-    }
-}
-@media (min-width: 800px){
-    .player-list .card{
-        -ms-flex: 0 0 12.5%;
-        -webkit-box-flex: 0;
-                flex: 0 0 12.5%;
-        max-width: 12.5%;
-    }
-}
-@media (min-width: 900px){
-    .player-list .card{
-        -ms-flex: 0 0 11.111111%;
-        -webkit-box-flex: 0;
-                flex: 0 0 11.111111%;
-        max-width: 11.111111%;
-    }
-}
-@media (min-width: 1000px){
-    .player-list .card{
-        -ms-flex: 0 0 10%;
-        -webkit-box-flex: 0;
-                flex: 0 0 10%;
-        max-width: 10%;
-    }
-}
-
-/*------------------------
-        목록형 리스트
-------------------------*/
-.card-list .list-group-title{
-    display: none;
-    padding: .8rem 2rem;
-    font-weight: 700;
-    color: #92A0AE;
-    background-color: #F6F8F9;
-}
-.card-list .num{
-    width: 10%;
-}
-.card-list .writer{
-    width: 10%;
-}
-.card-list .title{
-    -webkit-box-flex:1;
-        -ms-flex-positive:1;
-            flex-grow:1;
-}
-.card-list .title i {
-    display: none;
-}
-.card-list .title .badge{
-    display: inline-block;
-    margin-left: 8px;
-    border-radius: 0;
-    font-size: 11px;
-}
-.card-list .list-group .list-group-item{
-    padding: 1rem 2rem;
-    border-right: none;
-    border-left: none;
-    border-radius: 0;
-    border-color: #D1D5DB;
-}
-.card-list .list-group .list-group-item:hover {
-  background-color: #F4F8FE;
-}
-.card-list .list-group .list-group-item .d-flex p{
-    margin-bottom: 0;
-}
-.card-list .date {
-    margin-top:0.2rem;
-    font-size: 13px;
-    color: #7C889A;
-}
-.card-list .list-group .list-group-item .d-flex{
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.card-list .list-group .list-alert {
-    color: #C8A076;
-    line-height: 1em;
-}
-.card-list .list-group .list-alert i{
-    position: relative;
-    top: -1px;
-    margin-right: 0.25rem;
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-.list-header .num,
-.card-list .num,
-.list-header .writer,
-.card-list .writer {
-    display: none;
-}
-@media (min-width: 992px){
-    .card-list .title i {
-        display: block;
-        font-size: 18px;
-        vertical-align: middle;
-        color: #A8B0B9;
-        float: right;
-    }
-    .card-list .list-group-title,
-    .list-header .num,
-    .card-list .num,
-    .list-header .writer,
-    .card-list .writer {
-        display: block;
-    }
-    .card-list .list-group .list-group-item .d-flex{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-    .card-list .date{
-        width: 10%;
-        margin: 0;
-        text-align: center;
-        font-size: 14px;
-        color: #92A0AE;
-    }
-    .card-list .list-group .date{
-        color: #495057;
-    }
-}
-
-/*------------------------
-        목록형 리스트 - 선수
-------------------------*/
-.card-list.player{
-    border-right: none;
-    border-left: none;
-}
-.card-list.player .list-group .list-group-item {
-    padding: 1rem 0;
-}
-.card-list.player .list-group .list-group-item p {
-    margin: 0;
-}
-.card-list.player .list-group .list-group-item .btn{
-    background-color: transparent;
-    padding: 0;
-    border-radius: 0;
-}
-.team-img {
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background-color: #FFFFFF;
-}
-.team-img img {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-}
-.player-img {
-    width: 80px;
-    height: 80px;
-    background-color: #FFFFFF;
-    overflow: hidden;
-}
-.player-img img {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-}
-.name {
-    font-size: 1.25em;
-    color: #1B447E;
-}
-@media (min-width: 992px){
-    .card-list.player .list-group{
-        flex-direction: row;
-    }
-    .card-list.player .list-group .list-group-item{
-        width: 33.3%;
-        
-    }
-}
-/*------------------------
-        목록형 뷰
-------------------------*/
-.card-view {
-    border: none;
-}
-.card-view .card-header {
-    padding: 0 0 1rem 0;
-}
-.card-view .card-header .title{
-    margin: 0;
-    font-size: 1.25rem;
-}
-.card-view .card-header .info{
-    color: #7C889A;
-}
-.card-view .card-header .txt-bar{
-    margin: 0 0.5rem;
-    color: #A8B0B9;
-    font-size: 12px;
-    vertical-align: top;
-}
-.card-view .card-body {
-    padding:0;
-}
-.card-view .attach-file{
-    margin: 0;
-    padding: 1rem;
-    list-style: none;
-    background-color: #F6F8F9;
-}
-.card-view .attach-file li {
-    display: inline-block;
-    margin-right: 1rem;
-}
-.card-view .attach-file li a{
-    color: #7C889A;
-}
-.card-view .attach-file i{
-    margin-right: 0.25rem;
-    font-size: 18px;
-    vertical-align: middle;
-    color: #A8B0B9;
-    -webkit-transform: rotate(125deg);
-            transform: rotate(125deg);
-}
-.card-view .content{
-    min-height: 400px;
-    padding: 1rem 0;
-}
-
-    </style>
-    <style type="text/css">
-    	@charset "UTF-8";
-/*==========================================
-
-            U S E R    L A Y O U T
-
-==========================================*/
-.page-body .container-fluid{
-    padding-top: 1rem;
-}
-.main-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.page-footer {
-    background-color: transparent;
-}
-@media (min-width: 768px) {
-    .main-container {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-}
-@media (min-width: 992px){
-    .page-body .container-fluid{
-        padding-top: 2rem;
-    }
-}
-
-
-
-
-
-/*  프로필  */
-.profile {
-    position: relative;
-    border: 1px solid #D4D8DC;
-    background-color: #FFFFFF;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.profile .profile-img {
-    position: relative;
-    max-height: 250px;
-    overflow: hidden;
-    
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.profile .profile-img img {
-
-}
-.profile .profile-info {
-    position: relative;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-}
-@media (min-width: 576px) {
-    .profile {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-
-    }
-    .profile .profile-img {
-        max-height: 400px;
-
-    }
-    .profile .profile-info{
-        border-left: 1px solid #D4D8DC;
-    }
-
-}
-@media (min-width: 768px) {
-  .profile {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-        width: 32%;
-  }
-  .profile .profile-info{
-        border-left: none;
-    }
-}
-.profile .profile-text {
-    padding: 1.5rem;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    word-break: keep-all;
-}
-.profile .profile-text .t-date{
-    font-size: 16px;
-    color: #757575;
-}
-.profile .profile-text .t-greeting{
-    font-size: 30px;
-    color: #1B447E;
-    letter-spacing: -0.5px;
-}
-.profile .profile-text .t-greeting:before{
-    display: block;
-    width: 40px;
-    height: 4px;
-    margin-bottom: 1rem;
-    background-color: #1B447E;
-    content: "";
-}
-.profile .profile-text .btn{
-    padding: 0.6rem 1.3rem;
-    background-color: #041C3E;
-    border-radius: 0;
-    color: #FFFFFF;
-    line-height: 1em;
-}
-.profile .profile-text .btn i{
-    font-size: 16px;
-    margin-left: 1rem;
-}
-.profile .profile-text .t-guide{
-    font-size: 14px;
-    line-height: 1.4em;
-    color: #757575;
-}
-.profile .my-menu {
-    width: 100%;
-    border-top: 1px solid #D8D8D8;
-    background-color: #F6F8F9
-}
-.profile .my-menu .control{
-    padding: 0.5rem 1.5rem;
-}
-.profile .my-menu .title {
-    margin: 0;
-    color: #92A0AE;
-    font-size: 14px;
-}
-.profile .my-menu .control a{
-    color: #A8B0B9;
-    line-height: 1em;
-}
-.profile .my-menu .control a i {
-    font-size: 18px;
-}
-.profile .my-menu .menu{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-top: 1px solid #D8D8D8;
-}
-.profile .my-menu .menu li{
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-    text-align: center;
-}
-.profile .my-menu .menu li:first-child{
-    border-right: 1px solid #D8D8D8;
-}
-.profile .my-menu .menu li a {
-    display: block;
-    padding: 0.6rem;
-    color: #7C889A;
-}
-.profile .my-menu .menu li a:hover{
-    color: #4F5763;
-    text-decoration: none;
-}
-
-.briefing {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-}
-.briefing .title,
-.player .title {
-    margin-bottom: 0.8rem;
-    border-bottom: 1px solid #041C3E;
-    font-size: 20px;
-    line-height: 2.5em;
-    color: #041C3E;
-    letter-spacing: -0.5px;
-}
-.briefing .schedule {
-    margin-top: 2rem;
-    position: relative;
-}
-.briefing .schedule .control {
-    position: absolute;
-    top: 13px;
-    right: 0;
-}
-.briefing .schedule .control .thisweek{
-    margin: 0 0.2rem;
-    vertical-align: middle;
-    color: #757575;
-}
-.briefing .schedule .btn-prevweek,
-.briefing .schedule .btn-nextweek{
-    padding: 0;
-    border: 1px solid #757575;
-    background-color: transparent;
-    line-height: 0;
-}
-.briefing .schedule .btn-prevweek i,
-.briefing .schedule .btn-nextweek i{
-    color: #757575;
-    vertical-align: middle;
-    font-size: 20px;
-}
-.briefing .schedule .list-group-item{
-    padding : 0.8rem 1.5rem;
-    margin-bottom: 0.5rem;
-    border-color: transparent;
-    border-radius: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-}
-.briefing .schedule .list-group-item.active{
-    border-color: #598DBF;
-    background-color: #FFFFFF;
-    -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-.briefing .schedule .list-group-item.active:before{
-    position: absolute;
-    top: -20px;
-    left: -1px;
-    display: block;
-    width: 40px;
-    height: 20px;
-    background-color: #598DBF;
-    border-radius: 0.25rem 0.25rem 0 0;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 11px;
-    line-height: 20px;
-    content: "오늘";
-    -webkit-box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.2);
-}
-.briefing .schedule .list-group-item.disabled {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-}
-.briefing .schedule .list-group-item > p{
-    margin-bottom: 0;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-
-    order: 0;
-}
-.briefing .schedule .list-group-item > p .line{
-    display: inline-block;
-    width:1px;
-    height: 1rem;
-    background: #D5DEE7;
-}
-.briefing .schedule .date{
-    color: #333333;
-    font-size: 16px;
-    line-height: 1em;
-}
-.briefing .schedule .list-group-item.active .date {
-    color: #1B447E;
-}
-.briefing .schedule .time,
-.briefing .schedule .stadium{
-    color: #757575;
-    line-height: 1em;
-}
-.briefing .schedule .time:after{
-    margin-left: 1rem;
-}
-.briefing .schedule .match{
-    margin-top: 0.8rem;
-    padding: 0.8rem 0 0 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-top: 1px solid #D8D8D8;
-    color: #BBBBBB;
-}
-.briefing .schedule .match img{
-    width: 40px;
-}
-.briefing .schedule .match > span{
-    margin: 0 2rem;
-}
-.briefing .schedule .match .my-team,
-.briefing .schedule .match .opponent-team {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-}
-.briefing .schedule .match .my-team {
-    text-align: right;
-}
-.briefing .schedule .match .opponent-team {
-    text-align: left;
-}
-.briefing .schedule .match .my-team span{
-    margin-right: 0.5rem;
-    color: #70717C;
-    vertical-align: middle;
-}
-.briefing .schedule .match .opponent-team span{
-    margin-left: 0.5rem;
-    color: #70717C;
-    vertical-align: middle;
-}
-@media (min-width: 576px) {
-    .briefing {
-        margin-top: 0;
-        margin-left: 1rem;
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-    }
-    .briefing .schedule {
-        margin: 0;
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-    }
-    .briefing .schedule .list-group-item{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-    }
-    .briefing .schedule .list-group-item.active:before{
-        width: 60px;
-        height: 24px;
-        top: -24px;
-        font-size: 12px;
-    }
-    .briefing .schedule .match{
-        margin: 0;
-        margin-left: 1.5rem;
-        padding: 0;
-        border: none;
-        border-left: 1px solid #D8D8D8;
-        padding-left: 1.5rem;
-
-        flex-grow: 1;
-    }
-    .briefing .schedule .match > span {
-        margin: 0 1rem;
-    }
-    .briefing .schedule .match img {
-        width: 50px;
-    }
-    .briefing .schedule .date,
-    .briefing .schedule .time,
-    .briefing .schedule .line{
-        margin-right: 0.5rem;
-    }
-    .briefing .schedule .time,
-    .briefing .schedule .time + .line{
-        display: none !important;
-    }
-}
-@media (min-width: 768px) {
-    .briefing .schedule .list-group-item{
-        padding: 0.8rem 1rem;
-    }
-}
-@media (min-width: 950px){
-    .briefing .schedule .list-group-item{
-        padding: 0.5rem 1.5rem;
-    }
-    .briefing .schedule .match img {
-        width: 60px;
-    }
-    .briefing .schedule .date,
-    .briefing .schedule .time,
-    .briefing .schedule .line{
-        margin-right: 1rem;
-    }
-    .briefing .schedule .time,
-    .briefing .schedule .time + .line{
-        display: inline-block !important;
-    }
-}
-@media (min-width: 1100px){
-    .briefing .schedule .date,
-    .briefing .schedule .time,
-    .briefing .schedule .line{
-        margin-right: 1.5rem;
-    }
-    .briefing .schedule .match{
-        width: 300px;
-        margin-left: 5rem;
-    }
-}
-.briefing .game {
-    margin-top: 2rem;
-}
-/* .briefing .game .list-group-item{
-    margin-bottom: 0.5rem;
-    border: none;
-    border-radius: 0;
-}
-.briefing .game .list-group-item span{
-    display: block;
-    color: #757575;
-    font-size: 13px;
-}
-.briefing .game .list-group-item strong{
-    display: block;
-    color: #333333;
-    font-weight: 700;
-}
-.briefing .game .list-group-item i{
-    position: absolute;
-    top: 50%;
-    right: 0.5rem;
-    margin-top: -12px;
-    color: #757575;
-} */
-.briefing .game .list-group-item{
-    padding: 0.5rem 0.8rem;
-    margin-bottom: 0.5rem;
-    border: none;
-    border-radius: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-.briefing .game .list-group-item .date{
-    display: block;
-    color: #333333;
-    font-size: 12px;
-}
-.briefing .game .list-group-item .stadium{
-    display: block;
-    color: #757575;
-    font-size: 12px;
-}
-.briefing .game .list-group-item .btn{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top: -18px;
-    padding: 0.469rem;
-    color: #9CAFC1;;
-    border-radius: 0;
-}
-
-@media (min-width: 768px) {
-    .briefing .game {
-        margin: 0;
-    }
-    .briefing .game .list-group{
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-    .briefing .game .list-group-item {
-        margin : 0;
-        margin-right: 0.5rem;
-        padding: 0.5rem;
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
-    }
-    .briefing .game .list-group-item:last-child {
-        margin-right: 0;
-    }
-    .briefing .game .list-group-item .btn {
-        position: relative;
-        top:0;
-        margin-top: 0.5rem;
-        border-color: #EAEEF2;
-    }
-    .briefing .game .list-group-item .btn:hover{
-        background-color: #EAEEF2;
-    }
-}
-@media (min-width: 992px){
-    .briefing .game .list-group-item {
-        padding: 0.8rem 1rem;
-    }
-}
-.player{
-    margin-top: 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.current-list {
-    padding: 0 1rem 0.5rem 1rem;
-    border-top: 1px solid #D8DADE;
-    border-bottom: 1px solid #D8DADE;
-}
-.current-list .list-control {
-    padding: 0.5rem 0;
-}
-.current-list .list-group{
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    overflow: auto;
-
-    max-height: 470px;
-}
-.current-list .list-item{
-    width: 200px;
-    position: relative;
-    margin: 0 0.5rem 1rem 0.5rem;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: #FFFFFF;
-}
-.current-list .list-item:first-child{
-    margin-left: 0;
-}
-.current-list .list-item .btn-play{
-    position: absolute;
-    top:110px;
-    right: 10px;
-    width: 28px;
-    height: 28px;
-    border-radius: 100%;
-    background-color: #395A7A;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-.current-list .list-item .btn-play i {
-    font-size: 12px;
-    color: #FFFFFF;
-}
-.current-list .list-item .video-thumb{
-    width: 200px;
-}
-.current-list .list-item .video-thumb img{
-    width: 100%;
-}
-.current-list .list-item.active{
-
-    background-color: #07294B;
-    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-    color: #FFFFFF;
-}
-.current-list .list-item.active .btn-play{
-    background-color: #FFFFFF;
-}
-.current-list .list-item.active .btn-play i{
-    color: #395A7A;
-}
-.current-list .list-item .btn-play:hover{
-    background-color: #07294B;
-    text-decoration: none;
-}
-.current-list .list-item.active .video-thumb img{
-    opacity: 0.8;
-}
-.current-list .list-item .info-box{
-    padding: 0.5rem 1rem;
-}
-.current-list .list-title{
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.3em;
-    width: 85%;
-}
-@media (min-width: 768px) {
-    .current-list .list-group{
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-        overflow: visible;
-    }
-}
-
-.card-img-top img {
-    width: 100%;
-}
-.player {
-    position: relative;
-    padding-bottom: 2rem;
-}
-.player .player-video{
-    overflow: auto;
-    -webkit-box-pack: row;
-        -ms-flex-pack: row;
-            justify-content: row;
-    padding-bottom: 0.5rem;
-}
-.player .control {
-    position: absolute;
-    top: 15px;
-    right: 0;
-}
-.player .btn-more{
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: #757575;
-}
-.player .btn-more:hover{
-    color: #1B447E;
-    text-decoration: none;
-}
-.player .btn-more i {
-    vertical-align: middle;
-}
-.player .col-lg-3{
-    width: 275px;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-}
-.player .card {
-    margin-bottom: 0;
-}
-.player .card .card-img-top .vs-img{
-    min-height: 160px;
-}
-.player .card .card-body{
-    text-align: center;
-    padding: 0.5rem;
-}
-.player .card-title {
-    font-size: 16px;
-}
-.player .card p{
-    margin: 0;
-}
-@media (min-width: 992px) {
-    .player .card{
-        margin-bottom: 1rem;
-    }
-    .player .flex-nowrap{
-        -ms-flex-wrap: wrap !important;
-            flex-wrap: wrap !important;
-    }
-}
-
-    </style>
+	</style>
 
 </head>
 <body>
-    <div class="page main">
+	
+	
 
-        <!--  H E A D E R  -->
-    	<header class="page-header fixed-top">
-    		<nav class="navbar navbar-expand-lg">
-    			<div class="container-fluid">
-    				<a class="navbar-brand" href="01-user-00홈.html">D-LOCKER</a>
-
-    				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    					<i class="material-icons">menu</i>
-    				</button>
-
-    				<button class="navbar-toggler-search" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    					<i class="material-icons">search</i>
-    				</button>
-
-    				<!--메뉴-->
-    				<div class="collapse navbar-collapse menu-box" id="navbarTogglerDemo01">
-    					<button class="navbar-toggler-close" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    						<i class="material-icons">clear</i>
-    					</button>
-
-    					<!-- 메인 메뉴 -->
-    					<ul class="navbar-nav ml-auto top-menu">
-                            <li class="nav-item">
-    							<a class="nav-link" href="01-user-01브리핑-01분석자료.html">브리핑</a>
-    						</li>
-    						<li class="nav-item">
-    							<a class="nav-link" href="01-user-02선수정보-01투수-01.html">선수정보</a>
-    						</li>
-    						<li class="nav-item">
-    							<a class="nav-link" href="01-user-03풀영상-01.html">풀영상</a>
-    						</li>
-    						<li class="nav-item">
-    							<a class="nav-link" href="01-user-04공지-01전체알림-01.html">공지</a>
-    						</li>
-                            <li class="nav-item">
-    							<a class="nav-link" href="01-user-05라이브러리-01.html">라이브러리</a>
-    						</li>
-    					</ul>
-
-    					<!-- 퀵 메뉴 -->
-    					<div class="quick-menu">
-    						<a href="" class="menu-item-notice active" title="공지사항" data-toggle="tooltip"><i class="material-icons">notifications_none</i></a>
-    						<a href="00-admin-01야구정보관리-01일정관리.html" class="menu-item-admin" title="관리자" data-toggle="tooltip"><i class="material-icons">tune</i></a>
-    						<a href="" class="menu-item-search" title="선수검색" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" ><span data-toggle="tooltip" title="검색"><i class="material-icons">search</i></span></a>
-    					</div>
-
-    					<!-- 사용자 정보 -->
-    					<div class="user-info d-flex align-items-center">
-    						<div class="user-photo d-inline-block mr-2"><img src="https://www.koreabaseball.com/file/person/middle/2018/62907.jpg"></div>
-    						<a class="user-name mb-0 d-inline-block" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">박민우님</a>
-    					</div>
-    					<div class="list-group user-setting collapse" id="collapseExample">
-    						<a class="list-group-item list-group-item-action" href="#"><i class="material-icons">settings</i>설정</a>
-    						<a class="list-group-item list-group-item-action" href="#"><i class="material-icons">power_settings_new</i>로그아웃</a>
-    					</div>
-    				</div>
-
-    				<!--검색-->
-    				<div class="collapse navbar-collapse search-box" id="navbarTogglerDemo02">
-    					<button class="navbar-toggler-close" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    						<i class="material-icons">clear</i>
-    					</button>
-    					<div class="input-group">
-    						<select class="selectpicker" data-width="auto">
-    							<option selected>선수이름</option>
-    							<option>등번호</option>
-    						</select>
-    						<input type="search" name="" class="form-control" placeholder="검색할 선수의 이름이나 등번호를 입력하세요.">
-    						<div class="input-group-append d-flex">
-    							<button class="btn btn-outline-secondary" type="button"><i class="material-icons">search</i></button>
-    						</div>
-    					</div>
-    				</div>
-
-    			</div>
-    		</nav>
-    	</header>
-
-        <div class="page-container">
-      		<!--  B O D Y  -->
-          	<div class="page-body">
-                  <div class="container-fluid">
-                      <div class="main-container d-flex">
+	<!-- 주행 거리 입력-->
+	<div class="record-form show">
+		<div class="form-header">
+			<button type="button" class="button button-close">취소</button>
+			<h1 class="form-title">최종 주행거리</h1>
+			<button type="button" class="button">저장</button>
+		</div>
+		<div class="form-body">
+			<div class="form-group">
+				<label class="form-label">용도 선택</label>
+				<div class="segment">
+					<label><input type="radio" name="toggle1" checked="checked"><span>업무용</span></label>
+					<label><input type="radio" name="toggle1"><span>업무외</span></label>
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="form-label">날짜 선택</label>
+				<div class="input">
+					<input type="date" />	
+				</div>	
+			</div>
+			<div class="form-group">
+				<label class="form-label">주행거리 입력</label>
+				<div class="input">
+					<input type="number" name="" placeholder="최종 주행거리를 입력해주세요.">
+				</div>	
+				<p>입력값을 수정해 주세요. <br>12,000 km보다 작아야합니다.</p>
+			</div>
+		</div>
+	</div>
 
 
-                              <div class="profile d-flex">
-                                <div class="profile-img d-flex align-items-center">
-                                      <img src="http://ncdinos.firstmall.kr/data/player/42_1521793090_23171759_profile.jpg" alt="내사진">
-                                  </div>
-                                  <div class="profile-info d-flex flex-column">
-                                      <div class="profile-text">
-                                          <p class="t-date">2018년 11월 10일</p>
-                                          <h1 class="t-greeting">안녕하세요. 박민우님</h1>
-                                          <p class="t-guide">오늘은 <strong>KIA 타이거즈</strong>와 경기가 있는 날입니다. <br>오늘의 브리핑을 확인해 보세요.</p>
-                                          <a href="" class="btn">오늘의 브리핑 보기<i class="material-icons">arrow_forward</i></a>
-                                      </div>
-                                      <div class="my-menu">
-                                          <div class="control d-flex justify-content-between">
-                                              <h1 class="title">즐겨찾는 메뉴</h1>
-                                              <a href=""><i class="material-icons">settings</i></a>
-                                          </div>
-                                          <ul class="menu d-flex">
-                                              <li><a href="">선수정보</a></li>
-                                              <li><a href="">풀영상</a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-
-                          <div class="briefing d-flex flex-column">
-                              <div class="schedule">
-                                  <h1 class="title">오늘의 브리핑</h1>
-                                  <div class="control">
-                                      <button type="button" class="btn-prevweek"><i class="material-icons">keyboard_arrow_left</i></button>
-                                      <span class="thisweek">2018년 11월 첫째주</span>
-                                      <button type="button" class="btn-nextweek"><i class="material-icons">keyboard_arrow_right</i></button>
-                                  </div>
-                                  <div class="list-group">
-                                    <div class="list-group-item d-flex disabled">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 05일 월요일</span>
-                                        </p>
-                                        <p>경기가 없습니다.</p>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 06일 화요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 07일 수요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 08일 목요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 09일 금요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex active">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 10일 토요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="list-group-item d-flex">
-                                        <p class="d-flex align-items-center">
-                                            <span class="date">11월 11일 일요일</span>
-                                            <span class="line"></span>
-                                            <span class="time">19:30</span>
-                                            <span class="line"></span>
-                                            <span class="stadium">마산야구장</span>
-                                        </p>
-                                        <div class="match d-flex">
-                                            <div class="my-team">
-                                                <span>NC</span>
-                                                <img src="resource/img/emblem-nc.png" alt="NC 다이노스">
-                                            </div>
-                                            <span>vs</span>
-                                            <div class="opponent-team">
-                                                <img src="resource/img/emblem-HT.png" alt="KIA 타이거즈">
-                                                <span>KIA</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                              </div>
-                              <div class="game">
-                                  <h1 class="title">최근 KIA와 경기</h1>
-                                  <div class="list-group d-flex">
-                                      <div href="#" class="list-group-item d-flex">
-                                          <span class="date">2018년 07월 05일 화요일</span>
-                                          <span class="stadium">수원야구장</span>
-                                          <a href="#" class="btn">
-                                              브리핑 바로가기
-                                              <i class="material-icons">chevron_right</i>
-                                          </a>
-                                      </div>
-                                      <div href="#" class="list-group-item d-flex">
-                                          <span class="date">2018년 07월 05일 화요일</span>
-                                          <span class="stadium">수원야구장</span>
-                                          <a href="#" class="btn">
-                                              브리핑 바로가기
-                                              <i class="material-icons">chevron_right</i>
-                                          </a>
-                                      </div>
-                                      <div href="#" class="list-group-item d-flex">
-                                          <span class="date">2018년 07월 05일 화요일</span>
-                                          <span class="stadium">수원야구장</span>
-                                          <a href="#" class="btn">
-                                              브리핑 바로가기
-                                              <i class="material-icons">chevron_right</i>
-                                          </a>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="player">
-                          <h1 class="title">박민수님의 선수정보</h1>
-                          <div class="control">
-                              <a href="#" class="btn-more">자세히 보기<i class="material-icons">keyboard_arrow_right</i></a>
-                          </div>
-                          <div class="player-video row d-flex flex-nowrap">
-                              <div class="col-lg-3">
-                                  <div class="card">
-                                      <div class="card-img-top">
-                                          <div class="vs-img">
-                                                <div class="team">
-                                                    <img src="resource/img/emblem-NC.png" alt="nc dinos">
-                                                </div>
-                                                <div class="team">
-                                                    <img src="resource/img/emblem-SS.png" alt="samsung lions">
-                                                </div>
-                                          </div>
-                                      </div>
-                                      <div class="card-body">
-                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
-                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">NC 다이노스 VS 삼성 라이온즈</a>
-                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-lg-3">
-                                  <div class="card">
-                                      <div class="card-img-top">
-                                          <div class="vs-img">
-                                              <div class="team">
-                                                  <img src="resource/img/emblem-NC.png" alt="nc dinos">
-                                              </div>
-                                              <div class="team">
-                                                <img src="resource/img/emblem-HH.png" alt="Lotte egles">
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="card-body">
-                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
-                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
-                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-lg-3">
-                                  <div class="card">
-                                      <div class="card-img-top">
-                                          <div class="vs-img">
-                                              <div class="team">
-                                                  <span class="nc"></span>
-                                              </div>
-                                              <div class="team">
-                                                  <span class="lt"></span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="card-body">
-                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
-                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
-                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-lg-3">
-                                  <div class="card">
-                                      <div class="card-img-top">
-                                          <div class="vs-img">
-                                              <div class="team">
-                                                  <span class="nc"></span>
-                                              </div>
-                                              <div class="team">
-                                                  <span class="sk"></span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="card-body">
-                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
-                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
-                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div class="col-lg-3">
-                                  <div class="card">
-                                      <div class="card-img-top">
-                                          <div class="vs-img">
-                                              <div class="team">
-                                                  <span class="nc"></span>
-                                              </div>
-                                              <div class="team">
-                                                  <span class="hh"></span>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="card-body">
-                                          <p class="card-text"><small class="text-black-50">2018년 07월 12일</small></p>
-                                          <a href="01-user-01브리핑-02선발-02.html" class="card-title text-primary">레일리</a>
-                                          <p class="card-text"><small class="text-info">사직야구장</small></p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-          	</div>
-
-          	<!--  F O O T E R  -->
-          	<footer class="page-footer">
-          		<div class="container-fluid d-flex">
-                      <p>Copyright ⓒ NC Dinos Baseball Company. All Rights Reserved.</p>
-                      <img src="resource/img/logo-ncdinos.png" alt="NC Dinos">
-          		</div>
-          	</footer>
-        </div>
-
-    </div>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script src="resource/js/common.js" type="text/javascript"></script>
 </body>
 </html>
