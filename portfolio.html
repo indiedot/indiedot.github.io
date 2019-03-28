@@ -619,6 +619,484 @@ input::selection {
     background-color: #5c4f53;
 }
 		
+/*=======================================
+
+          L  A   Y   O   U  T
+
+=======================================*/
+.page{
+    position: relative;
+    background-color: #eaeaea;
+    width: 100%;
+    min-height: 100%;
+}
+/*--------------
+  H E A D E R
+--------------*/
+.page-header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 3.5rem;
+    background-color: #726267;
+    z-index: 2;
+}
+.page-title{
+    margin: 0;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 1em;
+}
+.button-logout{
+    position: absolute;
+    top: 12px;
+    right: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: #fff;
+    font-size: 0.875rem;
+}
+/*--------------
+    B O D Y
+--------------*/
+.page-body {
+    position: relative;
+    margin: 0;
+    padding: 3.5rem 0 3.5rem 0;
+}
+.car-selected{
+    position: relative;
+    padding: 1.5rem 0;
+    padding-left: 100px;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #fff;
+}
+.car-selected:before{
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #736368;
+    background: #fff url(../image/apc/corpCar/icon-car.png) no-repeat;
+    background-size: 28px;
+    background-position: 0.45rem 50%;
+    content: "";
+}
+.car-selected .car-info{
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #3d3537;
+}
+.car-selected .car-info .car-name{
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border:1px solid #bfaab1;
+    border-radius: 0.25rem;
+    background-color: #e8e1e1;
+    font-size: 0.875rem;
+    line-height: 1em;
+    vertical-align: middle;
+}
+.car-selected .driver-info{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+    line-height: 1.4em;
+}
+.car-list {
+    display: none;
+    position: relative;
+    border-bottom: 1px solid #736368;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+.car-list.active{
+    display: block;
+}
+.car-list.active.sticky{
+	position: fixed;
+	top: 3.5rem;
+	left: 0;
+	right: 0;
+}
+.car-list .list-more-p{
+    position: absolute;
+    left: 0;
+    width: 26px;
+    height: 36px;
+    background: -webkit-gradient(linear,left top,right top,color-stop(16.66%,#fff),color-stop(100%,rgba(255,255,255,0)));
+    background: gradient(linear,left top,right top,color-stop(16.66%,#fff),color-stop(100%,rgba(255,255,255,0)));
+    z-index: 2;
+}
+.car-list .list-more-n{
+    position: absolute;
+    right: 0;
+    width: 30px;
+    height: 36px;
+    background: #fff url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -255px;
+    background-size: auto 36px;
+    z-index: 2;
+}
+.car-list .list-more-n:after{
+    display: block;
+    position: absolute;
+    left:-20px;
+    width: 26px;
+    height: 36px;
+    background: -webkit-gradient(linear,left top,right top,color-stop(0,rgba(255,255,255,0)),color-stop(60%,#fff));
+    background: gradient(linear,left top,right top,color-stop(0,rgba(255,255,255,0)),color-stop(60%,#fff));
+    content: "";
+    z-index: 2;
+}
+.swiper-container.gallery-thumbs{
+    z-index: 0; 
+    margin: 0 2rem 0 0.7rem;
+}
+.car-list .car-list-item {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    color: #757575;
+    font-size: 0.875rem;
+    text-align: center;
+    line-height: 34px;
+}
+.car-list .car-list-item:last-child{
+    margin-right: 2rem;
+}
+.car-list .car-list-item.swiper-slide-thumb-active{
+    border-color: #736368;
+    color: #736368;
+    font-weight: 700;
+}
+
+/*----- 운행기록 ------*/
+.sticky + .record-list-header{
+  margin-top: 37px;
+}
+.record-list-header .record-title{
+    display: inline-block;
+    margin:1rem 0 1rem 1rem;
+    font-size: 1rem;
+    color: #2e2e2e
+}
+.record-list-header .info-text{
+    display: inline-block;
+    margin:0;
+    padding: 0 0 0 0.5rem;
+    /*border:1px solid #ffc6c5;
+    background-color: #fff5f5;*/
+    font-size: 0.75rem;
+    color: #d76666;
+}
+.swiper-container.gallery-top{
+    padding: 0 0.5rem;
+    overflow: visible;
+}
+.swiper-wrapper{
+    position: static;
+}
+.record-list {
+    position: relative;
+    padding: 0;
+}
+.record-list-item {
+    position: relative;
+    margin:0 0 0.5rem 0;
+    background-color: #fff;
+}
+.record-list-item .header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #fff;
+    z-index: 1;
+}
+.record-list-item .date{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 1.125rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #393134;
+    color: #2e2e2e;
+
+}
+.record-list-item .list-check{
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-right: 1px solid #d5d5d5;
+    border-radius: 0;
+    background: #fff url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -108px;
+    background-size: auto 36px;
+}
+
+.record-list-item .list-check input[type="checkbox"]{
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    opacity: 0 !important;
+    outline: none;
+    clip:rect(0,0,0,0);
+    border: 0 ;
+}
+
+.record-list-item .list-check input[type="checkbox"] + label {
+    cursor: auto;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    outline: none;
+}
+
+.record-list-item .list-check input[type="checkbox"] + label:before {
+    position: absolute;
+    left:0;
+    top:0;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin: 0 0 0 0;
+    background: transparent;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    cursor: pointer;
+    content: '';
+}
+.record-list-item .list-check input[type="checkbox"]:checked + label:before {
+    content: '';
+    background: #726267 url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -144px;
+    background-size: auto 36px;
+}
+.record-list-item.no-data .list-check.active{
+    display: block;
+}
+.record-list-item .add-record{
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-left: 1px solid #d5d5d5;
+    border-radius: 0;
+    background: #fff url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -72px;
+    background-size: auto 36px;
+    font-size: 0;
+}
+.record-list-item .business,
+.record-list-item .non-business{
+    display: block;
+    position: relative;
+    margin: 0 1rem;
+    margin: 0;
+    padding: 1rem 0;
+    padding: 1rem;
+    border-bottom: 1px dashed #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: #757575;
+}
+.record-list-item .business:last-child,
+.record-list-item .non-business:last-child{
+    border-bottom: none;
+}
+.record-list-item .business h2,
+.record-list-item .non-business h2{
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    width: 50px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    border: 1px solid #e3e0e1;
+    background-color: #f4f4f4;
+    border:none;
+    line-height : 30px;
+    text-align: center;
+}
+.record-list-item .business h2:after,
+.record-list-item .non-business h2:after{
+    content: "";
+    display: block;
+    position: absolute;
+    border: 25px solid #f4f4f4;
+    border-bottom-color: transparent;
+    top: 10px;
+    -webkit-transform: scaleY(0.3);
+            transform: scaleY(0.3)
+}
+
+.record-list-item dl{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.record-list-item dl:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+.record-list-item dt,
+.record-list-item dd{
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1.4em;
+}
+.record-list-item dt{
+    width: calc(50% - 0.5rem);
+    padding-right: 0.5rem;
+    clear: both;
+    text-align: right;
+
+}
+.record-list-item dd{
+    width: calc(50% - 0.5rem);
+    margin-top:0.07rem;
+    padding-left: 0.5rem;
+}
+.record-list-item dt.last-distance{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    color: #2e2e2e;
+    font-size: 0.875rem;
+}
+.record-list-item dd.last-distance{
+    color: #736368;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.record-list-item.no-data p{
+    padding: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #bbb;
+    font-size: 0.75rem;
+}
+/*----- 운행기록 없을때 ------*/
+.no-car{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height:100vh;
+    padding: 0;
+    background-color: #fff
+}
+.no-car .alert-img {
+    margin-bottom: 0.5rem;
+}
+.no-car .alert-img img{
+    width: 72px;
+}
+.no-car p{
+    margin-bottom: 10rem;
+}
+
+.record-list-control{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    z-index: 2;
+    border-top: 1px solid #726267;
+}
+.record-list-control .button{
+    padding: 1rem;
+    border-radius: 0;
+    font-size:0.875rem
+}
+.record-list-control .add-all-record{
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+    background-color: #726267;
+    color: #fff;
+}
+
+.record-list-control .button-top {
+    display: block;
+    width: 46px;
+    padding: 1rem;
+    outline: none;
+    background: #ede7e9;
+    border: none;
+    border-radius: 0;
+    visibility: hidden;
+    line-height: 1em;
+    text-align: center;
+    color: #757575;
+    opacity: 1;
+    visibility: visible;
+    font-size: 0;
+    background-image: url(../image/apc/corpCar/iconx2.png);
+    background-size: auto 48px;
+    background-position: -385px 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+}
 		
 
 	</style>
