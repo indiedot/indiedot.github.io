@@ -1098,6 +1098,278 @@ input::selection {
             flex: 0 0 auto;
 }
 		
+/*=======================================
+
+          A L E R T & M O D A L
+
+=======================================*/
+.alert-background{
+    visibility: hidden;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 99;
+}
+.alert-background.show{
+    visibility: visible;
+}
+.alert{
+    position: relative;
+    margin: 0 2rem;
+    border-radius: 0.25rem;
+    background-color: #fff;
+}
+.alert .button-icon-close{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 0 0.25rem 0 0;
+    background: #fff url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -180px;
+    background-size: auto 36px;
+    font-size: 0;
+}
+.alert-body{
+    padding: 2rem 2.5rem;
+    text-align: center;
+}
+.alert-body-left{
+    padding: 1.5rem;
+    text-align: left
+}
+.alert-body-left dl{
+    margin: 1rem 0 0 0;
+    padding: 1rem 0 0 0;
+    border-top: 1px dashed #dfcfd4;
+}
+.alert-body-left dl dt,
+.alert-body-left dl dd{
+    font-size: 0.76rem;
+    line-height: 1.6em;
+}
+.alert-body-left dl dt{
+    color: #888;
+}
+.alert-body-left dl dd{
+    margin:0 0 0.5rem 0;
+    padding:0;
+    color: #2e2e2e;
+    font-weight: bold;
+}
+.alert-footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #eaeaea;
+}
+.alert-footer .button{
+    padding: 1rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    background-color: #fff;
+}
+.alert-footer .button:first-child{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0.25rem !important;
+    border-left: none !important;
+}
+.alert-footer .button:last-child{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid #eaeaea;
+}
+.modal-background{
+    visibility: hidden;
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background: transparent;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-align: end;
+
+        -ms-flex-align: end;
+
+            align-items: flex-end;
+
+    z-index: 99;
+}
+.modal-background.show{
+    visibility: visible;
+}
+.modal{
+    position: relative;
+    width: 100%;
+    border-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+.modal .modal-header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.modal .button-icon-close,
+.modal .button-icon-save{
+    position: absolute;
+    top: 5px;
+    height: 40px;
+    border-radius: 0;
+    background-color: transparent;
+}
+.modal .button-icon-close{
+    left:0;
+    width: 40px;
+    padding:0;
+    background: #fff url(../image/apc/corpCar/iconx2.png) no-repeat;
+    background-position: -200px;
+    background-size: auto 40px;
+    font-size: 0;
+}
+.modal .button-icon-save{
+    right:0;
+    font-size: 0.875rem;
+}
+.modal .modal-title{
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    color: #726267;
+}
+.modal .modal-body .button{
+    width: 100%;
+    padding:1rem 0;
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+.modal .modal-body .button:last-child{
+    border-bottom: none;
+}
+/*----------
+RECORD WRITE
+-----------*/
+
+.record-form{}
+.record-form .form-date{
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+.record-form .form-group{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-bottom: 1px solid #d5d5d5;
+}
+.record-form .form-group .input{
+    min-height: 45px;
+    border: none;
+    padding: 0;
+}
+.record-form .form-group .input input{
+    width: 100%;
+}
+.record-form .form-group .input input[type='date']{
+    text-align: center;
+}
+.record-form .form-group .input.focus{
+    background-color: #eee;
+}
+.record-form .form-distance .input{
+}
+.record-form .form-distance .input input{
+    padding: 1rem 4rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.record-form .form-distance .input .button-reset{
+    top: 12px;
+    right: 40px;
+    width: 32px;
+    background-position: -180px;
+    border-bottom: none;
+}
+.record-form .form-distance .input .input-unit{
+    line-height: 55px;
+}
+.record-form .form-distance p{
+    margin: 0.5rem 0;
+    font-size: 0.75rem;
+    color: #d76666;
+    text-align: center;
+}
+.record-form .segment {
+    margin: 0.5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border:1px solid #e1d9dc;
+}
+.record-form .segment label {
+    width: 50%;
+}
+.record-form .segment label span {
+    position: relative;
+    display:block;
+    margin: 0;
+    padding: 1rem;
+    color: #9f9f9f;
+    font-size: 1rem;
+    text-align:center;
+    -webkit-transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    line-height: 1em;
+}
+.record-form .segment label input {
+    position:absolute;
+    top:-9999px;
+}
+.record-form .segment input:checked + span {
+    background-color:#e1d9dc;
+    color:#2e2e2e;
+}
 
 	</style>
   </head>
