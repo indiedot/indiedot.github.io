@@ -809,7 +809,7 @@ input::selection {
 }
 .swiper-container.gallery-top{
     padding: 0 0.5rem;
-    overflow: visible;
+    /*overflow: visible;*/
 }
 .swiper-wrapper{
     position: static;
@@ -1098,7 +1098,8 @@ input::selection {
             flex: 0 0 auto;
 }
 		
-/*=======================================
+		
+		/*=======================================
 
           A L E R T & M O D A L
 
@@ -1370,6 +1371,7 @@ RECORD WRITE
     background-color:#e1d9dc;
     color:#2e2e2e;
 }
+
 
 	</style>
   </head>
@@ -2126,7 +2128,7 @@ RECORD WRITE
 			$('.record-list-item .header').fixTo(
 				'.record-list-item',{
 					top: 93,
-					useNativeSticky:true,
+					useNativeSticky: false,
 					mindViewport: true
 				}
 			);
