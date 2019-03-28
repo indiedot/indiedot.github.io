@@ -1,1 +1,842 @@
 
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<title>기록테스트</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  </head>
+<body>
+	<div class="page">
+		<div class="page-header">
+			<h1 class="page-title">기록테스트</h1>
+			<button type="button" class="button button-logout">로그아웃</button>
+		</div>
+		<div class="page-body">
+			
+			<div class="car-selected">
+				<h1 class="car-info"> <span class="car-name">supercar</span>0200050</h1>
+			</div>
+
+			<div class="car-list active">
+				<div class="list-more-p"></div>
+				<div class="list-more-n"></div>
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide car-list-item">0200050-1</div>
+						<div class="swiper-slide car-list-item">0200050-2</div>
+						<div class="swiper-slide car-list-item">0200050-3</div>
+						<div class="swiper-slide car-list-item">0200050-4</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="record-list-header">
+				<h1 class="record-title">제목</h1>
+				<p class="info-text">
+					설명
+				</p>
+			</div>
+
+			<!-- 주행이력 -->
+			<div class="swiper-container gallery-top">
+				<div id="carHistory" class="carHistory swiper-wrapper">
+
+					<!--1-->
+					<div class="record-list swiper-slide">
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)-1</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="" class="non-business">
+								<h2>B타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="" class="non-business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+					</div>
+
+					<!--2-->
+					<div class="record-list swiper-slide">
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)-2</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="" class="non-business">
+								<h2>B타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="" class="non-business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+					</div>
+
+					<!--3-->
+					<div class="record-list swiper-slide">
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)-3</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="" class="non-business">
+								<h2>B타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="" class="non-business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+					</div>
+
+					<!--4-->
+					<div class="record-list swiper-slide">
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)-4</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+							<a href="" class="non-business">
+								<h2>B타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="#" class="business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item">
+							<div class="header">
+								<h1 class="date">2019.01.03 (목)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<a href="" class="non-business">
+								<h2>A타입</h2>
+								<dl>
+									<dt class="last-distance">최종 내용</dt>
+									<dd class="last-distance">155404</dd>
+									<dt>개별 내용</dt>
+									<dd>100</dd>
+								</dl>
+							</a>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+
+						<div class="record-list-item no-data">
+							<div class="header">
+								<h1 class="date">2019.01.04 (금)</h1>
+								<button type="button" class="button add-record">추가</button>
+							</div>
+							<p>내용이 없음</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="record-list-control">
+			<button type="button" class="button add-all-record">일괄입력</button>
+			<button type="button" class="button button-top">맨 위로</button>
+		</div>
+	</div>
+
+	
+
+
+	<!-- 주행용도 선택 -->
+	<div class="modal-background" id="modal-type-select">
+		<div class="modal">
+			<div class="modal-header">
+				<h1 class="modal-title">주행용도 선택</h1>
+				<button type="button" class="button button-icon-close">닫기</button>
+			</div>
+			<div class="modal-body">
+				<button type="button" class="button">A타입</button>
+				<button type="button" class="button">B타입</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 수정/삭제 선택-->
+	<div class="modal-background" id="modal-record-deleteormodify">
+		<div class="modal">
+			<div class="modal-header">
+				<h1 class="modal-title">최종주행거리 설정</h1>
+				<button type="button" class="button button-icon-close">닫기</button>
+			</div>
+			<div class="modal-body">
+				<button type="button" class="button" id="button-record-modify">수정</button>
+				<button type="button" class="button" id="button-record-delete">삭제</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- 주행 거리 입력-->
+	<div class="modal-background" id="modal-record-write">
+		<div class="modal">
+			<div class="modal-header">
+				<h1 class="modal-title">최종주행거리 입력</h1>
+				<button type="button" class="button button-icon-close">닫기</button>
+				<button type="button" class="button button-icon-save">저장</button>
+			</div>
+			<div class="modal-body">
+				<div class="record-form">
+					<div class="form-group">
+						<div class="input">
+							<input type="date" value="2019-01-03" />
+						</div>
+					</div>
+					<div class="form-group form-distance">
+						<p>최종 내용를 입력해주세요.<br>12,000 km보다 작아야합니다.</p>
+						<div class="input">
+							<input type="number" name="" placeholder="0">
+							<button type="button" class="button button-reset">입력 지우기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 주행 거리 수정-->
+	<div class="modal-background" id="modal-record-modify">
+		<div class="modal">
+			<div class="modal-header">
+				<h1 class="modal-title">최종주행거리 수정</h1>
+				<button type="button" class="button button-icon-close">닫기</button>
+				<button type="button" class="button button-icon-save">저장</button>
+			</div>
+			<div class="modal-body">
+				<div class="record-form">
+					<div class="form-group segment">
+						<label><input type="radio" name="toggle1" checked="checked"><span>A타입</span></label>
+						<label><input type="radio" name="toggle1"><span>B타입</span></label>
+					</div>
+					<div class="form-group form-distance">
+						<p>최종 내용를 입력해주세요.<br>12,000 km보다 작아야합니다.</p>
+						<div class="input">
+							<input type="number" name="" placeholder="0" value="2555">
+							<button type="button" class="button button-reset">입력 지우기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 주행 삭제-->
+	<div class="alert-background" id="alert-record-delete">
+		<div class="alert">
+			<div class="alert-body">
+				주행 이력을 <br>삭제하시겠습니까?
+			</div>
+			<div class="alert-footer">
+				<button type="button" class="button button-close">취소</button>
+				<button type="button" class="button">삭제</button>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 주행 거리 일괄입력-->
+	<div class="modal-background" id="modal-record-total-write">
+		<div class="modal">
+			<div class="modal-header">
+				<h1 class="modal-title">주행거리 일괄입력</h1>
+				<button type="button" class="button button-icon-close">닫기</button>
+				<button type="button" class="button button-icon-save">저장</button>
+			</div>
+			<div class="modal-body">
+				<div class="record-form">
+					<div class="form-date">
+						기간 : 2019-01-13 ~ 2019-01-14
+					</div>
+					<div class="form-group segment">
+						<label><input type="radio" name="toggle2" checked="checked"><span>일별 주행거리</span></label>
+						<label><input type="radio" name="toggle2"><span>최종 내용</span></label>
+					</div>
+					<div class="form-group segment">
+						<label><input type="radio" name="toggle1" checked="checked"><span>A타입</span></label>
+						<label><input type="radio" name="toggle1"><span>B타입</span></label>
+					</div>
+					<div class="form-group form-distance">
+						<p>일별 주행거리를 입력하세요</p>
+						<div class="input">
+							<input type="number" name="" placeholder="0" value="2555">
+							<button type="button" class="button button-reset">입력 지우기</button>
+							<div class="input-unit">km</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 주행거리 일괄입력 저장-->
+	<div class="alert-background" id="alert-save">
+		<div class="alert">
+			<div class="alert-body-left">
+				아래 내용대로 저장 됩니다. <br>
+				저장하시겠습니까?
+				<dl>
+					<dt>기간:</dt>
+					<dd>@2019-01-13@ ~ @2019-01-14@</dd>
+					<dt>총 일수: </dt>
+					<dd>@2@일</dd>
+					<dt>일별 주행거리: </dt>
+					<dd>~@30@Km</dd>
+				</dl>
+			</div>
+			<div class="alert-footer">
+				<button type="button" class="button button-close">취소</button>
+				<button type="button" class="button">저장</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fixto/0.5.0/fixto.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+	<!-- <script src="resource/js/apc/corpCar/corpCarList.js" type="text/javascript"></script> -->
+	<!-- <script src="resource/js/common/common.js" type="text/javascript"></script> -->
+	<script type="text/javascript">
+		$(document).ready( function(){
+
+			var i = 1;
+
+			//동작 테스트
+
+			// $( ".button-all-check" ).click(function() {
+			// 	$( ".record-list-item.no-data .list-check input" ).prop("checked", true);
+			// 	$( this ).removeClass('active');
+			// 	$( ".button-all-noncheck" ).addClass('active');
+			// });
+
+			// $( ".button-all-noncheck" ).click(function() {
+			// 	$( ".record-list-item.no-data .list-check input" ).prop("checked", false);
+			// 	$( this ).removeClass('active');
+			// 	$( ".button-all-check" ).addClass('active');
+			// });
+
+			$( ".button-close" ).click(function() {
+				$( this ).parent().parent().parent().removeClass('show');
+			});
+			$( ".button-icon-close" ).click(function() {
+				$( this ).parent().parent().parent().removeClass('show');
+			});
+
+
+			$( ".business, .non-business" ).click(function() {
+				$( '#modal-record-deleteormodify' ).addClass('show');
+				return false;
+			});
+
+			$( ".add-record" ).click(function() {
+				$( '#modal-type-select' ).addClass('show');
+			});
+
+			$( ".add-all-record" ).click(function() {
+				$( '#modal-type-select' ).addClass('show');
+				i = 2;			});
+
+			$( "#modal-type-select .modal-body .button" ).click(function() {
+				$( this ).parent().parent().parent().removeClass('show');
+				if( i == 1 ){
+					$( '#modal-record-write' ).addClass('show');
+				}else{
+					$( '#modal-record-total-write' ).addClass('show');
+					i = 1;
+				}
+			});
+
+
+			$( "#modal-record-total-write .button-icon-save" ).click(function() {
+				$( '#alert-save' ).addClass('show');
+			});
+
+			$( "#button-record-add" ).click(function() {
+				$( '#modal-record-write' ).addClass('show');
+			});
+
+			$( "#button-record-modify" ).click(function() {
+				$( this ).parent().parent().parent().removeClass('show');
+				$( '#modal-record-modify' ).addClass('show');
+			});	
+
+			$( "#button-record-delete" ).click(function() {
+				$( this ).parent().parent().parent().removeClass('show');
+				$( '#alert-record-delete' ).addClass('show');
+			});
+
+
+			//코치 마크 닫기
+			$( ".button-close-coarchmark" ).click(function() {
+				$( '.page' ).removeClass('noscroll');
+				$( '.coach-mark' ).removeClass('show');
+			});
+
+
+			//차 리스트 상단고정
+			var carList = $('.car-list.active');
+			var sticky = carList.offset().top - 60;
+
+			$(window).scroll(function() {
+				if ($(window).scrollTop() >= sticky) {
+					$('.car-list.active').addClass('sticky');
+				} else {
+					$('.car-list.active').removeClass('sticky');
+				}
+			});
+
+
+			//주행 이력 날짜 상단 고정
+			$('.record-list-item .header').fixTo(
+				'.record-list-item',{
+					top: 93,
+					useNativeSticky:true,
+					mindViewport: true
+				}
+			);
+
+
+			//스와이프 플러그인 
+			var slideLength = $('.record-list').length;  //차량 슬라이드 수
+			console.log(slideLength);
+
+
+			if( slideLength == 1 ){	//차량 리스트가 1개 이하 일때  - 루프 안함
+				
+				var galleryThumbs = new Swiper('.gallery-thumbs', {
+					spaceBetween: 5,
+					slidesPerView: 3, //섬네일 보여줄 갯수
+					watchSlidesVisibility: true,
+					watchSlidesProgress: true,
+				});
+
+				var galleryTop = new Swiper('.gallery-top', {
+					spaceBetween: 30,
+					thumbs: {
+						swiper: galleryThumbs
+					}
+				});
+
+			}else if (slideLength <= 3){ //차량 리스트가 3개 이하일 때 
+
+				var galleryThumbs = new Swiper('.gallery-thumbs', {
+					spaceBetween: 5,
+					slidesPerView: 3, //섬네일 보여줄 갯수
+					watchSlidesVisibility: true,
+					watchSlidesProgress: true,
+				});
+
+				var galleryTop = new Swiper('.gallery-top', {
+					spaceBetween: 30,
+					loop:true,
+					loopedSlides: slideLength, //looped slides should be the same
+					thumbs: {
+						swiper: galleryThumbs
+					}
+				});
+
+			}else{ //차량 리스트가 3개 이상일 때
+				
+				var galleryThumbs = new Swiper('.gallery-thumbs', {
+					spaceBetween: 5,
+					slidesPerView: 3, //섬네일 보여줄 갯수
+					loop: true,
+					loopedSlides: slideLength, //looped slides should be the same
+					watchSlidesVisibility: true,
+					watchSlidesProgress: true,
+				});
+
+				var galleryTop = new Swiper('.gallery-top', {
+					spaceBetween: 30,
+					loop:true,
+					loopedSlides: slideLength, //looped slides should be the same
+					thumbs: {
+						swiper: galleryThumbs
+					},
+				});
+
+			}
+
+
+			galleryTop.on('slideChange', function () {
+				console.log('slide changed');
+				jQuery('html, body').animate({scrollTop:0}, '50');
+			});
+
+
+		});
+	</script>
+</body>
+</html>
