@@ -809,7 +809,7 @@ input::selection {
 }
 .swiper-container.gallery-top{
     padding: 0 0.5rem;
-    /*overflow: visible;*/
+    overflow: visible;
 }
 .swiper-wrapper{
     position: static;
@@ -2035,6 +2035,14 @@ RECORD WRITE
 	<!-- <script src="resource/js/apc/corpCar/corpCarList.js" type="text/javascript"></script> -->
 	<!-- <script src="resource/js/common/common.js" type="text/javascript"></script> -->
 	<script type="text/javascript">
+		
+		$('.page').on('touchmove mousewheel', function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
+	});
+		
+		
 		$(document).ready( function(){
 
 			var i = 1;
@@ -2128,7 +2136,7 @@ RECORD WRITE
 			$('.record-list-item .header').fixTo(
 				'.record-list-item',{
 					top: 93,
-					useNativeSticky: false,
+					useNativeSticky: true,
 					mindViewport: true
 				}
 			);
