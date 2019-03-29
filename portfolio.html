@@ -2036,11 +2036,7 @@ RECORD WRITE
 	<!-- <script src="resource/js/common/common.js" type="text/javascript"></script> -->
 	<script type="text/javascript">
 		
-		$('.page').on('touchmove mousewheel', function(e){
-		e.preventDefault();
-		e.stopPropagation();
-		return false;
-	});
+		
 		
 		
 		$(document).ready( function(){
@@ -2178,6 +2174,10 @@ RECORD WRITE
 					loopedSlides: slideLength, //looped slides should be the same
 					thumbs: {
 						swiper: galleryThumbs
+					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true
 					}
 				});
 
@@ -2199,6 +2199,10 @@ RECORD WRITE
 					thumbs: {
 						swiper: galleryThumbs
 					},
+					effect: 'fade',
+					fadeEffect: {
+						crossFade: true
+					}
 				});
 
 			}
