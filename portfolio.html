@@ -2047,6 +2047,8 @@ RECORD WRITE
 		$(document).ready( function(){
 
 			var i = 1;
+			var viewportHeight = $('body').outerHeight(); //100vh를 위한 변수
+
 
 			//동작 테스트
 
@@ -2067,7 +2069,7 @@ RECORD WRITE
 			});
 			$( ".button-icon-close" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
-				$('.page').removeClass('modal-open');
+				$('body').removeClass('modal-open');
 			});
 
 
@@ -2089,7 +2091,9 @@ RECORD WRITE
 				if( i == 1 ){
 					$( '#modal-record-write' ).addClass('show');
 					// console.log('case1');
-					$('.page').addClass('modal-open');
+					$('body').height(viewportHeight);
+					$('body').addClass('modal-open');
+
 				}else{
 					$( '#modal-record-total-write' ).addClass('show');
 					i = 1;
@@ -2247,6 +2251,11 @@ RECORD WRITE
                 jQuery("#modal-record-write-input").val('');
                 jQuery("#modal-record-write-input").focus();
             });
+
+
+
+
+
 
 
 		});
