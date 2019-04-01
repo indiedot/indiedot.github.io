@@ -1921,8 +1921,8 @@ RECORD WRITE
 					<div class="form-group form-distance">
 						<p>최종 내용를 입력해주세요.<br>12,000 km보다 작아야합니다.</p>
 						<div class="input">
-							<input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="" placeholder="0">
-							<button type="button" class="button button-reset">입력 지우기</button>
+							<input type="number" min="0" inputmode="numeric" pattern="[0-9]*" name="" placeholder="0" id="modal-record-write-input">
+							<button type="button" class="button button-reset" id="addReset" style="font-size:14px;">지우기</button>
 						</div>
 					</div>
 				</div>
@@ -2212,6 +2212,29 @@ RECORD WRITE
 				console.log('slide changed');
 				jQuery('html, body').animate({scrollTop:0}, '50');
 			});
+			
+			
+			// 주행이력 추가시 주행거리 클릭
+            jQuery("#modal-type-select").click(function () {
+                jQuery(this).parent().attr("class","input focus");
+                jQuery("#addReset").show();
+            });
+
+            // 주행이력 추가시 주행거리 위치 벗어남
+            jQuery("#modal-record-write-input").focusout(function () {
+                jQuery(this).parent().attr("class","input");
+            });
+
+            // 주행이력 추가시 날자 위치 벗어남
+            jQuery("#modal-record-write-date").focusout(function () {
+                jQuery(this).parent().attr("class","input");
+            });
+
+            // 주행이력 추가 X 아이콘 클릭
+            jQuery("#addReset").click(function () {
+                jQuery("#modal-record-write-input").val('');
+                jQuery("#modal-record-write-input").focus();
+            });
 
 
 		});
