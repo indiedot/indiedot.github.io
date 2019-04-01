@@ -1904,8 +1904,8 @@ RECORD WRITE
 	</div>
 
 	<!-- 주행 거리 입력-->
-	<div class="modal-background" id="modal-record-write" style="position: absolute;">
-		<div class="modal">
+	<div class="modal-background" id="modal-record-write" style="align-items: flex-start">
+		<div class="modal" style="top: 3.5rem;">
 			<div class="modal-header">
 				<h1 class="modal-title">최종주행거리 입력</h1>
 				<button type="button" class="button button-icon-close">닫기</button>
@@ -2064,8 +2064,8 @@ RECORD WRITE
 			});
 			$( ".button-icon-close" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
-				$('body, html').css('overflow', 'visible');
-				$('body, html').css('height', 'auto');
+				// $('body, html').css('overflow', 'visible');
+				// $('body, html').css('height', 'auto');
 			});
 
 
@@ -2088,8 +2088,8 @@ RECORD WRITE
 				if( i == 1 ){
 					$( '#modal-record-write' ).addClass('show');
 					// console.log('case1');
-					$('body, html').height(viewportHeight);
-					$('body, html').css('overflow', 'hidden');
+					// $('body, html').height(viewportHeight);
+					// $('body, html').css('overflow', 'hidden');
 
 				}else{
 					$( '#modal-record-total-write' ).addClass('show');
