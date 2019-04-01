@@ -1372,6 +1372,11 @@ RECORD WRITE
     color:#2e2e2e;
 }
 
+		.modal-open{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
 
 	</style>
   </head>
@@ -2062,7 +2067,7 @@ RECORD WRITE
 			});
 			$( ".button-icon-close" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
-				$('body').css('overflow', 'visible');
+				$('.page').removeClass('modal-open');
 			});
 
 
@@ -2083,8 +2088,8 @@ RECORD WRITE
 				$( this ).parent().parent().parent().removeClass('show');
 				if( i == 1 ){
 					$( '#modal-record-write' ).addClass('show');
-					console.log('case1');
-					$('body').css('overflow', 'hidden');
+					// console.log('case1');
+					$('.page').addClass('modal-open');
 				}else{
 					$( '#modal-record-total-write' ).addClass('show');
 					i = 1;
