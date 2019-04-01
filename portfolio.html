@@ -2035,10 +2035,10 @@ RECORD WRITE
 	<!-- <script src="resource/js/apc/corpCar/corpCarList.js" type="text/javascript"></script> -->
 	<!-- <script src="resource/js/common/common.js" type="text/javascript"></script> -->
 	<script type="text/javascript">
-		
-		
-		
-		
+
+
+
+
 		$(document).ready( function(){
 
 			var i = 1;
@@ -2062,6 +2062,7 @@ RECORD WRITE
 			});
 			$( ".button-icon-close" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
+				$('body').css('overflow', 'visible');
 			});
 
 
@@ -2082,6 +2083,8 @@ RECORD WRITE
 				$( this ).parent().parent().parent().removeClass('show');
 				if( i == 1 ){
 					$( '#modal-record-write' ).addClass('show');
+					console.log('case1');
+					$('body').css('overflow', 'hidden');
 				}else{
 					$( '#modal-record-total-write' ).addClass('show');
 					i = 1;
@@ -2095,12 +2098,13 @@ RECORD WRITE
 
 			$( "#button-record-add" ).click(function() {
 				$( '#modal-record-write' ).addClass('show');
+				console.log('case2');
 			});
 
 			$( "#button-record-modify" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
 				$( '#modal-record-modify' ).addClass('show');
-			});	
+			});
 
 			$( "#button-record-delete" ).click(function() {
 				$( this ).parent().parent().parent().removeClass('show');
@@ -2138,13 +2142,13 @@ RECORD WRITE
 			);
 
 
-			//스와이프 플러그인 
+			//스와이프 플러그인
 			var slideLength = $('.record-list').length;  //차량 슬라이드 수
 			console.log(slideLength);
 
 
 			if( slideLength == 1 ){	//차량 리스트가 1개 이하 일때  - 루프 안함
-				
+
 				var galleryThumbs = new Swiper('.gallery-thumbs', {
 					spaceBetween: 5,
 					slidesPerView: 3, //섬네일 보여줄 갯수
@@ -2159,7 +2163,7 @@ RECORD WRITE
 					}
 				});
 
-			}else if (slideLength <= 3){ //차량 리스트가 3개 이하일 때 
+			}else if (slideLength <= 3){ //차량 리스트가 3개 이하일 때
 
 				var galleryThumbs = new Swiper('.gallery-thumbs', {
 					spaceBetween: 5,
@@ -2182,7 +2186,7 @@ RECORD WRITE
 				});
 
 			}else{ //차량 리스트가 3개 이상일 때
-				
+
 				var galleryThumbs = new Swiper('.gallery-thumbs', {
 					spaceBetween: 5,
 					slidesPerView: 3, //섬네일 보여줄 갯수
@@ -2212,8 +2216,11 @@ RECORD WRITE
 				console.log('slide changed');
 				jQuery('html, body').animate({scrollTop:0}, '50');
 			});
-			
-			
+
+
+
+
+
 			// 주행이력 추가시 주행거리 클릭
             jQuery("#modal-record-write-input").click(function () {
                 jQuery(this).parent().attr("class","input focus");
