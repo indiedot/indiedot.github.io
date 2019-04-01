@@ -1904,7 +1904,7 @@ RECORD WRITE
 	</div>
 
 	<!-- 주행 거리 입력-->
-	<div class="modal-background" id="modal-record-write">
+	<div class="modal-background" id="modal-record-write" style="align-items: flex-start">
 		<div class="modal">
 			<div class="modal-header">
 				<h1 class="modal-title">최종주행거리 입력</h1>
@@ -2232,7 +2232,7 @@ RECORD WRITE
 
             // 주행이력 추가 X 아이콘 클릭
             jQuery("#addReset").click(function () {
-                //jQuery("#modal-record-write-input").val('');
+                jQuery("#modal-record-write-input").val('');
                 jQuery("#modal-record-write-input").focus();
             });
 
