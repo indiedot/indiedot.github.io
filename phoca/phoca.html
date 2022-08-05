@@ -14,7 +14,15 @@
 		<header class="page-header">
 			<div class="logo"><a href="">PHOCA</a></div>
 			<div class="menu-container">
-				<button type="button" class="menu-button">menu</button>
+				<button type="button" class="menu-button active">
+					<svg>
+						<g>
+							<rect class="top" x="4" y="15" width="24" height="2"></rect>
+							<rect class="mid" x="4" y="15" width="24" height="2"></rect>
+							<rect class="bot" x="4" y="15" width="24" height="2"></rect>
+						</g>
+					</svg>
+				</button>
 				<div class="menu active">
 					<div class="menu-background">
 						<ul class="tab-menu">
@@ -25,10 +33,9 @@
 						</ul>
 						<ul class="nav-menu">
 							<li><a href="">JACK IN THE BOX</a></li>
-							<li><a href="">PROOF</a></li>
+							<li class="active"><a href="">PROOF</a></li>
 							<li><a href="">BUTTER</a></li>
 							<li class="disabled"><a href="">BE</a></li>
-							<li class="disabled"><a href="">MAP OF THE SOUL 7</a></li>
 							<li class="disabled"><a href="">MAP OF THE SOUL 7</a></li>
 						</ul>
 					</div>
@@ -154,6 +161,15 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<script>
+		$(document).ready(function() {
+
+			//메뉴 오픈
+			$('.menu-button').click(function(){
+				$(this).toggleClass('active');
+				$('.menu').toggleClass('active');
+			});
+
+		 });
 	
 	</script>
 </body>
